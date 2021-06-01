@@ -1,0 +1,93 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.6in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#3. }\rm
+\vskip .1cm
+{\bf Approximate plan for next week: } Direct and semi-direct products and further
+applications of Sylow theorems (5.4, 5.5).
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, September 19th}
+\skv
+{\bf 1.} Let $G$ be a finite group, $P$ a Sylow $p$-subgroup of $G$ for some $p$
+and $H$ a subgroup of $G$ such that $N_{G}(P)\subseteq H\subseteq G$.
+Prove that $N_H(P)=N_G(P)$ and $[G:H]\equiv 1\mod p$.
+\skv
+{\bf 2.} Prove that a group of order $132=3\cdot 4\cdot 11$ has a normal Sylow $p$-subgroup for some $p$.
+\skv
+{\bf 3.} Let $G$ be a group of order $48$. Prove that $G$ has either a normal subgroup of order $16$ or normal subgroups of orders $8$ and $24$.
+\skv 
+{\bf 4.} Let $G$ be a group of order $24$. Prove that $G$ has a normal 
+$2$-Sylow subgroup or a normal $3$-Sylow subgroup or is isomorphic to $S_4$. {\bf Note:} This is probably a pretty hard problem without a hint, but we will discuss how to approach it in class on Tue, Sep 17.
+\skv
+{\bf 5.} Let $\dbF_p$ be a finite field of order $p$, let $G=GL_n(\dbF_p)$ and $P=U_n(\dbF_p)$, the subgroup of upper-unitriangular matrices in $GL_n(\dbF_p)$.
+\begin{itemize}
+\item[(a)] Prove that $P$ is a Sylow $p$-subgroup of $G$
+(you may use the formula for $|G|$ established in Homework\#2).
+
+\item[(b)] Let $B=UT_n(\dbF_p)$, the subgroup of upper-triangular matrices in $G$.
+Prove that $N_G(P)=B$ . {\bf Hint: }  To prove the inclusion $N_G(P)\subseteq B$ consider the natural action of $G$ on $X=\dbF_p^n$. First compute $X^P=\{x\in X : gx=x \mbox { for any }g\in P\}$,  the set of fixed points of $P$. Now if $g\in N_G(P)$, what can you say
+about $g\cdot X^P$ (the image of $X^P$ under the action of $g$). Use this
+result and induction on $n$ to prove that $N_G(P)\subseteq B$.
+
+\item[(c)] Find $n_p(G)$, the number of Sylow $p$-subgroups of $G$.
+\end{itemize}
+
+{\bf 6.} Explicitly describe a Sylow $p$-subgroup of $S_{p^2}$. See next page for a hint.
+\newpage
+{\bf Hint for 6:} The largest power of $p$ dividing $(p^2)!$ is $p^{p+1}$. First find a subgroup of order $p^p$
+in $S_{p^2}$ (this is quite easy) and then think how to enlarge it to a subgroup of order $p^{p+1}$.
+\end{document}

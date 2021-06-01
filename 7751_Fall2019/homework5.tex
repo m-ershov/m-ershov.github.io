@@ -1,0 +1,123 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#5, due on Fri, Oct 11th (by 1pm in my mailbox). }\rm
+\vskip .1cm
+{\bf Plan for the next week:} Nilpotent and solvable groups (the best approximation
+in Dummit and Foote is 6.1, but we will not follow it very closely).
+
+\skv
+{\bf 1.} Solve Problems 1(c) and 3(b) from the in-class part of Midterm~1 (you do not have to redo problems for which you got full credit on the midterm):
+\begin{itemize}
+\item[(1c)] Let $p$ be a prime. Prove that any group of order $p^2$ is abelian.
+\item[(3b)] Let $p$ be an odd prime. Find the smallest $n$ for which $S_n$ contains a subgroup of order $2p$.  
+\end{itemize}
+
+{\bf 2.} 
+\begin{itemize}
+\item[(a)] Classify all abelian groups of order $360=2^3\cdot 3^2\cdot 5$ up to isomorphism. For each isomorphism type, state the corresponding elementary divisors form and invariant factors form.
+\item[(b)] Let $n\in\dbN$, and decompose $n$ as a product of primes: $n=p_1^{\alpha_1}\ldots p_k^{\alpha_k}$. Find (with justification) the number of non-isomorphic abelian groups of order $n$. Express your answer in terms of the partition function $P$ (where $P(n)$ is the number of partitions of $n$).
+\end{itemize}
+{\bf 3.} Let $G$ be a finite abelian group. Prove that $G$ is cyclic if and only if $G$ does not contain a subgroup isomorphic to $B\oplus B$ for some non-trivial group $B$.
+\skv
+\skv
+{\bf 4.} Given a finite group $G$ and a positive integer $n$, denote
+by $a_n (G)$ the number of elements of $G$ of order $n$ and by $b_n(G)$
+the  number of elements of $G$ of order dividing $n$. The goal
+of this problem is to prove the following theorem:
+\skv
+{\bf Theorem A:} If $G$ and $H$ are finite abelian groups and $a_n(G)=a_n(H)$ for all $n$, then $G$ is isomorphic to $H$.
+\skv
+\begin{itemize}
+\item[(a)] Let $G$ and $H$ be finite groups. Prove that $a_n(G)=a_n(H)$ for all $n$ $\iff$ $b_n(G)=b_n(H)$ for all $n$.
+\item[(b)] Suppose that $G=X\times Y$. Prove that $b_n(G)=b_n(X)b_n(Y)$.
+\item[(c)] Suppose that $G$ and $H$ are finite abelian groups s.t. $a_n(G)=a_n(H)$ for all $n$. Prove that there exists a non-trivial
+group $C$ s.t. $G\cong A\times C$ and $H\cong B\times C$ for some
+groups $A$ and $B$. {\bf Hint:} Use the classification theorem in
+invariant factors form.
+\item[(d)] Now use (a),(b) and (c) and induction to prove Theorem~A.
+\end{itemize}
+
+\skv
+{\bf 5.} Let $G$ be an abelian group (not necessarily finitely generated), and
+let $Tor(G)$ be the set of elements of finite order in $G$. Recall that
+$Tor(G)$ is a subgroup of $G$ (since $G$ is abelian), called the torsion subgroup of $G$.
+\begin{itemize}
+\item[(a)] Prove that the quotient group $G/Tor(G)$ is torsion-free.
+\item[(b)] For each prime $p$ let $Tor_p(G)$ be the set of elements of order $p^k$ (with $k\geq 0$)
+in $G$. Prove that each $Tor_p(G)$ is a subgroup of $Tor(G)$ and that $Tor(G)=\bigoplus_p Tor_p(G)$ where $p$ ranges over all primes.
+\end{itemize}
+{\bf Note:} Recall that if $A$ is an abelian group written additively and $\{A_i\}_{i\in I}$ is a family of its subgroups, then $A=\bigoplus_{i\in I} A_i$
+means that
+\begin{itemize}
+\item[(1)] $A=\la A_i: i\in I\ra$, that is (since $A$ is abelian), every $a\in A$ can be written as a finite! sum $a=a_1+\ldots+ a_m$
+where each $a_k$ lies in $A_{i_k}$ for some $i_k\in I$ 
+\item[(2)] for each $i\in I$ the intersection $A_i\cap \la A_j: j\neq i\ra$ is trivial. Since every element of $\la A_j: j\neq i\ra$
+if a finite sum of elements of $\bigcup_{j\neq i}A_j$, this is the same as requiring that for any distinct indices $i,j_1,\ldots, j_m\in I$
+the intersection $A_i\cap \la A_{j_1},\ldots, A_{j_m}\ra$ is trivial.
+\end{itemize}
+{\bf 6.} 
+\begin{itemize}
+\item[(a)] Let $A$ and $B$ be finitely generated groups. Prove that the restricted wreath product $A \wr B$
+is also finitely generated.
+{\bf Hint:} Recall that $A wr B=C\rtimes B$ where $C=\oplus_{b\in B}A_b$ (with each $A_b\cong A$). Let $S$
+be a generating set for $A$, $T$ a generating set for $B$, fix $b\in B$, and let $S_b$ be the image
+of $S$ under an isomorphism $A\to A_b$. Prove that $S_b\cup T$ generates $A wr B$.
+\item[(b)] Use (a) to give a simple example showing that a subgroup of a finitely generated group
+may not be finitely generated.
+\end{itemize}
+\end{document}

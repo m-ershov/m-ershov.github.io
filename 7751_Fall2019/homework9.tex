@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#9. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Unique Factorization Domains (8.3, 9.3) and Irreducibility criteria in polynomial rings (9.4). Note that we already discussed some of the main results from 8.3.
+
+\centerline{\bf Problems, to be submitted by Thursday, November 7th}
+\skv
+{\bf 1.} Let $\dbZ[i]=\{a+bi: a,b\in\dbZ\}$ be the ring of Gaussian integers.
+\begin{itemize}
+\item[(a)] Prove that $\dbZ[i]$ is a Euclidean domain.
+\item[(b)] Prove that $\dbZ[i]\cong \dbZ[x]/(x^2+1)$
+\item[(c)] Now use (a) and (b) to find all maximal ideals of $\dbZ[x]$ (the ring of polynomials over $\dbZ$ in one variable) which contain 
+$x^2+1$ and $15$. If you have not studied Gaussian integers before, carefully read the corresponding section in DF (pp. 289-292).
+\end{itemize}
+\skv
+{\bf 2.} Let $D$ be a positive integer such that $D\equiv 3\mod 4$, and let
+$R=\dbZ[\frac{1+\sqrt{-D}}{2}]$, that is, $R$ is the minimal subring of $\dbC$ containing $\dbZ$ and $\frac{1+\sqrt{-D}}{2}$.
+
+\begin{itemize}
+\item[(a)] Prove that $R=\{a+ b \frac{1+\sqrt{-D}}{2} : a,b\in\dbZ \}$. You may skip details, but it should
+be clear from your argument where the assumption $D\equiv 3\mod 4$ is used (otherwise the result is simply not true).
+
+\item[(b)] Assume that $D=3, 7$ or $11$. Prove that $R$ is a Euclidean domain.
+\end{itemize}
+
+\skv
+
+{\bf 3.} Let $R=\dbZ[\sqrt{5}]=\{a+b\sqrt{5} : a,b\in\dbZ\}$. Find an element of $R$
+which is irreducible but not prime and deduce that $R$ is not a unique factorization domain (UFD).
+\skv
+ {\bf Hint:} Consider the equality $2\cdot 2=(\sqrt{5}+1)(\sqrt{5}-1)$. In order to check
+whether some element of $R$ is irreducible it is convenient to use the standard norm function
+$N:R\to\dbZ_{\geq 0}$ given by $N(a+b\sqrt{5})=|a^2-5b^2|$ (note that $N(uv)=N(u)N(v)$).
+\skv\skv 
+{\bf 4.} Let $R=\dbZ+x\dbQ[x]$, the subring of $\dbQ[x]$ consisting of
+polynomials whose constant term is an integer.
+\begin{itemize}
+\item[(a)] Show that the element $\alpha x$, with $\alpha\in\dbQ$ is NOT irreducible
+in $R$. Then show that $x$ cannot be written as a product of irreducibles in $R$.
+Note that by Lecture~18, this implies that $R$ is not Noetherian.
+
+\item[(b)] Now prove directly that $R$ is not Noetherian by showing that
+$I=x\dbQ[x]$ is an ideal of $R$ which is not finitely generated.
+
+\item[(c)] Give an example of a non-Noetherian domain which is a UFD.
+\end{itemize}
+\skv
+{\bf 5.} Let $R$ be a commutative ring with $1$. 
+\begin{itemize}
+\item[(a)]   Let $M$ be an ideal of $R$. Prove that the following conditions are equivalent:
+\begin{itemize}
+\item[(i)] $M$ is the unique maximal ideal of $R$ 
+\item[(ii)] every element of $R\setminus M$ is invertible. 
+\end{itemize}
+Rings satisfying these equivalent conditions are called local.
+\item[(b)] Let $F$ be a field and $F[[x]]$ the ring of power series over $F$. Prove that $F[[x]]$ is local.
+\item[(c)] Now let $R$ be arbitrary, let $P$ be a prime ideal of $R$ and $S=R\setminus P$. Prove that the localization
+$S^{-1}R$ is local and explicitly describe its unique maximal ideal.
+\end{itemize}
+\end{document}

@@ -1,0 +1,142 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.2in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+\def\Sym{{\rm Sym}}
+\def\det{{\rm det}}
+
+\bf\centerline{Homework \#2}\rm
+\vskip .1cm
+\centerline{{\bf Plan for next week:} Sylow theorems (\S~4.5).}
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, September 12th}
+\vskip .1cm
+{\bf Note:} Problems 1 and 2 below are relevant to the proof of Sylow theorems that we will discuss in class next week.
+\skv
+\sk Let $R$ be a commutative ring with $1$ and $n\in\dbN$. Recall that $GL_n(R)$ denotes the group of invertible $n\times n$
+matrices over $R$ and $SL_n(R)$ the subgroup of $GL_n(R)$ consisting of matrices of determinant $1$. In general, a matrix
+$A\in Mat_n(R)$ lies in $GL_n(R)$ if and only if $\det(A)\in R^{\times}$. In particular, if $R$ is a field, then $A\in GL_n(R)$
+if and only if $\det(A)\neq 0$.
+
+\skv
+{\bf 1.} Let $F$ be a finite field of order $q$.
+\begin{itemize}
+\item[(a)] Prove that $GL_2(F)$ has order $(q^2-1)(q^2-q)=q(q-1)^2(q+1)$
+
+\item[(b)] State and prove the formula for the order of the groups $GL_n(F)$ for $n>2$.
+
+\item[(c)] Prove that $|SL_n(F)|=\frac{|GL_n(F)|}{q-1}$ for any $n\geq 2$.
+\end{itemize}
+{\bf Hint: } To determine the order of $GL_n(F)$ use the fact that a square matrix over a field $F$
+is invertible if and only if its rows are linearly independent.
+\skv
+{\bf 2.} Problem 10 on page 117 in Dummit and Foote.
+\skv
+
+{\bf 3.} An action of a group $G$ on a set $X$ is called {\it transitive} if it has
+just one orbit, that is, for any $x,y\in X$ there exists $g\in G$ with $g. x=y$.
+\begin{itemize}
+
+
+\item[(a)] Let $(G,X,.)$ be a group action. Prove that if $x,y\in X$ lie in the same orbit,
+then their stabilizers $Stab_G(x)$ and $Stab_G(y)$ are conjugate, that is, there exists $g\in G$
+with $g Stab_G(x) g^{-1} = Stab_G(y)$. 
+
+\item[(b)] Suppose that $(G,X,.)$ is a transitive action and fix $x\in X$. Prove that
+the kernel of this action is equal to $\bigcap\limits_{g\in G} g Stab_G(x) g^{-1}$
+
+\item[(c)] Now suppose that $G$ and $X$ are both finite, $(G,X,.)$ is a transitive 
+faithful action (where `faithful' means the kernel is trivial) and $G$ is abelian. 
+Prove that for any $g\in G\setminus \{1\}$ the fixed set $Fix_X(g)$ is empty. 
+Deduce that $|X|=|G|$. {\bf Hint:} Use (b).
+\end{itemize}
+
+{\bf 4.} Let $C$ be the cube in $\dbR^3$ whose vertices have coordinates 
+$(\pm 1, \pm 1,\pm 1)$. Let $G$ be the group of rotations of $C$, that is rotations in $\dbR^3$ which preserve the cube (you may assume that $G$ is a group without proof). Let $X$ be the set of $4$ main diagonals of $C$ (diagonals
+connecting the opposite vertices). Note that $G$ naturally acts on $X$ and therefore we have a homomorphism $\pi:G\to Sym(X)\cong S_4$. Prove that $\pi$ is an isomorphism.
+
+{\bf Hint: } First show that $G$ acts transitively on the 8 vertices of $C$. Then show that the stabilizer of a fixed vertex had order $\geq 3$. This implies that $|G|\geq 24=|S_4|$. Finally, show that $\pi$ is injective (since $|G|\geq |S_4|$, this would force $\pi$ to be an isomorphism).
+
+\skv
+{\bf 5.} In Lecture~3 we sketched a proof of the fact that $\Aut(D_8)\cong D_8$. Justify the following parts of the argument from class:
+\begin{itemize}
+\item[(i)] $|\Aut(D_8)|\geq 8$. {\bf Hint:} first prove that $|\Inn(D_8)|=4$ and think how this helps to prove the desired inequality. Also think how one can construct automorphisms of a group defined by generators and relations (since we have not formally defined presentations by generators and relations yet, I am not expecting a completely rigorous argument here).
+\item[(ii)] Let $S$ be the set of 4 reflections in $D_8$. In class we argued that $S$ invariant under any automorphism of $D_8$. Hence we have a natural action of $\Aut(D_8)$ on $S$ and the corresponding permutation representation $T:\Aut(D_8)\to \Sym(S)$. Prove that $T$ is injective.
+{\bf Hint:} let $G$ be any group, and let $S$ be an $\Aut(G)$-invariant subset of $G$. Find a simple-to-state sufficient condition on $S$
+which guarantees that the the corresponding permutation representation $T:\Aut(G)\to \Sym(S)$ is injective
+\end{itemize}
+
+{\bf 6.} Let $n\geq 4$ and $f=(1,2)(3,4)\in S_n$. Prove that 
+$|C_{S_n}(f)|=8 (n-4)!$. Then describe elements of this 
+centralizer explicitly. {\bf Hint:} What is the conjugacy
+class of $f$?
+\skv
+
+{\bf 7.} (optional) {\it Necklace-counting problem:}
+Suppose that we want to build a necklace using $n$ beads of $k$ possible colors
+(we do not have to use all available colors). Two necklaces will be considered equivalent 
+if they can be obtained from each other using rotations or reflections. What is the number 
+of non-equivalent necklaces one can construct?
+
+{\it Approach using group actions.} Let $X$ be the set of all necklaces with
+beads of $k$ possible colors located at the vertices of a regular $n$-gon. The dihedral
+group $D_{2n}$ has a natural action on $X$, and the orbits under that action
+are precisely equivalence classes of necklaces in the above sense. Use this
+interpretation and Burnside's orbit-counting formula to prove that for $n=9$ the number of 
+non-equivalent necklaces is
+$$\frac{k^9+2k^3+6k+9k^5}{18}.$$
+Then try to do the same for general $n$. 
+
+
+\end{document}

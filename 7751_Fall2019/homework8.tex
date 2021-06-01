@@ -1,0 +1,106 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#8. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Chapter 8 (Euclidean domains, principal ideal domains and unique factorization domains).
+
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, Oct 31}
+\skv
+{\bf 1.} (a) Let $G$ be a finitely generated group. Use Zorn's lemma to show that $G$ has a  
+maximal subgroup (recall that a maximal subgroup of $G$ is a maximal element of the set of  
+proper  subgroups of $G$ partially ordered by inclusion). {\bf Hint:} The key step is to show 
+that  if $\mathcal C$ is a chain of proper subgroups of $G$, then the union of subgroups in this 
+chain is not the whole $G$.
+
+(b) (optional) If your proof in (a) is correct, a nearly identical argument should
+imply that $G$ always has a maximal normal subgroup. However, the latter is true
+under weaker assumptions on $G$. Can you find a natural condition on $G$
+(weaker than finite generation) that guarantees the existence of a maximal normal subgroup? 
+Can you give an example of a group which has a maximal normal subgroup, but no maximal subgroup?
+
+\skv
+{\bf 2.} Let $R$ be a commutative ring with $1$. The {\it nilradical} of $R$ denoted $Nil(R)$ is the set of all nilpotent elements of $R$, that is $$Nil(R)=\{a\in R : a^n=0 \mbox{ for some }n\in\dbN\}.$$ The {\it Jacobson radical} of $R$ denoted by $J(R)$ is the intersection 
+of all maximal ideals of $R$. Prove that 
+\begin{itemize}
+\item[(a)] $Nil(R)$ and $J(R)$ are ideals of $R$ 
+\item[(b)] $Nil(R)\subseteq J(R)$.
+\end{itemize}
+\skv
+
+{\bf 3.} (a) Problem 7.3.34. Note: in all exercises in 7.3 $R$ is assumed to be a ring  
+with $1$ (this is crucial for this problem). Also note that $IJ$ is NOT defined to be the set 
+$\{ij: i\in I, j\in J\}$;  by definition, $IJ$ is the set of finite sums of elements of the form 
+$ij$, with $i\in I, j\in J$.  
+
+(b) Read the section on the Chinese remainder theorem (7.6).
+
+\skv
+{\bf 4.} Let $m$ and $n$ be positive integers with $m\mid n$, and let $f:\dbZ/n\dbZ\to \dbZ/m\dbZ$ be the natural projection. Prove that the associated map of the groups of units $f:(\dbZ/n\dbZ)^{\times}\to (\dbZ/m\dbZ)^{\times}$ is surjective.
+%DF, Problem 7.1.26 and 7.1.27
+
+\newpage
+{\bf 5.} Let $n\in\dbN$ and consider $\dbZ^n$ as a ring with component-wise addition and multiplication (note that $\dbZ^n$ considered as a group is precisely the additive group of this ring). Let $\Aut_{\rm ring}(\dbZ^n)$ be the group of ring automorphisms of $\dbZ^n$. Prove that $\Aut_{\rm ring}(\dbZ^n)\cong S_n$. {\bf Note:} recall that $\Aut_{\rm group}(\dbZ^n)\cong GL_n(\dbZ)$, as discussed in Lecture~2.
+\skv
+{\bf 6.} Let $R=\dbZ_{14}$, $D=\{\bar 1,\bar 2,\bar 4,\bar 8\}$ (note that $D$ is multiplicatively closed
+but it does contain zero divisors). Prove that the localization $RD^{-1}$ is isomorphic to $\dbZ_{7}$.
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage[all]{xy}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\phi{{\varphi}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#10. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Affine algebraic sets and Nullstellensatz (DF, Chapter 15). For the material of the lecture on Nov 19 see
+\skv
+\centerline{\url{http://people.virginia.edu/~mve2x/7751_Fall2009/lecture29.pdf}}
+\skv
+\skv
+\centerline{\bf Problems, to be submitted by Friday, Nov 22, by 1pm}
+\skv 
+Before solving problems 1 and 2 read the online lecture on irreducibility criteria
+\skv
+\centerline{\url{http://people.virginia.edu/~mve2x/7751_Fall2011/lecture23.pdf}}
+\skv
+\skv
+{\bf 1.} Let $F$ be a field, take $f(x,y)\in F[x,y]$, and write $f(x,y)=\sum_{i=0}^n c_i(y) x^i$
+where $c_i(y)\in F[y]$. Suppose that 
+\begin{itemize}
+\item[(i)] There exists $\alpha\in F$ such that $c_n(\alpha)\neq 0$
+\item[(ii)] $gcd(c_0(y), c_1(y),\ldots, c_n(y))=1$ in $F[y]$
+\item[(iii)] $f(x,\alpha)$ is an irreducible element of $F[x]$ (where $f(x,\alpha)$ is the polynomial obtained from $f(x,y)$ be substituting $\alpha$ for $y$). 
+\end{itemize}
+Prove that $f(x,y)$ is irreducible in $F[x,y]$. 
+\skv
+{\bf 2.} Prove that the following polynomials are irreducible:
+\begin{itemize}
+\item[(a)] $f(x,y)=y^3+x^2 y^2+x^3y+x^2+x$ in $\dbQ[x,y]$
+\item[(b)] $f(x,y)=xy^2+x^2y+2xy+x+y+1$ in $\dbQ[x,y]$
+\item[(c)] $f(x)=x^5-3x^2+15x-7$ in $\dbQ[x]$
+\end{itemize}
+{\bf Hint:} For (a) and (b) -- think of $\dbQ[x,y]$ as $(\dbQ[x])[y]$, the ring of polynomials in one variable $y$ over $R=\dbQ[x]$, or as $(\dbQ[y])[x]$.
+For (c): By Gauss Lemma, it is enough to prove irreducibility
+of $f(x)$ in $\dbZ[x]$. Consider the reduction map $u(x)\to \overline u(x)$
+from $\dbZ[x]$ to $\dbZ_3[x]$, consider possible factorizations of
+$\overline f(x)$ and show that none of them can be lifted to a factorization
+of $f(x)$ (the general idea is similar to the proof of the Eisenstein criterion).
+\skv
+
+{\bf 3.}\begin{itemize} 
+\item[(a)] Let $p$ be a prime. Use direct counting argument to find the number
+of monic irreducible polynomials of degree $n$ in $\dbF_p[x]$ for $n=2,3,4$ and
+check that your answer matches the general formula derived in the online supplement
+\skv
+\centerline{\url{http://people.virginia.edu/~mve2x/7751_Fall2011/irreducible.pdf}}
+\skv
+{\bf Hint:} The number of irreducible monic polynomials of degree $n$ equals
+the total number of monic polynomials of degree $n$ minus the number
+of reducible monic polynomials of degree $n$; the latter can be computed
+considering possible factorizations into irreducibles (assuming the number of 
+irreducible monic polynomials of degree $m$ for $m<n$ has already been computed).
+\item[(b)] Find a monic irreducible polynomial of degree $4$ in $\dbF_2[x]$.
+Then use it to construct a field $F$ with $|F|=16$ and {\bf find explicitly}
+a generator of the multiplicative group $F^{\times}$
+\end{itemize}
+\skv
+{\bf 4.} Let $R$ be a commutative Noetherian ring with 1. Prove that
+the ring $R[[x]]$ of power series over $R$ is also Noetherian.
+{\bf Hint:} As you may expect, this can be proved similarly 
+to the Hilbert basis theorem (HBT) except that you have to consider
+the lowest degree terms, not the highest degree terms (which may not exist). 
+In fact, the first part of the proof is even easier than in HBT, but you will 
+need some kind of limit argument at the end.
+
+
+\skv
+{\bf 5.} Give an example of a domain $R$ (other than a field or
+the zero ring) which has no irreducible elements. {\bf Hint:}
+Start with the ring of power series $R=F[[x]]$ where $F$ is a field.
+Then up to associates $x$ is the only irreducible element of $R$.
+Construct a larger ring $R_1\supseteq R$ s.t. $x$ is reducible in $R_1$, but
+$R_1\cong F[[x]]$. Then iterating the process construct
+an infinite ascending chain $R\subseteq R_1\subseteq R_2\subseteq \ldots$ and consider its union.
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.6in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .3cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#4. }\rm
+\vskip .1cm
+{\bf Plan for next week: } Simplicity of $A_n$ (4.6), classification of finitely generated abelian groups (5.2).
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, September 26th}
+
+\skv
+{\bf 1.} $\empty$
+\begin{itemize}
+\item[(a)] Prove Observation 8.2 from class: Let $H,K$ be groups, let $\phi$ and $\psi$ be homomorphisms from $K$ to $\Aut(H)$, and assume that there exists $\theta\in \Aut(K)$ such that
+$\phi\circ\theta=\psi$. Prove that $H\rtimes_{\phi} K\cong H\rtimes_{\psi} K$.
+\item[(b)] DF, Problem 6 on page 184.
+\end{itemize}
+
+\skv
+{\bf 2.} DF, Problem 7(a)(c)(e) on page 185. Note that we proved (b) in class (Lecture~6).
+Clarification for part (c): for each isomorphism class of $S$
+you are asked to construct a certain number of non-isomorphic groups
+of order $56$ with normal $7$-Sylow and $2$-Sylow isomorphic to $S$.
+You are not asked to prove that your groups cover all possible isomorphism classes
+(this part is optional and can be done using Problem~2(a) above). If you are using the hint in brackets following part (c), you should prove the statement in the hint.
+\skv
+
+{\bf 3.} Let $n\geq 3$ be an integer and let $S_n$ be the symmetric group on $\{1,2,\ldots, n\}$. Let $H$ be a subgroup of $S_n$ with $[S_n:H]=n$. Prove that $$H\cong S_{n-1}.$$ {\bf Hint:} Start by constructing a suitable action of $S_n$ associated to $H$. 
+You may use the description of normal subgroups of $S_n$ which will be proved in class next Tuesday:
+\begin{itemize}
+\item[(i)] If $n\neq 4$, the only normal subgroups of $S_n$ are $S_n$, $A_n$ and $\{1\}$
+\item[(ii)] The only normal subgroups of $S_4$ are $S_4$, $A_4$, $V_4$ (the Klein 4-group) and $\{1\}$
+\end{itemize}
+\skv
+
+{\bf 4.} Let $\Omega$ be an infinite countable set (for simplicity you may assume that $\Omega=\dbZ$,
+the integers). Let $S(\Omega)$ be the group of all permutations of $\Omega$.
+A permutation $\sigma\in S(\Omega)$ is called {\it finitary} if it moves
+only a finite number of points, that is, the set $\{i\in\Omega : \sigma(i)\neq i\}$
+is finite. It is easy to see that finitary permutations form a subgroup of $S(\Omega)$
+which will be denoted by $S_{fin}(\Omega)$. Finally, let $A_{fin}(\Omega)$ be the subgroup
+of even permutations in $S_{fin}(\Omega)$ (note that it makes sense to talk about
+even permutations in $S_{fin}(\Omega)$, but not in $S(\Omega)$).
+\begin{itemize}
+\item[(a)] Prove that the group $A_{fin}(\Omega)$ is simple and that $A_{fin}(\Omega)$
+is a subgroup of index two in $S_{fin}(\Omega)$. {\bf Hint:} To prove the first
+assertion solve problem 5 in [DF, page 151]. You may use the fact that $A_n$ is simple for $n\geq 5$.
+\item[(b)] Prove that $A_{fin}(\Omega)$ and $S_{fin}(\Omega)$ are both normal in $S(\Omega)$.
+\item[(c)] Prove that neither of the groups $S(\Omega)$ and $S_{fin}(\Omega)$ is finitely generated. {\bf Hint:} The two groups are not finitely generated for completely
+different reasons.
+\item[(d)] Construct a finitely generated subgroup $G$ of $S(\Omega)$ which contains
+$S_{fin}(\Omega)$. {\bf Note:} This example shows that a subgroup of a finitely
+generated group does not have to be finitely generated.
+\end{itemize}
+
+
+
+\end{document}
