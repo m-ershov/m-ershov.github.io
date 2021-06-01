@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+
+\bf\centerline{Homework Assignment \# 5}\rm
+\vskip .2cm
+{\bf Plan for the week of Mar 1:} Field extensions and algebraic closures (13.1, 13.2, 13.4 and online lectures 14, 15).
+\vskip .1cm
+Here and in all future assignments ``online'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, March 5th.}\rm
+\vskip .1cm
+\skv
+ {\bf Problem 1: } Find the number of distinct conjugacy classes in the group $GL_3(\dbF_2)$ (where $\dbF_2$ is the field with
+$2$ elements) and specify one element in each conjugacy class.
+\skv
+{\bf Problem 2: } \rm 
+\begin{itemize}
+\item[(a)] Prove that two $3\times 3$ matrices
+over some field $F$ are similar if and only if they have the same minimal and characteristic 
+polynomials. Give an example showing that this does not hold for $4\times 4$ matrices.
+
+\item[(b)] A matrix $A$ is called idempotent if $A^2=A$. Prove that two idempotent $n\times n$ matrices are similar if and only if they have they same rank. {\bf Hint:} What is the minimal polynomial of an idempotent matrix? How does rank relate to eigenvalue $0$?
+\end{itemize}
+\skv
+{\bf Problem 3: } \rm
+Prove that there is no matrix $A\in Mat_{10}(\dbQ)$ satisfying $A^4=-Id$.
+\skv
+{\bf Problem 4: }\rm DF, Problem~15 on page 500.
+\skv
+{\bf Problem 5: }\rm DF, Problem~20 on page 501. Also find an explicit $P\in GL_n(F)$ such that $A=PBP^{-1}$ where $A$ and
+$B$ are the two matrices in the form (you may choose which one
+is $A$ and which one is $B$).
+\skv
+{\bf Problem 6:} Let $V$ be an $n$-dimensional vector space over some field $F$,
+and let $T:V\to V$ be a {\bf nilpotent} $F$-linear map. Prove that $T^n=0$ in two different ways:
+\begin{itemize}
+\item[(a)] using JCF
+\item[(b)] without using JCF or RCF, but instead looking at the sequence of kernels $\{\Ker(T^k)\}_{k=1}^{\infty}$. The idea here
+is similar to Problem~2 in HW\#4 of Algebra~1.
+\end{itemize}
+\skv
+{\bf Problem 7:} Given $A\in Mat_n(\dbC)$, define its exponential
+$\exp(A)$ as in DF, Problem~41(b) on page 503 (you do not have to prove convergence of the series defining $\exp(A)$).
+\begin{itemize}
+\item[(a)] Prove that if $A=PBP^{-1}$ for some $P\in GL_n(\dbC)$,
+then $\exp(A)=P\,\exp(B)\,P^{-1}$
+\item[(b)] Use (a) to prove that $\det(\exp(A))=\exp(\tr(A))$.
+ \end{itemize}
+\end{document}

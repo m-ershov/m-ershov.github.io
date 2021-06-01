@@ -1,0 +1,150 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=9.6in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\Gal{{\rm Gal}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Algebra-II, Spring 2021. Midterm \#2}\rm
+\skv
+\bf\centerline{due by 11:59pm on Friday Apr 22nd}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] the book by Dummit and Foote
+\item[(ii)] your class notes (including notes from 7751)
+\item[(iii)] your previous assignments (homeworks and midterms)
+\item[(iv)] any materials posted on the Math 7751/7752 collab sites and any materials posted on \url{http://people.virginia.edu/~mve2x/}
+\end{itemize}
+
+The use of any other resources is prohibited and will be considered a violation of the UVA honor code.
+
+
+\skv
+{\bf Scoring:} The exam contains 5 problems, all of which will count towards your score. The first 4 problems are worth 10 points, and the last problem
+is worth 12 points. Thus, the maximal possible total is 52, but the score of 50 will count as 100\%.
+
+
+\skv
+
+{\bf Problem 1:} Let $F$ be a field.
+\begin{itemize}
+\item[(a)] Let $f(x)\in F[x]$ be a nonzero polynomial and $K/F$ a field extension.
+Prove that $$F[x]/(f(x))\otimes_F K\cong K[x]/(f(x))$$ as $F$-algebras.
+\item[(b)] Let $L/F$ be a finite separable extension. Prove that
+there exists a finite extension $K/F$ such that 
+$L\otimes_F K\cong \underbrace{K\times\ldots\times K}_{n \mbox{ times }}$
+for some $n$.
+\end{itemize}
+\skv
+
+{\bf Problem 2:} DF, Problem~6 on page 582. Make sure to include all the details.
+\skv
+\newpage
+
+{\bf Problem 3:} Let $F$ be a field and $f(x)= x^4+ 1\in F[x]$.
+\begin{itemize}
+\item[(a)] Determine for which characteristic of $F$ $f(x)$ is separable.
+\item[(b)]  Assume that $f(x)$ is separable and irreducible over $F$, and let $K$ be the splitting field of $f(x)$ over $F$.  
+Determine the Galois group $\Gal(K/F)$ (the answer should be of the form ``$\Gal(K/F)$ is isomorphic to $G$'' where $G$ is a familiar group).
+\item[(c)] Suppose that $f(x)$ is irreducible over $F$. Prove first that $F$ is infinite and then that $F$ has characteristic $0$.
+\end{itemize}
+
+\skv
+{\bf Problem 4:} \rm Let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$
+none of which is a perfect square, and let $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$. You are NOT allowed to refer to HW\#6.2.
+\begin{itemize}
+\item[(a)] Prove that $K/\dbQ$ is a Galois extension and $Gal(K/\dbQ)\cong \dbZ_2^m$ for some $m\leq k$
+\item[(b)] Now assume that $n_1,\ldots, n_k$ are pairwise coprime. Prove that $K$ contains at least $2^k$
+distinct subfields $L$ with $[L:\dbQ]=2$. 
+\item[(c)] Keep the extra assumption from (b). Use (b) to prove that $[K:\dbQ]=2^k$.  
+\end{itemize}
+
+\skv
+{\bf Problem 5:} Let $p$ be an odd prime, $\omega=e^{2\pi i/p}$, $K=\dbQ(\omega)$
+and $M$ the unique subfield of $K$ with $[M:\dbQ]=2$. Let $m$ be a generator of $(\dbZ/p\dbZ)^{\times}$
+and $\zeta=\sum_{i=0}^{(p-3)/2} \omega^{m^{2i}}$.
+At the end of Lecture 18 notes posted on collab it is proved
+that $\zeta\in M$ (we did not get to this part during class; read it before starting on this problem).
+\begin{itemize}
+\item[(a)] Prove that $\zeta\not\in\dbQ$ and deduce that
+$M=\dbQ(\zeta)$. {\bf Hint:} Assume that $\zeta\not\in\dbQ$ and deduce that $\deg_{\dbQ}(\omega)<p-1$, thereby
+reaching a contradiction.
+\item[(b)] Prove by direct computation that if $p=5$, then $M=\dbQ(\sqrt{5})$.
+\item[(c)] Let $S$ be the set of all elements of $(\dbZ/p\dbZ)^{\times}$ representable 
+as squares. Prove that $\zeta=\sum_{s\in S}\omega^s$.
+\item[(d)] Prove that $-1\in S$ if and only if $p\equiv 1\mod 4$
+\item[(e)] Prove that $\overline\zeta=\zeta$ if $p\equiv 1\mod 4$ and $\overline\zeta=-1-\zeta$
+if $p\equiv 3\mod 4$. Deduce that $M\subset \dbR$ if and only if $p\equiv 1\mod 4$.
+\item[(f)] Let $L$ be the unique subfield of $K$ with $[K:L]=2$. As proved in class,
+$L=K\cap \dbR$. Now prove that $M\subset \dbR$ if and only if $p\equiv 1\mod 4$ just 
+by using this fact and Galois correspondence (do not use an explicit description of $M$).
+{\bf Hint:} What is the relationship between the subgroups of $\Gal(K/\dbQ)$ corresponding
+to $L$ and $M$ depending on $p$ mod $4$?
+\end{itemize} 
+
+\end{document}

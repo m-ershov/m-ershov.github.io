@@ -1,0 +1,132 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+
+\bf\centerline{Homework Assignment \# 7}\rm
+\vskip .2cm
+{\bf Plan for the week of Mar 22:} Primitive element theorem (online Lecture 18). Structure of finite fields (see the first page and a half of online Lecture 22). Galois extensions and Galois groups (online lecture 19, Section 14.1 in DF), maybe start Galois correspondence (online lecture 20, Section 14.2 in DF).
+\vskip .1cm
+Here and in all future assignments ``online'' or ``online notes'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, March 26th.}\rm
+\vskip .1cm
+\skv
+{\bf Problem 1 (practice):} \rm Let $F$ be a field and $\Omega$ a subset of $F[x]$.
+Use the existence and uniqueness of algebraic closures to prove that
+there exists a unique splitting field for $\Omega$ over $F$ up to
+$F$-isomorphism. {\bf Hint:} Use the fact that any splitting field 
+$K$ for $\Omega$ lies in some algebraic closure of $F$ (this was proved at the beginning
+of Lecture~12 on March 16).
+\skv
+
+{\bf Problem 2:} Let $K/F$ be a field extension, and let $K_1$ and $K_2$
+be subfields of $K$ containing $F$ such that the extensions
+$K_1/F$ and $K_2/F$ are normal. Prove that the extensions
+$K_1 K_2/F$ and $K_1\cap K_2/F$ are also normal.
+Here $K_1 K_2$ is the {\it composite field of $K_1$ and $K_2$} (see  pp. 528-529 of DF for the definition).
+\skv
+
+\skv
+{\bf Problem 3:} \rm
+Prove the interesting part of Corollary 18.7 form online notes: if $K/L/F$ is a tower of algebraic extensions and $K/L$ and $L/F$ are separable, then $K/F$ is separable (see online notes for a hint). Give a detailed argument.
+\skv
+
+{\bf Problem 4:} 
+\begin{itemize}
+\item[(a)] Prove that if  $K/\dbQ$ is any field extension,
+then any field automorphism of $K$ must fix $\dbQ$ elementwise.
+
+\item[(b)] Prove that $\Aut(\dbR)$, the group of field automorphism of $\dbR$, is trivial.
+See [DF, Problem~7, p.567] for a sketch of the proof.
+\end{itemize}
+\skv
+Before doing problems 5-7 below read \S~13.6 in DF.
+\skv
+{\bf Problem 5:} \rm 
+Let $p$ be a prime, $n\geq 2$ an integer, $f(x)=x^n-p$, and let
+$K\subset \dbC$ be the splitting field for $f(x)$ over $\dbQ$.
+\begin{itemize}
+\item[(a)] Prove that $K=\dbQ(\sqrt[n]{p},\omega_n)$ where
+$\omega_n=e^{2\pi i/n}$.
+\item[(b)] Prove that $[K:\dbQ]\leq n\phi(n)$ where $\phi$
+is the Euler function.
+\item[(c)] Assume that $n$ is prime. Prove that inequality in (a)
+is equality.
+\item[(d)] Let $p=3$ and $n=12$. Prove that inequality in (a)
+is strict and find $[K:\dbQ]$. {\bf Hint:} Compute $\omega_{12}$
+explicitly.
+\end{itemize}
+\skv
+{\bf Problem 6:} Problem 4 in [DF, p.555]
+\skv
+{\bf Problem 7:} Problem 5 in [DF, p.555]
+\end{document}

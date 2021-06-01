@@ -1,0 +1,177 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+
+\bf\centerline{Homework Assignment \# 9}\rm
+\vskip .2cm
+{\bf Plan for the week of Apr 5:} On Tuesday we will talk about Galois groups of finite fields (see pages 2 and 3 of online lecture 22,
+Section 14.3 in DF) and Galois correspondence for cyclotomic fields (Section 14.5 in DF). On Thursday we will talk about cyclic Galois extensions (online lecture 23, beginning of 14.7 in DF).
+\vskip .1cm
+Here and in all future assignments ``online'' or ``online notes'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, April 9th.}\rm
+\vskip .1cm
+\skv
+{\bf Problem 0:} Read online Lecture 21 (there are some theorems and examples there which we have not discussed in class and which are relevant to this homework). Also read the last part of Lecture 15 notes posted on collab, starting with ``Another proof that
+$\Gal(K/\dbQ)\cong D_8$''.
+\skv
+{\bf Problem 1:} Let $f(x)\in \dbQ[x]$ be an irreducible polynomial
+of degree $n$, and let $K$ be a splitting field of $f(x)$.
+Label the roots of $f(x)$ by $1,\ldots, n$ (in some order),
+and let $\iota: \Gal(K/\dbQ)\to S_n$ be the associated embedding.
+
+\begin{itemize}
+\item[(a)] Assume $f(x)$ has at least one non-real root. Prove
+that the complex conjugation is an element of $\Gal(K/\dbQ)$
+of order $2$.
+
+\item[(b)] Assume that $f(x)$ has precisely two non-real roots. Prove
+that the image of the complex conjugation under the embedding $\iota$
+is a transposition.
+
+\item[(c)] Suppose that $n=\deg(f)$ is prime and again assume that $f(x)$ has precisely
+two non-real roots. Prove that $\Gal(K/\dbQ)$ is isomorphic to $S_n$ (this generalizes the result
+of HW\#8.4(c) from $n=3$ to arbitrary prime $n$).
+{\bf Hint:} $\Gal(K/\dbQ)$ must contain an element of order $n$ (why?)
+
+
+\end{itemize}
+
+{\bf Problem 2:} Let $K\subset\dbC$ be the splitting field of $f(x)=x^4-2$ over $\dbQ$.
+
+\begin{itemize}
+\item[(a)] Choose an order on the set of roots of $x^4-2$ and describe the associated embedding
+of $\Gal(K/\dbQ)$ to $S_4$.
+
+\item[(b)] Describe all subgroups of $\Gal(K/\dbQ)$ and the corresponding subfields of $K$.
+
+\end{itemize}
+
+\newpage
+\skv
+{\bf Problem 3:} Let $p$ and $q$ be distinct primes with $q>p$,
+and let $K/F$ be a Galois extension of degree $pq$. Prove that
+\begin{itemize}
+\item[(a)] There exists a field $L$ with $F\subseteq L\subseteq K$ and $[L:F]=q$
+
+\item[(b)] There exists a unique field $M$ with $F\subseteq M\subseteq K$ and $[M:F]=p$.
+\end{itemize}
+\skv
+
+{\bf Problem 4:} DF, Problem 17 on pages 582-583. 
+\skv
+{\bf Problem 5:} Let $K/F$ and $L/F$ be Galois extensions.
+
+\begin{itemize}
+\item[(a)] Prove that the extension $KL/F$ is also Galois and there is a natural
+embedding $\iota:\Gal(KL/F)\to \Gal(K/F)\times \Gal(L/F)$.
+
+\item[(b)]
+Assume now that $K/F$ and $L/F$ are both finite. Prove that the map $\iota$ in (a)
+is an isomorphism if and only if $K\cap L=F$.
+\end{itemize}
+
+{\bf Problem 6:} \rm Before doing this problem, read the first half
+of Section 14.4 in DF (pp. 591-593).
+
+{\bf Definition~1:} Let $L/F$ be a finite separable extension
+and let $\overline F$ be an algebraic closure of $F$ containing $L$.
+A subfield $L'$ of $\overline F$ is called
+{\bf conjugate to $L$ over $F$} if $L'=\sigma(L)$ for some $F$-embedding of
+$\sigma$ into $\overline F$. Note that $L/F$ is Galois if and
+only if $L$ does not have any $F$-conjugates besides $L$ itself.
+\skv
+{\bf Definition~2:} A finite extension $K/F$ is called
+a {\bf $p$-extension} if $K/F$ is Galois and $Gal(K/F)$ is a $p$-group.
+\skv
+\begin{itemize}
+\item[(a)] Let $L/F$ be a separable extension of degree $n$, and
+let $K$ be the Galois closure of $L$ over $F$ (see p. 594 in DF or the end of online Lecture~18 for the definition). 
+Prove that $K$ can be written as a compositum $L_1L_2\ldots L_n$
+where $L_1,\ldots L_n$ are (not necessarily distinct) conjugates of
+$L$ over $F$.
+
+\item[(b)] Let $K/F$ and $L/F$ be finite $p$-extensions. Prove
+that $KL/F$ is also a $p$-extension.
+
+\item[(c)] Suppose $K/L$ and $L/F$ are both $p$-extensions, and
+let $M$ be the Galois closure of $K$ over $F$ (note: we do
+not know whether $K/F$ is Galois or not). Prove that
+$M/F$ is also a $p$-extension. {\bf Hint:} first use (b) to show that
+$M/L$ is a $p$-extension.
+
+\item[(d)] Now assume only that $L/F$ is a separable extension
+with $[L:F]$ a power of $p$, and let $M$ be the Galois closure
+of $L$ over $F$. Prove that $[M:F]$ need not be a power of $p$.
+\end{itemize}
+\end{document}

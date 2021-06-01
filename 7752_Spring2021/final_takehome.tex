@@ -1,0 +1,182 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+%\baselineskip=16pt
+%\textheight=9.6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\Gal{{\rm Gal}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Algebra-II, Spring 2021. Final exam}\rm
+\skv
+\bf\centerline{due by 12pm on Saturday May 15th}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] the book by Dummit and Foote
+\item[(ii)] your class notes (including notes from 7751)
+\item[(iii)] your previous assignments (homeworks and midterms)
+\item[(iv)] any materials posted on the Math 7751/7752 collab sites and any materials posted on \url{http://people.virginia.edu/~mve2x/}
+\end{itemize}
+
+The use of any other resources is prohibited and will be considered a violation of the UVA honor code.
+
+
+\skv
+{\bf Scoring:} The exam contains 6 problems, each of which is worth 15 points. If $s_1\geq s_2\geq s_3\geq s_4\geq s_5\geq s_6$ are
+your scores on individual problems in decreasing order, your total will be $s_1+s_2+s_3+s_4+s_5+\max\{s_6-10,0\}$. Thus, the maximal
+possible total is 80, but the score of 75 will count as 100\%.
+
+
+\skv
+
+{\bf Problem 1: } Let $F$ be an algebraically closed field with ${\rm char}\, {F}\neq 2$. 
+\begin{enumerate}
+\item[(a)] Let $J$ be a Jordan block of size $n$ with eigenvalue $\lambda$ over $F$. Determine the Jordan canonical form of the matrix $J^2$. {\bf Hint: } Consider the cases $\lambda=0$ and $\lambda\neq 0$ separately.  
+\item[(b)] Let $A\in Mat_4(F)$. Determine necessary and sufficient conditions for $A$ to have a square root, i.e. for there to exist a matrix $B\in Mat_4(F)$ such that $A=B^2$. State your answer in the form: $A$ has a square root $\iff$ $JCF(A)$ satisfies certain conditions. Make sure to prove your answer. 
+\end{enumerate}
+
+\skv
+{\bf Problem 2: } Let $f(x)=(x^2-2)(x^3-3)\in\dbQ[x]$ and let $K\subseteq \dbC$  be the splitting field of $f(x)$ over $\dbQ$.
+\begin{itemize}
+\item[(a)] Prove that $\Gal(K/\dbQ)\cong S_3\times \dbZ/2\dbZ$
+\item[(b)] Describe explicitly all subfields $L$ of $K$ with $[L:\dbQ]=6$ by giving explicit generators for each subfield and determine the corresponding subgroup of $\Gal(K/\dbQ)$ for each such $L$. Make sure to prove that you found all such subfields/subgroups.
+%\item[(c)] Find a primitive element for $K$ over $\dbQ$ (and prove
+%your answer).
+\end{itemize}
+
+\newpage
+{\bf Problem 3: } Let $K/F$ be a finite Galois extension and $G=\Gal(K/F)$.
+\begin{itemize}
+\item[(a)] Assume  that $G$ is a simple group, let $\alpha\in K\setminus F$
+and $\mu_{\alpha,F}(x)$ the minimal polynomial of $\alpha$ over $F$.
+Prove that $K$ is a splitting field for $\mu_{\alpha,F}(x)$.
+
+\item[(b)] Let $n=[K:F]$, and fix integers $m$ and $l$ with $ml=n$.
+Find a condition on the \underline{subfield lattice of $K/F$} which is equivalent
+to the following: $G$ can be written as a semidirect product $G=A\rtimes B$
+for some subgroups $A$ and $B$ where $|A|=m$ and $|B|=l$. Make sure to prove your answer.
+
+
+\skv
+\noindent
+{\bf Note:} your answer should be stated in terms of subfields of $K/F$ and the integers $m$ and $l$; you can refer to properties like `normal extension' or `Galois extension', but you cannot mention any groups in your characterization.
+\end{itemize}
+\skv
+{\bf Problem 4: }In this problem $p$ denotes a fixed prime number. Let $P$ denote the set of all prime numbers. Recall from Lecture~23 that
+a {\it supernatural number} is a formal product $\alpha=\prod\limits_{q\in P}q^{a_q}$ where each $a_q\in\dbZ_{\geq 0}\cup\{\infty\}$.
+Note that natural numbers can be identified with supernatural numbers for which all $a_q$ are finite and only finitely many $a_q$ are nonzero.
+The goal of this problem is to construct a natural bijection between supernatural numbers and subfields of $\overline {\dbF_p}$
+(a fixed algebraic closure of $\dbF_{p}$).
+\skv
+For each $i\in\dbN$ let $F_i=\dbF_{p^i}\subseteq \overline{\dbF_p}$. Given a subfield $L$ of $ \overline{\dbF_p}$, define
+$I(L)=\{i\in\dbN: F_i\subseteq L\}$.
+\begin{itemize}
+\item[(a)] Prove that for any subfield $L$ of $\overline{\dbF_p}$ we have $L=\bigcup\limits_{i\in I(L)} F_i$.
+\item[(b)] Suppose that $I=I(L)$ for some subfield $L$ of $\overline{\dbF_p}$. Prove that $I$ satisfies the following two conditions:
+\begin{itemize}
+\item[(i)] $I$ is closed under divisors: for any $i\in I$, any positive divisor of $I$ also lies in $i$
+\item[(ii)] $I$ is closed under least common multiples: for any $i,j\in I$ we have $LCM(i,j)\in I$
+\end{itemize}
+\item[(c)] Now let $I$ be a subset of $\dbN$ satisfying conditions (i) and (ii) from (b), and let $L=\bigcup\limits_{i\in I}F_i$. 
+Prove that $L$ is a subfield and that $I(L)=I$ (it is clear that $I(L)$ contains $I$, but you need to prove the equality!)
+\item[(d)] Deduce from (b) and (c) that there exists a bijection between subfields of $ \overline{\dbF_p}$ and subsets of $\dbN$
+satisfying (i) and (ii)
+\item[(e)] Now construct a natural bijection between subsets of $\dbN$ satisfying (i) and (ii) and supernatural numbers. Your bijection
+should satisfy two conditions: 
+\begin{itemize}
+\item[(iii)] finite subsets of $\dbN$ correspond to natural numbers
+\item[(iv)] if $I$ and $J$ are two subsets of $\dbN$ satisfying (i) and (ii) and $\alpha_I=\prod\limits_{q\in P}q^{a_q}$ and
+$\beta_I=\prod\limits_{q\in P}q^{b_q}$ are the corresponding supernatural numbers, then $I\subseteq J$ $\iff$ $a_q\leq b_q$ for all $q\in P$.
+\end{itemize}  
+\end{itemize}  
+{\bf Problem 5: } [DF, Problem 12, page 654(a)-(c)]. Let $K$ be a subfield of $\dbC$ maximal with respect to the property ``$\sqrt{2}\not\in K$.''
+\begin{itemize}
+\item[(a)] Show that such a field $K$ exists.
+\item[(b)] Show that $\dbC$ is algebraic over $K$. {\bf Hint:} Assume that there exists $\alpha\in \dbC$ which is transcendental over $K$
+and consider the extension $K(\alpha)/K$.
+\item[(c1)] Let $L/K$ be a finite Galois extension, with $L\subseteq \dbC$. Prove that $\Gal(L/K)$ is cyclic of order $2^k$ for some $k\in\dbZ_{\geq 0}$. {\bf Hint:} What can you say about the subfield lattice of $L/K$ based on the definition of $K$? Use Galois correspondence to translate this property into a condition on $\Gal(L/K)$, and then show that the only groups satisfying that condition are cyclic groups of
+$2$-power order.
+\item[(c2)] Now use (c) to prove that any finite extension $L/K$, with $L\subseteq \dbC$, is Galois.      
+\end{itemize}
+\skv
+{\bf Problem 6: } Let $F$ be a field, with ${\rm char\,}(F)\neq 2$ 
+and $$A=F[x,y,z]/(x^2+y^2+z^2-4).$$ For every polynomial $p\in F[x,y,z]$ 
+we denote by $\bar p$ the image of $p$ in $A$. It is easy to see that $A$ is a domain (you need not prove this), so we can consider its field of fractions
+$K=Frac(A)$. 
+
+ \begin{itemize}
+ \item[(a)] Let $a=\bar x+\bar y+\bar z$, $b=\bar x\bar y+ \bar x\bar z + \bar y\bar z$
+and $c=\bar x\bar y\bar z$, and let $L=F(a,b,c)$, the subfield of $K$ generated by $F,a,b$ and $c$. 
+Prove that $K/L$ is a finite Galois extension and $\Gal(K/L)\cong S_3$. 
+\skv
+\noindent
+{\bf Hint:} First find a faithful action of $S_3$ on $K$ such that $L\subseteq K^{S_3}$.
+Then find a cubic polynomial $f(t)\in L[t]$ such that $K$ is a splitting field for $f$ over $L$. Then deduce (a) from these two results
+(and some theorems proved in class)
+\item[(b)] Prove that the extension $L/F$ is purely transcendental and find an explicit transcendence basis for it. 
+\end{itemize} 
+
+\end{document}

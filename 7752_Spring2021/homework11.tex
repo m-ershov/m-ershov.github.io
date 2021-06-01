@@ -1,0 +1,146 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\def\Im{\mbox{Im}\,}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+
+\bf\centerline{Homework Assignment \# 11}\rm
+\vskip .2cm
+{\bf Plan for the week of April 26-30.} Tuesday: finish the discussion of Galois correspondence for infinite Galois extensions. Thursday: transcendental extensions (section 14.8 in DF).
+\vskip .1cm
+Here and in all future assignments ``online'' or ``online notes'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, April 30th.}\rm
+\vskip .1cm
+{\bf Problem 1:} Prove the following analogue of Kummer's theorem for abelian extensions:
+Let $n\in\dbN$ and let $F$ be a field containing primitive $n^{\rm th}$ root of unity.
+\begin{itemize}
+\item[(a)] Let $K/F$ be a finite Galois extension such that $\Gal(K/F)$ is abelian
+of exponent dividing $n$. Then there exist $a_1,\ldots, a_t\in K$ s.t.
+$K=F(\sqrt[n]{a_1},\ldots,\sqrt[n]{a_t})$, or more precisely, there exist
+$\alpha_1,\ldots, \alpha_t\in K$ s.t.
+$K=F(\alpha_1,\ldots,\alpha_t)$ and $\alpha_i^n\in F$ for all $i$.
+{\bf Hint:} Use Kummer's theorem, the Galois correspondence and the classification theorem for finite abelian groups.
+
+
+\item[(b)] Conversely, suppose that $K=F(\sqrt[n]{a_1},\ldots,\sqrt[n]{a_t})$
+for some elements $a_1,\ldots, a_t\in F$. Prove that $K/F$ is Galois, and $\Gal(K/F)$
+is abelian of exponent dividing $n$.
+\end{itemize}
+{\bf Problem 2:} DF, problem 9 on p.636. By definition a {\it cyclic extension} is a Galois extension
+with cyclic Galois group.
+\vskip .1cm
+{\bf Problem 3:} DF, problem 19 on p.654. Note: we essentially discussed in class why (a),(b) and (c) are true, so the main thing to prove is (d), but you should still write down the complete solution.
+\vskip .1cm
+{\bf Problem 4:} In all parts of this problem $G$ is a fixed group. Given normal subgroups $M$ and $N$ of $G$ with $M\subseteq N$ let $\pi_{N,M}:G/M\to G/N$ be the natural projection
+(given by $\pi_{M,N}(gM)=gN$).
+\begin{itemize}
+\item[(a)] Let $\Omega$ be the poset of all normal subgroups of finite index in $G$ ordered
+by reverse inclusion ($N\leq M$ if and only if $M\subseteq N$). Prove that 
+$\Omega$ is a directed set and the quotient groups $\{G/N\}_{N\in\Omega}$ form an inverse
+system with respect to the transition maps $\pi_{N,M}$. The inverse limit
+$\varprojlim\limits_{N\in\Omega}G/N$ is called the {\it profinite completion} of $G$.
+{\bf Note:} One of the homework problems from Algebra-I is relevant for this problem.
+\item[(b)] Let $p$ be a fixed prime. Prove the analogue of (a) for $\Omega_p$ defined
+as the poset of all normal subgroups of $G$ which have index $p^k$ for some $k\in\dbZ_{\geq 0}$. The inverse limit $\varprojlim\limits_{N\in\Omega_p}G/N$ is called the {\it pro-$p$ completion} of $G$.
+\end{itemize}
+\vskip .1cm
+{\bf Problem 5:} 
+\begin{itemize}
+\item[(a)] Let $\mathcal C$ be the category of groups or rings. Consider natural numbers $\dbN$
+as a poset with respect to the usual ordering. Let $\{X_i\}_{i\in\dbN}$ be the inverse
+system in $\mathcal C$, and let $\{\pi_{ij}: X_j\to X_i\}_{i\leq j}$ be the transition maps. Prove that the inverse limit $\varprojlim\limits_{i\in\dbN} X_i$
+coincides with the subgroup (resp. subring) of the direct product $\prod\limits_{i\in\dbN} X_i$
+consisting of all sequences $(x_1,x_2,\ldots)$ such that $x_i\in X_i$ and 
+$\pi_{i,i+1}(x_{i+1})=x_i$ for all $i$.
+\item[(b)] Let $p\geq 2$ be an integer (we do NOT assume that $p$ is prime, although the latter is the most interesting case which explains the notation). For each $i\in\dbN$
+let $X_i=\dbZ/p^i\dbZ$. Then $\{X_i\}_{i\in\dbN}$ is an inverse system in the category
+of rings (where the transition maps $\pi_{ij}$ are natural projections). The inverse
+limit $$\varprojlim\limits_{i\in\dbN} X_i=\varprojlim\limits_{i\in\dbN} \dbZ/p^i\dbZ$$ is called the
+{\it ring of $p$-adic integers} and will be denoted by $\dbZ_{\widehat p}$ (it is common
+to denote $p$-adic integers simply by $\dbZ_p$ but we will not use the latter notation
+to avoid confusion with the finite field of order $p$). 
+
+Use (a) to prove
+that as a set $\dbZ_{\widehat p}$ can be identified with the set of formal expressions
+$\sum\limits_{i=0}^{\infty} a_i p^i$ where each $a_i$ is an integer between $0$ and $p-1$
+(very informally these are ``power series in $p$'') and the addition and multiplication
+are defined as follows: given two elements $\sum\limits_{i=0}^{\infty} a_i p^i, 
+\sum\limits_{i=0}^{\infty} b_i p^i$, write the coefficient sequences $a_0,a_1,\ldots$
+and $b_0,b_1,\ldots$ from right to left, one above the other, and then add and multiply using the usual carryover rules mod $p$ (the case $p=10$ will correspond exactly to the addition and multiplication algorithm you learn in school). 
+\item[(c)] Define $\iota: \dbZ\to \dbZ_{\widehat p}$ by
+$\iota(n)=(n+p\dbZ, n+p^2\dbZ,\ldots)$. Prove that $\iota$ is an injective 
+ring homomorphism and that under the identification from (b) $\iota (\dbZ_{\geq 0})$ is equal to the set of finite sums
+$\sum\limits_{i=0}^{k} a_i p^i$. Then express $\iota(-1)$ in the form 
+$\sum\limits_{i=0}^{\infty} a_i p^i$ with $0\leq a_i\leq p-1$.
+\end{itemize}
+\end{document}

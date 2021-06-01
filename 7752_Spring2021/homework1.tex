@@ -1,0 +1,125 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 1. }\rm
+\vskip .2cm
+{\bf Plan for the first two classes:} Algebras over rings and their tensor products (end of 10.4, online lecture 5),  Tensor, symmetric and exterior algebras (11.5, online lecture 6). Perhaps we will also start talking about modules over PID (12.1, online lecture 7).
+\vskip .1cm
+Here and in all future assignments ``online'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, February 5th.}\rm
+\vskip .1cm
+{\bf Problem 1.} Prove Schur's lemma [DF, problem 11, p.356].
+\vskip .1cm
+{\bf Problem 2.} Let $G$ be a group and $\dbZ[G]$ its integral group ring
+(see online Lecture 1 or DF, \S~7.2 for definition). Let $M$ be an abelian group. Show that there is a natural
+bijection between $\dbZ[G]$-module structures on $M$ and actions of $G$
+on $M$ by group automorphisms (that is, actions of $G$ on $M$ such that for any
+$g\in G$ the map $m\mapsto gm$ is an automorphism of the abelian group $M$).
+\skv
+ 
+\vskip .1cm
+
+{\bf Problem 3.} Let $R$ be a commutative ring, $\{N_{\alpha}\}$ a collection
+of $R$-modules and $M$ another $R$-module.
+
+\begin{itemize}
+\item[(a)] (practice, [DF, problem 14, p.376 ]) Prove that $M\otimes (\oplus N_{\alpha})\cong \oplus (M\otimes N_{\alpha})$ as $R$-modules (tensor products are over $R$).
+
+\item[(b)] (see [DF, problem 15, p. 376]) Show by example that $M\otimes (\prod N_{\alpha})$ need not be isomorphic to $\prod (M\otimes N_{\alpha})$. {\bf Hint:} Use the result of one of the previous problems on p. 376.
+\end{itemize}
+\bf{Problem 4. }\rm Problem 17 on pp.376-377 of DF. 
+\skv
+\bf{Problem 5. }\rm (Problem 6 from the Algebra-I final): 
+Let $R$ be a commutative ring with $1$, $I$ an ideal of $R$ and 
+$M$ an $R$-module. Let $IM$ be the set of all elements of the form $\sum_{k=1}^n i_k m_k$ with $i_k\in I$ and $m_k\in M$.
+\begin{itemize}
+\item[(a)] Prove that $IM$ is a submodule of $M$
+\item[(b)] Prove that
+$$R/I\otimes_R M\cong M/IM$$
+as $R$-modules. {\bf Hint:} It is probably easiest to construct $R$-module
+homomorphisms in both directions and then show that they are mutually inverse.
+\item[(c)] Deduce the result of Problem 16(b) on p.376 of DF from (b).
+\end{itemize}
+\newpage
+
+\bf{Problem 6. }\rm 
+\begin{itemize}
+\item[(a)] Let $V$ be a finite-dimensional vector space over $\dbC$
+(complex numbers). Note that $V$ can also be considered as a vector space over $\dbR$,
+but $\dim_{\dbR} (V)=2 \dim_{\dbC}(V)$. Prove that $V\otimes_{\dbC} V$ is not isomorphic
+to $V\otimes_{\dbR} V$ as vector spaces over $\dbR$ and compute their dimensions over $\dbR$.
+
+\item[(b)] Let $R$ be a commutative integral domain (with $1$) and $F$ its field of fractions. Prove that
+$F\otimes_{R} F\cong F\otimes_{F} F\cong F$ as $F$-modules (later we will see that all these objects are actually isomorphic as $F$-algebras).
+
+\skv
+
+{\bf Note:} Recall that if $T$ and $S$ are rings with $1$,
+$M$ is a left $T$-module and $N$ is an $(S,T)$-bimodule, then $N\otimes_T M$ is a left $S$-module where the action of $S$
+on simple tensors is given by $s(n\otimes m)=(sn)\otimes m$ for all $s\in S, m\in M, n\in N$. The $F$-module structures on $F\otimes_{R} F$ and
+$F\otimes_{F} F$ are given by this construction (in both cases $S=M=N=F$ and $T=R$ in the first case and $T=F$ in the second case).
+\end{itemize}
+
+
+\end{document}

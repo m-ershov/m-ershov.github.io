@@ -1,0 +1,153 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\def\Im{\mbox{Im}\,}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+\def\eps{{\varepsilon}}
+
+\bf\centerline{Homework Assignment \# 12}\rm
+\vskip .2cm
+{\bf Plan for the week of May 3-7.} Exact sequences. Injective, projective and flat modules (section 10.5 in DF).
+\vskip .1cm
+Here and in all future assignments ``online'' or ``online notes'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, April 30th.}\rm
+\vskip .1cm
+\skv
+{\bf Problem 1:} This is a continuation of Problem~5 from Midterm\#2.
+Let $p$ be a prime, with $p\equiv 3\mod 4$, $\omega=e^{2\pi i/p}$, $K=\dbQ(\omega)$ and $L$ the unique subfield of $K$ with $[L:\dbQ]=2$. 
+Let $S$ be the set of elements of $(\dbZ/p\dbZ)^{\times}$ 
+representable as squares and $T$ the set of elements of 
+$(\dbZ/p\dbZ)^{\times}$ not representable as squares.
+\begin{itemize}
+\item[(a)] Prove that any $\alpha\in K$ can be uniquely represented
+as $\alpha=\sum_{s\in S}b_s \omega^s+\sum_{t\in T}c_t \omega^t$,
+with $b_s,c_t\in\dbQ$.
+\item[(b)] Let $\alpha\in K$. Prove that $\alpha\in L$ if and only
+if in the above decomposition of $\alpha$ all $b_s$ are the same
+and all $c_t$ are the same.
+\item[(c)] Let $\zeta=\sum_{s\in S}\omega^s$, $\eta=\zeta\overline\zeta$,
+and write $\eta=\sum_{s\in S}b_s \omega^s+\sum_{t\in T}c_t \omega^t$ as in (a).
+Prove that 
+\begin{itemize}
+\item[(i)] there exists $d\in \dbQ$ such that $b_s=c_t=d$
+for all $s$ and $t$ and
+\item[(ii)] $\sum_{s\in S}b_s+\sum_{t\in T}c_t=\frac{(p-1)^2}{4}-\frac{p\cdot (p-1)}{2}=-\frac{(p-1)(p+1)}{4}$
+\end{itemize}
+\item[]
+\item[(d)] Use (c) to prove that $\eta=\frac{p+1}{4}$ and deduce that 
+$L=\dbQ(\sqrt{-p})$.
+\end{itemize}
+\skv
+{\bf Problem 2:} Let $I$ be a poset. Let $\{j_n\}_{n\in\dbN}$ be an infinite strictly increasing sequence in $I$, that is,
+$j_n<j_{n+1}$ for all $n$. We will say that $\{j_n\}$ is {\it dominant} if for every $i\in I$ there exists $n\in\dbN$
+such that $i\leq j_n$ (note that the existence of such a sequence ensures that $I$ is a directed set).
+
+Suppose now that $I$ is a poset which contains a dominant strictly increasing sequence $\{j_n\}_{n\in\dbN}$, let
+$\{X_i\}_{i\in I}$ be an inverse system of sets, groups or rings, and let $\{X_{j_n}\}_{n\in \dbN}$ be the subsystem
+consisting of objects index by elements of $\{j_n\}$ (with the same transition maps). Prove that
+$$\varprojlim\limits_{i\in\dbN}X_i \cong \varprojlim\limits_{n\in\dbN}X_{j_n}. \eqno (***)$$
+Note that the limit on the right-hand side can be described more explicitly using HW\#11.5(a) (this is an explanation
+of why the statement of Problem~2 is useful, rather than a hint on how to prove the isomorphism).
+{\bf Hint:} It is probably most convenient to define a natural morphism from LHS to RHS in (***) (this can be done for any
+sequence $\{j_n\}$) and then prove that the map is bijective (using the fact that $\{j_n\}_{n\in\dbN}$ is strictly increasing and
+dominant).
+\skv
+{\bf Problem 3:} Let $\widehat \dbZ$ be the profinite completion of $\dbZ$. It is defined as the inverse
+limit $\varprojlim\limits_{i\in\dbN} \dbZ/i\dbZ$ where $\dbN$ is considered as a poset with respect to the divisibility partial order
+($i\leq j$ $\iff$ $i\mid j$) and the maps $\pi_{ij}:\dbZ/j\dbZ\to \dbZ/i\dbZ$ (with $i\mid j$) are natural projections.
+Also recall that for each prime $p$ the ring of $p$-adic integers $\dbZ_{\widehat p}$ is defined as the inverse limit
+$\varprojlim\limits_{n\in\dbN} \dbZ/p^n\dbZ$ (this time $\dbN$ is a poset with the usual order and the transition maps are the same).
+Prove the following isomorphism of rings:
+$$\widehat \dbZ\cong \prod\limits_{p}\dbZ_{\widehat p}$$
+where the product is taken over all primes. This result can be thought of as the ``profinite Chinese Remainder Theorem''. 
+{\bf Hint:} This can be proved in many different ways. One possible approach is to choose a dominant strictly increasing sequence
+in $\dbN$ with divisibility partial order, and then use the isomorphism from Problem~2 in conjunction with the usual Chinese Remainder Theorem.
+\skv
+{\bf Problem 4:} Let $P=\{p_1<p_2<\ldots\}$ be the set of all prime numbers enumerated in increasing order, let $K=\dbQ(\{\sqrt{p}: p\in P\})$.
+\begin{itemize}
+\item[(a)] Prove that $G=\Gal(K/\dbQ)$ is isomorphic to $\dbZ_2^{\infty}$ (product of countably many copies of $\dbZ_2$)
+via the map $\sigma\mapsto (\eps_1(\sigma),\eps_2(\sigma),\ldots)$ where 
+$$
+\eps_i(\sigma)=\left\{
+\begin{array}{ll}
+0 & \mbox{ if } \sigma(\sqrt{p_i})=\sqrt{p_i}\\
+1 & \mbox{ if } \sigma(\sqrt{p_i})=-\sqrt{p_i}.
+\end{array}
+\right.
+$$
+{\bf Note:} You can use the representation of $\Gal(K/\dbQ)$ as an inverse
+limit of finite groups (as in HW\#11.3) in conjunction with Problem~2, but you can also give a direct argument.
+\item[(b)] Describe explicitly all closed subgroups of index $2$ in $G$ and their fixed subfields (you can start with subfields and then use the Galois correspondence to describe the subgroups, but you also do things in the opposite order).
+\item[(c)] Now prove that $G$ has a non-closed subgroup of index $2$. {\bf Hint:} $G$ has exponent 2, so you can think of it as vector space
+over $\dbF_2$.
+\end{itemize} 
+\end{document}

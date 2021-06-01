@@ -1,0 +1,168 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 2. }\rm
+\vskip .2cm
+{\bf Plan for the week of Feb 8:}  Modules over PIDs (12.1, online lectures 7-9). At the beginning of Tue class we will probably also briefly discuss a characterization of modules over $F[x]$, $F$ a field (see DF, pp. 340-341 and online lecture 1).
+\vskip .1cm
+Here and in all future assignments ``online'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, February 12th.}\rm
+\vskip .1cm
+{\bf Problem 1.} Problem 25 on pp. 377 of DF. Deduce that for any commutative ring $R$ with $1$ we have $R[x]\otimes_R R[y]\cong R[x,y]$ as $R$-algebras (here $R[x]$ and $R[y]$ are isomorphic copies of the ring of polynomials over $R$ in 1 variable and $R[x,y]$ is the ring of polynomials over $R$ in 2 commuting variables).
+\vskip .1cm
+{\bf Problem 2.} 
+\begin{itemize}
+\item[(a)] Finish the proof of the fact that $A=\dbC\otimes_{\dbR}\dbC$ and $B=\dbC \times \dbC$ are isomorphic as $\dbC$-algebras. Recall that in class we constructed a  map $\phi: A\to B$ as a composition of four ring isomorphisms $\phi_1,\ldots, \phi_4$. What you have to do is describe each  $\phi_i$ explicitly and deduce that each $\phi_i$ is $\dbC$-linear (and hence also a $\dbC$-algebra isomorphism).
+\item[(b)] Explain why $\{1\otimes 1, 1\otimes i\}$ is a basis for $A$ over $\dbC$. Now compute $\phi(1\otimes 1)$ and
+ $\phi(1\otimes i)$ where $\phi$ is an isomorphism from (a) (note that $\phi$ is completely determined by its values on a $\dbC$-basis of $A$).
+ \item[(c)] Prove that there exist precisely $2$ $\dbC$-algebra isomorphisms from $A$ to $B$. {\bf Hint:} First prove $\geq 2$ and then $\leq 2$.
+ See the last page for a more detailed hint.
+\end{itemize}
+
+
+\bf{Problem 3. }\rm The main goal of this problem is to classify
+$2$-dimensional $\dbR$-algebras ($\dbR$=reals), that is,
+$\dbR$-algebras which are 2-dimensional as vector spaces over $\dbR$.
+\skv
+Let $F$ be a field with ${\rm char}(F)\neq 2$, and
+let $A$ be a $2$-dimensional $F$-algebra with $1$.
+\begin{itemize}
+\item[(a)] Let $u\in A$ be any element which is not an $F$-multiple of $1$.
+Prove that
+\begin{itemize}
+\item[(i)] $u$ generates $A$ as an $F$-algebra, that is, the minimal $F$-subalgebra of $A$ containing $u$ and $1$ is $A$ itself.
+\item[(ii)] $u$ satisfies a quadratic equation $au^2+bu+c=0$
+for some $a,b,c\in F$ with $a\neq 0$.
+\end{itemize}
+\item[(b)] Show that there exists $v\in A$ such that $v^2\in F$.
+{\bf Hint:} take any $u$ as in (a), and look for $v$ of the form
+$u+\beta$ with $\beta\in F$.
+\item[(c)] Deduce from (b) that $A$ is isomorphic as an $F$-algebra
+to  $F[x]/(x^2-c)$ for some $c\in F$. 
+\item[(d)] Prove that if $c=d^2$ for some $d\in F\setminus\{0\}$, then $F[x]/(x^2-c)\cong F\times F$.
+\item[(e)] Now let $F=\dbR$ (real numbers). Prove that in (c) one can choose
+$c=0,1$ or $-1$. Then prove that the algebras $\dbR[x]/(x^2+1)$, $\dbR[x]/(x^2-1)$ and $\dbR[x]/(x^2)$ 
+are pairwise non-isomorphic. {\bf Hint:} the algebras can be distinguished from
+each other by simple abstract properties.
+\end{itemize}
+
+\skv
+
+{\bf Problem 4. } Let $V$ and $W$ be finite dimensional vector spaces
+over a field $F$, let $\{v_1,\ldots, v_n\}$ be a basis of $V$
+and $\{w_1,\ldots, w_m\}$ a basis of $W$.
+
+Let  $\phi: V\otimes_F W\to Mat_{n\times m}(F)$ be the
+$F$-linear transformation such that $\phi(v_i\otimes w_j)=e_{ij}$
+where $e_{ij}$ is the matrix whose $(i,j)$-entry is equal to $1$ and all
+other entries are equal to $0$ (note that such transformation
+exists and is unique because $\{v_i\otimes w_j : 1\leq i\leq n, 1\leq j\leq m\}$
+is a basis for $V\otimes_F W$; furthermore, $\phi$ is an isomorphism
+since matrices $\{e_{ij}\}$ form a basis of $Mat_{n\times m}(F)$).
+
+Prove that for a matrix $A\in Mat_{n\times m}(F)$ the following are equivalent:
+\begin{itemize}
+\item[(a)] $A=\phi(v\otimes w)$ for some $v\in V, w\in W$ (note: $v$ and $w$
+need not be elements of the above bases)
+
+\item[(b)] $rk(A)\leq 1$.
+\end{itemize}
+
+{\bf Problem 5 (practice).} Let $R=\oplus_{n=0}^{\infty} R_n$ be a graded ring.
+An element $r\in R$ is called \emph{homogeneous} if $r\in R_n$
+for some $n$. 
+
+\sk Any $r\in R$ can be uniquely written as $r=\sum_{n=0}^{\infty} r_n$
+where $r_n\in R_n$ and only finitely many $r_n$'s are nonzero. The elements
+$\{r_n\}$ are called the \emph{homogeneous components of $r$}.
+
+(a) Let $I$ be an ideal of $R$. Prove that the following are equivalent:
+\begin{itemize}
+\item[(i)] $I$ is a graded ideal, that is, $I=\oplus_{n=0}^{\infty} I\cap R_n$  
+\item[(ii)] For each $r\in I$ all homogeneous components of $r$ also lie in $I$
+\end{itemize}
+
+(b) Let $I$ be an ideal of $R$ generated by homogeneous elements
+(possibly of different degrees). Prove that $I$ is graded.
+
+\skv
+{\bf Problem 6.} Before solving this problem read about the exterior algebras (see DF, \S~11.5 and the end of online Lecture~6).
+\begin{itemize}
+\item[(a)] Let $R$ be a commutative ring with $1$ and $M$ an $R$-module.
+Let $m_1,\ldots, m_k$ be elements of $M$ and $\sigma\in S_k$ a permutation.
+Prove that $m_{\sigma(1)}\wedge\ldots\wedge m_{\sigma(k)}=(-1)^{\sigma}
+m_1\wedge\ldots \wedge m_k$.
+\item[(b)] Use (a) to prove Proposition~6.5 from the online Lecture~6.
+\end{itemize}
+\newpage
+{\bf Extra Hint for Problem 2(c):} 
+\begin{itemize}
+\item To prove that there are at least $2$ $\dbC$-algebra isomorphisms from $A$ to $B$ show that either $A$ or $B$ has a non-trivial $\dbC$-algebra automorphism (the assertion is true for both $A$ and $B$, but you only need to prove it for one of them). 
+
+\item
+To prove $\leq 2$ find enough restrictions on $\psi(1\otimes 1)$ and 
+$\psi(1\otimes i)$ where $\psi:A\to B$ is a $\dbC$-algebra isomorphism to deduce that there are at most $2$ choices
+for the pair $(\psi(1\otimes 1), \psi(1\otimes i))$.
+\end{itemize}
+\end{document}

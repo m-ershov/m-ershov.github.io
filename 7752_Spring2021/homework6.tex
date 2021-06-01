@@ -1,0 +1,136 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\exp{{\rm exp}}
+\def\det{{\rm det}}
+\def\tr{{\rm tr}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+
+\bf\centerline{Homework Assignment \# 6}\rm
+\vskip .2cm
+{\bf Plan for the week of Mar 15:} Normal and separable extensions (13.4, 13.5 and online lectures 17, 18).
+\vskip .1cm
+Here and in all future assignments ``online'' refers to Algebra-II lectures posted on my Spring 2010 Algebra-II webpage
+\vskip .1cm
+\centerline{\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}}
+\vskip .1cm
+
+%{\bf Note on hints:} All hints are given at the end of the %assignment, each on a separate page.
+%Problems (or parts of problems) for which hint is available are %marked with *.
+
+\vskip .3cm
+
+\bf\centerline{Problems, due by 11:59pm on Friday, March 19th.}\rm
+\vskip .1cm
+\skv
+{\bf Problem 1:} \rm 
+
+\begin{itemize}
+
+\item[(a)] Let $K=\dbQ(\sqrt{2},\sqrt{3})$. Prove that $[K:\dbQ]=4$.
+
+\item[(b)] Let $L=\dbQ(\sqrt{2}+\sqrt{3})$. Prove that $L=K$ and hence $[L:\dbQ]=4$ by (a).
+\end{itemize}
+
+{\bf Problem 2:} \rm Let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$
+and let $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$.
+\begin{itemize}
+\item[(a)] Prove that $[K:\dbQ]=2^m$ for some $m\leq k$ and the set $P(S)=\{1\}\cup \{\sqrt{n} : n \mbox{ is a product of distinct elements of }S\}$ spans $K$ over $\dbQ$.
+
+\item[(b)] For each $0\leq j\leq k$ let $\dbQ_j=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_j})$ (we set $\dbQ_0=\dbQ$).
+Prove that $[K:\dbQ]<2^k$ if and only if $n_1$ is a complete square or
+there exists $2\leq i\leq k$ s.t. $\sqrt{n_i}=a+b\sqrt{n_{i-1}}$ for some $a,b\in\dbQ_{i-2}$.
+
+\item[(c)] Assume that the elements of $S$ are pairwise relatively prime
+and none of them is a complete square.
+Prove that $[K:\dbQ]=2^k$. {\bf Hint:} Use (b) and induction on $k=|S|$.
+\end{itemize}
+
+{\bf Problem 3:} \rm Let $F$ be a field, and let $\alpha$ be an algebraic element of odd degree
+over $F$ (recall that the degree of $\alpha$ over $F$ is equal to $[F(\alpha):F]$). Prove that
+$F(\alpha^2)=F(\alpha)$.
+\skv
+\skv
+{\bf Problem 4:} Let $K/F$ be a finite field extension, $n=[K:F]$, and fix some basis
+$\Omega=\{\alpha_1,\ldots, \alpha_n\}$
+for $K$ over $F$. For any $\alpha\in K$
+define $T_{\alpha}:K\to K$ by $T_{\alpha}(\beta)=\alpha\beta$. Note that $T_{\alpha}\in  End_F(K)$.
+Let $A_{\alpha}=[T_{\alpha}]_{\Omega}\in Mat_n(F)$ be the matrix of $T_{\alpha}$ with respect to $\Omega$.
+\begin{itemize}
+
+
+\item[(a)] (practice) Prove that the map $K\to Mat_n(F)$ given by $\alpha\mapsto A_{\alpha}$ is an injective ring homomorphism.
+\item[(b)] Prove that the minimal polynomial of $\alpha$ over $F$ and the minimal polynomial of $A_{\alpha}$
+coincide.
+
+\item[(c)] Find the minimal polynomial of the matrix
+$$A=\begin{pmatrix}  0&3& 5&0\\
+1&0& 0&5\\
+1&0& 0&3\\
+0&1& 1&0\\
+\end{pmatrix}$$
+without doing extensive computations.
+{\bf Hint:} Find an extension $K/\dbQ$ of degree $4$, a basis for $K$ over $\dbQ$
+and an element $\alpha\in K$ such that $A_{\alpha}=A$ in the notations of part (a).
+\end{itemize}
+
+
+
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=9.6in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Algebra-II, Spring 2021. Midterm \#1}\rm
+\skv
+\bf\centerline{due by 11:59pm on Tuesday Mar 16th}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] the book by Dummit and Foote
+\item[(ii)] your class notes (including notes from 7751)
+\item[(iii)] your previous assignments (homeworks and midterms)
+\item[(iv)] any materials posted on the Math 7751/7752 collab sites and any materials posted on \url{http://people.virginia.edu/~mve2x/}
+\end{itemize}
+
+The use of any other resources is prohibited and will be considered a violation of the UVA honor code.
+
+
+\skv
+{\bf Scoring:} The exam contains 5 problems, each of which is worth 12 points. If $s_1\geq s_2\geq s_3\geq s_4\geq s_5$ are
+your scores on individual problems in decreasing order, your total will be $s_1+s_2+s_3+s_4+\max\{s_5-8,0\}$. Thus, the maximal
+possible total is 52, but the score of 50 will count as 100\%.
+
+
+\skv
+\skv
+{\bf 1.} $\empty$
+\begin{itemize}
+\item[(a)] Let $R$ be a commutative domain (with $1$)
+and $F$ the field of fractions of $R$. Let $M$ and $N$ be $F$-modules,
+and let $\phi:M\to N$ be an isomorphism of $R$-modules. Prove that
+$\phi$ must be an isomorphism of $F$-modules.
+
+\item[(b)] Give an example of finitely generated $\dbC$-modules
+$M$ and $N$ and a map $\phi:M\to N$ such that $\phi$ is an isomorphism
+of $\dbR$-modules but not an isomorphism of $\dbC$-modules.
+
+\item[(c)] Let $M$ and $N$ be finitely generated $\dbC$-modules,
+and suppose that $M$ and $N$ are isomorphic as $\dbR$-modules.
+Prove that $M$ and $N$ are isomorphic as $\dbC$-modules.
+\end{itemize} \skv
+\newpage
+
+{\bf 2.} Let $R$ be a commutative ring with $1$, and let
+$M,N$ and $L$ be $R$-modules.
+\begin{itemize}
+\item[(a)] Suppose that $L$ is a quotient module of $M$. Prove that $L\otimes_R N$ is 
+(isomorphic to) a quotient module of $M\otimes_R N$. You are NOT allowed to use Dummit and Foote for this question (class and online notes should be sufficient).
+\item[(b)] Suppose that $M$ is finitely generated and $N$ is Noetherian.
+Prove that the $R$-module $M\otimes_R N$ is Noetherian.
+{\bf Hint:} Start with the case when $M$ is a free $R$-module.
+\item[(c)] Suppose that $L$ is a submodule of $M$. Is it always true
+(for any $R,M,N$ and $L$) that $M\otimes_R N$ contains a submodule 
+isomorphic to $L\otimes_R N$? Prove or give a counterexample.
+\end{itemize}
+
+\skv{\bf 3.} Let $R$ be a commutative ring (with 1) and let $M$ and $N$
+be $R$-modules.
+\begin{itemize}
+\item[(a)] Give an example showing that $T(M\oplus N)$ need not be isomorphic
+to $T(M)\otimes T(N)$ as rings. {\bf Hint:} Look for an example where
+$T(M)\otimes T(N)$ satisfies certain nice algebraic property, while
+$T(M\oplus N)$ does not.
+\item[(b)] Prove that $S(M\oplus N)$ is isomorphic to $S(M)\otimes S(N)$
+as $R$-algebras. {\bf Hint:} Use the universal property of symmetric algebras
+to construct a map in one direction and results from previous homeworks 
+to construct a map in the opposite direction. Then prove that the two maps
+are mutually inverse.
+\item[(c)] Now assume that $R$ is a field and $M$ and $N$ are finite-dimensional
+over $R$. Prove that $\bigwedge (M\oplus N)$ is isomorphic to
+$\bigwedge(M)\otimes \bigwedge(N)$ as $R$-modules but not necessarily
+as rings.
+\end{itemize}
+\skv
+{\bf 4.} Let $V$ be a finite-dimensional vector space over a field $F$,
+and let $T:V\to V$ be an $F$-linear map. Let $m$ be the number of invariant factors
+of $T$.
+\begin{itemize}
+\item[(a)] Prove that $m=1$ if and only if there exists $v\in V$ such that
+the smallest $T$-invariant subspace of $V$ containing $v$ is the entire $V$.
+\item[(b)] Assume that $m=1$ and $a(x)=x^6-1$ is the (unique) invariant factor
+of $T$. Find the number of distinct $T$-invariant subspaces of $V$
+in each of the following 4 cases: $F=\dbR$, $F=\dbC$, $F=\dbF_2$ (field with
+$2$ elements) and $F=\dbF_3$. 
+ \end{itemize}
+{\bf Hint:} Rephrase both (a) and (b) as questions about $F[x]$-modules.
+In (b), the answers in the 4 cases are all finite and all different.
+\skv
+\skv
+{\bf 5.} Let $F$ be an algebraically closed field, let $A\in Mat_n (F)$
+for some $n\in\dbN$, and let $C$ be the centralizer of $A$ in $Mat_n (F)$.
+Prove that $$dim_F(C)\geq n.$$ {\bf Hint:} First assume that $A$ is in Jordan
+canonical form and has just one Jordan block; then consider the case when
+$A$ is an arbitrary matrix in Jordan canonical form, and finally prove
+the statement for general $A$.
+
+\end{document}
