@@ -1,0 +1,104 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#2}\rm
+\vskip .1cm
+{\bf Plan for next week:} PIDs, continued (\S~8.2), UFDs (\S~8.3), polynomial rings over UFDs (\S~9.3).
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Thu, September 10th}
+\vskip .1cm
+
+{\bf 1.} Let $R$ be a finitely generated ring (not necessarily with $1$). Use Zorn's lemma to show that $R$ has a  
+maximal subring (by definition a maximal subring is a maximal element of the set of  
+proper subrings of $R$ partially ordered by inclusion). Give a detailed argument. 
+%{\bf Hint:} The key step is to show 
+%that  if $\mathcal C$ is a chain of proper subrings of $G$, then the union of subrings in this 
+%chain is not the entire $R$.
+\skv
+{\bf 2.} Let $R$ be a commutative ring with $1$. The {\it nilradical} of $R$ denoted $Nil(R)$ is the set of all nilpotent elements of $R$, that is $$Nil(R)=\{a\in R : a^n=0 \mbox{ for some }n\in\dbN\}.$$ Prove that 
+\begin{itemize}
+\item[(a)] $Nil(R)$ is an ideal of $R$ 
+\item[(b)] $Nil(R)$ is contained in every prime ideal of $R$. Later we will show that $Nil(R)$ is equal to the intersection of all prime ideals.
+\end{itemize}
+\skv
+{\bf 3.} Let $R$ be a commutative ring with $1$, and let $D$ be a subset of $R$ which is closed under multiplication such that 
+$1\in D$ and $0\not\in D$.
+\begin{itemize}
+\item[(a)] Prove that the relation $\sim$ in the definition of rings of fractions $RD^{-1}$ is an equivalence relation
+\item[(b)] The operations $+$ and $\cdot$ on $RD^{-1}$ (given by $\frac{r_1}{d_1}+\frac{r_2}{d_2}=\frac{r_1 d_2+r_2 d_1}{d_1 d_2}$
+and $\frac{r_1}{d_1}\cdot\frac{r_2}{d_2}=\frac{r_1 r_2}{d_1 d_2}$) are well defined.
+\end{itemize}
+\skv
+{\bf 4.} Let $R=\dbZ_{14}$, $D=\{\bar 1,\bar 2,\bar 4,\bar 8\}$ (note that $D$ is multiplicatively closed
+but it does contain zero divisors). Prove that the localization $RD^{-1}$ is isomorphic to $\dbZ_{7}$.
+{\bf Hint:} What can you say about the map $\iota:R\to RD^{-1}$ in this case?
+\skv
+\skv
+{\bf 5.} Let $\dbZ[i]=\{a+bi: a,b\in\dbZ\}$ be the ring of Gaussian integers.
+\begin{itemize}
+\item[(a)] Prove that $\dbZ[i]$ is a Euclidean domain.
+\item[(b)] Prove that $\dbZ[i]\cong \dbZ[x]/(x^2+1)$
+\end{itemize}
+\skv
+{\bf 6.} Let $D$ be a positive integer such that $D\equiv 3\mod 4$, and let
+$R=\dbZ[\frac{1+\sqrt{-D}}{2}]$, that is, $R$ is the minimal subring of $\dbC$ containing $\dbZ$ and $\frac{1+\sqrt{-D}}{2}$.
+
+\begin{itemize}
+\item[(a)] Prove that $R=\{a+ b \frac{1+\sqrt{-D}}{2} : a,b\in\dbZ \}$. It should be clear from your argument where the assumption $D\equiv 3\mod 4$ is used (otherwise the result is simply not true).
+
+\item[(b)] Assume that $D=3, 7$ or $11$. Prove that $R$ is a Euclidean domain. {\bf Hint:} It is important to use the right Euclidean norm $N$. Before claiming that your $N$ is multiplicative, better check it is actually true. Your argument should ``barely'' work for
+$D=11$; if it still ``works'' for $D=15$, it is a wrong argument.
+\end{itemize} 
+\end{document}

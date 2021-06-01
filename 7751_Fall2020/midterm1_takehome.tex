@@ -1,0 +1,123 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=9.6in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Algebra-I, Fall 2020. Midterm \#1}\rm
+\skv
+\bf\centerline{due by 11:59pm on Friday Oct 9th}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use class notes (your notes or notes posted on collab),
+previous homework assignments and the book by Dummit and Foote. You may also use materials posted on any of my course pages. The use of other books or other online resources is prohibited.
+
+\skv
+{\bf Scoring:} The best 5 out of 6 problems will count, but there will be some sort of bonus for solving all 6 essentially correctly (I will make this more precise later).
+
+\skv
+{\bf 1.} Let $R$ be a commutative ring with $1$.
+\begin{itemize}
+\item[(a)] Let $S$ be another commutative ring with $1$, and let $\phi:R\to S$ be a ring homomorphism such that $\phi(1_R)=1_S$. Prove that
+if $P$ is a prime ideal of $S$, then $\phi^{-1}(P)$ is a prime ideal of $R$.
+\item[(b)] Let $a\in R$ be a non-nilpotent element. Prove that there exists a prime ideal of $R$ which does not contain $a$ without explicitly using Zorn's lemma (a proof using Zorn's lemma can be found in Chapter~15 of DF). {\bf Hint:} Apply (a) to a suitable $S$ and $\phi$
+and a result from class whose proof used Zorn's lemma.
+\end{itemize}
+{\bf Remark:} Recall that in HW\#2 it was proved that the nilradical $Nil(R)$ (the set of all nilpotent elements of $R$) is contained in every prime ideal of $R$. Combining this with (b), we deduce that $Nil(R)$ is equal to the intersection of all prime ideals.
+\skv
+{\bf 2.} Let $R$ be a commutative ring with $1$. Prove that the following are equivalent:
+\begin{itemize}
+\item[(a)] $R$ has no nonzero nilpotent elements
+\item[(b)] Every unit of the polynomial ring $R[x]$ is a constant polynomial
+\end{itemize}
+{\bf Hint:} The result of Problem~1 is helpful for the implication (a)$\Rightarrow$(b).
+\skv
+{\bf 3.}
+\begin{itemize}
+\item[(a)] Let $R$ be a subgroup of $(\dbQ,+)$ with $1\in R$, and suppose $\frac{m}{n}\in R$ where $m,n\in\dbZ$ and $gcd(m,n)=1$. Prove that $\frac{1}{n}\in R$.
+\item[(b)] Prove that $\dbQ$ has a maximal subring (hint: you can describe it explicitly)
+\item[(c)] Prove that $(\dbQ,+)$ has no maximal subgroup.
+\end{itemize}
+{\bf 4.} Let $R=\dbZ[i]$, the ring of Gaussian integers. Find (with complete proof!) the number of ideals of $R$ which contain $30$.
+\skv
+{\bf 5.} Let $R$ be a commutative Noetherian ring with 1. Prove that
+the ring $R[[x]]$ of power series over $R$ is also Noetherian.
+{\bf Hint:} As you may expect, this can be proved similarly 
+to the Hilbert basis theorem (HBT) except that you have to consider
+the lowest degree terms, not the highest degree terms (which may not exist). 
+In fact, the first part of the proof is even easier than in HBT, but you will 
+need some kind of limit argument at the end.
+\skv
+{\bf 6.} In parts (a)-(d) below $k$ is an algebraically closed field, $n$ a positive
+integer, $V_1,V_2$ are algebraic subsets of $k^n$ and $J_1$ and $J_2$
+are ideals of $k[x_1,\ldots, x_n]$.
+\begin{itemize}
+\item[(a)] Prove that $I(V_1\cup V_2)=I(V_1)\cap I(V_2)$.
+\item[(b)] Prove that $Z(J_1)\cap Z(J_2)=Z(J_1+J_2)$
+\item[(c)] Prove that $I(V_1\cap V_2)=\sqrt{I(V_1)+ I(V_2)}$.
+\item[(d)] Give an example where
+$I(V_1\cap V_2)\neq I(V_1)+ I(V_2)$
+\item[(e)] Give an example of a prime ideal $J\subset \dbR[x,y]$ such that $Z(J)$ is reducible (that is, not empty and not irreducible).
+{\bf Hint:} Use the fact that $\sum_{i=1}^m a_i^2=0$ in $\dbR$ $\iff$ $a_i=0$ for all $i$.
+\end{itemize}
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\Ker{{\rm Ker}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#4}\rm
+\vskip .1cm
+{\bf Plan for next week:} Hilbert's Nullstellensatz (\S~15.3). Start Group Theory. I plan to review isomorphism theorems (\S~3.3), briefly talk about the commutator subgroups, automorphism groups (\S~4.4) and possibly the classification theorem for finitely generated abelian groups (\S~5.2).
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Thu, September 24th}
+\vskip .1cm
+\skv
+{\bf 1.} Give an example of a domain $R$ (other than a field or
+the zero ring) which has no irreducible elements. {\bf Hint:}
+Start with the ring of power series $R=F[[x]]$ where $F$ is a field.
+Then up to associates $x$ is the only irreducible element of $R$.
+Construct a larger ring $R_1\supseteq R$ s.t. $x$ is reducible in $R_1$, but
+$R_1\cong F[[x]]$. Then iterating the process construct
+an infinite ascending chain $R\subseteq R_1\subseteq R_2\subseteq \ldots$ and consider its union.
+\skv
+{\bf 2.} Let $R$ be a commutative Noetherian ring and $\phi:R\to R$
+a surjective ring homomorphism. Prove that $\phi$ must be an isomorphism.
+{\bf Hint:} Consider the ideals $\Ker(\phi^n),\, n\in\dbN$, where
+$\phi^n$ is $\phi$ composed with itself $n$ times.
+\skv
+{\bf 3.} Let $I$ be an ideal of $\dbZ[x]$, and suppose that $I$ contains a monic polynomial $f(x)$ of degree $n$. Prove that
+$I$ can be generated (as an ideal) by at most $n+1$ elements. 
+\skv
+{\bf 4.} DF, Problem~19 on p. 332. Make sure to read about the Buchberger's algorithm in 9.6 prior to solving this problem.
+\skv
+{\bf 5.} Let $k$ be a field.
+Recall that an algebraic set $V\subseteq k^n$ is called \underline{irreducible} 
+if $V\neq\emptyset$ and $V$ cannot be written as the union $V=V_1\cup V_2$ where
+$V_1$ and $V_2$ are both algebraic, with $V_1\neq V$ and $V_2\neq V$.
+\begin{itemize}
+\item[(a)] (practice) Prove that $V$ is irreducible if and only if its vanishing ideal
+$I(V)$ is prime.  
+\item[(b)] It is not hard to prove that any algebraic set $V$
+can be uniquely written as a union of finitely many algebraic subsets 
+$$V=\cup_{i=1}^k V_i$$ where $V_i$'s are irreducible and do not contain
+each other (you can assume this as a fact). Such $V_i$'s are called the \bf irreducible components of $V$ \rm.
+\skv
+
+Assume that $k$ is infinite, and 
+let $$V=Z(xy-y, x^2z-z)\subset k^3,$$ the set of common zeroes of $xy-y$
+and $x^2z-z$. Find irreducible components of $V$ and their vanishing ideals (with justification!).
+The answer will depend on $char(k)$, the characteristic of $k$.
+\end{itemize}
+\skv
+{\bf 6.} Let $k$ be a field and $n\in\dbN$. The {\bf Zariski topology} on $k^n$ is the unique topology in which closed subsets
+are precisely the algebraic subsets of $k^n$.
+\begin{itemize}
+\item[(a)] Check the topology axioms for the Zariski topology, that is prove that,
+\begin{itemize}
+\item[(i)] If $V$ and $W$ are algebraic, then $V\cup W$ is algebraic
+\item[(ii)] If $\{V_i\}_{i\in I}$ is any collection of algebraic subsets, then $\bigcap_{i\in I} V_i$ is also algebraic
+\end{itemize}
+\item[(b)] Prove that $Z(I(Y))=\overline Y$ for every $Y\subseteq k^n$ where $\overline Y$ is the closure of $Y$ in the Zariski topology.
+\end{itemize}
+\skv
+
+In Problem 7 we identify the set $Mat_n(k)$ of $n\times n$ matrices over a field $k$
+with $k^{n^2}$ and thus can talk about Zariski topology on $Mat_n(k)$.
+\skv
+{\bf Problem 7:} Let $k$ be a field and $n\in\dbN$. Determine if the following subsets of $Mat_n(k)$ are Zariski closed
+ and prove your answer.
+\begin{itemize}
+\item[(a)] $SL_n(k)=\{A\in Mat_n(k): \det(A)=1\}$.
+\item[(b)] $GL_n(k)=\{A\in Mat_n(k): \det(A)\neq 0\}$.
+\item[(c)] The set of all matrices in $Mat_n(k)$ which have rank $\leq d$ for some fixed $1\leq d\leq n$ (the answer may be different for different $d$).
+\end{itemize}
+\end{document}

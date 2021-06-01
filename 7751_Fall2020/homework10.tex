@@ -1,0 +1,136 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{url}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\Tor{{\rm Tor}}
+\def\Inn{{\rm Inn\,}}
+\def\Ker{{\rm Ker\,}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#10}\rm
+\vskip .1cm
+{\bf Plan for next week:} Tensor products of modules and algebras (10.4). See also Lectures 3-5 at
+\skv
+\url{http://people.virginia.edu/~mve2x/7752_Spring2010/}
+\skv
+
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Sat, November 21st}
+\vskip .1cm
+\skv
+
+{\bf Convention:} All rings below are assumed to have $1$, and all modules are left modules.
+\skv
+
+{\bf 1.} Problem~\#4 from Midterm~\#2 (no need to submit if you received full credit on the midterm).
+\skv
+{\bf 2.} Let $R$ be a ring and let $M$ be an $R$-module.
+\begin{itemize}
+\item[(a)] Prove that for any $m\in M$, the map $x\mapsto xm$ from $R$ to $M$ is a homomorphism of $R$-modules
+(recall that $R$ is an $R$-module with the left multiplication action).
+\item[(b)] Assume that $R$ is commutative, and let $M$ be an $R$-module. Prove that $Hom_R(R,M)\cong M$ as $R$-modules. {\bf Note:} For the definition and justification
+of the $R$-module structure on the set $Hom_R(M,N)$ (where $R$ is commutative and $M$ and $N$ are $R$-modules) see Proposition~2 on page 346 in DF. {\bf Hint:}
+An element of $Hom_R(R,M)$ is uniquely determined by where it maps $1$.
+\end{itemize}
+\skv
+{\bf 3.} An $R$-module $M$ is called {\it simple (or irreducible)} if
+$M$ has no submodules besides $\{0\}$ and $M$. An $R$-module $M$ is called
+{\it indecomposable} if $M$ is not isomorphic to $N\oplus P$ for nonzero
+$R$-modules $N$ and $P$.
+\begin{itemize}
+\item[(a)] Prove that every simple module is indecomposable
+\item[(b)] Describe (with proof) all simple $\dbZ$-modules and all finitely generated
+indecomposable $\dbZ$-modules. Deduce that an indecomposable module need not
+be simple.
+\end{itemize}
+\skv
+{\bf 4.} An $R$-module $M$ is called {\it cyclic} if $M$ is generated
+(as an $R$-module) by one element.
+\begin{itemize}
+\item[(a)] Prove that cyclic $R$-modules are precisely the ones which are isomorphic to $R/I$
+for some left ideal $I$ of $R$.
+\item[(b)] Prove that every simple module is cyclic. Then show that simple
+$R$-modules are precisely the ones which are isomorphic to $R/I$
+for some maximal left ideal $I$ of $R$.
+\end{itemize}
+\skv
+{\bf 5.} Let $R$ be a commutative domain, and let $I$ be a non-principal ideal of $R$. 
+Prove that $I$, considered as an $R$-module (with left-multiplication action) is indecomposable but not cyclic. 
+{\bf Hint:} One way to prove that $I$ is indecomposable is to show that any two elements of $I$ 
+are linearly dependent over $R$. {\bf Note:} As we will prove in Algebra-II, if $R$ is a principal
+ideal domain, every finitely generated indecomposable module is cyclic.
+\skv
+{\bf 6.} Let $R$ be a commutative ring.
+An $R$-module $M$ is called {\it torsion} if for any $m\in M$
+there exists nonzero $r\in R$ such that $rm=0$. An $R$-module $M$ is called {\it divisible} 
+if for any nonzero $r\in R$ we have $rM=M$. In other words, $M$ is divisible if
+for any $m\in M$ and nonzero $r\in R$ there exists $x\in M$ such that $rx=m$.
+
+\begin{itemize}
+\item[(a)] Suppose that $M$ is a torsion $R$-module and $N$ is a divisible $R$-module.
+Prove that $M\otimes_R N =\{0\}$.
+
+\item[(b)] Let $M=\dbQ/\dbZ$ considered as a $\dbZ$-module. Prove that
+$M\otimes _{\dbZ} M=\{0\}$.
+\end{itemize}
+
+\skv
+{\bf 7.} Let $R$ be a commutative ring, and let $M$ be a free 
+$R$-module with basis $e_1,\ldots, e_k$. Prove that the element
+$e_1\otimes e_2+e_2\otimes e_1\in M\otimes M$ is not representable as a simple tensor
+$m\otimes n$ for some $m,n\in M$. {\bf Note:} You may want to start with the case where $R$ is a domain (where the proof is a little bit easier)
+and then think how to modify the argument in the general case.
+\end{document}

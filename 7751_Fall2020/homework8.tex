@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn\,}}
+\def\Ker{{\rm Ker\,}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#8}\rm
+\vskip .1cm
+{\bf Plan for next week:} Classification of finitely generated abelian groups with applications (5.2). A very brief discussion of nilpotent and solvable groups (6.1). Free groups (6.3).
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Fri, October 30th}
+\vskip .1cm
+\skv
+
+{\bf 1.} Let $n\geq 3$ be an integer and let $S_n$ be the symmetric group on $\{1,2,\ldots, n\}$. Let $H$ be a subgroup of $S_n$ with $[S_n:H]=n$. Prove that $$H\cong S_{n-1}.$$ {\bf Hint:} Start by constructing a suitable action of $S_n$ associated to $H$. 
+You may use the description of normal subgroups of $S_n$ (the result for $n\geq 5$ follows very easily from the fact that $A_n$ is simple).
+\begin{itemize}
+\item[(i)] If $n\neq 4$, the only normal subgroups of $S_n$ are $S_n$, $A_n$ and $\{1\}$
+\item[(ii)] The only normal subgroups of $S_4$ are $S_4$, $A_4$, $V_4$ (the Klein 4-group) and $\{1\}$
+\end{itemize}
+\skv
+
+{\bf 2.} Let $\Omega$ be an infinite countable set (for simplicity you may assume that $\Omega=\dbZ$,
+the integers). Let $S(\Omega)$ be the group of all permutations of $\Omega$.
+A permutation $\sigma\in S(\Omega)$ is called {\it finitary} if it moves
+only a finite number of points, that is, the set $\{i\in\Omega : \sigma(i)\neq i\}$
+is finite. It is easy to see that finitary permutations form a subgroup of $S(\Omega)$
+which will be denoted by $S_{fin}(\Omega)$. Finally, let $A_{fin}(\Omega)$ be the subgroup
+of even permutations in $S_{fin}(\Omega)$ (note that it makes sense to talk about
+even permutations in $S_{fin}(\Omega)$, but not in $S(\Omega)$).
+\begin{itemize}
+\item[(a)] Prove that the group $A_{fin}(\Omega)$ is simple and that $A_{fin}(\Omega)$
+is a subgroup of index two in $S_{fin}(\Omega)$. {\bf Hint:} To prove the first
+assertion solve problem 5 in [DF, page 151]. 
+\item[(b)] Prove that $A_{fin}(\Omega)$ and $S_{fin}(\Omega)$ are both normal in $S(\Omega)$.
+\item[(c)] Prove that neither of the groups $S(\Omega)$ and $S_{fin}(\Omega)$ is finitely generated. {\bf Hint:} The two groups are not finitely generated for completely
+different reasons.
+\item[(d)] Construct a finitely generated subgroup $G$ of $S(\Omega)$ which contains
+$S_{fin}(\Omega)$. {\bf Note:} This example shows that a subgroup of a finitely
+generated group does not have to be finitely generated.
+\end{itemize}
+\newpage
+
+{\bf 3.} Let $X$ be a non-empty set. Let $\{X_i\}_{i\in I}$ be a partition of $X$, that is, assume that each $X_i$ is non-empty and $X=\sqcup_{i\in I} X_i$. The partition $\{X_i\}_{i\in I}$ is called {\bf trivial} if either $|I|=1$ (so that $X_i=X$ for the unique $i\in I$)
+or $|X_i|=1$ for all $i\in I$; otherwise we will say that $\{X_i\}_{i\in I}$ is non-trivial.
+
+Suppose now that a group $G$ acts on $X$. A partition $\{X_i\}_{i\in I}$ of $X$ will be called invariant (with respect to the given action) if for all $i\in I$ and $g\in G$ there exists $j=j(i,g)\in I$ such that $g(X_i)=X_j$. The action is called {\bf primitive} if it does not admit any non-trivial invariant partition.
+\begin{itemize}
+\item[(a)] Prove that if $|X|> 2$, then a primitive action must be transitive
+\item[(b)] Prove that a 2-transitive action must be primitive
+\item[(c)] Given $n\in\mathbb N$, let $[n]=\{1,2,\ldots, n\}$. Find (with proof) all $n$ for which there exists an action of some $G$ on $[n]$
+which is transitive, but not primitive.
+\end{itemize}
+\skv
+
+{\bf 4.} In each of the following cases determine (with proof) if a given group $G$ decomposes as a semi-direct product
+$H\rtimes K$ or $K\rtimes H$ for a given subgroup $H$ (if the answer is yes, explicitly describe $K$).
+\begin{itemize}
+\item[(a)] $G=S_4$, $H=V_4=\{e,(12)(34), (13)(24), (14)(23)\}$
+\item[(b)] $G=GL_n(F)$ for some $n\in\dbN$ and a field $F$, $H=SL_n(F)$
+\item[(c)] $G=SL_2(F)$ for some field $F$ with ${\rm char}(F)\neq 2$, $H=Z(SL_2(F))=\{diag(\lambda,\lambda): \lambda=\pm 1\}$ (you can assume the second equality here without proof)
+\item[(d)] $G$ is the subgroup of $GL_n(F)$ consisting of all matrices $(a_{ij})\in GL_n(F)$ with $a_{i1}=1$ for $i>1$ (in other words,
+$G$ is the stabilizer of the line $Fe_1$ with respect to the standard action of $G$ on $F^n$) and $H$ is the subgroup consisting
+of all matrices $(a_{ij})\in GL_n(F)$ with $a_{11}=1$ and $a_{1i}=a_{i1}=0$ for $i>1$. 
+\end{itemize}
+\end{document}

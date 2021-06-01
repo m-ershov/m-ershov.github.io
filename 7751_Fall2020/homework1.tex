@@ -1,0 +1,137 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#1}\rm
+\vskip .1cm
+{\bf Plan for next week:} Existence of maximal ideal (\S~7.4), Rings of Fractions (\S~7.5), Euclidean Domains (\S~8.1), start 
+PIDs (\S~8.2).
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, September 3rd}
+\vskip .1cm
+
+{\bf 1.} Let $G$ be a group.
+
+\begin{itemize}
+\item[(a)] Define $\phi: G\to G$ by $\phi(g)=g^2$. Prove that $\phi$ is a homomorphism
+if and only if $G$ is abelian.
+
+\item[(b)] Assume that $x^2=1$ for any $x\in G$. Prove that $G$ is abelian.
+\end{itemize}
+
+\skv
+{\bf 2.} A group $G$ is called {\it finitely generated} if there exists a finite subset $S$ of $G$ such that
+$\la S\ra=G$.
+\begin{itemize}
+\item[(a)] Prove that every finite group is finitely generated. 
+
+\item[(b)] Let $\dbQ$ be the group of rational numbers with addition. Prove that $\dbQ$
+is not finitely generated. {\bf Hint:} If $G$ is an abelian group written additively
+and $S=\{s_1,\ldots, s_n\}$ is a finite subset of $G$, what is the general form of an element of the subgroup $\la S\ra$? 
+
+\item[(c)] Prove that any finitely generated subgroup of $\dbQ$ is cyclic.
+\end{itemize}
+
+\skv
+
+{\bf 3.} Prove that an element $\bar a\in\dbZ_n$ is invertible if and only if $gcd(a,n)=1$
+where $gcd$ is the greatest common divisor. You may use any standard theorem about integers
+(e.g. unique factorization), but do not use any theorems about $\dbZ_n$. Give a detailed argument.
+\skv
+
+{\bf 4.} Let $R$ and $S$ be rings with $1$, and let $\phi: R\to S$ be a ring homomorphism. Assume that
+$S$ is a domain and $\phi$ is not identically zero. Prove that $\phi(1_R)=1_S$.
+\skv
+
+{\bf 5.} 
+\begin{itemize}
+\item[(a)] Problem 7.3.34 in Dummit and Foote (DF). Note: in all exercises in 7.3 $R$ is assumed to be a ring  
+with $1$ (this is crucial for this problem). Also note that $IJ$ is NOT defined to be the set 
+$\{ij: i\in I, j\in J\}$;  by definition, $IJ$ is the set of finite sums of elements of the form 
+$ij$, with $i\in I, j\in J$.  
+
+\item[(b)] Read the section on the Chinese remainder theorem either in 7.6 or online notes from Lecture~2 (see the Lecture Notes folder in the Resources section on collab).
+\end{itemize}
+
+{\bf 6.} Before formulating this problem, we introduce some notations/definitions.
+
+{\bf A.} Given a ring $R$, let $\Aut_{\rm ring}(R)$ be the set of ring automorphisms of $R$ (that is, bijective ring homomorphisms from $R$ to $R$). Note that $\Aut_{\rm ring}(R)$ is a group with respect to composition. Let $\Aut_{\rm group}(R)$ be the set of group automorphisms of $(R,+)$ (that is, bijections from $R$ to $R$ must preserve addition, but not necessarily multiplication).
+Again $\Aut_{\rm group}(R)$ is a group, and it should be clear that $\Aut_{\rm ring}(R)$ is a subgroup of $\Aut_{\rm group}(R)$.
+\skv
+
+{\bf B.} Given a ring $S$ with $1$ and $n\in\dbN$, define $GL_n(S)=(Mat_n(S))^{\times}$ to be the group of units (=invertible elements) of the ring of $n\times n$ matrices over $S$. It is not difficult to show that if $S$ is commutative, then a matrix $A\in Mat_n(S)$ lies
+in $GL_n(S)$ if and only if $\det(A)\in S^{\times}$ (in particular, if $S$ is a field, then $A\in Mat_n(S)$ lies
+in $GL_n(S)$ if and only if $\det(A)\neq 0$).
+\skv
+
+Now the actual problem. Let $n\in\dbN$ and consider $\dbZ^n$ as a ring with component-wise addition and multiplication (thus $\dbZ^n$
+is just the direct product of $n$ copies of $\dbZ$). Prove that
+\begin{itemize}
+\item[(a)] $\Aut_{\rm group}(\dbZ^n)\cong GL_n(\dbZ)$
+\item[(b)] $\Aut_{\rm ring}(\dbZ^n)\cong S_n$
+\end{itemize}
+{\bf Hint:} In both cases an automorphism is completely determined by where it sends $e_1,\ldots, e_n$, elements of the standard basis
+of $\dbZ^n$ (why?) However, there are additional constraints, and these considerably stronger in the case of ring automorphisms.
+\skv
+{\bf 7.} 
+\begin{itemize}
+\item[(a)] Let $R$ be a commutative ring with $1$, let $X=\{x_1,\ldots, x_n\}$ be a finite subset of $R$, and 
+let $I=(X)$, the ideal of $R$ generated by $X$. Prove that $(X)$ is the set of elements of the form $\sum_{i=1}^n r_i x_i$ with $r_i\in R$.
+\item[(b)] State and prove the analogue of (a) without assuming that $R$ is commutative (but still assume that $R$ has $1$).
+\item[(c)] Let $F$ be a field, $n\in\dbN$ and $R=Mat_n(F)$. Prove that if $I$ is a nonzero ideal of $R$, then $I=R$.
+\end{itemize}
+
+
+ 
+\end{document}

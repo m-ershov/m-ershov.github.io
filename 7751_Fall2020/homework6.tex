@@ -1,0 +1,116 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn\,}}
+\def\Ker{{\rm Ker\,}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#6}\rm
+\vskip .1cm
+{\bf Plan for next week:} Direct and semi-direct products and further applications of Sylow theorems (5.4, 5.5). Jordan-H\"older Theorem (3.4).
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Thu, October 15th}
+\vskip .1cm
+\skv
+\skv
+{\bf 1.} Let $F$ be a finite field of order $q$.
+\begin{itemize}
+\item[(a)] Prove that $|GL_n(F)|=\prod_{k=0}^{n-1} (p^n-p^k)$. {\bf Note:} We outlined the argument in Lecture~14, so your main task is to carefully write down the details.
+\item[(b)] Prove that $|SL_n(F)|=\frac{|GL_n(F)|}{q-1}$ for any $n\geq 2$.
+\end{itemize}
+{\bf 2.} 
+\begin{itemize}
+\item[(a)] Solve Problem 10 on page 117 in Dummit and Foote.
+\item[(b)] Use Problem~10 to prove the index formula in Theorem~14.2 from class:
+$$[G:K]=\sum_{x\in\Omega}[H:H\cap xKx^{-1}]$$ 
+where $\Omega$ is a set of representatives of $(H,K)$-double cosets.
+\end{itemize}
+\skv
+{\bf 3.} An action of a group $G$ on a set $X$ is called {\it transitive} if it has
+just one orbit, that is, for any $x,y\in X$ there exists $g\in G$ with $g. x=y$.
+\begin{itemize}
+\item[(a)] Let $(G,X,.)$ be a group action. Prove that if $x,y\in X$ lie in the same orbit,
+then their stabilizers $Stab_G(x)$ and $Stab_G(y)$ are conjugate, that is, there exists $g\in G$
+with $g Stab_G(x) g^{-1} = Stab_G(y)$. 
+
+\item[(b)] Suppose that $(G,X,.)$ is a transitive action and fix $x\in X$. Prove that
+the kernel of this action is equal to $\bigcap\limits_{g\in G} g Stab_G(x) g^{-1}$
+
+\item[(c)] Now suppose that $G$ and $X$ are both finite, $(G,X,.)$ is a transitive 
+faithful action (where `faithful' means the kernel is trivial) and $G$ is abelian. 
+Prove that for any $g\in G\setminus \{1\}$ the fixed set $Fix_X(g)$ is empty. 
+Deduce that $|X|=|G|$. {\bf Hint:} Use (b).
+\end{itemize}
+\skv
+
+{\bf 4.} Let $C$ be the cube in $\dbR^3$ whose vertices have coordinates 
+$(\pm 1, \pm 1,\pm 1)$. Let $G$ be the group of rotations of $C$, that is rotations in $\dbR^3$ which preserve the cube (you may assume that $G$ is a group without proof). Let $X$ be the set of $4$ main diagonals of $C$ (diagonals
+connecting the opposite vertices). Note that $G$ naturally acts on $X$ and therefore we have a homomorphism $\pi:G\to Sym(X)\cong S_4$. Prove that $\pi$ is an isomorphism.
+
+{\bf Hint: } First show that $G$ acts transitively on the 8 vertices of $C$. Then show that the stabilizer of a fixed vertex had order $\geq 3$. This implies that $|G|\geq 24=|S_4|$. Finally, show that $\pi$ is injective (since $|G|\geq |S_4|$, this would force $\pi$ to be an isomorphism).
+\skv
+{\bf 5.} Let $G$ be a finite group, $P$ a Sylow $p$-subgroup of $G$ for some $p$
+and $H$ a subgroup of $G$ such that $N_{G}(P)\subseteq H\subseteq G$.
+Prove that $N_H(P)=N_G(P)$ and $[G:H]\equiv 1\mod p$.
+\skv
+{\bf 6.} Prove that a group of order $132=3\cdot 4\cdot 11$ has a normal Sylow $11$-subgroup. {\bf Hint:} first show that
+$G$ has a normal Sylow $p$-subgroup for some $p\in {2,3,11}$.
+\skv
+{\bf 7.} Explicitly describe a Sylow $p$-subgroup of $S_{p^2}$. See next page for a hint.
+\newpage
+{\bf Hint for 7:} The largest power of $p$ dividing $(p^2)!$ is $p^{p+1}$. First find a subgroup of order $p^p$
+in $S_{p^2}$ (this is quite easy) and then think how to enlarge it to a subgroup of order $p^{p+1}$. Proposition~10 on p. 125 of DF
+is very relevant here.
+\end{document}

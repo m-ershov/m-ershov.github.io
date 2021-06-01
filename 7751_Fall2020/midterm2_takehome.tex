@@ -1,0 +1,123 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=9.6in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Algebra-I, Fall 2020. Midterm \#2}\rm
+\skv
+\bf\centerline{due by 11:59pm on Saturday Nov 7th}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use class notes (your notes or notes posted on collab),
+previous homework assignments and the book by Dummit and Foote. You may also use materials posted on any of my course pages. The use of other books or other online resources is prohibited.
+
+\skv
+{\bf Scoring:} The best 4 out of 5 problems will count, but note that different problems are worth different numbers of points. The maximum possible
+score is 52, but the score of 50 will count as 100\%/
+\skv
+{\bf 1.} (12 pts) In all parts of this problem $G$ is a non-abelian group. A {\it maximal abelian} subgroup of $G$ is a maximal element of the set of all abelian subgroups of $G$ ordered by inclusion.
+\begin{itemize}
+\item[(a)] Prove that the union of all maximal abelian subgroups of $G$ is equal to $G$ and the intersection of all maximal abelian subgroups of $G$ is $Z(G)$.
+\item[(b)] Prove that $G$ has at least 3 maximal abelian subgroups. 
+\item[(c)] Give an example of $G$ which has exactly $3$ maximal abelian subgroups.
+\end{itemize}
+\skv
+{\bf 2.} (12 pts) Let $G$ be a group of order $105=3\cdot 5\cdot 7$.
+\begin{itemize}
+\item[(a)] Prove that $G$ has a normal Sylow $5$-subgroup OR a normal Sylow $7$-subgroup.
+\item[(b)] Use (a) to prove that $G$ has a normal subgroup of order $35$. 
+\item[(c)] Use (b) to find the number of isomorphism classes of groups of order $105$ (make sure to prove your answer).
+\end{itemize}
+\skv
+{\bf 3.} (14 pts) Let $G$ and $H$ be simple groups.
+\begin{itemize}
+\item[(a)] Prove that the direct product $G\times H$ has EXACTLY 4 normal subgroups except for the case where $G\cong H\cong \dbZ_p$ for some $p$.
+Describe these 4 subgroups explicitly.
+\item[(b)] Suppose that $G\not\cong H$. Use (a) to prove that $$\Aut(G\times H)\cong \Aut(G)\times \Aut(H)$$
+\item[(c)] Suppose now that $G\cong H$. State and prove the analogue of (b) in this case.
+\end{itemize}
+\skv
+{\bf 4.} (10 pts) Prove Lemma~17.4 from class restated below. Let $k\in\dbN$. Let $X$ be a set with $|X|\geq 3k$, and suppose that $G$ acts on $X$
+$2k$-transitively. Let $N$ be a normal subgroup of $G$.
+Prove that one of the following holds:
+\begin{itemize}
+\item[(a)] every element of $N$ has a fixed point
+\item[(b)] $N$ acts $k$-transitively on $X$  
+\end{itemize}
+{\bf Hint:} Suppose that there some $n\in N$ does not have any fixed points. First show that there exist disjoint subsets $A$ and $B$
+of $X$ such that $|A|=|B|=k$ and $n(A)=B$. Write $A=\{a_1,\ldots, a_k\}$ and $B=\{b_1,\ldots, b_k\}$. Next show that for any $k$-tuple
+$c_1,\ldots, c_k$ of distinct elements of $X$ such that $A\cap \{c_1,\ldots, c_k\}=\emptyset$ there exists $y\in N$ with $y(a_i)=c_i$
+for $1\leq i\leq k$. Then deduce that (b) must hold. 
+\skv
+{\bf 5.} (14 pts)  The main goal of this problem is to prove the isomorphism $$PSL_2(\dbZ_5)\cong A_5$$
+First some notations and terminology. Let $V$ be a finite-dimensional space over a field $F$. The projective space $\dbP(V)$ is defined to be the set of all $1$-dimensional subspaces of $V$; equivalently $\dbP(V)=(V\setminus\{0\})/\sim$ where $v\sim w$ for nonzero vectors $v$ and $w$
+$\iff$ $w=\lambda v$ for some $\lambda\in F\setminus\{0\}$. For each $n\in\dbN$ we set $\dbP^n(F)=\dbP(F^{n+1})$ (where $F^{m}$ is the standard $m$-dimensional vector space over $F$). Also recall that $PSL_n(F)=SL_n(F)/Z_n(F)$ where $Z_n(F)$ is the center of $SL_n(F)$ which happens to consist 
+of scalar matrices in $SL_n(F)$.
+\skv
+\begin{itemize}
+\item[(a)] Prove that for any field $F$ and any $n\in\dbN$ there is a natural faithful action of $PSL_n(F)$ on $\dbP^{n-1}(F)$. Do not use any results about simplicity of $PSL_n(F)$. Deduce that there is a natural injective homomorphism $\phi:PSL_2(\dbZ_5)\to S_6$.
+\item[(b)] Use (a) and the idea from HW\#8.1 to prove that $\Im\phi\cong A_5$.
+\end{itemize}
+{\bf Hint:} Use may use the fact that $PSL_n(\dbZ_p)$ is always generated by elementary matrices $E_{ij}$, $i\neq j$ (where $E_{ij}$ is the matrix which has $1$'s on the diagonal and in the position $(i,j)$ and $0$'s everywhere else). It may not be immediately clear how this result helps for this problem. 
+\end{document}

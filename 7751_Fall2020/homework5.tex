@@ -1,0 +1,170 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn\,}}
+\def\Ker{{\rm Ker\,}}
+\def\Im{{\rm Im\,}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#4}\rm
+\vskip .1cm
+{\bf Plan for next week:} Group actions (\S~4.1-4.3). Start direct and semi-direct products (\S~5.4-5.5).
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Thu, October 1st}
+\vskip .1cm
+\skv
+{\bf 1.} Let $k$ be an algebraically closed field.
+Let $Y$ be a subset of $k^n$. Let 
+$$k[Y]=k[x_1,\ldots, x_n]/I(Y).$$ 
+The ring $k[Y]$ can be naturally identified with the ring of polynomial functions from $Y$ to $k$ (with pointwise addition and multiplication). Indeed, every polynomial in $k[x_1,\ldots, x_n]$ naturally defines a function
+from $Y$ to $k$. Thus, we have a map $ev_Y: k[x_1,\ldots, x_n]\to Func(Y,k)$. By {\bf polynomial functions from $Y$ to $k$} we mean
+exactly the functions in $\Im(ev_Y)$. It is straightforward to check that $ev_Y$ is a ring homomorphism and thus 
+$$\Im(ev_Y)\cong k[x_1,\ldots, x_n]/\Ker(ev_Y)$$
+Finally, by definition $\Ker(ev_Y)=I(Y)$, and thus $k[Y]\cong \Im(ev_Y)$.
+
+\sk Let $O(Y)$ be the set of all everywhere defined rational functions on $Y$, that is,
+all functions $f:Y\to k$ for which there exist polynomials $p,q\in k[x_1,\ldots, x_n]$
+s.t. $q$ does not vanish at any point of $Y$ and $f=p/q$ as a function on $Y$. Clearly,
+$k[Y]\subseteq O(Y)$.
+\begin{itemize}
+\item[(a)] Prove that if $Y$ is an algebraic set, then $O(Y)=k[Y]$. {\bf Hint:} Use the weak
+Nullstellensatz, version 2.
+\item[(b)] Let $Y=k^1\setminus\{0\}$, the affine line with $0$ removed. Prove that
+$k[Y]=k[x]$ (polynomials in one variable) while $O(Y)=k[x,1/x]$.
+\item[(c)] Find an algebraic subset $Z$ of $k^2$ such that $k[Z]\cong k[x,1/x]$.
+How is $Z$ related to $Y$ from part (b)?
+\item[(d)] Find a non-algebraic subset $W$ of $k^2$ for which $O(W)=k[W]\cong k[x_1,x_2]$.
+\end{itemize}
+\skv
+{\bf 2.} Let $R$ be a commutative ring with $1$, and let $n\in\dbN$. Let $End(R^n)$ be the set of all endomorphism of the additive group $(R^n,+)$.
+\begin{itemize}
+\item[(a)] Define $\iota: Mat_n(R)\to End(R^n)$ by $\iota(A)=(v\mapsto Av)$ (or, in more elementary notation,
+$(\iota(A)(v))=Av$ for all $v\in R^n$). Here we think of elements of $R^n$ as column vectors. Prove that
+$\iota$ is an injective homomorphism of monoids.
+\item[(b)] Now define $\Phi: End(R^n)\to Mat_n(R)$ as in Lecture~10 (in Lecture~10 we dealt with the special case $R=\dbZ$,
+but definition remains the same -- $e_i$ is still the element of $R^n$ whose $i^{\rm th}$ coordinate is $1$ and other coordinates
+are $0$). Prove that $\Phi\circ \iota$ is the identity map on $Mat(R^n)$. Deduce that $\Phi$ is always surjective.
+\item[(c)] By (a) and (b) $\Phi$ is an injective $\iff$ $\Phi$ is an isomorphism $\iff$ $\iota$ is an isomorphism.
+In Lecture~10 we observed that $\Phi$ is injective for $R=\dbZ$. Determine (with proof) if $\Phi$ is injective 
+for each of the following rings: (i) $R=\dbZ_m$ for some $m\in\dbN$, (ii) $R=\dbQ$, (iii) $R=\dbZ[\sqrt{2}]$. 
+\end{itemize}
+Note that whenever $\Phi$ is an isomorphism, by taking the units on both sides, we get that $\Aut(R^n)\cong GL_n(R)$.
+
+\skv
+{\bf 3.} Let $G$ be a group. For each $g\in G$ let $\iota_g: G\to G$
+be the conjugation by $g$, that is, $\iota_g(x)=gxg^{-1}$.
+Recall that $\iota_g\in \Aut(G)$ for any $g\in G$ and
+the mapping $\iota: G\to \Aut(G)$ given by $\iota(g)=\iota_g$
+is a homomorphism. Elements of the subgroup $\Inn(G)=\iota(G)$ of $\Aut(G)$
+are called inner automorphisms.
+
+\begin{itemize}
+\item[(a)] Prove that for any $g\in G$ and $\sigma\in \Aut(G)$
+one has $\sigma \iota_g \sigma^{-1}=\iota_{\sigma(g)}$.
+Deduce that $\Inn(G)$ is a normal subgroup of $\Aut(G)$.
+
+\item[(b)] Let $H$ be a normal subgroup of $G$. Note that for each $g\in G$, 
+the mapping $\iota_g$ restricted to $H$
+is an automorphism of $H$. By slight abuse of notation
+we denote this automorphism of $H$ by $\iota_g$ as well.
+Prove that $\iota_g$ is an inner automorphism of $H$ if and
+only if $g\in H\cdot C_{G}(H)$ where $C_G(H)$ is the centralizer
+of $H$ in $G$.
+\end{itemize}
+
+
+\skv
+{\bf 4.} Find the minimal $n$ for which the symmetric group $S_n$ contains an element of order $15$
+(and prove rigorously why your $n$ is indeed minimal). {\it Note: }All you need to know about $S_n$ for this
+problem is stated in Section 1.3 of DF (pp.29-32).
+
+\skv
+{\bf 5.} Let $G=D_8$, the dihedral group of order $8$ (that is, the group of isometries of a square). Prove that $|[G,G]|=2$ and describe $[G,G]$
+explicitly without computing every single commutator. 
+\skv
+\skv
+{\bf Index of a subgroup.} If $G$ is a group and $H$ is a subgroup of $G$, the index of $H$ in $G$, denoted by $[G:H]$, is
+defined to be the cardinality of $G/H$, that is, the number of left cosets of $H$ in $G$.
+It is not hard to show that the sets $G/H$ (the set of left cosets of $H$) and
+$H\setminus G$ (the set of right cosets of $H$) always have the same cardinality, so there is no need to introduce ``left index'' and ``right index''. 
+
+The full statement of Lagrange theorem asserts that if $G$ is a finite group and $H$ is a subgroup of $G$, then $[G:H]=\frac{|G|}{|H|}$ (typically one applies not the full statement but its most useful consequence, namely, that the order of $H$ divides the order of $G$).
+\skv
+
+
+
+
+{\bf 6.} Let $G$ be a group and let $H$ and $K$ be subgroups of $G$ of finite index
+(note that $G$ is not assumed to be finite).
+
+\begin{itemize}
+
+\item[(a)] Assume that $H\subseteq K$. Prove that $[G:H]=[G:K][K:H]$.
+
+\item[(b)] Let $m=[G:H]$ and $n=[G:K]$. Prove that
+$${\rm LCM}(m,n)\leq [G:H\cap K]\leq  mn$$ 
+(where ${\rm LCM}$ is the least common multiple).
+\end{itemize}
+
+
+{\bf Hint for (a):} If $A$ is a group and $B$ a subgroup of $A$, a
+subset $S$ of $A$ is called a left transversal of $B$ in $A$
+if $S$ contains precisely one element from each left coset of $B$
+(an alternative name for a transversal is a system of left coset representatives).
+Let $\{g_1,\ldots, g_r\}$ be a left transversal of $K$ in $G$
+and $\{k_1,\ldots, k_s\}$ a left transversal of $H$ in $K$. Prove
+that $\{g_i k_j\}_{1\leq i\leq r, 1\leq j\leq s}$ is a left transversal for $H$ in $G$.
+Recall that if $B$ is a subgroup of a group $G$, then $xB=yB$ $\iff$ $x^{-1}y\in B$
+for $x,y\in G$.
+\end{document}

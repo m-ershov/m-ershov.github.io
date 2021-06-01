@@ -1,0 +1,115 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Aut{{\rm Aut}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#3}\rm
+\vskip .1cm
+{\bf Plan for next week:} Finite fields (\S~9.5), Hilbert's basis Theorem (\S~9.6).
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by 11:59pm on Thu, September 17th}
+\vskip .1cm
+\skv
+{\bf 1.} Let $R$ and $S$ be rings with $1$, and let $\phi:R\to S$ be a ring homomorphism such that
+$\phi(1_R)=1_S$.
+\begin{itemize}
+\item[(a)] Prove that $\phi(R^{\times})\subseteq S^{\times}$
+\item[(b)] Give an example where $\phi$ is surjective, but $\phi(R^{\times})\neq S^{\times}$.
+\end{itemize}
+
+\skv
+{\bf 2.} Let $m,n\in\dbN$ with $m\mid n$, and define $f:\dbZ/n\dbZ\to \dbZ/m\dbZ$ by
+$$f(x+n\dbZ)=x+m\dbZ$$ (note that $f$ is well defined precisely because $m\mid n$). Prove that the associated map of the groups of units $f:(\dbZ/n\dbZ)^{\times}\to (\dbZ/m\dbZ)^{\times}$ is surjective.
+\skv
+{\bf Hint:} First prove this directly for special values of $n$ and $m$ (using the standard characterization of units in $\dbZ/k\dbZ$
+from HW\#1.3). Then use another homework problem to do the general case.
+\skv
+
+{\bf 3.} Use HW\#2.5 to find all maximal ideals of $\dbZ[x]$ (the ring of polynomials over $\dbZ$ in one variable) which contain 
+$x^2+1$ and $15$. You will need to use standard results about primes (=irreducible) elements in $\dbZ[i]$ -- see the corresponding section in DF (pp. 289-292).
+\skv
+
+{\bf 4.} Let $R=\dbZ[\sqrt{5}]=\{a+b\sqrt{5} : a,b\in\dbZ\}$. Find an element of $R$
+which is irreducible but not prime and deduce that $R$ is not a unique factorization domain (UFD).
+\skv
+ {\bf Hint:} Consider the equality $2\cdot 2=(\sqrt{5}+1)(\sqrt{5}-1)$. In order to check
+whether some element of $R$ is irreducible it is convenient to use the standard norm function
+$N:R\to\dbZ_{\geq 0}$ given by $N(a+b\sqrt{5})=|(a+b\sqrt{5})(a-b\sqrt{5})|=|a^2-5b^2|$ (just as in the $\dbZ[\sqrt{3}]$ example considered in class,
+it is easy to check that $N(uv)=N(u)N(v)$).
+\skv\skv 
+{\bf 5.} Let $R=\dbZ+x\dbQ[x]$, the subring of $\dbQ[x]$ consisting of
+polynomials whose constant term is an integer.
+\begin{itemize}
+\item[(a)] Show that the element $\alpha x$, with $\alpha\in\dbQ$ is NOT irreducible
+in $R$. Then show that $x$ cannot be written as a product of irreducibles in $R$.
+Note that by Lecture~5, this implies that $R$ is not Noetherian.
+
+\item[(b)] Now prove directly that $R$ is not Noetherian by showing that
+$I=x\dbQ[x]$ is an ideal of $R$ which is not finitely generated.
+
+\item[(c)] Give an example of a non-Noetherian domain which is a UFD.
+\end{itemize}
+\skv
+{\bf 6.} Let $R$ be a commutative ring with $1$. 
+\begin{itemize}
+\item[(a)]   Let $M$ be an ideal of $R$. Prove that the following conditions are equivalent:
+\begin{itemize}
+\item[(i)] $M$ is the unique maximal ideal of $R$ 
+\item[(ii)] every element of $R\setminus M$ is invertible. 
+\end{itemize}
+Rings satisfying these equivalent conditions are called local.
+\item[(b)] Let $F$ be a field and $F[[x]]$ the ring of power series over $F$. Prove that $F[[x]]$ is local.
+\item[(c)] Now let $R$ be arbitrary, let $P$ be a prime ideal of $R$ and $S=R\setminus P$. Prove that the localization
+$S^{-1}R$ is local and explicitly describe its unique maximal ideal.
+\end{itemize}
+\end{document}
