@@ -1,0 +1,97 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#3. Due Wednesday, February 5th, in class}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 4.2-4.6
+\skv
+\skv
+2. Next week we will continue with the basic theory of linear codes (4.2-4.6). Then (probably next Wednesday) we will introduce binary Hamming codes (5.3.1, page 84). If there will be time left, we will go back to Chapter 4 and start discussing encoding and decoding for linear codes (4.7-4.8).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Problem 4.3. {\bf Hint:} First count the number of ordered $k$-tuples $(v_1,\ldots, v_k)$ such that the vectors $v_1,\ldots, v_k$ are linearly independent. This can be done by using the argument from the proof of Theorem~4.1.15(ii).
+
+{\bf 2.} Problem 4.14. If the code is linear, find its generator matrix and its parity-check matrix.
+
+{\bf 3.} Problem 4.15.
+
+{\bf 4.} Problem 4.20.
+
+{\bf 5.} 
+\begin{itemize}
+\item[(a)] Let $C$ be a binary linear code of length $n$. Fix $1\leq i\leq n$, consider the $i^{\rm th}$ coordinates of all codewords in $C$. Prove that either all codewords have $0$ as their $i^{\rm th}$ coordinate or exactly half of all codewords have $0$ as their $i^{\rm th}$ coordinate. This is based on the same idea as 4.20(iii).
+\item[(b)] In Homework~1 we proved that if $C$ is a binary code of length $n$ and distance $2$, then $|C|\leq 2^{n-1}$; thus, if in addition $C$ is linear,
+then $\dim C\leq n-1$. Now prove that if $C$ is a binary $[n,n-1,2]$-linear code, then $C$ is the parity-check code. {\bf Hint:} Use induction on $n$ and part (a). If you need a more detailed hint, see next page.
+\end{itemize}
+
+{\bf 6.} Problem 4.22.
+
+{\bf 7.} Problem 4.31.
+
+
+\newpage
+{\bf Hint for 5(b):} For the induction step take an arbitrary binary  $[n,n-1,2]$-linear code $C$, consider the set $C'=\{w\in\dbF_2^{n-1}: w0\in C\}$
+(here $w0$ is the concatenation of $w$ and $0$), show that $C'$ is a linear code of Hamming distance $\geq 2$ (and length $n$) and apply part (a).
+\end{document}
+
+
+

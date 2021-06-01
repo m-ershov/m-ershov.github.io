@@ -1,0 +1,109 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\eps{{\varepsilon}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#10}\rm
+\skv
+\it\centerline{Due Tue, April 21st by 23:59pm in filedrop}\rm
+\skv
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 7.5, 6.1 and 6.2 in Lindell's notes and class notes from Lectures 19-22.
+\skv
+2. Plan for next week: Asymptotically good codes. This material is not in our main book, but it is discussed in Lindell's notes (see 4.1, 4.2 and Chapter 7). There is way too much material in those sections, so I will probably just discuss the main results and ideas, skipping many proofs.
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Let $C$ be a narrow-sense RS (Reed-Solomon) code over $\dbF_7$ (as defined in Lecture~20) of dimension $k=4$ (such a code is unique up to the choice of primitive element $\alpha$). Write down explicitly a GM for $C$, a PCM for $C$ and the generator polynomial for $C$ (all matrix entries and coefficients of the polynomial in your answer should be explicit elements of $\dbF_7$).
+\skv
+{\bf 2.} Let $F$ be a finite field, $q=|F|$ and $n=q-1$. 
+\begin{itemize}
+\item[(a)] Given $\beta\in F$, let $\Sigma(\beta)=\sum\limits_{j=0}^{n-1}\beta^j$. Prove that $\Sigma(1)= -1$ and $\Sigma(\beta)= 0$
+for $\beta\neq 0,1$. {\bf Hint:} Consider the cases $\beta=0,1$ separately. For all other $\beta$ recall how to find the sum of a finite geometric progression. 
+\item[(b)] Let $\alpha\in F$ be a primitive element, set $\alpha_i=\alpha^{i-1}$ for $1\leq i\leq n$, and
+let $\vec{\alpha}=(\alpha_1,\ldots,\alpha_n)$ and $\vec{v}=(v_1,\ldots, v_n)$ for some nonzero $v_i\in F$.
+Let $C=GRS(\vec{\alpha}, \vec{v})$ for some $k$. Recall from Lecture~20 that GRS codes of this type are called primitive.
+
+For each $1\leq i\leq n$ set $w_i=\frac{\alpha_i}{v_i}=\frac{\alpha^{i-1}}{v_i}$. Use (a) to prove that these elements $w_1,\ldots, w_n$ are valid GM multipliers for $C$, that is, they satisfy the conclusion of Theorem~19.4 from class.
+\end{itemize}
+\skv
+{\bf 3.} Give a new proof of the fact that GRS codes are MDS using polynomial representation of GRS codes (see the section
+``Explicit description of elements of $GRS_k(\vec{\alpha}, \vec{v})$'' at the end of Lecture~19). You only need to use the description obtained in this section, not the original definition. {\bf Hint:} use the fact that for any field $F$, a nonzero polynomial of degree $m$ over $F$ cannot have more than $m$ roots.
+\skv
+{\bf 4.} Prove Lemma~21.2 from class (in the proof make sure to use the definition given in Lecture~21). {\bf Hint:} for the second part of Lemma~21.2 (dealing with burst error correction) it may be convenient to ``negate the definition of an
+$E$-error correcting code'', that is, to rewrite the definition in the form ``A code $C$ is NOT $E$-error correcting $\iff$ ...''
+\skv
+{\bf 5.} Prove Theorem~22.1 from class. Recall that in class we discussed a specific example illustrating the proof. As in the example, it is probably most convenient to use part of Lemma~21.2 recalled at the beginning of Lecture~22.
+\skv
+{\bf 6.} Let $D$ be the binary cyclic code of length $9$ with generator polynomial $g(x)=1+x^3+x^6$. 
+\begin{itemize}
+\item[(a)] Show that $D$ has the form $IL(C^m)$ (in the notations from Lecture~22) for some (specific) $C$ and $m$. Deduce
+that $D$ is $3$-burst error correcting.
+\item[(b)] Use the error trapping algorithm to decode the word $w=110111000$ (as a polynomial $w=1+x+x^3+x^4+x^5$). 
+\end{itemize}
+Some remarks on 6(b):
+\begin{itemize}
+\item[(i)] Using the description of $D$ from (a), it is easy to guess the answer (and once you correctly guessed $c$, you can justify that you guessed correctly using the fact that $D$ is $3$-burst error correcting). Nevertheless, you should still show how to get the answer using error trapping.
+\item[(ii)] The syndromes $s_i=S(x^i\odot w)$ are not hard to compute directly from definition, but you may use the recursive formula $s_{i+1}=(x s_i)\mod g(x)$ (if you do use this formula, at least think why it should be true).
+\item[(iii)] HW\# 9.1 describes a ``shortcut'' for computing the remainders modulo $x^n-1$. There is a similar shortcut for finding the remainders modulo any polynomial (try to formulate it in general). The amount of time it saves depends on the number of nonzero monomials in the poynomial you are dividing by (the fewer monomials, the better). So, for $g(x)=x^6+x^3+1$ which has 3 monomials, it would not work as well as for $x^n-1$, but still pretty well.
+\end{itemize}
+\end{document}

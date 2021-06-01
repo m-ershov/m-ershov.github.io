@@ -1,0 +1,111 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\eps{{\varepsilon}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#7}\rm
+\skv
+\it\centerline{Due Thu, March 19th by 23:59pm in my mailbox or collab filedrop}\rm
+\skv
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 5.2, 5.5 and 5.6. 
+\skv
+2. Plan for next week: Polynomial rings and basic theory of finite fields (3.2 and parts of 3.3). Start talking about cyclic codes (7.1 and maybe 7.2).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Redo problem~4 on the midterm (=Problem~5.6 in the book). No need to submit if you got full credit on the midterm.
+
+\skv
+{\bf 2.} Use the result of Problem~5.19 to show that the simplex codes $S(r,q)$ attain the Griesmer bound.
+\skv
+{\bf 3.} 
+\begin{itemize}
+\item[(a)] Read (and understand) the proof of the Gilbert-Varshamov bound (5.2.2)
+\item[(b)] Combining the sphere-packing bound with the first inequality
+of Corollary~5.2.7, we get that for any prime power $q$ and any 
+integers $1\leq d\leq n$ we have
+$$q^{n-\ceil{\log_q(V_q^{n-1}(d-2)+1)}}\leq B_q(n,d)\leq A_q(n,d)
+\leq\frac{q^n}{V_q^n(\floor{\frac{d-1}{2}})}. \eqno (***)$$
+Verify that in the case $n=\frac{q^{r}-1}{q-1}$ and $d=3$ (these are length and distance of the Hamming code $Ham(r,q)$), the expressions on the left-hand and the right-hand side of (***) are equal. {\bf Note:} This a rare case when a lower bound and an upper bound (on the size of a code) obtained from very general considerations coincide with each other.
+\end{itemize}
+\skv
+{\bf 4.} Recall from Lecture~14 that the Hadamard codes $\{{\rm Hdr}(k)\}_{k=0}^{\infty}$ are binary codes defined inductively by
+${\rm Hdr}(0)=\{0,1\}$ and $${\rm Hdr}(k)=\{ww, w\overline{w}: w\in {\rm Hdr}(k-1)\} \mbox{ for }k\geq 1$$ (here $\overline{w}$ is the word obtained from $w$ by flipping 
+every symbol, and $ww$ and $w\overline{w}$ are concatenations). 
+\begin{itemize}
+\item[(a)] List all the elements of ${\rm Hdr}(k)$ for $k=3$ and $k=4$ (we did the same in class for $k\leq 2$).
+
+\item[(b)] Prove that ${\rm Hdr}(k)$ is a $(2^{k},2^{k+1},2^{k-1})$-code for $k\geq 1$.
+
+{\bf Note:} The statements about the length and size of ${\rm Hdr}(k)$ follow easily from the definition, but you should still explain why they hold. For the statement about the distance it is convenient to prove the following stronger result by induction: $d({\rm Hdr}(k))=2^{k-1}$ AND ${\rm Hdr}(k)$ is closed under inversion, that is, ($w\in Hdr(k) \Rightarrow \overline{w}\in {\rm Hdr}(k)$).
+\end{itemize}
+\skv
+
+{\bf 5.} Prove the first part of the binary Plotkin bound (part (i) of Theorem~5.5.3 in the case $n<2d$). {\bf Note:} In class we proved a slightly weaker bound, namely, $A_2(n,d)\leq \floor{\frac{2d}{2d-n}}$ instead of $A_2(n,d)\leq 2\floor{\frac{d}{2d-n}}$. Explain how you use the assumption that $d$ is even in your proof. You may look up the proof on wikipedia, but note that there is an unjustified statement in that proof.
+\skv
+
+{\bf 6.} Problem~5.14. 
+\skv
+{\bf 7.} Problem~5.37 (see Problem~5.36 for the relevant definitions).
+ \end{document}

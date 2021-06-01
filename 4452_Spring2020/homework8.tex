@@ -1,0 +1,106 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\eps{{\varepsilon}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#8}\rm
+\skv
+\it\centerline{Due Sun, March 29th by 23:59pm in filedrop}\rm
+\skv
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 3.2, 3.3 and 7.1. 
+\skv
+2. Plan for next week: We will continue talking about cyclic codes. I plan to cover 7.2 and 7.3 in detail and then briefly go over 7.4 and 7.5. If time left (unlikely, but possible), we will start talking about generalized Reed-Solomon codes. For this topic I will not be following the book; instead, we will probably follow the presentation in Chapter~6 of Yehuda Lindell's notes (see a link on the course webpage).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Problem 3.7 (a)(b)(d) (part (c) was essentially done in class during Lecture~15)
+
+\skv
+{\bf 2.} Problem 3.10.
+\skv
+{\bf 3.} Problem 3.13. For a brief discussion of primitive elements see online notes from Lecture~15 (we did not get to that part in class). Note that to answer the question for $\dbF_8$ and $\dbF_9$ you first have to realize $\dbF_8$ and $\dbF_9$ in the form $\dbF_p[x]/(f(x))$
+for appropriate $p$ and irreducible $f(x)\in\dbF_p[x]$ (you have to choose specific $f(x)$ for your computation).
+\skv
+{\bf 4.} Problem 7.1. Make sure to prove your answer.
+\skv
+{\bf 5.} Problem 7.2.
+\skv
+{\bf 6.} Let $A$ be an alphabet and $n\in\dbN$. Let us say that a code $C\subseteq A^n$ is {\bf shift-invariant} if 
+$(a_1\ldots a_n\in C \Rightarrow a_2\ldots a_n a_1\in C)$. Thus, cyclic codes are precisely shift-invariant {\bf linear} codes.
+
+Now define a relation $\sim$ on $A^n$ by $w\sim v$ $\iff$ $v$ can be obtained from $w$ by a cyclic shift (by some number of positions). It is not hard to show that $\sim$ is an equivalence relation. One can reformulate the definition of a shift-invariant code in terms of $\sim$: a code $C\subseteq A^n$ is shift-invariant if and only if $C$ is a union of (some) equivalence classes with respect to $\sim$.
+
+\begin{itemize}
+\item[(a)] Describe the equivalence classes on $\dbF_2^3$ with respect to $\sim$
+\item[(b)] Use (a) to determine the number of binary shift-invariant codes of length $3$
+\item[(c)] Now describe all binary cyclic codes of length $3$ (and prove there are no other such codes).
+\end{itemize}
+\skv
+{\bf 7.} Let $F$ be a field and $n\in\dbN$.
+\begin{itemize}
+\item[(a)] Let $C\subseteq F^n$ be a linear code. Suppose that $C$ has a generator matrix $G$ whose set of rows is invariant under cyclic shifts. Prove that $C$ is a cyclic code.
+  
+\item[(b)] Give an example of a cyclic code which does NOT have a generator matrix $G$ satisfying the condition in (a).
+\end{itemize}
+\end{document}

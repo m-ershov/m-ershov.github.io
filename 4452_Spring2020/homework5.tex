@@ -1,0 +1,101 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.8in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#4. Due Thursday, Feb 20th, by 1pm in my mailbox }\rm
+\vskip .1cm
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 4.8, 5.1 and parts of 5.2
+\skv
+2. Plan for next week: 5.1-5.4. I am not sure about the order, but we will almost definitely start with the sphere-covering bound (5.2) and sphere-packing bound (5.3)
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+
+{\bf 1.} Problem 4.27. {\bf Hint:} This problem can be solved using the same idea as 4.20(i), (ii), but there is a more conceptual solution involving cosets.
+\skv
+
+{\bf 2.} Problem 4.47. In addition to what you are asked to do in the book, construct the syndrome look-up table and use it to decode the three words given in the problem.
+\skv
+
+{\bf 3.} Problem 4.44.
+\skv
+
+{\bf 4.} Let $r\geq 2$, let $N=2^r-1$ and let $Ham(r,2)$ be the binary Hamming code of length $N$ (see 5.3.1). Recall that we proved in Lecture~7 that $Ham(r,2)$ has distance 3. 
+\begin{itemize}
+\item[(a)] Consider the following $N+1=2^r$ elements: $0,e_1,\ldots, e_{N}$ (where $e_i$ is the $i^{\rm th}$ element of the standard basis). Prove that every coset of $Ham(r,2)$ in $\dbF_2^N$ contains exactly one of these elements.
+\item[(b)] Deduce from (a) that for every $w\in \dbF_2^N$ there exists $c\in Ham(r,2)$ such that $d(w,c)\leq 1$. This implies that $Ham(r,2)$ is a perfect code
+(a slightly different proof of this fact will be given in class next week).
+\end{itemize}
+\skv
+
+{\bf 5.} In parts (a) and (b) of this problem assume that $d\geq 2$.
+\begin{itemize}
+\item[(a)] Prove that $A_q(n,d)\leq A_q(n,d-1)$. In other words, fix an alphabet $A$ with $|A|=q$ and prove the following: if there exists
+an $(n,M,d)$-code $C$ over $A$, there also exists an $(n,M,d-1)$-code $C'$ over $A$. You should give a precise argument; do not try to say this is obvious or something like that.
+\item[(b)] Now prove that $A_q(n,d)\leq A_q(n-1,d-1)$. {\bf Hint:} one way to do this is to imitate the second solution to HW 1.1 given in Lecture~9. You will likely need (a) to complete the argument.
+\item[(c)] Now use (b) and induction to prove the singleton bound: $A_q(n,d)\leq q^{n-d+1}$.
+\end{itemize}
+\skv
+
+{\bf 6.} You are not allowed to use the Plotkin bound in this problem.
+\begin{itemize}
+\item[(a)] Assume that $\frac{2n}{3}<d\leq n$. Prove that $A_2(n,d)=2$. {\bf Hint:} Use the same idea as in the proof of the equality $A_2(5,4)=2$ given in Lecture~9.
+\item[(b)] Assume now that $d=\frac{2n}{3}$. Prove that $A_2(n,d)\geq 4$.
+\item[(c)] (bonus) Now prove that if $d=\frac{2n}{3}$, then $A_2(n,d)=4$.
+\end{itemize}
+\end{document}
