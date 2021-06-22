@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\phi{{\varphi}}
+
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Midterm \#2, Spring 2012. Due Thursday, April 12th.}\rm
+\vskip .7cm
+{\bf Directions: } There are five problems, each of which is worth 10 points.
+The best 4 out of 5 problems will be counted. Provide complete arguments (do not skip steps). State clearly any result you are referring to. Partial credit for incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will not provide hints. You may freely use your class notes,
+previous homework assignments and the book by Dummit and Foote, except when
+explicitly stated otherwise. The use of other books is allowed, but not encouraged. If you happen to run across a problem very similar or identical to one on the midterm which is solved in another book, do not consult that solution.
+
+\skv
+{\bf 1.} Let $F$ be an algebraically closed field, let $A\in Mat_n (F)$
+for some $n\in\dbN$, and let $C$ be the centralizer of $A$ in $Mat_n (F)$.
+Prove that $$dim_F(C)\geq n.$$ {\bf Hint:} First assume that $A$ is in Jordan
+canonical form and has just one Jordan block; then consider the case when
+$A$ is an arbitrary matrix in Jordan canonical form, and finally prove
+the statement for general $A$.
+\skv
+{\bf 2.} Let $f(x)=(x^2-2)(x^3-3)$ and $K\subset\dbC$ the splitting field of $f(x)$
+over $\dbQ$.
+\begin{itemize}
+\item[(a)] Prove that $\Gal(K/\dbQ)\cong S_3\times \dbZ/2\dbZ$
+%\item[(b)] How many subfields $L$ with $[L:\dbQ]=6$ does $K$ contain?
+\item[(b)] Find a primitive element for $K$ over $\dbQ$ (and prove
+your answer).
+\end{itemize}
+\skv
+{\bf 3.} Let $K/F$ be a finite Galois extension and $G=\Gal(K/F)$.
+\begin{itemize}
+\item[(a)] Assume  that $G$ is a simple group, let $\alpha\in K\setminus F$
+and $\mu_{\alpha,F}(x)$ the minimal polynomial of $\alpha$ over $F$.
+Prove that $K$ is a splitting field for $\mu_{\alpha,F}(x)$.
+
+\item[(b)] Let $n=[K:F]$, and fix integers $m$ and $l$ with $ml=n$.
+Find a condition on the \underline{subfield lattice of $K/F$} which is equivalent
+to the following: $G$ can be written as a semidirect product $G=A\rtimes B$
+for some subgroups $A$ and $B$ where $|A|=m$ and $|B|=l$.
+\end{itemize}
+\skv
+{\bf 4.} Let $F$ be a field.
+\begin{itemize}
+\item[(a)] Let $f(x)\in F[x]$ be a nonzero polynomial and $K/F$ a field extension.
+Prove that $$F[x]/(f(x))\otimes_F K\cong K[x]/(f(x))$$ as $F$-algebras.
+\item[(b)] Let $L/F$ be a finite separable extension. Prove that
+there exists a finite extension $K/F$ such that 
+$L\otimes_F K\cong \underbrace{K\times\ldots\times K}_{n \mbox{ times }}$
+for some $n$.
+\end{itemize}
+\skv
+{\bf 5.} This is a continuation of Problem~4 from HW\#9.
+Let $p$ be a prime, with $p\equiv 3\mod 4$, $\omega=e^{2\pi i/p}$, $K=\dbQ(\omega)$ and $L$ the unique subfield of $K$ with $[L:\dbQ]=2$. 
+Let $S$ be the set of elements of $(\dbZ/p\dbZ)^{\times}$ 
+representable as squares and $T$ the set of elements of 
+$(\dbZ/p\dbZ)^{\times}$ not representable as squares.
+\begin{itemize}
+\item[(a)] Prove that any $\alpha\in K$ can be uniquely represented
+as $\alpha=\sum_{s\in S}b_s \omega^s+\sum_{t\in T}c_t \omega^t$,
+with $b_s,c_t\in\dbQ$.
+\item[(b)] Let $\alpha\in K$. Prove that $\alpha\in L$ if and only
+if in the above decomposition of $\alpha$ all $b_s$ are the same
+and all $c_t$ are the same.
+\item[(c)] Let $\zeta=\sum_{s\in S}\omega^s$, $\eta=\zeta\overline\zeta$,
+and write $\eta=\sum_{s\in S}b_s \omega^s+\sum_{t\in T}c_t \omega^t$ as in (a).
+Prove that 
+\begin{itemize}
+\item[(i)] there exists $d\in \dbQ$ such that $b_s=c_t=d$
+for all $s$ and $t$ and
+\item[(ii)] $\sum_{s\in S}b_s+\sum_{t\in T}c_t=(p-1)^2/4-p\cdot (p-1)/2=-(p-1)(p+1)/4$
+\end{itemize}
+\item[(d)] Use (c) to prove that $\eta=(p+1)/4$ and deduce that 
+$L=\dbQ(\sqrt{-p})$.
+\end{itemize}
+\end{document}

@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\lam{{\lambda}}
+
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 6. }\rm
+
+{\bf Plan for next week:} Normal and separable extensions 
+(online lectures 17,18, \S~13.5 and parts of \S~13.4 in DF)
+
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Thursday, March 15th. }\rm
+\vskip .1cm
+
+{\bf Problem 1:} \rm $V$ be a vector space over an algebraically closed field $F$,
+let $n=\dim V$ and $T\in\mathfrak{gl}(V)$. Recall that if $\lam$ is an eigenvalue of $T$,
+a sequence of vectors $v_1,\ldots, v_k\in V$ is called a {\it cycle of generalized
+eigenvectors corresponding to $\lam$} if $(T-\lam)v_1=0$ and $(T-\lam)v_i=v_{i-1}$
+for $i>1$. The vector $v_1$ is called the {\it initial vector} of the cycle and 
+$v_n$ is called the {\it tail vector}. 
+
+Note that a basis $\Omega$ of $V$ is a Jordan basis for $T$ $\iff$
+$\Omega$ is an ordered union of cycles of generalized eigenvectors
+(with one cycle corresponding to each Jordan block).
+
+\begin{itemize}
+\item[(a)] Let $v_1,\ldots, v_k\in V$ be a cycle of generalized eigenvectors
+with $v_1\neq 0$. Prove that $v_1,\ldots, v_k$ are linearly independent.
+
+\item[(b)] Suppose that $T$ has unique eigenvalue $\lam$ and just one Jordan block,
+and let $S=T-\lam I$. Let $v$ be any vector in $V\setminus \Ker(S^{n-1})$. Deduce that  $\{S^{n-1}v,\ldots,Sv, v\}$ is a Jordan basis for $T$.
+
+\item[(c)] (practice) Let $C_1,\ldots, C_m$ be cycles of generalized eigenvectors
+(possibly corresponding to different eigenvalues), and suppose that the initial
+vectors of these cycles are linearly independent. Prove that the cycles 
+$C_1,\ldots, C_m$ are disjoint and their union is linearly independent. {\bf Hint:} Since
+$V=\oplus_{\lam \in Spec(T)} V_{\lam}$ where $V_{\lam}$ is the root subspace of $T$
+corresponding to $\lam$ and any generalized cycle of eigenvectors corresponding
+to $\lam$ is obviously contained in $V_{\lam}$, without loss of generality
+you may assume that all cycles $C_1,\ldots, C_m$ correspond to the same eigenvalue.
+\end{itemize}
+\skv
+{\bf Problem 2:} \rm Again let $V$ be a finite-dimensional vector space over an algebraically closed field,
+$T\in\mathfrak{gl}(V)$ and $n=\dim V.$
+
+\begin{itemize}
+\item[(a)] Assume that $T$ has unique eigenvalue $0$ and two Jordan blocks: a $1\times 1$ block and a $2\times 2$ block
+(so $n=3$). Use Problem~1 to justify the following algorithm for computing a Jordan basis for $T$: Take any $v\in V\setminus \Ker(T)$
+and choose $w\in \Ker(T)$ such that $\{w, Tv\}$ is a basis for $\Ker(T)$ (why is this possible?); 
+then $\{w,Tv,v\}$ is a Jordan basis for $T$.
+
+\item[(b)] Assume that $T$ has unique eigenvalue $0$ and two Jordan blocks, both of which are $2\times 2$ (so $n=4$).
+State and justify an algorithm for finding a Jordan basis similar to the one in (a).
+
+\item[(c)] Assume that for each $\lam\in Spec(T)$ there is only one Jordan $\lam$-block in $JCF(T)$.
+Decribe an algoirhtm for computing a Jordan basis of $T$. {\bf Hint:} You just need 
+a minor variation of the algorithm in Problem~1(b).
+\end{itemize}
+\vskip .1cm
+
+
+
+{\bf Remark:} Recall that if $K/F$ and $L/K$ are finite field extensions,
+then $[L:F]=[L:K][K:F]$. In particular, both $[K:F]$ and $[L:K]$ divide $[L:F]$.
+This simple observation turns out to be extremely useful.
+\skv
+
+
+
+
+
+{\bf Problem 3:} \rm (a) Let $K=\dbQ(\sqrt{2},\sqrt{3})$. Prove that $[K:\dbQ]=4$.
+
+(b) Let $L=\dbQ(\sqrt{2}+\sqrt{3})$. Prove that $L=K$ and hence $[L:\dbQ]=4$ by (a).
+\skv
+
+{\bf Problem 4:} \rm Let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$
+and let $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$.
+\begin{itemize}
+\item[(a)] Prove that $[K:\dbQ]=2^m$ for some $m\leq k$ and the set $P(S)=\{1\}\cup \{\sqrt{n} : n \mbox{ is a product of distinct elements of }S\}$ spans $K$ over $\dbQ$.
+
+\item[(b)] For each $0\leq j\leq k$ let $\dbQ_j=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_j})$ (we set $\dbQ_0=\dbQ$).
+Prove that $[K:\dbQ]<2^k$ if and only if $n_1$ is a complete square or
+there exists $2\leq i\leq k$ s.t. $\sqrt{n_i}=a+b\sqrt{n_{i-1}}$ for some $a,b\in\dbQ_{i-2}$.
+
+\item[(c)] Assume that the elements of $S$ are pairwise relatively prime
+and none of them is a complete square.
+Prove that $[K:\dbQ]=2^k$. {\bf Hint:} Use (b) and induction on $k=|S|$.
+\end{itemize}
+
+{\bf Problem 5:} \rm Let $F$ be a field, and let $\alpha$ be an algebraic element of odd degree
+over $F$ (where the degree of $\alpha$ over $F$ is $[F(\alpha):F]$). Prove that
+$F(\alpha^2)=F(\alpha)$.
+\skv
+\skv
+{\bf Problem 6:} Let $K/F$ be a finite field extension, $n=[K:F]$, and fix some basis
+$\Omega=\{\alpha_1,\ldots, \alpha_n\}$
+for $K$ over $F$. For any $\alpha\in K$
+define $T_{\alpha}:K\to K$ by $T_{\alpha}(\beta)=\alpha\beta$. Note that $T_{\alpha}\in  End_F(K)$.
+Let $A_{\alpha}=[T_{\alpha}]_{\Omega}\in Mat_n(F)$ be the matrix of $T_{\alpha}$ with respect to $\Omega$.
+\begin{itemize}
+
+
+\item[(a)] (practice) Prove that the map $K\to Mat_n(F)$ given by $\alpha\mapsto A_{\alpha}$ is an injective ring homomorphism.
+\item[(b)] Prove that the minimal polynomial of $\alpha$ over $F$ and the minimal polynomial of $A_{\alpha}$
+coincide.
+
+\item[(c)] Find the minimal polynomial of the matrix
+$$A=\begin{pmatrix}  0&3& 5&0\\
+1&0& 0&5\\
+1&0& 0&3\\
+0&1& 1&0\\
+\end{pmatrix}$$
+without doing extensive computations.
+{\bf Hint:} Find an extension $K/\dbQ$ of degree $4$, a basis for $K$ over $\dbQ$
+and an element $\alpha\in K$ such that $A_{\alpha}=A$ in the notations of part (a).
+\end{itemize}
+
+
+{\bf Problem 7:} Before doing this problem read about composite fields on pp. 528-529.
+Let $E/F$ be a field extension, let $K_1$ and $K_2$ be subfields of $E$ containing $F$,
+and assume that the extensions $K_1/F$ and $K_2/F$ are finite. Let $K_1 K_2$ be the composite
+field of $K_1$ and $K_2$. Prove that the $F$-algebra $K_1\otimes_F K_2$ is a field if and only if
+$[K_1 K_2: F]=[K_1: F][K_2: F]$. {\bf Hint:} First show that there exists an $F$-linear map
+$\Phi: K_1\otimes_F K_2\to K_1 K_2$ such that $\Phi(a\otimes b)=ab$ for any $a\in K_1$ and $b\in K_2$.
+Then explain why $\Phi$ is always surjective.
+\end{document} 

@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Gal{{\rm Gal\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\deg{{\rm deg}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 10. }\rm
+
+{\bf Plan for the next week:} Tuesday (April 17) -- proof of Hilbert's Nullstellensatz;
+Thursday (April 19) -- dimension theory of affine varieites. Good references on
+commutative algebra and algebraic geometry freely available online are notes by 
+J. Milne
+
+\centerline{http://www.jmilne.org/math/xnotes/CA.pdf} 
+
+and 
+
+\centerline{http://www.jmilne.org/math/CourseNotes/AG.pdf}
+
+\skv
+\skv
+\bf\centerline{Problems, to be submitted by Thu, April 19th. }\rm
+\skv
+{\bf Problem 1:} Let $k$ be a field and $R=k[x_1,\ldots, x_n]$ for some $n\geq 1$.
+\begin{itemize}
+\item[(a)] Prove that if $\{I_{\alpha}\}$ is any collection of ideals of $R$, then
+$\cap Z(I_{\alpha})=Z(\cup I_{\alpha})=Z(\sum I_{\alpha})$.
+\item[(b)] Prove that if $I$ and $J$ are ideals of $R$, then
+$Z(I)\cup Z(J)=Z(I\cap J)=Z(IJ)$.
+\end{itemize}
+\skv
+{\bf Problem 2:} Let $k$ be an algebraically closed field.
+An algebraic set $V\subseteq k^n$ is called \underline{irreducible} 
+if $V\neq\emptyset$ and $V$ cannot be written as the union $V=V_1\cup V_2$ where
+$V_1$ and $V_2$ are both algebraic, with $V_1\neq V$ and $V_2\neq V$.
+\begin{itemize}
+\item[(a)] Prove that $V$ is irreducible if and only if its vanishing ideal
+$I(V)$ is prime.
+\item[(b)] We will prove in class next week that any algebraic set $V$
+can be uniquely written as a union of finitely many algebraic subsets 
+$V=\cup_{i=1}^k V_i$ where $V_i$'s are irreducible and do not contain
+each other. Such $V_i$'s are called \underline{irreducible components of $V$}.
+Let $$V=Z(xy-y, x^2z-z)\subset k^3,$$ the set of common zeroes of $xy-y$
+and $x^2z-z$. Find irreducible components of $V$ and their vanishing ideals.
+The answer will depend on $char(k)$.
+\skv
+
+
+{\bf Problem 3:} DF, Problem 17 on pages 582-583 (this time really assigned).
+\skv
+{\bf Problem 4:} This is a continuation of Problem~7 in HW\#9.
+\begin{itemize}
+\item[(c)] Suppose $K/L$ and $L/F$ are both $p$-extensions, and
+let $M$ be the Galois closure of $K$ over $F$ (note: we do
+not know whether $K/F$ is Galois or not). Prove that
+$M/F$ is also a $p$-extension. {\bf Hint:} first show that
+$M/L$ is Galois.
+
+\item[(d)] Now assume only that $L/F$ is a separable extension
+with $[L:F]$ a power of $p$, and let $M$ be the Galois closure
+of $L$ over $F$. Prove that $[M:F]$ need not be a power of $p$.
+\end{itemize}
+
+\skv
+{\bf Problem 5:} Let $f(x)$ and $g(x)$ be irreducible polynomials in $\mathbb F_p[x]$
+of the same degree and let $F=\mathbb F_p[x]/(f(x))$. Prove that $g(x)$ splits completely over $F$.
+\skv
+{\bf Problem 6:} Let $p$ be a prime, $n$ a positive integer and
+$\Phi_n(x)=x^{p^n}-x\in \mathbb F_p[x]$. Prove that $\Phi_n(x)$ is equal to the product
+of all monic irreducible polynomials in $\mathbb F_p[x]$ whose degrees divide $m$
+(where each polynomial occurs with multiplicity one).
+\skv
+\skv
+{\bf Problem 7:} (practice) Prove the following analogue of Kummer's theorem for abelian extensions:
+Let $n\in\dbN$ and let $F$ be a field containing primitive $n^{\rm th}$ root of unity.
+\begin{itemize}
+\item[(a)] Let $K/F$ be a finite Galois extension such that $\Gal(K/F)$ is abelian
+of exponent $n$. Then there exists $a_1,\ldots, a_t\in K$ s.t.
+$K=F(\sqrt[n]{a_1},\ldots,\sqrt[n]{a_t})$, or more precisely, there exists
+$\alpha_1,\ldots, \alpha_t\in K$ s.t.
+$K=F(\alpha_1,\ldots,\alpha_t)$ and $\alpha_i^n\in F$ for all $i$.
+
+\item[(b)] Conversely, suppose that $K=F(\sqrt[n]{a_1},\ldots,\sqrt[n]{a_t})$
+for some $a_1,\ldots, a_t\in F$. Prove that $K/F$ is Galois, and $\Gal(K/F)$
+is abelian of exponent $n$.
+\end{itemize}
+
+
+\end{itemize}
+\end{document} 

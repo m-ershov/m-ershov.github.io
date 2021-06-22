@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.7in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 7. }\rm
+\skv
+{\bf Plan for next week}: start Galois theory (online lecture 19, DF 14.1 and parts of 14.2)
+\skv
+\bf\centerline{Problems, to be submitted by Thursday, March 22nd. }\rm
+\skv
+
+{\bf Problem 1:} \rm Let $F$ be a field and $\Omega$ a subset of $F[x]$.
+Use the existence and uniqueness of algebraic closures to prove that
+there exists a unique splitting field for $\Omega$ over $F$ up to
+$F$-isomorphism. {\bf Hint:} First show that any splitting field 
+$K$ for $\Omega$ lies in some algebraic closure of $F$.
+\skv
+
+{\bf Problem 2:} \rm Before doing this problem read \S~13.6 in DF.
+Let $p$ be a prime, $n\geq 2$ an integer, $f(x)=x^n-p$, and let
+$K\subset \dbC$ be the splitting field for $f(x)$ over $\dbQ$.
+As we proved in class, $K=\dbQ(\sqrt[n]{p},\omega_n)$ where
+$\omega_n=e^{2\pi i/n}$.
+\begin{itemize}
+\item[(a)] Prove that $[K:\dbQ]\leq n\phi(n)$ where $\phi$
+is the Euler function.
+\item[(b)] Assume that $n$ is prime. Prove that inequality in (a)
+is equality.
+\item[(c)] Let $p=3$ and $n=12$. Prove that inequality in (a)
+is strict and find $[K:\dbQ]$. {\bf Hint:} Compute $\omega_{12}$
+explicitly.
+\end{itemize}
+\skv
+{\bf Problem 3 (practice):} (a) Prove that if  $K/\dbQ$ is any field extension,
+then any automorphism of $K$ must fix $\dbQ$ elementwise.
+
+(b) Prove that the automorphism group $\Aut(\dbR/\dbQ)$ is trivial.
+See [DF, Problem~7, p.567] for a sketch of the proof.
+
+\skv
+{\bf Problem 4:} Let $K/F$ be an algebraic extension. Prove that $K/F$
+is normal if and only if for any algebraic extension $L/K$ and
+any $F$-automorphism $\sigma\in \Aut_F(L)$ we have $\sigma(K)=K$.
+
+\skv
+{\bf Problem 5:} Let $K/F$ be a field extension, and let $K_1$ and $K_2$
+be subfields of $K$ containing $F$ such that the extensions
+$K_1/F$ and $K_2/F$ are normal. Prove that the extensions
+$K_1 K_2/F$ and $K_1\cap K_2/F$ are also normal.
+\skv
+{\bf Problem 6:} Problems 10 and 11 in [DF, p.556]
+\skv
+{\bf Problem 7:} Let $p_1,\ldots,p_k$ be distinct primes and
+$K=\dbQ(\sqrt{p_1},\ldots,\sqrt{p_k})$. Find a primitive element
+of $K/\dbQ$ (and justify that your element is indeed primitive).
+\skv
+{\bf Problem 8 (practice):} Problem 13 in [DF, p.556]. 
+\end{document}

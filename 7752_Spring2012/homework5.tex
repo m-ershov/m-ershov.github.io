@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\rk{{\rm rk}}
+
+\bf\centerline{Homework Assignment \# 5. }\rm
+\vskip .5cm
+{\bf Plan for next week:} Jordan canonical form (12.3 and online
+lecture 12+) and field extensions (13.1, 13.2 and online lecture 14).
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Thu, February 23rd. }\rm
+\vskip .1cm
+{\bf Problem 1:} Let $R$ be a commutative ring (with 1).
+\skv
+(a) Let $C$ be an $R$-algebra and let $A$ and $B$ be $R$-subalgebras of $C$
+which commute with each other, that is, $ab=ba$ for any $a\in A, b\in B$
+(note that $A$ and $B$ themselves do not have to be commutative).
+Prove that there is an \underline{$R$-algebra homomorphism} $\phi:A\otimes_R B\to C$
+such that $\phi(a\otimes b)=ab$ for each $a\in A$ and $b\in B$.
+\skv
+(b) Prove that $\dbZ[i]\otimes_{\dbZ} \dbR\cong \dbC$ as rings (as usual $\dbR$
+is real numbers and $\dbC$ are complex numbers).
+\skv
+(c) Now assume that $R$ is a field, and let $A$ be a finite-dimensional
+$R$-algebra. Prove that the algebra $A\otimes_R A$ cannot be a field
+unless $\dim_R A=1$. {\bf Hint:} use (a).
+
+
+\vskip .2cm
+{\bf Problem 2: } \rm DF, Problem 6, page 488. 
+\vskip .2cm
+{\bf Problem 3: } \rm DF, Problem 9, page 489, first two matrices
+are for practice. 
+\vskip .2cm
+
+{\bf Problem 4: } \rm Recall that for a matrix $A$ we denoted by
+$\chi_A(x)$ and $\mu_A(x)$ its characteristic and minimal polynomials, respectively. Determine the number of possible RCFs of $8\times 8$ matrices $A$ over $\dbQ$ with 
+$\chi_A(x)=x^8-x^4$. Explain your argument in detail.
+
+\skv
+{\bf Problem 5: } \rm (a) (practice) Prove that two $3\times 3$ matrices
+over some field $F$ are similar if and only if they have the same minimal and characteristic 
+polynomials. Give an example showing that this does not hold for $4\times 4$ matrices.
+
+(b) A matrix $A$ is called idempotent if $A^2=A$. Prove that two idempotent $n\times n$ matrices are similar if and only if they have they same rank. {\bf Hint:} What is the minimal polynomial of an idempotent matrix? How does rank relate to eigenvalue $0$?
+
+\skv
+{\bf Problem 6: } Find the number of distinct conjugacy classes in the group $GL_3(\dbZ/2\dbZ)$
+and specify one element in each conjugacy class.
+\end{document}

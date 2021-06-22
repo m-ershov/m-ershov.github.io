@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\phi{{\varphi}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Midterm \#1, Spring 2012. Due Thursday, March 1st.}\rm
+\vskip .7cm
+{\bf Directions: } There are five problems, each of which is worth 10 points.
+The best 4 out of 5 problems will be counted. Provide complete arguments (do not skip steps). State clearly any result you are referring to. Partial credit for incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will not provide hints. You may freely use your class notes,
+previous homework assignments and the book by Dummit and Foote, except when
+explicitly stated otherwise. The use of other books is allowed, but not encouraged. If you happen to run across a problem very similar or identical to one on the midterm which is solved in another book, do not consult that solution.
+
+\skv
+{\bf 1.} $\empty$
+\begin{itemize}
+\item[(a)] Let $R$ be a commutative domain (with $1$)
+and $F$ the field of fractions of $R$. Let $M$ and $N$ be $F$-modules,
+and let $\phi:M\to N$ be an isomorphism of $R$-modules. Prove that
+$\phi$ must be an isomorphism of $F$-modules.
+
+\item[(b)] Give an example of finitely generated $\dbC$-modules
+$M$ and $N$ and a map $\phi:M\to N$ such that $\phi$ is an isomorphism
+of $\dbR$-modules but not an isomorphism of $\dbC$-modules.
+
+\item[(c)] Let $M$ and $N$ be finitely generated $\dbC$-modules,
+and suppose that $M$ and $N$ are isomorphic as $\dbR$-modules.
+Prove that $M$ and $N$ are isomorphic as $\dbC$-modules.
+\end{itemize} \skv
+
+{\bf 2.} Let $R$ be a commutative ring with $1$, and let
+$M,N$ and $L$ be $R$-modules.
+\begin{itemize}
+\item[(a)] Suppose that $L$ is a quotient module of $M$. Prove that $L\otimes_R N$ is 
+(isomorphic to) a quotient module of $M\otimes_R N$. You are NOT allowed to use Dummit and Foote for this question (class and online notes should be sufficient).
+\item[(b)] Suppose that $M$ is finitely generated and $N$ is Noetherian.
+Prove that the $R$-module $M\otimes_R N$ is Noetherian.
+{\bf Hint:} Start with the case when $M$ is a free $R$-module.
+\item[(c)] Suppose that $L$ is a submodule of $M$. Is it always true
+(for any $R,M,N$ and $L$) that $M\otimes_R N$ contains a submodule 
+isomorphic to $L\otimes_R N$? Prove or give a counterexample.
+\end{itemize}
+
+\skv{\bf 3.} Let $R$ be a commutative ring (with 1) and let $M$ and $N$
+be $R$-modules.
+\begin{itemize}
+\item[(a)] Give an example showing that $T(M\oplus N)$ need not be isomorphic
+to $T(M)\otimes T(N)$ as rings. {\bf Hint:} Look for an example where
+$T(M)\otimes T(N)$ satisfies certain nice algebraic property, while
+$T(M\oplus N)$ does not.
+\item[(b)] Prove that $S(M\oplus N)$ is isomorphic to $S(M)\otimes S(N)$
+as $R$-algebras. {\bf Hint:} Use the universal property of symmetric algebras
+to construct a map in one direction and results from previous homeworks 
+to construct a map in the opposite direction. Then prove that the two maps
+are mutually inverse.
+\item[(c)] Now assume that $R$ is a field and $M$ and $N$ are finite-dimensional
+over $R$. Prove that $\bigwedge (M\oplus N)$ is isomorphic to
+$\bigwedge(M)\otimes \bigwedge(N)$ as $R$-modules but not necessarily
+as rings.
+\end{itemize}
+\skv
+{\bf 4.} Let $V$ be a finite-dimensional vector space over a field $F$,
+and let $T\in\mathfrak{gl}(V)$. Let $m$ be the number of invariant factors
+of $T$.
+\begin{itemize}
+\item[(a)] Prove that $m=1$ if and only if there exists $v\in V$ such that
+the smallest $T$-invariant subspace of $V$ containing $v$ is the entire $V$.
+\item[(b)] Assume that $m=1$ and $a(x)=x^6-1$ is the (unique) invariant factor
+of $T$. Find the number of distinct $T$-invariant subspaces of $V$
+in each of the following 4 cases: $F=\dbR$, $F=\dbC$, $F=\dbF_2$ (field with
+$2$ elements) and $F=\dbF_3$. 
+ \end{itemize}
+{\bf Hint:} Rephrase both (a) and (b) as questions about $F[x]$-modules.
+In (b), the answers in the 4 cases are all finite and all different.
+\skv
+\skv
+ {\bf 5.} Let $a,b\in\dbR$ (real numbers) and $k$ a positive integer. Define
+the $2k\times 2k$ matrix $J(a,b,2k)$ over $\dbR$ as follows: if
+we break $J(a,b,2k)$ into $2\times 2$ blocks, then each
+diagonal block is equal to $\begin{pmatrix} -a & 1 \\ -b & 0 \end{pmatrix}$,
+blocks just above the diagonal are equal to  $\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ and other blocks are equal to $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}.$ For instance,
+$$J(a,b,6)=\begin{pmatrix} 
+-a & 1 & 0 & 0 & 0 & 0\\
+-b & 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 &-a & 1 & 0 & 0\\
+ 0 & 0 &-b & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0 &-a & 1\\
+ 0 & 0 & 0 & 0 &-b & 0\\
+\end{pmatrix}$$
+Let us say that a matrix $A\in \mathfrak{gl}_n(\dbR)$ is in {\bf real JCF} if
+$A$ is block-diagonal where each block is either a Jordan block $J(\lambda,m)$ or a matrix of the form $J(a,b,2k)$ with $a^2<4b$.
+\begin{itemize}
+\item[(a)]  Let $V$ be a finite-dimensional vector space over $\dbR$,
+and let $T\in\mathfrak{gl}(V)$. Prove that there exists a basis $\Omega$ of $V$ such that $[T]_{\Omega}$ is in real JCF.
+\item[(b)] Let
+$$A=\begin{pmatrix}
+0  &  0  &  0  & -9\\
+1  &  0  &  0  &  0\\
+0  &  1  &  0  & -6\\
+0  &  0  &  1  &  0\\
+\end{pmatrix}.$$
+Find a matrix $D$ in real JCF which is similar to $A$. {\bf Hint:}
+What are the elementary divisors of $A$?
+\end{itemize}
+\end{document}

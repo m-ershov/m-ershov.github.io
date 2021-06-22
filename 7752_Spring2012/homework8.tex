@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Gal{{\rm Gal\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\deg{{\rm deg}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 8. }\rm
+
+{\bf Plan for the next week:} Galois correspondence (online lectures 20 and 21,
+Section 14.2 in DF), maybe start finite fields (online lecture 22,
+Section 14.3 in DF).
+\skv
+\bf\centerline{Problems, to be submitted by Thu, March 29th. }\rm
+\skv
+{\bf Problem 1:} \rm
+Prove the interesting part of Corollary 18.7 form online notes: if $K/L/F$ is a tower of algebraic extensions and $K/L$ and $L/F$ are separable, then $K/F$ is separable (see online notes for a hint). Give a detailed argument.
+\skv
+\skv
+{\bf Problem 2:} \rm  Let $p$ be a prime, $n\geq 2$ an integer, $f(x)=x^n-p$, and let
+$K\subset \dbC$ be the splitting field for $f(x)$ over $\dbQ$.
+Recall that $K=\dbQ(\sqrt[n]{p},\omega_n)$ where
+$\omega_n=e^{2\pi i/n}$.
+\begin{itemize}
+\item[(a)] Describe the elements of $\Gal(K/\dbQ)$ by their actions on $\sqrt[n]{p}$
+and $\omega_n$.
+\item[(b)] Let $G=\dbZ/n\dbZ\rtimes (\dbZ/n\dbZ)^{\times}$ where 
+$(\dbZ/n\dbZ)^{\times}$
+acts on $\dbZ/n\dbZ$ by multiplication. Prove that $\Gal(K/\dbQ)$ is isomorphic
+to a subgroup of $G$ and describe an explicit embedding. 
+\item[(c)] (optional) Under which conditions on $n$ and $p$ is this embedding an isomorphism? 
+You are not asked for necessary and sufficient conditions; just the most general sufficient
+conditions that you can justify.
+\end{itemize}
+
+{\bf Problem 3:} \rm Let $F$ be a field, let $f(x)\in F[x]$
+be an irreducible (over $F$) separable polynomial of degree $n$,
+and let $K$ be a splitting field of $f(x)$.
+
+\begin{itemize}
+\item[(a)] Prove that $|\Gal(K/F)|$ is a multiple of $n$ and divides $n!$
+
+\item[(b)] Let $n=3$. Prove that $\Gal(K/F)$ is isomorphic to either $\dbZ/3\dbZ$ or $S_3$.
+
+\item[(c)] Let $n=4$ and assume that $|\Gal(K/F)|=8$.
+Determine the isomorphism class of $\Gal(K/F)$.
+\end{itemize}
+
+
+{\bf Problem 4:} Let $f(x)\in \dbQ[x]$ be an irreducible polynomial
+of degree $n$, and let $K$ be a splitting field of $f(x)$.
+Label the roots of $f(x)$ by $1,\ldots, n$ (in some order),
+and let $\iota: \Gal(K/\dbQ)\to S_n$ be the associated embedding.
+
+\begin{itemize}
+\item[(a)] Assume $f(x)$ has at least one non-real root. Prove
+that the complex conjugation is an element of $\Gal(K/\dbQ)$
+of order $2$.
+
+\item[(b)] Assume that $f(x)$ has precisely two non-real roots. Prove
+that the image of the complex conjugation under the embedding $\iota$
+is a transposition.
+
+\item[(c)] Suppose that $n=\deg(f)$ is prime and again assume that $f(x)$ has precisely
+two non-real roots. Prove that $\Gal(K/\dbQ)$ is isomorphic to $S_n$.
+{\bf Hint:} $\Gal(K/\dbQ)$ must contain an element of order $n$ (why?)
+
+\end{itemize}
+{\bf Problem 5:} The main goal of this problem is to give a slightly different solution
+to Problem~4(c) in HW\#6. So, let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$ and $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$.
+
+\begin{itemize}
+\item[(a)] Prove that there exists a subset $T$ of $S$ such that the set
+$P(T)=\{1\}\cup \{\sqrt{n} : n \mbox{ is a product of distinct elements of }T\}$
+is a basis for $K/\dbQ$.
+
+\item[(b)] Let $T$ be as in (a). Let $\alpha\in K$ be such that $\sigma(\alpha)=\pm \alpha$ for every $\sigma\in \Gal(K/\dbQ)$. Prove that $\alpha=q\beta$ for some $\beta\in T$ and $q\in\dbQ$.
+
+\item[(c)] Assume now that $n_1,\ldots, n_k$ are pairwise relatively prime and none
+of them is a square. Use (b) to give a short proof of the fact that $[K:\dbQ]=2^k$. 
+\end{itemize}
+
+\end{document} 
