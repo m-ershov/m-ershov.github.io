@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\eps{{\epsilon}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Math 7751, Fall 2011. Final exam. Due Tuesday, December 6th}\rm
+\vskip .7cm
+{\bf Directions: } Each problem is worth 15 points. The best 5 out of 6 scores
+will be counted with 100\% weight, and the lowest score will be counted with
+33$\frac{1}{3}$\% weight, so the maximal possible total is 80 points. Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but I may only provide minor hints. You may use freely your class notes,
+previous homework assignments and the book by Dummit and Foote. The use of other books is allowed,
+but not encouraged. If you happen to run across a problem very similar or identical to one on the midterm
+which is solved in another book, do not consult that solution.
+
+\skv
+{\bf 1.} Let G be a group of order $pqr$ where $p$, $q$, $r$ are 
+distinct primes and 
+\begin{itemize}
+\item[(i)] $p > q > r$
+\item[(ii)] $gcd(q, p - 1) = gcd(r, q - 1) = gcd(r, p - 1) = 1$.
+\end{itemize}
+\begin{itemize}
+\item[(a)] Prove that $G$ has a normal subgroup $P$ of order $p$.
+\item[(b)] Prove that $G$ has a normal subgroup $S$ of order $pq$
+and that this subgroup $S$ is cyclic.
+\item[(c)] Finally prove that $G$ itself is cyclic.
+\end{itemize}
+\skv
+{\bf 2.} Let $G$ be group. A subgroup $H$ of $G$ will be called {\it essential}
+if $H\cap K\neq \{1\}$ for every non-trivial subgroup $K$ of $G$.
+\begin{itemize}
+
+\item[(a)] Let $p$ be a prime and $k\geq 2$. Prove that the group $\dbZ/p^k\dbZ$
+has a proper essential subgroup.
+
+\item[(b)] Assume that $H_1$ is an essential subgroup of $G_1$ and $H_2$
+is an essential subgroup of $G_2$. Prove that $H_1\times H_2$ is an essential subgroup
+of $G_1\times G_2$.
+
+\item[(c)] Let $G$ be a finite abelian group. Prove that $G$ does not have a proper
+essential subgroup if and only if $G$ is a direct product of groups of prime order.
+\end{itemize}
+\skv
+{\bf 3.}
+\begin{itemize}
+\item[(a)] Find a monic irreducible polynomial of degree $4$ in $\dbF_2[x]$.
+Then use it to construct a field $F$ with $|F|=16$ and {\bf find explicitly}
+a generator of the multiplicative group $F^{\times}$ (recall that we proved
+in class that $F^{\times}$ is cyclic).
+\item[(b)] Let $p>3$ be a prime and $R=\dbF_p[x]/(x^3-1)$.
+Describe the multiplicative group $R^{\times}$ as a direct product of cyclic groups.
+{\bf Hint:} There will be two different cases depending on whether
+$p\equiv 1$ or $2$ mod $3$.
+\end{itemize}
+
+
+\skv
+{\bf 4.} Let $\dbR$ denote the real numbers. The purpose of this problem is to show that the ring 
+$A=\dbR[x,y]/(x^2+y^2-1)$ is not a UFD. For an element $f\in \dbR[x,y]$ 
+we denote its image in $A$ by $[f]$.
+
+\begin{itemize}
+\item[(a)] Show that every element of $A$ can be uniquely represented in the form $[f(x)+g(x)y]$
+where $f(x),g(x)\in F[x]$. 
+\item[(b)] Show that $A$ has an automorphism $\phi$ of order $2$ such that
+$\phi([f(x)])=[f(x)]$ for each $f(x)\in F[x]$ and $\phi([y])= -[y]$.
+\item[(c)] Use (a) and (b) to construct a function $N:A\to F[x]$ such that $N(uv)=N(u)N(v)$ for all $u,v\in A.$   
+\item[(d)] Use the function $N$ from (c) to show that $[x]$ is an irreducible element of $A$
+and that the only invertible elements of $A$ are (images of) nonzero constant polynomials.
+{\bf Hint:} It is essential that you are working over $\dbR$, not over $\dbC$.
+\item[(e)] Now show that $A$ is not a UFD.
+\end{itemize}
+\skv
+{\bf 5.}  Let $R$ be a commutative ring with $1$, and let $\Omega$ be the set
+of all ideals $I$ of $R$ such that every element of $I$ is $0$ or a zero divisor.
+\begin{itemize}
+\item[(a)] Prove that $\Omega$ has a maximal element (with respect to inclusion)
+and moreover any element of $\Omega$ is contained in a maximal element.
+\item[(b)] Let $I$ be a maximal element of $\Omega$. Prove that $I$ must be prime.
+\end{itemize}
+{\bf Hint:} It is a well-known fact that for any non-nilpotent element
+$f\in R$ there exists a prime ideal $P$ of $R$ such that $f\not\in P$.
+While this result is not directly related to Problem 5(b), its proof
+(see e.g. DF, Proposition 12 on p.674) may help you with 5(b).
+
+\skv
+{\bf 6.} Let $F$ be a field and $R=F[x,y]$ the ring of polynomials over $R$ in two (commuting) variables $x$ and $y$. Let $I=xR$ be the principal ideal of $R$ generated by $x$ and $S=F+I=\{f+i: f\in F, i\in I\}$. Observe that $S$ is a subring of $R$ and $I$ is an ideal of $S$ (you need not justify these facts).
+\begin{itemize}
+\item[(a)] Prove that $I$ is not finitely generated as an ideal of $S$.
+{\bf Hint:} Assume that $I$ is finitely generated as an ideal of $S$
+and reach a contradiction by showing that there must exist a natural number $m$ 
+such that any polynomial $p(x,y)\in I$ contains no monomials of the form $xy^n$, with $n>m.$
+\item[(b)] Prove that $S$ is not finitely generated as a ring.
+{\bf Hint:} It is possible to answer (b) using (a) without doing any computations.
+\end{itemize}
+\end{document}

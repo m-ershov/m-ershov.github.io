@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.3in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#1, to be submitted by Thursday, September, 1st}\rm
+\vskip .1cm
+
+\skv
+{\bf 1.} Let $A$ be a set and let $f:A\to A$ and $g:A\to A$ be mappings such that
+$f\circ g=id_A$ (where $id_A$ is the identity mapping on $A$).
+
+(a) Prove that $f$ is surjective and $g$ is injective
+
+(b) Show by example that $f$ need not be injective and $g$ need not be surjective
+\skv
+
+{\bf 2.} (a) Let $G$ be a group, and define the relation $\sim$ on $G$: $x\sim y$
+if $y$ is conjugate to $x$ in $G$, that is, there exists $g\in G$ such that
+$y=gxg^{-1}$. Prove that $\sim$ is an equivalence relation.
+
+(b) Let $G$ be a group. An equivalence relation $\sim$ on $G$ is called a {\bf congruence}
+if for any $a,b,c,d\in G$ such that $a\sim b$ and $c\sim d$ we have $ac\sim bd$.
+
+Now let $H$ be a subgroup of $G$ and define the relation $\sim_H$ on $G$ by
+$$a\sim_H b \iff a^{-1}b\in H.$$ Prove that $\sim_H$ is a congruence
+if and only if $H$ is normal in $G$.
+
+\skv
+{\bf 3.} Let $G$ be a group.
+(a) Define $\phi: G\to G$ by $\phi(g)=g^2$. Prove that $\phi$ is a homomorphism
+if and only if $G$ is abelian.
+
+(b) Assume that $x^2=1$ for any $x\in G$. Prove that $G$ is abelian.
+\skv
+
+{\bf 4.} Find the minimal $n$ for which the symmetric group $S_n$ contains an element of order $15$
+(and explain why your $n$ is indeed minimal). {\it Note: }All you need to know about $S_n$ for this
+problem is stated in Section 1.3 of DF (pp.29-32).
+\skv
+
+{\bf 5.} Prove that an element $\bar a\in\dbZ_n$ is invertible if and only if $gcd(a,n)=1$
+where $gcd$ is the greatest common divisor. You may use any standard theorem about integers
+(e.g. unique factorization), but do not use any theorems about $\dbZ_n$.
+
+{\bf Hint: } The forward direction is easy. For the opposite direction
+either use the theorem about representation of $gcd(a,n)$ as an integral linear 
+combination of $a$ and $n$ or, alternatively, show that the mapping $\phi_n:\dbZ_n\to\dbZ_n$
+given by  $\phi_n(\bar x)=\bar x\bar a$ is injective whenever $gcd(a,n)=1$.
+\skv
+{\bf 6.} (a) Prove that every finite group is finitely generated. 
+
+(b) Let $\dbQ$ be the group of rational numbers with addition. Prove that $\dbQ$
+is not finitely generated. 
+
+(c) Prove that any finitely generated subgroup of $\dbQ$ is cyclic.
+\skv
+{\bf 7.} Let $G$ be a group and $H$ a subgroup of $G$. Let $G/H$ (resp. $H\backslash G$)
+be the set of left (resp. right) cosets of $H$ in $G$. Construct an explicit
+bijection between $G/H$ and $H\backslash G$. {\bf Remark:} This result explains
+why we can talk about the index $[G:H]$ of a subgroup $H$ of $G$ instead
+of talking about left and right indices.
+\end{document}

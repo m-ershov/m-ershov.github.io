@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \#2, to be submitted by Thursday, September, 8th}\rm
+\vskip .1cm
+
+\skv
+{\bf 1.} (a) Let $G$ be a cyclic group of order $n<\infty$. Prove that if $k\in\dbZ$,
+then the mapping $\phi:G\to G$ defined by $\phi(x)=x^k$ is bijective if and
+only if $k$ is relatively prime to $n$.
+
+(b) Let $G$ be an arbitrary finite group of order $n<\infty$. Prove that if $k\in\dbZ$
+is relatively prime to $n$, then the mapping $\phi:G\to G$ defined by $\phi(x)=x^k$ is bijective. 
+{\bf Hint: } Use the main corollary of Lagrange theorem.
+\skv
+
+{\bf 2.} Let $F$ be a finite field of order $q$.
+
+(a) Prove that the group $GL_2(F)$ has order $q(q-1)^2(q+1)$
+
+(b) Prove that the group $SL_2(F)$ has order $q(q-1)(q+1)$
+
+(c) State and prove the formula for the order of the groups $GL_n(F)$
+and $SL_n(F)$ for $n>2$.
+
+{\bf Hint: } To determine the order of $GL_n(F)$ use the fact that a square matrix over a field $F$
+is invertible if and only if its rows are linearly independent. 
+Use this to count the number of possible choices for the first row, then the 
+number of choices for the second row, once the first one has been fixed etc.
+\skv
+
+{\bf 3.} (a) Let $n\geq 2$ be an integer. Prove that the quotient group $\dbZ/n\dbZ$ is isomorphic to $\dbZ_n$.
+
+(b) Prove that the quotient group $\dbR/\dbZ$ is isomorphic to the group
+of rotations of a circle.
+
+(c) Prove that every element of the group $\dbQ/\dbZ$ has finite order.
+\skv
+
+{\bf 4 (practice).} Let $G$ be a group and $H$ a normal subgroup of $G$, and let
+$\pi: G\to G/H$ be the canonical projection. Let $\mathcal S$
+be the set of all subgroups of $G$ containing $H$ and $\mathcal T$
+the set of all subgroups of $G/H$. Define the mappings $f: \mathcal S\to \mathcal T$
+and $g: \mathcal T\to \mathcal S$ by $f(X)=\pi(X)$ and $g(Y)=\pi^{-1}(Y)$.
+
+(a) Prove that $f$ and $g$ are mutually inverse, and thus there is a natural
+bijection between the sets $\mathcal S$ and $\mathcal T$.
+
+(b) Prove any two (your choice) of parts (1)-(5) of the lattice isomorphism theorem
+(Theorem 20 on page 99, DF).
+\skv
+
+{\bf 5.} Let $G$ be a group and let $H$ and $K$ be subgroups of $G$ of finite index
+(note that $G$ is not assumed to be finite).
+
+(a) Assume that $H\subseteq K$. Prove that $[G:H]=[G:K][K:H]$ (recall that $[A:B]$
+denotes the index of a subgroup $B$ in a group $A$).
+
+(b) (independent of (a)) Let $m=[G:H]$ and $n=[G:K]$. Prove that
+${\rm LCM}(m,n)\leq [G:H\cap K]\leq  mn$ (where ${\rm LCM}$ is the least common multiple).
+
+{\bf Hint for (a):} If $A$ is a group and $B$ a subgroup of $A$, a
+subset $S$ of $A$ is called a (left) transversal of $B$ in $A$
+if $S$ contains precisely one element from each left coset of $B$
+(an alternative name for a transversal is a system of left coset representatives).
+Let $\{g_1,\ldots, g_r\}$ be a left transversal of $K$ in $G$
+and $\{k_1,\ldots, k_s\}$ a left transversal of $H$ in $K$. Prove
+that $\{g_i k_j\}_{1\leq i\leq r, 1\leq j\leq s}$ is a left transversal for $H$ in $G$.
+Recall that if $B$ is a subgroup of a group $G$, then $xB=yB$ $\iff$ $x^{-1}y\in B$
+for $x,y\in G$.
+
+
+\skv
+{\bf 6.} (a) Let $(G,X,.)$ be a group action. Recall that for a subset $S$ of $X$
+we put
+$PStab_G(S)=\{g\in G:\, g . s=s\mbox{ for all }s\in S\}$ (the poinwise stabilizer of $S$) and 
+$Stab_G(S)=\{g\in G:\, g. S=S\}$ (the stablizer of $S$). 
+Prove that $PStab_G(S)$ is a normal subgroup of $Stab_G(S)$.
+
+(b) Let $R$ be a commutative ring with $1$ and $n\geq 2$ an integer.
+Let $UT_{n}(R)$ be the subgroup of $GL_n(R)$ consisting of upper-triangular
+matrices and $U_{n}(R)$ the subgroup of $GL_n(R)$ consisting of upper-unitriangular
+matrices (upper-triangular matrices with $1$'s on the diagonal). Use (a) to
+prove that $U_{n}(R)$ is normal in $UT_{n}(R)$.
+\end{document}

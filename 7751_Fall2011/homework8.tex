@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#8. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Properties of ideals (7.4). Ring of fractions
+and Localization (7.5).
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, October, 27th}
+\skv
+\skv
+{\bf 1.} (a) Let $X$ be a finite set with $|X|=n$, and let $F=F(X)$ be the (standard) free group on $X$. Prove that $F/[F,F]\cong \dbZ^n$. {\bf Hint:} 
+First show that there is a natural epimorphism $\pi: F/[F,F]\to \dbZ^n$
+and then argue that $\pi$ must be an isomorphism.
+
+(b) Let $X$ and $Y$ be finite sets. Prove that free groups $F(X)$ and $F(Y)$
+are isomorphic if and only if $|X|=|Y|$. 
+\skv
+{\bf 2.} Let $X$ be a set and $F(X)$ the free group on $X$.
+Given $f\in F(X)$, the {\it length of $f$}, denoted by $l(f)$ is defined to be
+the length of the unique reduced word in $X\cup X^{-1}$ representing $f$. Equivalently,
+$l(f)$ is the smallest $n$ such that $f=x_1^{\epsilon_1}\ldots x_n^{\epsilon_n}$
+for some $x_i\in X$ and $\epsilon_i\in\{\pm 1\}$.
+
+(a) Prove that for any $f\in F(X)$ there exists integers $a,b\in\dbZ_{\geq 0}$
+(depending on $f$) such that $l(f^n)=na+2b$ for any $n\in\dbN$.
+Describe explicitly (i.e. give an algorithm) how to compute $a$ and $b$
+for a given $f$.
+
+(b) Use (a) to show that free groups are torsion-free.
+\skv
+{\bf 3.} Let $G=\la x,y \mid x^2, y^2\ra$. Prove that the element $xy\in G$
+has infinite order. {\bf Hint:} Use von Dyck's theorem.
+\skv
+{\bf 4.} (a) Explain why for any $n\in\dbN$ there are only finitely many isomorphism
+classes of groups of order $n$.
+
+(b) Let $G$ be a finitely generated group and $H$ a finite group. Prove that
+there are only finitely many homomorphisms from $G$ to $H$. {\bf Hint:}
+A homomorphism from $G$ is completely determined by its values on generators.
+
+(c) Let $G$ be a finitely generated group. Prove that for any $n\in\dbN$
+there are only finitely many normal subgroups of index $n$ in $G$. Then deduce that
+$G$ has only finitely many subgroups of index $n$ (use small index lemma).
+\skv
+{\bf 5.} A group $G$ is called {\it residually finite} if for any distinct elements $x,y\in G$
+there exists a finite group $H$ and a homomorphism $\phi: G\to H$ such that $\phi(x)\neq \phi(y)$.
+Thus, informally speaking, a group is residually finite if its elements can be separated
+via their images in finite quotients of $G$.
+
+Clearly, any finite group $G$ is residually finite (in which case for any $x,y\in G$
+we take $H=G$ and $\phi$ the identity mapping). Probably, the simplest example
+of an infinite residually finite group is $\dbZ$: if $x,y\in\dbZ$ are distinct,
+choose any $n\in\dbN$ such that $n\nmid (x-y)$, and let $\phi:\dbZ\to\dbZ/n\dbZ$
+be the natural projection; then clearly $\phi(x)\neq \phi(y)$.
+
+(a) Prove that the following conditions on a group $G$ are equivalent:
+\begin{itemize}
+\item[(i)] $G$ is residually finite
+\item[(ii)] For any non-identity element $x\in G$ there exists a finite group $H$
+and a homomorphism $\phi: G\to H$ such that $\phi(x)\neq 1$.
+\item[(iii)] The intersection of all normal subgroups of finite index in $G$ is trivial.
+\end{itemize}
+
+(b) Prove that a subgroup of a residually finite group is residually finite.
+
+(c) Let $n\geq 2$ be an integer. Prove that the group $GL_n(\dbZ)$ is residually finite.
+{\bf Hint: }Probably, it is the easiest to show that condition (ii) from part (a) holds.
+
+{\bf Note: } It is well known that free groups of finite rank can be embedded in
+$SL_2(\dbZ)$. Thus, (b) and (c) imply that free groups of finite rank are residually finite
+(but there are other interesting proofs of that fact).
+
+\skv
+{\bf 6.} (optional) Recall from Homework\#3 that a group $G$ is called hopfian if any surjective
+homomorphism $\phi: G\to G$ is injective. Prove that any finitely generated residually finite
+group is hopfian. {\bf Hint:} Suppose, on the contrary, that there exists a finitely
+generated group $G$ and a surjective homomorphism $\phi:G\to G$ with $\Ker\phi$ non-trivial.
+Then $G/\Ker\phi\cong G$. Deduce that for any $n\in\dbN$ there is a bijection between
+the set of all normal subgroups of index $n$ in $G$ and the set of those normal subgroups of index
+$n$ in $G$ which contain $\Ker\phi$. Then use Problem~4 to reach a contradiction
+with the assumption that $G$ is residually finite.
+\end{document}

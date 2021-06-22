@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#6. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Free groups (6.3)
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, October, 13th}
+\skv
+{\bf 1.} (a) Classify all abelian groups of order $360=2^3\cdot 3^2\cdot 5$ up to isomorphism. For each isomorphism type, state the corresponding elementary divisors form and invariant factors form.
+
+(b) Let $n\in\dbN$, and decompose $n$ as a product of primes: $n=p_1^{\alpha_1}\ldots p_k^{\alpha_k}$. Find the number of non-isomorphic abelian groups of order $n$. Express your answer in terms of the partition function.
+\skv
+{\bf 2.} Let $G$ be a finite abelian group. Prove that $G$ is cyclic if and only if $G$ does not contain a subgroup isomorphic to $B\oplus B$ for some non-trivial group $B$.
+\skv
+{\bf 3.} Let $G$ be an abelian group (not necessarily finitely generated), and
+let $Tor(G)$ be the set of elements of finite order in $G$. Recall that
+$Tor(G)$ is a subgroup of $G$ (since $G$ is abelian), called the torsion subgroup of $G$.
+
+(a) Prove that the quotient group $G/Tor(G)$ is torsion-free (a group is called torsion-free
+if it does not have non-identity elements of finite order).
+
+(b) For each prime $p$ let $Tor_p(G)$ be the set of elements of order $p^k$ (with $k\geq 0$)
+in $G$. Prove that each $Tor_p(G)$ is a subgroup of $Tor(G)$ and that $Tor(G)$
+is a direct sum of these subgroups where $p$ runs over all primes.
+
+\skv
+{\bf 4.} Let $\Omega$ be a countable set (for simplicity you may assume that $\Omega=\dbZ$,
+the integers). Let $S(\Omega)$ be the group of all permutations of $\Omega$.
+A permutation $\sigma\in S(\Omega)$ is called {\it finitary} if it moves
+only a finite number of points, that is, the set $\{i\in\Omega : \sigma(i)\neq i\}$
+is finite. It is easy to see that finitary permutations form a subgroup of $S(\Omega)$
+which will be denoted by $S_{fin}(\Omega)$. Finally, let $A_{fin}(\Omega)$ be the subgroup
+of even permutations in $S_{fin}(\Omega)$ (note that it makes sense to talk about
+even permutations in $S_{fin}(\Omega)$, but not in $S(\Omega)$).
+
+(a) Prove that the group $A_{fin}(\Omega)$ is simple and that $A_{fin}(\Omega)$
+is a subgroup of index two in $S_{fin}(\Omega)$. {\bf Hint:} To prove the first
+assertion solve problem 5 in [DF, page 151].
+
+(b) Prove that $A_{fin}(\Omega)$ and $S_{fin}(\Omega)$ are both normal in $S(\Omega)$.
+
+(c) Prove that neither of the groups $S(\Omega)$ and $S_{fin}(\Omega)$ is finitely generated. {\bf Hint:} The two groups are not finitely generated for completely
+different reasons.
+
+(d) Construct a finitely generated subgroup $G$ of $S(\Omega)$ which contains
+$S_{fin}(\Omega)$. {\bf Note:} This example shows that a subgroup of a finitely
+generated group does not have to be finitely generated.
+\end{document}

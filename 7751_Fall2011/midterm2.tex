@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\eps{{\varepsilon}}
+
+\bf\centerline{Algebra-I, Fall 2011. Midterm \#2. Due Thursday, November 3rd}\rm
+\vskip .3cm
+{\bf Directions: } Each problem is worth 10 points. The best 4 out of 5 problems
+will be counted (but you are encouraged to do all 5). Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will not provide hints. You may freely use your class notes,
+previous homework assignments and the book by Dummit and Foote. The use of other books
+is allowed, but not encouraged. If you happen to run across a problem
+very similar or identical to one on the midterm which is solved in another book,
+do not consult that solution.
+
+\skv
+{\bf 1.} Given a finite group $G$ and a positive integer $n$, denote
+by $a_n (G)$ the number of elements of $G$ of order $n$ and by $b_n(G)$
+the  number of elements of $G$ of order dividing $n$. The goal
+of this problem is to prove the following theorem:
+\skv
+{\bf Theorem A:} If $G$ and $H$ are finite abelian groups and $a_n(G)=a_n(H)$ for all $n$, then $G$ is isomorphic to $H$.
+\skv
+(a) (1 pt) Let $G$ and $H$ be finite groups. Prove that $a_n(G)=a_n(H)$ for all $n$ $\iff$ $b_n(G)=b_n(H)$ for all $n$.
+
+(b) (2 pts) Suppose that $G=X\times Y$. Prove that $b_n(G)=b_n(X)b_n(Y)$.
+
+(c) (4 pts)  Suppose that $G$ and $H$ are finite abelian groups s.t. $a_n(G)=a_n(H)$ for all $n$. Prove that there exists a non-trivial
+group $C$ s.t. $G\cong A\times C$ and $H\cong B\times C$ for some
+groups $A$ and $B$. {\bf Hint:} Use the classification theorem in
+invariant factors form.
+ 
+(d) (3 pts) Now use (a),(b) and (c) to prove Theorem~A.
+\skv
+\skv
+
+{\bf 2.} Let $G$ be a finite group
+
+(a) (5 pts) Prove that $G$ is nilpotent if and only if $G$ contains
+a normal subgroup of order $m$ for any $m$ dividing $|G|$.
+
+(b) (5 pts) Prove that $G$ is cyclic if and only if $G$ contains
+a unique subgroup of order $m$ for any $m$ dividing $|G|$.
+
+{\bf Note:} Of course, the forward direction in (b) is well known,
+so you can assume it without proof. {\bf Hint:} You may find
+some results in [DF,6.1] useful.
+\skv
+\skv
+
+{\bf 2.} In all parts of this problem $G$ is a finite group.
+
+(a) (3 pts) Prove that $G$ has a simple quotient (that is, $G$ has a quotient
+which is a simple group).
+
+(b) (2 pts) Suppose that $G$ is perfect, that is, $[G,G]=G$. Prove that $G$ has
+a non-abelian simple quotient.
+
+(c) (5 pts) Once again, let $G$ be an arbitrary finite group. Prove that $G$
+has a unique normal subgroup $K$ such that $K$ is perfect and $G/K$
+is solvable. {\bf Hint:} Such $K$ can be easily described in terms of
+the derived series of $G$.
+\skv
+\skv
+
+{\bf 4.} (10 pts) Prove that there are precisely 5 isomorphism classes of groups of order $20$. Include all the details. 
+\skv
+\skv
+
+
+{\bf 5.} Let $X$ be a finite set and $F=F(X)$ the (standard) free group on $X$.
+\skv
+{\bf Definition:} An element $g\in F$ is called cyclically reduced (with respect to $X$) if the reduced word representing $g$ is of the form $x_1^{\eps_1}\ldots x_n^{\eps_n}$
+(with $x_i\in X$, $\eps_i=\pm 1$) where $x_n^{\eps_n}\neq (x_1^{\eps_1})^{-1}$.
+\skv
+\begin{itemize}
+\item[(a)] (1 pt) Prove that any element $g\in F$ is conjugate to a cyclically
+reduced element.
+
+\item[(b)] (3 pts) Prove that if $f\in F$ and $n\in\dbN$, then $f^n$ is cyclically reduced if and only if $f$ is cyclically reduced.
+
+\item[(c)] (4 pts) Prove that if $f,g\in F$ and $f^n=g^n$ for some $n\in\dbN$, then $f=g$. Explain the argument in detail.
+{\bf Hint:} First consider the case when $f$ is cyclically reduced
+and then treat the general case. 
+
+\item[(d)] (2 pts) Now prove that if $f,g\in F$ and $f^n=g^m$ for some $n,m\in\dbN$,
+then $f$ and $g$ commute. {\bf Hint:} Use (c).
+\end{itemize}
+\end{document}

@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9.2in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#3, to be submitted by Thursday, September, 15th}\rm
+\vskip .1cm
+
+{\bf 1.} An action of a group $G$ on a set $X$ is called {\it transitive} if it has
+just one orbit, that is, for any $x,y\in X$ there exists $g\in G$ with $g. x=y$.
+
+(a) Let $(G,X,.)$ be a group action. Prove that if $x,y\in X$ lie in the same orbit,
+then their stabilizers $Stab_G(x)$ and $Stab_G(y)$ are conjugate, that is, there exists $g\in G$
+with $g Stab_G(x) g^{-1} = Stab_G(y)$. 
+
+(b) Suppose that $(G,X,.)$ is a transitive action and fix $x\in X$. Prove that
+the kernel of this action is equal to $\bigcap\limits_{g\in G} g Stab_G(x) g^{-1}$
+
+(c) Now suppose that $G$ and $X$ are both finite, $(G,X,.)$ is a transitive 
+faithful action (where `faithful' means the kernel is trivial) and $G$ is abelian. 
+Prove that for any $g\in G\setminus \{1\}$ the fixed set $Fix_X(g)$ is empty. 
+Deduce that $|X|=|G|$. {\bf Hint:} Use (b).
+\skv
+
+{\bf 2.} Let $G$ be a group. For each $g\in G$ let $\iota_g: G\to G$
+be the conjugation by $g$, that is, $\iota_g(x)=gxg^{-1}$.
+Recall that $\iota_g\in \Aut(G)$ for any $g\in G$ and
+the mapping $\iota: G\to \Aut(G)$ given by $\iota(g)=\iota_g$
+is a homomorphism. Elements of the subgroup $\Inn(G)=\iota(G)$ of $\Aut(G)$
+are called inner automorphisms.
+
+(a) Prove that for any $g\in G$ and $\sigma\in \Aut(G)$
+one has $\sigma \iota_g \sigma^{-1}=\iota_{\sigma(g)}$.
+Deduce that $\Inn(G)$ is a normal subgroup of $\Aut(G)$.
+
+(b) Let $H$ be a normal subgroup of $G$. Note that for each $g\in G$, 
+the mapping $\iota_g$ restricted to $H$
+is an automorphism of $H$. By slight abuse of notation
+we denote this automorphism of $H$ by $\iota_g$ as well.
+Prove that $\iota_g$ is an inner automorphism of $H$ if and
+only if $g\in H\cdot C_{G}(H)$ where $C_G(H)$ is the centralizer
+of $H$ in $G$.
+\skv
+
+{\bf 3.} Let $n\geq 4$ and $f=(1,2)(3,4)\in S_n$. Prove that 
+$|C_{S_n}(f)|=8 (n-4)!$. Then describe elements of this 
+centralizer explictly. {\bf Hint:} What is the conjugacy
+class of $f$?
+\skv
+
+{\bf 4.} (optional) {\it Necklace-counting problem:}
+Suppose that we want to build a necklace using $n$ beads of $k$ possible colors
+(we do not have to use all available colors). Two necklaces will be considered equivalent 
+if they can be obtained from each other using rotations or reflections. What is the number 
+of non-equivalent necklaces one can construct?
+
+{\it Approach using group actions.} Let $X$ be the set of all necklaces with
+beads of $k$ possible colors located at the vertices of a regular $n$-gon. The dihedral
+group $D_{2n}$ has a natural action on $X$, and the orbits under that action
+are precisely equivalence classes of necklaces in the above sense. Use this
+interpretation and Burnside's orbit-counting formula to prove that for $n=9$ the number of 
+non-equivalent necklaces is
+$$\frac{k^9+2k^3+6k+9k^5}{18}.$$
+Then try to do the same for general $n$. 
+
+{\bf 5.} Let $G=GL_n(\dbZ_p)$ and $P=U_n(\dbZ_p)$,
+the subgroup of upper-unitriangular matrices in $GL_n(\dbZ_p)$.
+
+(a) Prove that $P$ is a Sylow $p$-subgroup of $G$
+(you may use the formula for $|G|$ established in Homework\#2).
+
+(b) Let $B=UT_n(\dbZ_p)$, the subgroup of upper-triangular matrices in $G$.
+Prove that $N_G(P)=B$ (note that the inclusion $N_G(P)\supseteq B$ holds
+by Problem~6 in Homework\#2). {\bf Hint: } Consider the natural action
+of $G$ on $X=\dbZ_p^n$. First show that if $g\in N_G(P)$, then $g . X^P=X^P$.
+Then compute $X^P$ explicitly (using the definition of $P$) and then combine
+these two results to deduce that $N_G(P)$ is contained in certain proper subgroup
+of $G$. Finally, use induction on $n$ to prove that $N_G(P)\subseteq B$.
+
+(c) Find $n_p(G)$, the number of Sylow $p$-subgroups of $G$.
+\skv
+{\bf 6.} Let $G$ be a group such that $G/Z(G)$ is cyclic.
+Prove that $G$ is abelian.
+\skv
+
+{\bf 7.} (a) Prove that if $\phi:\dbZ\to\dbZ$ is a surjective homomorphism,
+then $\phi$ must be injective. 
+
+(b) Find a group $G$ and a homomorphism $\phi:G\to G$ which is surjective
+and not injective.
+
+(c) (optional) A group $G$ with the property that every surjective homomorphism from
+$G$ to $G$ must also be injective is called {\it hopfian}, so part (a) asserts
+that $\dbZ$ is hopfian. Can you find interesting sufficient conditions for
+a group to be hopfian?
+\skv
+\end{document}

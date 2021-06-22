@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Inn{{\rm Inn}}
+
+\bf\centerline{Homework \#9. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Unique factorization and irreducibility
+criteria in polynomial rings (9.3 and 9.4).
+
+
+\vskip .1cm
+\centerline{\bf Problems, to be submitted by Thursday, November 10th}
+\skv
+{\bf 1.} (a) Let $G$ be a finitely generated group. Use Zorn's lemma to show that $G$ has a  
+maximal subgroup (recall that a maximal subgroup of $G$ is a maximal element of the set of  
+proper  subgroups of $G$ partially ordered by inclusion). {\bf Hint:} The key step is to show 
+that  if $\mathcal C$ is a chain of proper subgroups of $G$, then the union of subgroups in this 
+chain is not the whole $G$.
+
+(b) (optional) If your proof in (a) is correct, a nearly identical argument should
+imply that $G$ always has a maximal normal subgroup. However, the latter is true
+under weaker assumptions on $G$. Can you find a natural condition on $G$
+(weaker than finite generation) that guarantees the existence of a maximal normal subgroup? 
+Can you give an example of a group which has a maximal normal subgroup, but no maximal subgroup?
+
+\skv
+{\bf 2.} Let $R$ be a commutative ring with $1$. The {\it nilradical} of $R$ denoted $Nil(R)$ is the set of all nilpotent elements of $R$, that is $$Nil(R)=\{a\in R : a^n=0 \mbox{ for some }n\in\dbN\}.$$ The {\it Jacobson radical} of $R$ denoted by $J(R)$ is the intersection 
+of all maximal ideals of $R$. Prove that 
+
+(a) $Nil(R)$ and $J(R)$ are ideals of $R$ 
+
+(b) $Nil(R)\subseteq J(R)$.
+\skv
+
+{\bf 3.} Let $D$ be a positive integer such that $D\equiv 3\mod 4$, and let
+$R=\dbZ[\frac{1+\sqrt{-D}}{2}]$, that is, $R$ is the minimal subring of $\dbC$ containing $\dbZ$ and $\frac{1+\sqrt{-D}}{2}$.
+
+(a) Prove that $R=\{a+ b \frac{1+\sqrt{-D}}{2} : a,b\in\dbZ \}$. You may skip details, but it should
+be clear from your argument where the assumption $D\equiv 3\mod 4$ is used (otherwise the result is simply not true).
+
+(b) Assume that $D=3, 7$ or $11$. Prove that $R$ is a Euclidean domain.
+\skv
+
+{\bf 4.} Let $R=\dbZ[\sqrt{5}]=\{a+b\sqrt{5} : a,b\in\dbZ\}$. Find an element of $R$
+which is irreducible but not prime and deduce that $R$ is not a unique factorization domain (UFD).
+{\bf Note:} It is an easy exercise to prove that the property {\it prime=irreducible} holds in any UFD.
+ {\bf Hint:} Consider the equality $2\cdot 2=(\sqrt{5}+1)(\sqrt{5}-1)$. In order to check
+whether some element of $R$ is irreducible it is convenient to use the standard norm function
+$N:R\to\dbZ_{\geq 0}$ given by $N(a+b\sqrt{5})=|a^2-5b^2|$ (note that $N(uv)=N(u)N(v)$).
+\skv
+{\bf 5.} (a) (practice) Problem 7.3.34. Note: in all exercises in 7.3 $R$ is assumed to be a ring  
+with $1$ (this is crucial for this problem). Also note that $IJ$ is NOT defined to be the set 
+$\{ij: i\in I, j\in J\}$;  by definition, $IJ$ is the set of finite sums of elements of the form 
+$ij$, with $i\in I, j\in J$.  
+
+(b) Read the section on the Chinese remainder theorem (7.6).
+
+\skv
+{\bf 6.} (practice) DF, Problem 7.1.26 and 7.1.27
+
+\skv
+{\bf 7.} (a) (practice) DF, Problem 7.2.3
+
+(b) DF, Problem 7.2.5 (you may freely refer to 7.2.3).
+
+(c) Let $M$ be an ideal of a commutative ring $R$ with $1$. Prove that the following conditions are equivalent:
+
+\sk (i) $M$ is the unique maximal ideal of $R$ 
+
+\sk (ii) every element of $R\setminus M$ is invertible. 
+
+A commutative ring with $1$ which has the unique maximal ideal is called {\it local}.
+\skv
+{\bf 8.} (practice) Let $R=\dbZ_{14}$, $D=\{\bar 1,\bar 2,\bar 4,\bar 8\}$ (note that $D$ is multiplicatively closed
+but it does contain zero divisors). Prove that the localization $RD^{-1}$ is isomorphic to $\dbZ_{7}$ (we gave a brief an outline of proof in class).
+\end{document}
