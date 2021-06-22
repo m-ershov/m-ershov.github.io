@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 1. }\rm
+\vskip .2cm
+{\bf Plan for next week:} Tensor products of modules and algebras.
+Reading: 10.4 in DF and Lectures 3, 4, 5 from the webpage.
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Fri, January 25th. }\rm
+\vskip .1cm
+
+{\bf Convention:} All rings below are assumed to have $1$, and all modules are left modules.
+\skv
+\vskip .1cm
+\bf{Problem 1: }\rm Let $M$ be an $R$-module for some ring $R$ (not necessarily commutative).
+\begin{itemize}
+\item[(a)] For a subset $N$ of $M$ the {\it annihilator of $N$ in $R$} is defined to be the set
+$Ann_R(N):=\{r\in R : rn=0 \mbox{ for any }n\in N\}$. Prove that $Ann_R(N)$ is a left
+ideal of $R$.
+\item[(b)] Prove that if $N$ is a submodule of $M$, then $Ann_R(N)$ is an ideal of $R$ (that is, a two-sided ideal).
+\item[(c)] For a subset $I$ of $R$ the {\it annihilator of $I$ in $M$} is defined to be the
+set $Ann_M(I):=\{m\in M : xm=0 \mbox{ for any }x\in I\}$. Find a natural condition on $I$
+which guarantees that $Ann_M(I)$ is a submodule of $M$.
+\end{itemize}
+\bf{Problem 2: }\rm Let $R$ be a ring and let $M$ be an $R$-module.
+\begin{itemize}
+\item[(a)] Prove that for any $m\in M$, the map $x\mapsto xm$ from $R$ to $M$ is a homomorphism of $R$-modules
+(recall that $R$ is an $R$-module with the left multiplication action).
+\item[(b)] Assume that $R$ is commutative, and let $M$ be an $R$-module. Prove that $Hom_R(R,M)\cong M$ as $R$-modules. {\bf Note:} For the definition and justification
+of the $R$-module structure on the set $Hom_R(M,N)$ (where $R$ is commutative and $M$ and $N$ are $R$-modules) see Proposition~2 on page 346 in DF. {\bf Hint:}
+An element of $Hom_R(R,M)$ is uniquely determined by where it maps $1$.
+\end{itemize}
+\bf{Problem 3: }\rm In Lecture 1 (see also online Lecture 1) we obtained a simple characterization of $R$-modules for $R=\dbZ$ and $R=F[x]$, with $F$ a field. 
+\begin{itemize}
+\item[(a)] Find a similar characterization of $R$-modules for $R=\dbZ/n\dbZ$; 
+\item[(b)] Let $R=S[x]$ for some commutative ring $S$ with $1$. Prove that there is a natural correspondence
+between $R$-modules and pairs $(M,T)$ where $M$ is an $S$-module and $T:M\to M$ is an $S$-linear map.
+\item[(c)] Let $R=F[x,y]$, with $F$ a field. Use (b) to construct a natural correspondence between
+$R$-modules and triples $(V,A,B)$ where $V$ is an $F$-vector space and $A,B:V\to V$ are commuting linear transformations.
+{\bf Note:} This can be done without (b), but (b) yields a complete proof which does not involve long
+and tedious verifications.
+\end{itemize}
+\skv
+\bf{Problem 4 (practice): }\rm Let $G$ be a group and $\dbZ[G]$ its integral group ring
+(see online Lecture 1 or DF, \S~7.2 for definition). Let $M$ be an abelian group. Show that there is a natural
+bijection between $\dbZ[G]$-module structures on $M$ and actions of $G$
+on $M$ by group automorphisms (that is, actions of $G$ on $M$ such that for any
+$g\in G$ the map $m\mapsto gm$ is an automorphism of the abelian group $M$).
+\skv
+
+\bf{Problem 5: }\rm An $R$-module $M$ is called {\it simple (or irreducible)} if
+$M$ has no submodules besides $\{0\}$ and $M$. An $R$-module $M$ is called
+{\it indecomposable} if $M$ is not isomorphic to $N\oplus P$ for nonzero
+$R$-modules $N$ and $P$.
+\begin{itemize}
+\item[(a)] Prove that every simple module is indecomposable
+\item[(b)] Describe all simple $\dbZ$-modules and all finitely generated
+indecomposable $\dbZ$-modules. Deduce that an indecomposable module need not
+be simple.
+\end{itemize}
+
+\bf{Problem 6: }\rm  An $R$-module $M$ is called {\it cyclic} if $M$ is generated
+(as an $R$-module) by one element.
+\begin{itemize}
+\item[(a)] Prove that cyclic $R$-modules are precisely the ones which are isomorphic to $R/I$
+for some left ideal $I$ of $R$.
+\item[(b)] Prove that every simple module is cyclic. Then show that simple
+$R$-modules are precisely the ones which are isomorphic to $R/I$
+for some maximal left ideal $I$ of $R$.
+\end{itemize}
+
+{\bf Problem 7.} Let $R$ be a commutative domain, and let $I$ be a non-principal ideal of $R$. 
+Prove that $I$, considered as an $R$-module (with left-multiplication action) is indecomposable but not cyclic. 
+{\bf Hint:} One way to prove that $I$ is indecomposable is to show that any two elements of $I$ 
+are linearly dependent over $R$. {\bf Note:} As we will prove in a couple of weeks, if $R$ is a principal
+ideal domain, every finitely generated indecomposable module is cyclic.
+\vskip .12cm
+{\bf Problem 8.} Prove Schur's lemma [DF, problem 11, p.356].
+\end{document}

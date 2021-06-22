@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\lam{{\lambda}}
+
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 6. }\rm
+\skv
+
+{\bf Plan for next week:} Algebraic closures, splitting fields and normal extensions (online lectures 15,16,17 and \S~13.4 in DF).
+
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Thursday, March 7th. }\rm
+\vskip .1cm
+
+{\bf Problem 1:} Let $F$ be an algebraically closed field of characteristic zero, $V$ a vector space over $F$ and $T:V\to V$ a linear map with $T^n=I$ for some $n$.
+\begin{itemize}
+\item[(a)] Assume that $\dim(V)<\infty$. Use JCF to prove that $T$ is diagonalizable
+\item[(b)] Now do not assume that $\dim(V)<\infty$. Prove that $T$ is still diagonalizable (by definition this means that $V$ has a basis consisting of eigenvectors for $T$). {\bf Hint:} All you need to use is that there is a polynomial $p(x)\in F[x]$ such that $p(T)=0$
+and $p$ is separable, that is, $p$ is a product of distinct linear factors.
+\end{itemize}
+\skv
+
+
+
+
+
+{\bf Problem 2:} \rm 
+
+\begin{itemize}
+
+\item[(a)] Let $K=\dbQ(\sqrt{2},\sqrt{3})$. Prove that $[K:\dbQ]=4$.
+
+\item[(b)] Let $L=\dbQ(\sqrt{2}+\sqrt{3})$. Prove that $L=K$ and hence $[L:\dbQ]=4$ by (a).
+\end{itemize}
+
+{\bf Problem 3:} \rm Let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$
+and let $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$.
+\begin{itemize}
+\item[(a)] Prove that $[K:\dbQ]=2^m$ for some $m\leq k$ and the set $P(S)=\{1\}\cup \{\sqrt{n} : n \mbox{ is a product of distinct elements of }S\}$ spans $K$ over $\dbQ$.
+
+\item[(b)] For each $0\leq j\leq k$ let $\dbQ_j=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_j})$ (we set $\dbQ_0=\dbQ$).
+Prove that $[K:\dbQ]<2^k$ if and only if $n_1$ is a complete square or
+there exists $2\leq i\leq k$ s.t. $\sqrt{n_i}=a+b\sqrt{n_{i-1}}$ for some $a,b\in\dbQ_{i-2}$.
+
+\item[(c)] Assume that the elements of $S$ are pairwise relatively prime
+and none of them is a complete square.
+Prove that $[K:\dbQ]=2^k$. {\bf Hint:} Use (b) and induction on $k=|S|$.
+\end{itemize}
+
+{\bf Problem 4:} \rm Let $F$ be a field, and let $\alpha$ be an algebraic element of odd degree
+over $F$ (recall that the degree of $\alpha$ over $F$ is equal to $[F(\alpha):F]$). Prove that
+$F(\alpha^2)=F(\alpha)$.
+\skv
+\skv
+{\bf Problem 5:} Let $K/F$ be a finite field extension, $n=[K:F]$, and fix some basis
+$\Omega=\{\alpha_1,\ldots, \alpha_n\}$
+for $K$ over $F$. For any $\alpha\in K$
+define $T_{\alpha}:K\to K$ by $T_{\alpha}(\beta)=\alpha\beta$. Note that $T_{\alpha}\in  End_F(K)$.
+Let $A_{\alpha}=[T_{\alpha}]_{\Omega}\in Mat_n(F)$ be the matrix of $T_{\alpha}$ with respect to $\Omega$.
+\begin{itemize}
+
+
+\item[(a)] (practice) Prove that the map $K\to Mat_n(F)$ given by $\alpha\mapsto A_{\alpha}$ is an injective ring homomorphism.
+\item[(b)] Prove that the minimal polynomial of $\alpha$ over $F$ and the minimal polynomial of $A_{\alpha}$
+coincide.
+
+\item[(c)] Find the minimal polynomial of the matrix
+$$A=\begin{pmatrix}  0&3& 5&0\\
+1&0& 0&5\\
+1&0& 0&3\\
+0&1& 1&0\\
+\end{pmatrix}$$
+without doing extensive computations.
+{\bf Hint:} Find an extension $K/\dbQ$ of degree $4$, a basis for $K$ over $\dbQ$
+and an element $\alpha\in K$ such that $A_{\alpha}=A$ in the notations of part (a).
+\end{itemize}
+
+
+{\bf Problem 6:} Before doing this problem read about composite fields on pp. 528-529.
+Let $E/F$ be a field extension, let $K_1$ and $K_2$ be subfields of $E$ containing $F$,
+and assume that the extensions $K_1/F$ and $K_2/F$ are finite. Let $K_1 K_2$ be the composite
+field of $K_1$ and $K_2$. Prove that the $F$-algebra $K_1\otimes_F K_2$ is a field if and only if
+$[K_1 K_2: F]=[K_1: F][K_2: F]$. {\bf Hint:} First show that there exists an $F$-linear map
+$\Phi: K_1\otimes_F K_2\to K_1 K_2$ such that $\Phi(a\otimes b)=ab$ for any $a\in K_1$ and $b\in K_2$.
+Then explain why $\Phi$ is always surjective.
+\end{document} 

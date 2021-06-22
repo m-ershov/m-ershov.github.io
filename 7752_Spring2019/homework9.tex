@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=9in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .07cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\Gal{{\rm Gal\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\deg{{\rm deg}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 9. }\rm
+\skv
+\skv
+{\bf Plan for the next week:} Galois correspondence, continued (parts of lectures 20 and 21 we have not discussed so far),
+finite fields (online lecture 22, the end of 13.5 and 14.3 in DF) and maybe start cyclic Galois extensions (online lecture 23, beginning of 14.7 in DF)
+\skv
+\bf\centerline{Problems, to be submitted by Thu, April 4th. }\rm
+\skv
+{\bf Problem 1:} Let $f(x)\in \dbQ[x]$ be an irreducible polynomial
+of degree $n$, and let $K$ be a splitting field of $f(x)$.
+Label the roots of $f(x)$ by $1,\ldots, n$ (in some order),
+and let $\iota: \Gal(K/\dbQ)\to S_n$ be the associated embedding.
+
+\begin{itemize}
+\item[(a)] Assume $f(x)$ has at least one non-real root. Prove
+that the complex conjugation is an element of $\Gal(K/\dbQ)$
+of order $2$.
+
+\item[(b)] Assume that $f(x)$ has precisely two non-real roots. Prove
+that the image of the complex conjugation under the embedding $\iota$
+is a transposition.
+
+\item[(c)] Suppose that $n=\deg(f)$ is prime and again assume that $f(x)$ has precisely
+two non-real roots. Prove that $\Gal(K/\dbQ)$ is isomorphic to $S_n$.
+{\bf Hint:} $\Gal(K/\dbQ)$ must contain an element of order $n$ (why?)
+
+\end{itemize}
+
+{\bf Problem 2:} Let $K\subset\dbC$ be the splitting field of $f(x)=x^4-2$ over $\dbQ$.
+
+\begin{itemize}
+\item[(a)] Choose an order on the set of roots of $x^4-2$ and describe the associated embedding
+of $\Gal(K/\dbQ)$ to $S_4$.
+
+\item[(b)] Describe all subgroups of $\Gal(K/\dbQ)$ and the corresponding subfields of $K$.
+
+\end{itemize}
+
+\skv
+{\bf Problem 3:} Let $p$ and $q$ be distinct primes with $q>p$,
+and let $K/F$ be a Galois extension of degree $pq$. Prove that
+\begin{itemize}
+\item[(a)] There exists a field $L$ with $F\subseteq L\subseteq K$ and $[L:F]=q$
+
+\item[(b)] There exists a unique field $M$ with $F\subseteq M\subseteq K$ and $[M:F]=p$.
+\end{itemize}
+\skv
+
+{\bf Problem 4:} DF, Problem 17 on pages 582-583. 
+\skv
+{\bf Problem 5:} Let $K/F$ and $L/F$ be Galois extensions.
+
+\begin{itemize}
+\item[(a)] Prove that the extension $KL/F$ is also Galois and there is a natural
+embedding $\iota:\Gal(KL/F)\to \Gal(K/F)\times \Gal(L/F)$.
+
+\item[(b)]
+Assume now that $K/F$ and $L/F$ are both finite. Prove that the map $\iota$ in (a)
+is an isomorphism if and only if $K\cap L=F$.
+\end{itemize}
+
+{\bf Problem 6:} \rm Before doing this problem, read the first half
+of Section 14.4 in DF (pp. 591-593).
+
+{\bf Definition~1:} Let $L/F$ be a finite separable extension
+and let $\overline F$ be an algebraic closure of $F$ containing $L$.
+A subfield $L'$ of $\overline F$ is called
+{\bf conjugate to $L$ over $F$} if $L'=\sigma(L)$ for some $F$-embedding of
+$\sigma$ into $\overline F$. Note that $L/F$ is Galois if and
+only if $L$ does not have any $F$-conjugates besides $L$ itself.
+\skv
+{\bf Definition~2:} A finite extension $K/F$ is called
+a {\bf $p$-extension} if $K/F$ is Galois and $Gal(K/F)$ is a $p$-group.
+\skv
+\begin{itemize}
+\item[(a)] Let $L/F$ be a separable extension of degree $n$, and
+let $K$ be the Galois closure of $L$ over $F$ (see p. 594 in DF or the end of online Lecture~18 for the definition). 
+Prove that $K$ can be written as a compositum $L_1L_2\ldots L_n$
+where $L_1,\ldots L_n$ are (not necessarily distinct) conjugates of
+$L$ over $F$.
+
+\item[(b)] Let $K/F$ and $L/F$ be finite $p$-extensions. Prove
+that $KL/F$ is also a $p$-extension.
+
+\item[(c)] Suppose $K/L$ and $L/F$ are both $p$-extensions, and
+let $M$ be the Galois closure of $K$ over $F$ (note: we do
+not know whether $K/F$ is Galois or not). Prove that
+$M/F$ is also a $p$-extension. {\bf Hint:} first use (b) to show that
+$M/L$ is a $p$-extension.
+
+\item[(d)] Now assume only that $L/F$ is a separable extension
+with $[L:F]$ a power of $p$, and let $M$ be the Galois closure
+of $L$ over $F$. Prove that $[M:F]$ need not be a power of $p$.
+\end{itemize}
+\end{document} 

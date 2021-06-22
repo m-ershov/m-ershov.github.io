@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\Im{{\rm Im}}
+
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 3. }\rm
+\vskip .1cm
+{\bf Plan for next week:} Modules over PID (12.1, online lectures 7-9).
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Thursday, February 7th. }\rm
+\vskip .1cm
+
+\bf{Problem 1. }\rm The main goal of this problem is to classify
+$2$-dimensional $\dbR$-algebras ($\dbR$=reals), that is,
+$\dbR$-algebras which are 2-dimensional as vector spaces over $\dbR$.
+\skv
+Let $F$ be a field with ${\rm char}(F)\neq 2$, and
+let $A$ be a $2$-dimensional $F$-algebra with $1$.
+\begin{itemize}
+\item[(a)] Let $u\in A$ be any element which is not an $F$-multiple of $1$.
+Prove that
+\begin{itemize}
+\item[(i)] $u$ generates $A$ as an $F$-algebra, that is, the minimal $F$-subalgebra of $A$ containing $u$ and $1$ is $A$ itself.
+\item[(ii)] $u$ satisfies a quadratic equation $au^2+bu+c=0$
+for some $a,b,c\in F$ with $a\neq 0$.
+\end{itemize}
+\item[(b)] Show that there exists $v\in A$ such that $v^2\in F$.
+{\bf Hint:} take any $u$ as in (a), and look for $v$ of the form
+$u+\beta$ with $\beta\in F$.
+\item[(c)] Deduce from (b) that $A$ is isomorphic as an $F$-algebra
+to  $F[x]/(x^2-c)$ for some $c\in F$. 
+\item[(d)] Prove that if $c=d^2$ for some $d\in F\setminus\{0\}$, then $F[x]/(x^2-c)\cong F\times F$.
+\item[(e)] Now let $F=\dbR$ (real numbers). Prove that in (c) one can choose
+$c=0,1$ or $-1$. Then prove that the algebras $\dbR[x]/(x^2+1)$, $\dbR[x]/(x^2-1)$ and $\dbR[x]/(x^2)$ 
+are pairwise non-isomorphic. {\bf Hint:} the algebras can be distinguished from
+each other by simple abstract properties.
+\end{itemize}
+
+{\bf Problem 2.} Let $R$ be a commutative ring with $1$ and let 
+$M,N$ and $L$ be $R$-modules. Let $Bil_R(M\times N,L)$ be the set of
+all $R$-bilinear maps from $M\times N$ to $L$
+
+\begin{itemize}
+\item[(a)] The main theorem from Lecture~4 asserts that
+$Bil_R(M\times N,L)$ is isomorphic to $Hom_R(M\otimes N,L)$ as abelian groups. Define a natural $R$-algebra structure on $Bil_R(M\times N,L)$ and prove that $Bil_R(M\times N,L)$ is isomorphic to $Hom_R(M\otimes N,L)$ as $R$-modules.
+
+\item[(b)] Now prove that $Bil_R(M\times N,L)$ is isomorphic to
+$Hom_R(M,Hom_R(N,L))$ as $R$-modules.
+\end{itemize}
+Note that (a) and (b) imply that $Hom_R(M\otimes N,L)\cong Hom_R(M,Hom_R(N,L))$ as $R$-modules.
+\skv
+
+{\bf Problem 3. } Let $V$ and $W$ be finite dimensional vector spaces
+over a field $F$, let $\{v_1,\ldots, v_n\}$ be a basis of $V$
+and $\{w_1,\ldots, w_m\}$ a basis of $W$.
+
+Let  $\phi: V\otimes_F W\to Mat_{n\times m}(F)$ be the
+$F$-linear transformation such that $\phi(v_i\otimes w_j)=e_{ij}$
+where $e_{ij}$ is the matrix whose $(i,j)$-entry is equal to $1$ and all
+other entries are equal to $0$ (note that such transformation
+exists and is unique because $\{v_i\otimes w_j : 1\leq i\leq n, 1\leq j\leq m\}$
+is a basis for $V\otimes_F W$; furthermore, $\phi$ is an isomorphism
+since matrices $\{e_{ij}\}$ form a basis of $Mat_{n\times m}(F)$).
+
+Prove that for a matrix $A\in Mat_{n\times m}(F)$ the following are equivalent:
+\begin{itemize}
+\item[(a)] $A=\phi(v\otimes w)$ for some $v\in V, w\in W$ (note: $v$ and $w$
+need not be elements of the above bases)
+
+\item[(b)] $rk(A)\leq 1$.
+\end{itemize}
+Note that this problem yields a one-line solution to Problem~3 from HW\#2.
+\skv
+
+{\bf Problem 4 (practice).} Let $R=\oplus_{n=0}^{\infty} R_n$ be a graded ring.
+An element $r\in R$ is called \emph{homogeneous} if $r\in R_n$
+for some $n$. 
+
+\sk Any $r\in R$ can be uniquely written as $r=\sum_{n=0}^{\infty} r_n$
+where $r_n\in R_n$ and only finitely many $r_n$'s are nonzero. The elements
+$\{r_n\}$ are called the \emph{homogeneous components of $r$}.
+
+(a) Let $I$ be an ideal of $R$. Prove that the following are equivalent:
+\begin{itemize}
+\item[(i)] $I$ is a graded ideal, that is, $I=\oplus_{n=0}^{\infty} I\cap R_n$  
+\item[(ii)] For each $r\in I$ all homogeneous components of $r$ also lie in $I$
+\end{itemize}
+
+(b) Let $I$ be an ideal of $R$ generated by homogeneous elements
+(possibly of different degrees). Prove that $I$ is graded.
+
+\skv
+{\bf Problem 5.} $\empty$
+\begin{itemize}
+\item[(a)] Let $R$ be a commutative ring with $1$ and $M$ an $R-module$.
+Let $m_1,\ldots, m_k$ be elements of $M$ and $\sigma\in S_k$ a permutation.
+Prove that $m_{\sigma(1)}\wedge\ldots\wedge m_{\sigma(k)}=(-1)^{\sigma}
+m_1\ldots m_k$.
+\item[(b)] Use (a) to prove Proposition~6.5 from the online version of Lecture~6.
+\end{itemize}
+\skv
+{\bf Problem 6.} DF, Problem 8 on page 455.
+\end{document}

@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework Assignment \# 2. }\rm
+\vskip .2cm
+{\bf Plan for next week:} Tensor products of algebras, continued (end of 10.4, online lecture 5),  Tensor, symmetric an exterior algebras (11.5, online lecture 6),  modules over PID (12.1, online lecture 7).
+\vskip .1cm
+
+\bf\centerline{Problems, to be submitted by Thu, January 31st. }\rm
+\vskip .1cm
+
+\vskip .1cm
+{\bf Problem 0.} Read the section on graded algebras from online Lecture 5
+before the class on Tuesday, Jan 29.
+\vskip .1cm
+
+{\bf Problem 1.} Let $R$ be a commutative ring.
+An $R$-module $M$ is called {\it torsion} if for any $m\in M$
+there exists nonzero $r\in R$ such that $rm=0$. An $R$-module $M$ is called {\it divisible} 
+if for any nonzero $r\in R$ we have $rM=M$. In other words, $M$ is divisible if
+for any $m\in M$ and nonzero $r\in R$ there exists $x\in M$ such that $rx=m$.
+
+(a) Suppose that $M$ is a torsion $R$-module and $N$ is a divisible $R$-module.
+Prove that $M\otimes_R N =\{0\}$.
+
+(b) Let $M=\dbQ/\dbZ$ considered as a $\dbZ$-module. Prove that
+$M\otimes _{\dbZ} M=\{0\}$.
+\vskip .1cm
+
+{\bf Problem 2.} Let $R$ be a commutative ring, $\{N_{\alpha}\}$ a collection
+of $R$-modules and $M$ another $R$-module.
+
+(a) (practice, [DF, problem 14, p.376 ]) Prove that $M\otimes (\oplus N_{\alpha})\cong \oplus (M\otimes N_{\alpha})$ as $R$-modules (tensor products are over $R$).
+
+(b) (see [DF, problem 15, p. 376]) Show by example that $M\otimes (\prod N_{\alpha})$ need not be isomorphic to $\prod (M\otimes N_{\alpha})$. {\bf Hint:} Use the result of one of the previous problems on p. 376.
+\vskip .1cm
+
+
+\skv
+\bf{Problem 3. }\rm Let $R$ be a commutative domain, and let $M$ be a free 
+$R$-module with basis $e_1,\ldots, e_k$. Prove that the element
+$e_1\otimes e_2+e_2\otimes e_1\in M\otimes M$ is not representable as a simple tensor
+$m\otimes n$ for some $m,n\in M$.
+\skv
+\bf{Problem 4. }\rm Problem 16 on p.376 of DF
+\skv
+\bf{Problem 5. }\rm Problem 17 on pp.376-377 of DF. 
+\skv
+\bf{Problem 6. }\rm (practice) Problem 21 on p.377 of DF
+\skv
+\bf{Problem 7. }\rm Let $R$ be a commutative ring with $1$, let $S$ and $B$ be $R$-algebras,
+and suppose that $S$ is commutative. Then $S\otimes_R B$ is an $R$-algebra (and in particular a ring) and also an $S$-module via the extension of scalars construction (type I tensor product). Prove that $S\otimes_R B$ is also an $S$-algebra.
+\skv
+\newpage
+
+
+{\bf Problem 8.} Problem 25 on pp. 377 of DF (the $S$-algebra structure on $S\otimes_R R[x]$ is described
+in Problem~7).
+
+\skv
+\bf{Problem 9. }\rm (a) Let $V$ be a finite-dimensional vector space over $\dbC$
+(complex numbers). Note that $V$ can also be considered as a vector space over $\dbR$,
+but $\dim_{\dbR} (V)=2 \dim_{\dbC}(V)$. Prove that $V\otimes_{\dbC} V$ is not isomorphic
+to $V\otimes_{\dbR} V$ as vector spaces over $\dbR$ and compute their dimensions over $\dbR$.
+
+(b) Let $R$ be an integral domain and $F$ its field of fractions. Prove that
+$F\otimes_{R} F\cong F\otimes_{F} F\cong F$ as $F$-algebras (again the $F$-algebra structure on
+structure on $F\otimes_{R} F$ is described in Problem~7).
+\end{document}

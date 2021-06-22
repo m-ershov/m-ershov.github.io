@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.6in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\phi{{\varphi}}
+
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+
+\bf
+\begin{center}Algebra-II, Spring 2019. Midterm \#2. \\Due Friday, April 12th, by 1pm
+\end{center}
+\rm
+\vskip .1cm
+
+
+{\bf Directions: } Each problem is worth 10 points, and all 6 problems
+will be counted. Provide complete arguments
+(do not skip steps). State clearly any result you are referring to. Partial credit for
+incorrect solutions, containing steps in the right direction, may be given.
+\vskip .1cm
+
+{\bf Rules: } You are not allowed to discuss midterm problems with each other.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use your class notes,
+previous homework assignments and the book by Dummit and Foote. The use of other books
+is allowed, but not encouraged. If you happen to run across a problem
+very similar or identical to one on the midterm which is solved in another book,
+do not consult that solution. The use of any online resources (except the class webpage)
+is absolutely prohibited.
+
+
+\skv
+{\bf Problem 1:} Let $F$ be an algebraically closed field, let $A\in Mat_n (F)$
+for some $n\in\dbN$, and let $C$ be the centralizer of $A$ in $Mat_n (F)$.
+Prove that $$dim_F(C)\geq n.$$ {\bf Hint:} First assume that $A$ is in Jordan
+canonical form and has just one Jordan block; then consider the case when
+$A$ is an arbitrary matrix in Jordan canonical form, and finally prove
+the statement for general $A$.
+\skv
+{\bf Problem 2:} DF, Problem~6 on page 582
+\skv
+{\bf Problem 3:} Let $K/F$ be a finite Galois extension and $G=\Gal(K/F)$.
+\begin{itemize}
+\item[(a)] Assume  that $G$ is a simple group, let $\alpha\in K\setminus F$
+and $\mu_{\alpha,F}(x)$ the minimal polynomial of $\alpha$ over $F$.
+Prove that $K$ is a splitting field for $\mu_{\alpha,F}(x)$.
+
+\item[(b)] Let $n=[K:F]$, and fix integers $m$ and $l$ with $ml=n$.
+Find a condition on the \underline{subfield lattice of $K/F$} which is equivalent
+to the following: $G$ can be written as a semidirect product $G=A\rtimes B$
+for some subgroups $A$ and $B$ where $|A|=m$ and $|B|=l$.
+\end{itemize}
+\newpage
+{\bf Problem 4:} Let $F$ be a field.
+\begin{itemize}
+\item[(a)] Let $f(x)\in F[x]$ be a nonzero polynomial and $K/F$ a field extension.
+Prove that $$F[x]/(f(x))\otimes_F K\cong K[x]/(f(x))$$ as $F$-algebras.
+\item[(b)] Let $L/F$ be a finite separable extension. Prove that
+there exists a finite extension $K/F$ such that 
+$L\otimes_F K\cong \underbrace{K\times\ldots\times K}_{n \mbox{ times }}$
+for some $n$.
+\end{itemize}
+\skv
+{\bf Problem 5:} \rm Let $S=\{n_1,\ldots, n_k\}$ be a finite set of positive integers $\geq 2$
+and let $K=\dbQ(\sqrt{n_1},\ldots, \sqrt{n_k})$. You are NOT allowed to refer to HW\#6.3.
+\begin{itemize}
+\item[(a)] Prove that $K/\dbQ$ is a Galois extension and $Gal(K/\dbQ)\cong \dbZ_2^m$ for some $m\leq k$
+\item[(b)] Now assume that $n_1,\ldots, n_k$ are pairwise coprime. Prove that $K$ contains at least $2^k$
+distinct subfields $L$ with $[L:\dbQ]=2$. 
+\item[(c)] Keep the extra assumption from (b). Use (b) to prove that $[K:\dbQ]=2^k$.  
+\end{itemize}
+\skv
+{\bf Problem 6:} Let $p$ be an odd prime, $\omega=e^{2\pi i/p}$, $K=\dbQ(\omega)$
+and $L$ the unique subfield of $K$ with $[L:\dbQ]=2$. As we proved in class, if we let
+$m$ be a generator of $(\dbZ/p\dbZ)^{\times}$ and $\zeta=\sum_{i=0}^{(p-3)/2} \omega^{m^{2i}}$,
+then $L=\dbQ(\zeta)$.
+\begin{itemize}
+\item[(a)] Prove by direct computation that if $p=5$, then $L=\dbQ(\sqrt{5})$.
+\item[(b)] Let $S$ be the set of all elements of $(\dbZ/p\dbZ)^{\times}$ representable 
+as squares. Prove that $\zeta=\sum_{s\in S}\omega^s$.
+\item[(c)] Prove that $-1\in S$ if and only if $p\equiv 1\mod 4$
+\item[(d)] Prove that $\overline\zeta=\zeta$ if $p\equiv 1\mod 4$ and $\overline\zeta=-1-\zeta$
+if $p\equiv 3\mod 4$. Deduce that $L\subset \dbR$ if and only if $p\equiv 1\mod 4$.
+\item[(e)] Let $M$ be the unique subfield of $K$ with $[K:M]=2$. As proved in class,
+$M\subset \dbR$. Now prove that $L\subset \dbR$ if and only if $p\equiv 1\mod 4$ just 
+by using this fact and Galois correspondence (do not use an explicit description of $L$).
+{\bf Hint:} What is the relationship between the subgroups of $\Gal(K/\dbQ)$ corresponding
+to $L$ and $M$ depending on $p$ mod $4$?
+\end{itemize} 
+
+\end{document}
