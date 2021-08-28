@@ -1,0 +1,151 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\lam{{\lambda}}
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#1. Due by 6pm on Saturday, Sep 4th}\rm
+\vskip .1cm
+\bf\centerline{Problems}\rm
+\vskip .1cm
+\skv
+{\bf Note on hints:} All hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *.
+\skv
+
+Most of the problems below deal with concepts that have not been introduced in class so far. The definitions of those concepts are given on page~3. We denote by $Mat_n(F)$ the set of all $n\times n$ matrices over $F$.
+\vskip .1cm
+{\bf 1.} Let $V=Pol_2(\dbR)$, the vector space of polynomials of degree at most $2$ over $\dbR$. Let $\beta=\{1,x,x^2\}$ and $\gamma=\{1,(x-1),(x-1)^2\}$.
+Both $\beta$ and $\gamma$ are bases of $V$ (you do not need to verify this). Let $T:V\to V$ be the differentiation map: $T(f)=f'$.
+\begin{itemize}
+\item[(a)] compute the matrix $[T]_{\beta}$ directly from definition
+\item[(b)] compute the matrix $[T]_{\gamma}$ directly from definition
+\item[(c)] now compute $[T]_{\gamma}$ using your answer in (a) and the change of basis formula.
+\end{itemize}
+\skv
+{\bf 2.} In each of the following examples determine if $H$ is a bilinear form on $V$ (make sure to justify your answer):
+\begin{itemize}
+\item[(a)] $V=Mat_{n}(F)$ for some field $F$ and $n\in\dbN$ and $H(A,B)=AB$.
+\item[(b)] $V=Mat_{n}(F)$ for some field $F$ and $n\in\dbN$ and $H(A,B)=(AB)_{1,1}$ (the (1,1)-entry of the matrix $AB$).
+\item[(c)] $V=F^n$ for some field $F$ and $n\in\dbN$ and $H((x_1,\ldots,x_n),(y_1,\ldots,y_n))=x_1+y_1$.
+ \end{itemize}
+
+\skv
+{\bf 3.} As in problem~1, let $V=Pol_2(\dbR)$, and define $H:V\times V\to\dbR$ by $$H(f,g)=\int\limits_{0}^1 f(x)g(x)dx.$$ Prove that $H$ is a symmetric bilinear form and
+compute the matrix $[H]_{\beta}$ (where again $\beta=\{1,x,x^2\}$).
+\skv
+{\bf 4.} Let $F$ be any field, $n\in\dbN$ and $V=Mat_n(F)$, the vector space of $n\times n$ matrices over $F$. Let $e_{ij}$ be the matrix whose
+$(i,j)$-entry is equal to $1$ and all other entries are $0$. Then $\beta=\{e_{ij}: 1\leq i,j\leq n\}$ is a basis of $V$ (you do not need to verify this). Define $H:V\times V\to F$ by
+$$H(A,B)=Tr(AB^T)$$ 
+(where $B^T$ is the transpose of $B$).
+Prove that $H$ is a symmetric bilinear form and compute the matrix $[H]_{\beta}$ (you can order $\beta$ in any way you like).
+Include all the relevant computations.
+\skv
+{\bf 5.} Let $F$ be a field with $\char(F)\neq 2$, let $V$ be a finite-dimensional vector space over $F$, and let $H$ be a bilinear form on $V$. Prove that
+$H$ can be {\bf uniquely} written as $H=H^++H^-$ where $H^+$ is a symmetric bilinear form on $V$ and $H^-$ is an antisymmetric bilinear form on $V$.
+\skv
+{\bf 6.} Let $F$ be any field and $n\in\dbN$. 
+\begin{itemize}
+\item[(a)] Let $V=F^n$ (the standard $n$-dimensional vector space over $F$). Let $D:V\times V\to F$ be the dot product form. Prove that $D$ is non-degenerate.
+\item[(b)*] Now $V$ be any $n$-dimensional vector space over $F$, $\beta$ an ordered basis for $V$ and $H$ a bilinear form on $V$. Prove that $H$ is left non-degenerate if and only if $[H]_{\beta}$ (the matrix of $H$ with respect to $\beta$) is invertible. 
+\end{itemize}
+{\bf Note:} (a) is a special case of (b); however, there is a natural way to solve (b) using (a), so it does make sense to prove (a) first.
+\skv
+{\bf 7.} Let $F$ be any field, $n\in\dbN$, $V=F^n$ and $\{e_1,\ldots, e_n\}$ the standard basis of $V$. Define $\rho:S_n\to GL(V)$ by
+$(\rho(g))(e_i)=e_{g(i)}$. As discussed in Lecture 1, the pair $(\rho,V)$ is a representation of $S_n$.
+\begin{itemize}
+\item[(a)] Let $V_0$ be the subspace of $V$ consisting of all vectors whose sum of coordinates is equal to $0$:
+$$V_0=\{(x_1,\ldots, x_n)\in V: x_1+\ldots+x_n=0\}.$$ Prove that $V_0$ is an $S_n$-invariant subspace of $V$, and therefore $(\rho,V_0)$ is also a representation of $S_n$.
+\item[(b)*]{\bf BONUS} Now prove that the representation $(\rho,V_0)$ is irreducible, that is, if $W$ is any $S_n$-invariant subspace of $V_0$, then
+$W=0$ or $W=V_0$. 
+\end{itemize}
+\newpage
+\centerline{\bf Definitions}
+\skv
+1. {\it Characteristic of a ring.} Let $R$ be a ring with $1$. The \emph{characteristic} of $R$, denoted $\char(R)$, is the smallest positive integer
+$n$ such that $\underbrace{1+\ldots+1}_{n\mbox{ times }}=0$ in $R$. If no such $n$ exists, we define $\char(R)=0$. For instance, 
+$\char(\dbZ)=\char(\dbQ)=\char(\dbR)=\char(\dbC)=0$, while $\char(\dbZ_n)=n$ (where $\dbZ_n=\dbZ/n\dbZ$ is the ring of congruence classes mod $n$).
+There is a theorem saying that if $F$ is a field, then $\char(F)$ is either $0$ or a prime number.
+\skv
+2. Let $V$ be a vector space over any field. A {\it bilinear form} on $V$ is a map $H:V\times V\to F$
+which is linear in each variable, that is,
+$$H(x+\lam y, z)=H(x,z)+\lam H (y,z)\mbox { and } H(x,y+\lam z)=H(x,y)+\lam H(x,z)$$
+for all $\lam\in F, x,y,z\in V$.
+
+If $V$ is finite-dimensional and $\beta=\{v_1,\ldots, v_n\}$ is an ordered basis of $V$, the matrix of $H$
+with respect to $\beta$, denoted by $[H]_{\beta}$ is the $n\times n$ matrix over $F$ whose $(i,j)$-entry is
+$H(v_i,v_j)$.
+
+\skv
+3. Let $H$ be a bilinear form on a vector space $V$. Then $H$ is called
+\begin{itemize}
+\item[(i)] \emph{symmetric} if $H(x,y)=H(y,x)$ for all $x,y\in V$;
+\item[(ii)] \emph{antisymmetric} if $H(x,y)= -H(y,x)$ for all $x,y\in V$;
+\item[(iii)] \emph{left non-degenerate} if for every nonzero $x\in V$ there exists $y\in V$ with $H(x,y)\neq 0$.
+\item[(iv)] \emph{right non-degenerate} if for every nonzero $x\in V$ there exists $y\in V$ with $H(y,x)\neq 0$.
+\end{itemize}
+
+
+\newpage
+{\bf Hint for 6(b)}. Use the formula $H(v,w)=[v]_{\beta}^T [H]_{\beta} [w]_{\beta}$ (will be proved in Lecture~3). Interpret the right-hand side of this formula as a dot product and use 6(a).
+\newpage
+{\bf Hint for 7(b)}. Let $W$ be an $S_n$-invariant subspace of $V_0$, and assume that $W\neq 0$. Our goal is to show that $W=V_0$. First prove that $W$ must contain a nonzero vector $w_1$ one of whose coordinates is zero. Then
+use $w_1$ to construct an element $w_2\in W$ which has exactly two nonzero coordinates and deduce that $w_1$
+is a nonzero scalar multiple of $e_i-e_j$ for some $i\neq j$. Finally, use $w_2$ to prove that $W=V_0$.
+
+
+\end{document}
