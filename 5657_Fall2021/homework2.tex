@@ -1,0 +1,135 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\lam{{\lambda}}
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#2. Due by 6pm on Saturday, Sep 11th}\rm
+\vskip .1cm
+\bf\centerline{Plan for next week: }\rm
+\skv
+Alternating and skew-symmetric bilinear forms. Sesquilinear and hermitian forms. Inner product spaces.
+
+\bf\centerline{Problems: }\rm
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the assignment. Do not to look at the hint(s) until you seriously tried to solve the problem without it.
+\skv
+{\bf 1.} Let $V$ and $H$ be as in Problem~3 of Homework~1. 
+\begin{itemize}
+\item[(a)] Prove that $H$ is positive definite directly from definition. You will need some basic facts from real analysis to make the argument rigorous.
+\item[(b)] Now use the ``modified Gram-Schmidt process'' (that is, the algorithm from the proof of Theorem~ 4.2 from class) to find a basis $\beta$ such that $[H]_{\beta}$ is the identity matrix.
+\end{itemize}
+\skv
+{\bf 2.}* Let $V=Mat_n(\dbR)$ for some $n\in\dbN$, and let $H$ be the bilinear form on $V$ given by $H(A,B)=Tr(AB)$. Prove that $H$ is symmetric and compute its signature (the pair $(p,q)$ from the statement of Theorem~4.5). It may be a good idea to start with $n=2$ and $n=3$.
+\skv
+{\bf 3.} The goal of this problem is to prove the following theorem:
+
+{\bf Theorem:} \it Let $F$ be a finite field with $\char(F)\neq 2$, $V$ a finite-dimensional vector space over $F$ and $H$ a symmetric bilinear form on $V$. 
+Then there exists a basis $\beta$ of $V$ such that $[H]_{\beta}$ is diagonal and at MOST one entry of $[H]_{\beta}$ is different from $0$ or $1$ (in 
+particular, if $H$ is non-degenerate, then there exists a basis $\beta$ such that $[H]_{\beta}=diag(1,\ldots,1,\lam)$ for some $\lam\in F$).\rm
+
+\sk If you do not feel comfortable working with arbitrary finite fields, you can assume that $F=\dbZ_p$ for some $p>2$ (this does not substantially simplify the problem).
+ 
+\begin{itemize}
+\item[(a)]* Let $Q$ be the set of squares in $F$, that is, $Q=\{f\in F: f=x^2\mbox{ for some }x\in F\}$. Prove that $|Q|=\frac{|F|+1}{2}$.
+\item[(b)]* Now take any nonzero $a,b\in F$. Use (a) to prove that there exist $x,y\in F$ such that $ax^2+by^2=1$.
+\item[(c)] Now use (b) to prove the above Theorem. {\bf Hint:} The main case to consider is when $\dim(V)=2$ and $H$ is non-degenerate. Once you prove the theorem in this case, the general statement follows fairly easily by induction (using the diagonalization theorem, Theorem~4.2). In the case
+$\dim(V)=2$ and $H$ is non-degenerate we already know that there is a basis $\beta$ such that $[H]_{\beta}$ is diagonal with nonzero diagonal entries.
+Now starting with that basis, try to imitate the proof of Theorem~4.2, using (b) at some stage.
+\end{itemize}
+
+\skv
+{\bf 4.}* Let $H$ be a bilinear form on a finite-dimensional vector space $V$. In class we proved that for any subspace $W$ of $V$
+we have $\dim(W)+\dim(W^{\perp})\geq \dim(V)$ (Lemma~3.4) where $W^{\perp}$ is the orthogonal complement of $W$ with respect to $H$. Prove that if $H$ is non-degenerate, then $\dim(W)+\dim(W^{\perp})= \dim(V)$. One way to prove this is to show that the map $\phi$ from the proof of Lemma~3.4 is surjective.
+\skv
+{\bf 5.} In this problem we discuss linear maps and bilinear forms on vector spaces of (infinite) countable dimension over an arbitrary field $F$. One example of such a space is $F^{\infty}_{fin}$, the set of (infinite) sequences of elements of $F$ in which only finitely many elements are nonzero. The set $\{e_1,e_2,\ldots\}$ is a basis of $F^{\infty}_{fin}$ where $e_i$ is the sequence whose $i^{\rm th}$ element is $1$ and all other elements are $0$.
+
+\sk Now let $V$ be any countably-dimensional vector space over $F$ and $\beta=\{v_1,v_2,\ldots \}$ a basis of $V$. Any $v\in V$ is a linear combination of finitely many elements of $\beta$, so we can write $v=\sum_{i=1}^n \lam_i v_i$ for some $n$ (if some $v_i$ with $i\leq n$ does not appear in the expansion of $v$, we simply let $\lam_i=0$). Define $[v]_{\beta}=(\lam_1,\ldots,\lam_n,0,0,\ldots)\in F^{\infty}_{fin}$.
+
+\begin{itemize}
+\item[(a)] (practice) Prove that the map $\phi:V\to F^{\infty}_{fin}$ given by $\phi(v)=[v]_{\beta}$ is an isomorphism of vector spaces.
+\end{itemize}
+
+Denote by $Mat_{\infty}(F)$ the set of all matrices with countably many rows and columns whose entries are in $F$.
+Given a bilinear form $H$ on $V$, let $[H]_{\beta}\in Mat_{\infty}(F)$ be the matrix whose $(i,j)$-entry is $H(v_i,v_j)$.
+
+\begin{itemize}
+\item[(b)] Prove that $H(v,w)=[v]_{\beta}^T [H]_{\beta}] [w]_{\beta}$ for any $v,w\in V$ (here we consider $[v]_{\beta}$ and $[w]_{\beta}$ as columns). In particular, explain why the expression on the right-hand side is well defined even though $[H]_{\beta}$ is an infinite-size matrix. 
+\item[(c)] Prove that the map $\Phi: Bil(V)\to Mat_{\infty}(F)$ given by $\Phi(H)=[H]_{\beta}$ is an isomorphism of vector spaces.
+\end{itemize}
+
+Now let $T\in\mathcal L(V)$ be a linear map from $V$ to $V$. Define $[T]_{\beta}\in Mat_{\infty}(F)$ to be the matrix whose $i^{\rm th}$ column
+is $[Tv_i]_{\beta}$.
+
+\begin{itemize}
+\item[(d)] Prove that the map $\Psi: \mathcal L(V)\to Mat_{\infty}(F)$ given by $\Psi(T)=[T]_{\beta}$ is linear and injective, but not surjective, and explicitly describe its image.
+\end{itemize}
+\newpage
+{\bf Hint for 2}. Start by computing the matrix of $H$ with respect to the ``standard'' basis $\{e_{ij}\}$. This matrix is not diagonal, but if you
+order the elements of $\{e_{ij}\}$ in the right way, the matrix will be block-diagonal with blocks of size at most $2$.
+
+\newpage
+{\bf Hint for 3(a)}. Show that if $F$ is any field with $\char(F)\neq 2$, then for any nonzero $f\in F$ the equation $x^2=f$ has either $2$ or $0$ solutions.
+
+\newpage
+{\bf Hint for 3(b)}. Rewrite the equation as $1-ax^2=by^2$ and use a counting argument (what you need from (a) is that more than half of all elements of $F$ are squares). 
+
+\newpage
+{\bf Hint for 4.} Let $\{w_1,\ldots, w_m\}$ be a basis of $W$, and assume that $\phi$ from the proof of Lemma~3.4 is not surjective. Show that there
+exist $\lam_1,\ldots,\lam_m\in F$, not all zero, such that $\sum_{i=1}^m \lam_i H(w_i,v)=0$ for all $v\in V$ and deduce that $H$ must be degenerate.
+\end{document}
+
