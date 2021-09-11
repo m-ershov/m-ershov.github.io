@@ -1,0 +1,128 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#3. Due Saturday, Sep 18}\rm
+\vskip .1cm
+
+1. Reading for this homework assignment: Friedberg-Insel-Spence 6.1, 6.3 + online class notes (Lectures 5,6)
+\skv
+\skv
+2. Plan for the next week: Diagonalization in Inner Product Spaces (Friedberg-Insel-Spence 6.4, 6.5, online lectures 7,8)
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Let $V$ be a finite-dimensional vector space over a field $F$ of characteristic $2$ and $H$ a symmetric (=skew-symmetric since $\char F=2$) bilinear form on $V$. Prove that there exist subspaces $V_1$ and $V_2$ of $V$ such that
+\begin{itemize}
+\item[(a)] $V=V_1\oplus V_2$ and $V_1\perp V_2$ (that is, $H(v,w)=0$ for all $v\in V_1$ and $w\in V_2$).
+\item[(b)] $H_{| V_1}$ is diagonalizable (that is, $[H_{| V_1}]_{\beta_1}$ is diagonal for some basis $\beta_1$ of $V_1$)
+\item[(c)] $H_{| V_2}$ is alternating and non-degenerate (such a form is called symplectic).
+\end{itemize}
+{\bf Hint:} Combine the proofs of Theorems~4.2 and 5.1 from class.
+\skv
+{\bf 2.} As observed at the beginning of Lecture~5, if $V$ is a finite-dimensional vector space and $H$ is a bilinear form on $V$,
+the following conditions are equivalent:
+
+\begin{itemize}
+\item[(i)] $H$ is left non-degenerate
+\item[(ii)] $H$ is right non-degenerate
+\item[(iii)] $[H]_{\beta}$ is invertible for some (hence any) basis $\beta$ of $V$.
+\end{itemize}
+
+Now assume that $\dim V$ is countably infinite and $\beta=\{v_1,v_2,\ldots\}$ is a basis of $V$. 
+
+\begin{itemize}
+\item[(a)] Find (with proof) conditions $(ND)_{left}$ and $(ND)_{right}$ on an infinite square matrix such that $H$ is left non-degenerate $\iff$ $[H]_{\beta}$ satisfies $(ND)_{left}$
+and $H$ is right non-degenerate $\iff$ $[H]_{\beta}$ satisfies $(ND)_{right}$. {\bf Hint:} The conditions will be non-equivalent, but in the finite dimensional case they should both reduce to different (but similar) well-known characterizations of invertible matrices.
+
+\item[(b)] Use (a) to find a bilinear form $H$ on $V$ which is left-nondenerate but not right-nondegenerate.
+\end{itemize}
+
+
+
+
+
+
+ 
+
+
+\skv
+{\bf 3.} Let $V$ be an inner product space.
+\begin{itemize}
+\item[(a)] Prove the parallelogram law: $\|x+y\|^2+\|x-y\|^2=2(\|x\|^2+\|y\|^2)$ for all $x,y\in V$.
+\item[(b)] Show that $\la x,y\ra$ can be expressed as a linear combination of squares of norms. In Lecture~6 we discussed how to do this for the real
+inner product spaces. 
+\end{itemize}
+\skv
+{\bf 4.} Let $V$ be a finite-dimensional complex inner product space and $A\in\mathcal L(V)$.
+Prove that $\Im(A^*)=\Ker(A)^{\perp}$ (where the orthogonal complement is with respect to the inner product on $V$).
+Here $A^*$ is the adjoint operator of $A$ (see the end of the online lecture 6 for the definition).
+\skv
+{\bf 5.} Let $V$ be an inner product space where $\dim V$ is finite or countable, $\beta$ an orthonormal basis of $V$ and $A\in\mathcal L(V)$. 
+\begin{itemize} 
+\item[(a)] Prove that if $A^*\in \mathcal L(V)$ is any operator such that $\la Ax,y\ra=\la x,A^*y\ra$ for all $x,y\in V$, then $[A^*]_{\beta}=[A]_{\beta}^*$ (where $[A]_{\beta}^*$ is the conjugate transpose of $A$).
+In particular, this shows that the adjoint operator is unique (if exists).
+\item[(b)] As we will prove in class, the adjoint $A^*$ always exists if $\dim V$ is finite. Now use (a) and a result from earlier homeworks to
+show that if $V$ is countably-dimensional, then the adjoint $A^*$ may not exist.
+\end{itemize}
+\end{document}
