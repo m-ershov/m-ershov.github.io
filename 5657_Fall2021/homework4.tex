@@ -1,0 +1,107 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#4. Due Saturday, Sep 25}\rm
+\vskip .1cm
+
+1. Reading for this homework assignment: Friedberg-Insel-Spence 6.1, 6.3 + online class notes (Lectures 7,8)
+\skv
+\skv
+2. Plan for the next week: Finish diagonalization in Inner Product Spaces (Friedberg-Insel-Spence 6.4, 6.5, online lectures 7,8),
+dual spaces (Friedberg-Insel-Spence 2.6, online lectures 9,10); start talking about tensor products (online lecture 10).
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the assignment. Do not to look at the hint(s) until you seriously tried to solve the problem without it.
+\skv
+{\bf Note:} Problems 1, 2 and 3 establish some fundamental facts about unitary operators that we will continuously use when talking and representations.
+\skv
+{\bf 1.} Let $V$ be a finite-dimensional inner product space over $\dbC$ and let $A\in \mathcal L(V)$ be a normal operator. Prove that $A$ is unitary if and only if all eigenvalues of $A$ have absolute value $1$.
+\skv
+{\bf 2.} Let $V$ be an inner product space over $\dbC$ and $A\in GL(V)$, that is, $A\in \mathcal L(V)$ is invertible. 
+\begin{itemize}
+\item[(a)] Prove that $A$ is unitary if and only if $\la Ax,Ay\ra=\la x,y\ra$ for all $x,y\in V$.
+\item[(b)*] Now use (a) to prove that $A$ is unitary if and only if $\|Ax\|=\|x\|$ for all $x\in V$.
+\end{itemize}
+\skv
+{\bf 3.} Let $V$ be an inner product space over $\dbC$, let $A\in \mathcal L(V)$ be unitary, and let $W\subseteq V$ be a {\it finite-dimensional} subspace of $V$ which is  $A$-invariant (that is, $A(W)\subseteq W$).
+ \begin{itemize}
+\item[(a)] Prove that if $A(W)=W$.
+\item[(b)] Use (a) to prove that $W^{\perp}$ is also $A$-invariant.
+\end{itemize}
+\skv
+{\bf 4.} Let $A=\begin{pmatrix}2&1&1\\1&2&1\\1&1&2\end{pmatrix}$. Find a unitary matrix $U$ such that $U^{-1}AU$ is diagonal (see the online version of Lecture~8 for a brief discussion of the algorithm for finding $U$). Try to determine the eigenvalues of $A$ without computing the characteristic polynomial.
+\skv
+{\bf 5.} Let $V$ be a finite-dimensional inner product space over $\dbC$ and let $H$ and $G$ be Hermitian forms on $V$.
+ \begin{itemize}
+\item[(a)*] Assume that $G$ is positive-definite. Prove that there exists a basis $\beta$ of $V$ such that $[H]_{\beta}$ and $[G]_{\beta}$ are both diagonal (equivalently, if $A,B\in Mat_n(\dbC)$ are Hermitian matrices and $A$ is positive definite, there exists $P\in GL_n(\dbC)$ such that
+$P^*AP$ and $P^*BP$ are both diagonal).
+\item[(b)] (bonus) Now give an explicit example showing that if neither $G$ nor $H$ is positive-definite, the conclusion of (a) may fail.
+\end{itemize}
+\newpage
+{\bf Hint for 2(b):} One direction is straightforward. For the other direction use the result of an earlier homework problem.
+\newpage
+{\bf Hint for 5:} The result follows from one of the theorems from the online lecture 8 with almost no additional computations (but it may take some work to figure out which result to use).
+\end{document}
