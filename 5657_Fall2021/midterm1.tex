@@ -1,0 +1,122 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\textwidth=5.58in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\eps{{\varepsilon}}
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\dim{{\rm dim}}
+\def\Ker{{\rm Ker}}
+
+\bf\centerline{Bilinear Forms and Group Representations, Fall 2021. Midterm \#1. }\rm
+\bf\centerline{Due by 11:59pm on Thursday, October 7th}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments (do not skip steps). State clearly and FULLY any result you are referring to. Partial credit for incorrect solutions, containing steps in the right direction, may be given.
+If you are unable to solve a problem (or a part of a problem), you may still use its result
+to solve a later part of the same problem or a later problem in the exam.
+
+\vskip .1cm
+
+{\bf Rules: } You are NOT allowed to discuss midterm problems with anyone else except me.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] your class notes + online notes 
+\item[(ii)] homework solutions (both your solutions and solutions posted on the course webpage)
+\item[(iii)]the books `Linear Algebra' by Friedberg, Insel and Spence and `Linear Algebra Done Wrong' by Treil
+\end{itemize}
+The use of other books or online sources is NOT allowed.
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the assignment. 
+\skv
+\skv
+{\bf 1.} (10 pts) Let $V=Mat_2(\dbR)$, the vector spaces of $2\times 2$ matrices over $\dbR$. 
+Given a real number $c$, define $H_c:V\times V\to V$ by $$H_c(A,B)=Tr(AB)+c\, Tr(A)Tr(B).$$ Prove that $H_c$ is a symmetric bilinear form, find a basis $\beta$ such that $[H_c]_{\beta}$ is diagonal and compute the signature of $H_c$ (both parts of your answer will depend on $c$).
+\skv
+{\bf 2.} (10 pts) Let $V$ be a finite-dimensional REAL inner product space and $A\in\mathcal L(V)$. Prove that
+$\la Ax,x\ra=0$ for all $x\in V$ if and only if $A^*=-A$.
+\skv
+{\bf 3*.} (10 pts) Let $F$ be a field with $\rm char (F)\neq 2$, $V$ a vector space over $F$ and $H$ a bilinear form on $V$.
+Suppose that $H$ has the following property: if $H(x,y)=0$ for some $x,y\in V$, then $H(y,x)=0$. Prove that $H$ must be
+symmetric or alternating. 
+\skv
+{\bf 4.} (10 pts)  
+\begin{itemize}
+\item[(a)*] Let $A\in Mat_n(\dbC)$ be arbitrary. Prove that there exists a unitary matrix $U$ such that $U^{-1}AU=U^* AU$ is upper-triangular.
+\item[(b)*] Use (a) to give a short proof of the following special case of Theorem~8.3 from class: if $A\in Mat_n(\dbC)$ is
+Hermitian or unitary, there exists a unitary matrix $U$ such that $U^{-1}AU$ is diagonal.
+\end{itemize}
+
+\skv
+{\bf 5.} (10 pts) Let $H$ and $G$ be Hermitian forms on $\dbC^2$ which are not proportional, and let $W$ be the set of linear combinations of $H$ and $G$ with REAL coefficients. Thus, $W$ is a 2-dimensional (real) subspace of the space
+$\mathbb H(\dbC^2)$ of all Hermitian forms on $\dbC^2$ (note that $\mathbb H(\dbC^2)$ is a vector space over $\dbR$, but not over $\dbC$). Prove that the following three conditions are equivalent:
+\begin{itemize}
+\item[(i)] The forms $H$ and $G$ are simultaneously diagonalizable, that is, there exists a basis $\beta$ such that
+$[H]_{\beta}$ and $[G]_{\beta}$ are both diagonal
+\item[(ii)] The subspace $W$ contains a positive definite form
+\item[(iii)] If $[H]$ and $[G]$ are the matrices of $H$ and $G$ with respect to the standard basis, then there exist
+$a,b\in\dbR$ such that $\det(a[H]+b[G])>0$.
+\end{itemize}
+{\bf Note:} It is probably easiest to prove the equivalences  (i)$\iff$(ii) and  (ii)$\iff$(iii). I do not see a natural way to relate (i) directly to (iii).
+\newpage
+{\bf Hint for 3:} First prove the result for finite-dimensional $V$. Once this is done, it is easy to extend the result to arbitrary $V$.
+
+To prove the result for finite-dimensional $V$, assume that $H$ is not alternating and prove that $H$ is symmetric,
+arguing by induction on $n=\dim(V)$ similarly to the proof of Theorem~4.2. The induction hypothesis applied to a suitable subspace $Z$ of dimension $n-1$ should imply that $H$ restricted 
+to $Z$ is either symmetric or alternating. If $H_{| Z}$ is symmetric, deduce that $H$ on the entire $V$ is symmetric. If $H_{| Z}$ is alternating (and nonzero), you should reach a contradiction with the original assumption on $H$. 
+\newpage
+{\bf Hint for 4(a):} Reformulate the result in terms of operators and imitate the proof of Theorem~7.3 (there are many steps in that proof that are irrelevant for this problem).
+\newpage
+{\bf Hint for 4(b):} If $A$ is Hermitian or unitary, what can you say about $U^{-1}AU$ for unitary $U$?
+\end{document}
