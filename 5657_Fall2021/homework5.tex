@@ -1,0 +1,125 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\Tr {{\rm Tr}}
+\def\sk {\hskip .3cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Homework \#5. Due Saturday, October 16th}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: online lectures 9-12 and Steinberg 3.1
+\skv
+
+2. Next Thursday we will talk about the unitary and unitarizable representations,  
+prove Maschke's theorem over $\mathbb C$ (the end of online lecture 12 + online lecture 13 and Steinberg 3.2)
+and perhaps start talking about Schur's lemma (online lectures 13-14 and Steinberg 4.1, up to Corollary 4.1.8)
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the assignment. Do not to look at the hint(s) until you seriously tried to solve the problem without it.
+\skv
+{\bf 1.} Let $U,V$ and $W$ be vector spaces over the same field $F$. Prove that the vector spaces $(U\oplus V)\otimes W$ and 
+$(U\otimes W)\oplus (V\otimes W$) are naturally isomorphic.
+
+Recall that we sketched the construction in Lecture 10 in class (Thu, Sep 23), so your main task is to fill in the details. In particular, make sure to verify that the maps $(U\oplus V)\otimes W\to (U\otimes W)\oplus (V\otimes W)$ and $(U\otimes W)\oplus (V\otimes W)\to
+(U\oplus V)\otimes W$ we defined in class are mutually inverse.
+\skv
+{\bf 2.} Let $V_1, V_2,W_1$ and $W_2$ be vector spaces over the same field $F$, and let $\phi:V_1\to V_2$ and $\psi: W_1\to W_2$
+be linear maps. Prove that there exists a unique linear map $\phi\otimes \psi: V_1\otimes W_1\to V_2\otimes W_2$ such that 
+$(\phi\otimes \psi)(v\otimes w)=\phi(v)\otimes \psi(w)$ for all $v\in V_1$ and $w\in W_1$ (here $\phi\otimes \psi$ is just the notation for the map being defined).
+
+\skv
+{\bf 3.} Let $V$ and $W$ be vector spaces over the same field $F$, and let $\phi:V\to V$ and $\psi: W\to W$ be linear maps.
+\begin{itemize}
+\item[(a)] Prove that $\Tr(\phi\otimes \psi)=\Tr(\phi) \Tr(\psi)$
+\item[(b)*] Assume that $\phi$ and $\psi$ are both diagonalizable. Prove that $\phi\otimes \psi$ is also diagonalizable and express the eigenvalues of $\phi\otimes \psi$ in terms of the eigenvalues of $\phi$ and $\psi$.
+\end{itemize}
+
+\skv
+{\bf 4.} Let $\rho:S_3\to GL(\dbC^3)$ be the representation of $S_3$ introduced in HW\#1.7, and let $W=\{(x_1,x_2,x_3)\in\dbC^3: x_1+x_2+x_3=0\}$. Recall that $W$ is $S_3$-invariant, and let $\rho_W: S_3\to GL(W)$ be the corresponding subrepresentation. Find a basis 
+$\beta$ of $W$ such that the matrix $[\rho_W(g)]_{\beta}$ has integer entries for all $g\in S_3$ and compute those matrices explicitly (for each $g\in S_3$).
+
+\skv
+{\bf 5.} Let $G$ be a cyclic group and $(\rho,V)$ an irreducible complex representation of $G$. Prove that $\dim(V)=1$.
+
+\skv
+{\bf 6.} The goal of this problem is to establish the equivalence of the external and internal direct sums of representations.
+
+{\bf External direct sum}. As in class, given two representations $(\rho_1,V_1)$ and $(\rho_2,V_2)$ of the same group $G$ over the same field, define their external direct sum to be the representation $(\rho,V)$ where $V=V_1\oplus V_2$ and $\rho:G\to GL(V)$ is given by
+$\rho(g)((v_1,v_2))=(\rho_1(g)(v_1),\rho_2(g)(v_2))$.
+
+{\bf Internal direct sum}. Let $(\rho,V)$ be a representation of a group $G$, and let $V_1$ and $V_2$ be subrepresentations of $V$ (that is,
+$G$-invariant subspaces) such that $V=V_1\oplus V_2$ (as vector spaces). In this case we say that $V$ is an internal direct sum of $V_1$
+and $V_2$ (as a representations of $G$).
+
+\sk Prove that the external and internal direct sums are equivalent as representations of $G$ in the following sense. Let $(\rho,V)$ be a representations of $G$, and let $V_1$ and $V_2$ be subrepresentations of $V$ such that $V=V_1\oplus V_2$. Prove that $(\rho,V)$ is equivalent to the (external) direct sum of the representations $(\rho_1,V_1)$ and $(\rho_2,V_2)$ where $\rho_i(g)\in GL(V_i)$ is 
+simply the restriction of $\rho(g)$ to $V_i$.
+
+\sk Just in the case of vector spaces, we will not explicitly distinguish between external and internal direct sums in the future identifying them via the above equivalence.
+
+\newpage
+{\bf Hint for 3(b):} Think of diagonalizability in terms of eigenvectors.
+\end{document}
