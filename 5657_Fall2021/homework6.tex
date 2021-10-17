@@ -1,0 +1,128 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\Tr {{\rm Tr}}
+\def\sk {\hskip .3cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\Ker{\mathrm {Ker}}
+\def\End{\mathrm {End}}
+\def\Hom{\mathrm {Hom}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#6. Due Saturday, October 23rd}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: online class notes (Lectures 12 and 13) and Steinberg 3.2, 4.1
+\skv
+
+2. Next week we will talk about Schur's Lemma and representations of abelian groups and one-dimensional representations (online lectures 13 and 14 and Steinberg 4.1).
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} The goal of this problem is to prove the general case of Maschke's Theorem: \it If $G$ is a finite group and $F$ is any field with
+$\char(F)\nmid |G|$, then any representation of $G$ over $F$ is completely reducible. \rm
+
+\sk The key part of the proof is the following lemma.
+
+{\bf Lemma:} \it Let $G$ and $F$ be as above, $(\rho,V)$ a representation of $G$ over $F$ and $W$ a $G$-invariant subspace. Then there exists a $G$-invariant subspace $U$ such that $V=W\oplus U$. \rm
+
+\sk Maschke's theorem follows immediately by repeated applications of this lemma (or by induction on $\dim V$).
+
+\sk To prove the lemma, consider the following maps. Choose any subspace $Z$ of $V$ such that $V=W\oplus Z$ and
+let $P: V\to W$ be the projection onto $W$ along $Z$, that is, $P$ is the unique linear map such that $P(w)=w$ for all $w\in W$ and $P(Z)=0$. Now define $Q:V\to V$ by
+$$Q(v)=\frac{1}{|G|}\sum\limits_{g\in G}\rho(g)^{-1} P \rho(g) (v).$$
+Prove that 
+\begin{itemize}
+\item[(i)] $Q(w)=w$ for all $w\in W$ and $\Im(Q)=W$. Deduce that $Q^2=Q$.
+\item[(ii)] $\Ker(Q)$ is $G$-invariant
+\end{itemize}
+Deduce from (i) that $V=W\oplus \Ker(Q)$ and therefore $U=\Ker(Q)$ has the desired property.
+\skv
+
+{\bf 2.} Given a vector space $V$, let $\End(V)=\Hom(V,V)$ (we previously denoted this set by $\mathcal L(V)$). Elements of $\End(V)$ are called
+{\it endomorphisms of $V$}. If $X$ is an algebraic structure (e.g. group, ring, vector space), an endomorphism of $X$ is a homomorphism from $X$ to itself.
+\begin{itemize}
+\item[(a)] Prove that $\End(V)$ is a ring with $1$ (where addition is the usual pointwise addition of maps and multiplication is given by composition). Clearly state where you use the fact that elements of $\End(V)$ are linear maps.
+\end{itemize}
+Now suppose that $(\rho,V)$ is a representation of some group $G$. Let $\End_{\rho}(V)$ be the set of those elements of $\End(V)$ which are homomorphisms of representations (from $(\rho,V)$ to $(\rho,V)$). Prove that
+\begin{itemize}
+\item[(b)] $\End_{\rho}(V)$ is a subring of $\End(V)$ which contains $1$ and also that $\End_{\rho}(V)$ is a vector subspace of $\End(V)$.
+\item[(c)] If $g\in G$ is a central element (that is, $gx=xg$ for all $x\in G$), then $\rho(g)\in \End_{\rho}(V)$.
+\end{itemize}
+\skv
+{\bf 3.} Next week in class we will show that if $G$ is an abelian group, then any irreducible representation of $G$ over an algebraically closed field is one-dimensional. 
+\begin{itemize}
+\item[(a)] Let $n>2$ be an integer. Construct an irreducible representation of $\dbZ_n$ over $\dbR$ (reals) which is not one-dimensional. {\bf Hint:} Recall that we completely described representations of cyclic groups over arbitrary fields in Lecture 14 on Oct 7.
+\item[(b)] Prove that any irreducible representation of $\dbZ_2$ over any field is one-dimensional.
+\item[(c)] (bonus) Describe (with proof) all finite abelian groups $G$ such that any irreducible representation of $G$ over any field is one-dimensional.
+\end{itemize}
+\skv
+{\bf 4.} Let $(\alpha,V)$ and $(\beta,W)$ be representations of the same group over the same field. The {\it tensor product} of these representations is the representation $(\rho, V\otimes W)$ where $\rho(g)=\alpha(g)\otimes \beta(g)$ for each $g\in G$ (in the notations
+from Problem~2 in HW\#5). In other words, $\rho(g)\in GL(V\otimes W)$ is the unique linear map such that $\rho(g)(v\otimes w)=
+(\alpha(g)v)\otimes (\beta(g)w)$ for all $v\in V$ and $w\in W$.
+\begin{itemize}
+\item[(a)] Prove that $(\rho, V\otimes W)$ is indeed a representation, that is, $\rho: G\to GL(V\otimes W)$ is a homomorphism.
+\item[(b)] Prove that if $(\alpha,V)$ is NOT irreducible and $W\neq 0$, then $(\rho,V\otimes W)$ is not irreducible either.
+\item[(c)] Now prove that if $(\alpha,V)$ is irreducible and $\dim(W)=1$, then $(\rho,V\otimes W)$ is irreducible.
+\end{itemize}
+\end{document}
