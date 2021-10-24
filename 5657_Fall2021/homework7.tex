@@ -1,0 +1,185 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\Tr {{\rm Tr}}
+\def\sk {\hskip .3cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\Ker{\mathrm {Ker}}
+\def\End{\mathrm {End}}
+\def\Hom{\mathrm {Hom}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#7. Due Saturday, October 30th}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: online class notes (Lectures 14 and 15) and Steinberg, second half of 4.1.
+\skv
+
+2. Next week we will talk a bit more about groups defined by generators and relations and then move to characters of groups (Lectures 16 and 17 in online class notes and Steinberg 4.2, 4.3 and 4.4). Note that our order of exposition will be quite different from Steinberg's book. 
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} In all parts of this problem include ALL relevant computations. Make sure to read a note on pages 4-5 before starting this problem.
+
+Let $G=D_{2n}$ be the dihedral group of order $2n$. Recall that $G$ has a presentation 
+$G=\la r,s \mid r^n=1, s^2=1, srs^{-1}=r^{-1}\ra$. 
+\begin{itemize}
+\item[(a)] Let $\omega\in\dbC$ be an $n^{\rm th}$ root of unity (that is, $\omega^n=1$). Prove that $G$ has a representation 
+$\rho_{\omega}:G\to GL_2(\dbC)$ such that $\rho(r)=\begin{pmatrix}\omega & 0\\ 0 &\omega^{-1}
+\end{pmatrix}$ and $\rho(s)=\begin{pmatrix}0 & 1\\ 1 &0\end{pmatrix}$
+\item[(b)] Prove that the representation $\rho_{\omega}$ in part (a) is irreducible if and only if $\omega\neq \pm 1$.
+\item[(c)] Let $\omega_1$ and $\omega_2$ be $n^{\rm th}$ roots of unity different from $\pm 1$. Prove that 
+$\rho_{\omega_1}\cong \rho_{\omega_2}$ (as representations of $G$) if and only if $\omega_2=\omega_1$ or $\omega_2=\omega_1^{-1}$.
+\item[(d)] Since we can think of isometries of a regular $2n$-gon as invertible linear operators on $\dbR^2$, we get a 2-dimensional representation of $G$ ``for free'' (simply representing the elements of $D_{2n}$ by their matrices with respect to the standard basis).
+If we assume that $r$ is the counterclockwise rotation by $\frac{2\pi}{n}$ and $s$ is the reflection with respect to the $x$-axis, 
+the corresponding $\rho$ is given by $\rho(r)=\begin{pmatrix}\cos\frac{2\pi}{n} & -\sin\frac{2\pi}{n}\\ \sin\frac{2\pi}{n} &\cos\frac{2\pi}{n}\end{pmatrix}$ and $\rho(s)=\begin{pmatrix}1 & 0\\ 0 &-1\end{pmatrix}$. Note that technically $\rho$ is a real representation
+(a homomorphism from $G$ to $GL_2(\dbR)$), but since every $2\times 2$ real matrix can be thought of as a  $2\times 2$ complex matrix,
+we can think of $\rho$ as a complex representation. Prove that this $\rho$ is equivalent to some $\rho_{\omega}$ from part (a),
+explicitly find such $\omega$ as well as a matrix $T\in GL_2(\dbC)$ such that $T^{-1}\rho(g) T=\rho_{\omega}(g)$ for all $g\in G$. 
+\item[(e)] Recall that the number of one-dimensional complex representations of $G$ is equal to $|G^{ab}|$. In online Lecture 15 it is shown that $|G^{ab}|$ is equal to $2$ if $n$ is odd and $4$ if $n$ is even (we will give a different proof in class on Tue, Oct 26). Now describe all one-dimensional complex representations of $G$ explicitly
+(it is enough to specify the images of $r$ and $s$ under these representations).  
+\end{itemize}
+We will soon prove that every complex irreducible representation of $D_{2n}$ is 1-dimensional or 2-dimensional and, in the latter case,
+isomorphic to some $\rho_{\omega}$ as in part (a).
+\skv
+{\bf 2.} Given a field $F$, the \emph{Heisenberg group over $F$} is the group $Heis(F)$ consisting of all $3\times 3$ upper unitriangular matrices in $GL_3(F)$, that is, matrices of the form $\begin{pmatrix}1&a&c\\ 0& 1& b\\ 0&0&1\end{pmatrix}$
+with $a,b,c\in F$. Denote by $E_{ij}(\lam)$ the matrix which has 1's on the diagonal, $\lam$ in the position $(i,j)$ and $0$
+everywhere else.
+
+Let $G=Heis(\dbZ_p)$ for some prime $p$.
+\begin{itemize}
+\item[(a)] Prove that $[G,G]=\{E_{13}(\lam):\lam\in \dbZ_p\}$ and that 
+$G^{ab}\cong \dbZ_p\times \dbZ_p$.
+\item[(b)] Let $x=E_{12}([1])$, $y=E_{23}([1])$ and $z=E_{13}([1])$ where $[1]$ is the unity element of $\dbZ_p$. Prove that $$G=\la x,y,z \mid x^p=1, y^p=1, z^p=1, xz=zx, yz=zy, x^{-1}y^{-1}xy=z\ra.$$
+{\bf Note:} You can argue similarly to the proof of Theorem~15.2 in online lecture 15 (we will also discuss the latter in class on Tue, Oct 26).
+\item[(c)] Describe all one-dimensional complex representations of $G$.  
+\end{itemize}
+
+
+{\bf 3.} A representation $(\rho, V)$ of a group $G$ is called {\bf cyclic} if there exists $v\in V$ such that the smallest 
+$G$-invariant subspace of $V$ containing $v$ is $V$ itself.
+\begin{itemize}
+\item[(a)] Prove that any irreducible representation is cyclic.
+\item[(b)] Give an example of a cyclic representation (of some group) which is not irreducible.
+\end{itemize}
+\skv
+{\bf 4.} Let $(\rho_1,V_1)$ and $(\rho_2,V_2)$ be equivalent representations of a group $G$, and let $(\rho,V_1\oplus V_2)$ be their direct sum. Let $T:V_1\to V_2$ be an isomorphism of representations and let $W=\{(v,T(v)): v\in V_1\}\subset V_1\oplus V_2$. Prove that
+$W$ is a $G$-invariant subspace and that $(W,\rho_{|W})$ is isomorphic to $(\rho_1,V_1)$ as a $G$-representation. {\bf Note:} We will
+use the result of this problem in the course of the proof of orthogonality relations between characters.
+\skv
+
+\newpage
+\centerline {\bf On groups defined by generators and relations}
+\skv
+\sk Let $G$ a group given by a presentation $G=\la x_1,\ldots, x_k \mid R\ra$. Let $Q$ be another group.
+Note that a homomorphism $\rho:G\to Q$ is completely determined by the elements $\rho(x_i)\in Q$, with $1\leq i\leq k$; however, given
+$q_1,\ldots,q_k\in Q$, it is not always possible to find a homomorphism $\rho:G\to Q$ such that $\rho(x_i)=q_i$ for each $i$. The following proposition describes exactly when that is possible.
+\skv
+{\bf Theorem~A: }\it Let $q_1,\ldots, q_k\in Q$. Then a homomorphism $\rho:G\to Q$ such that $\rho(x_i)=q_i$ for each $i$ exists $\iff$ each relation in $R$ holds if we substitute each $x_i$ by $q_i$.\rm
+\skv
+{\bf Note: } In the setting of representation theory we will be applying this result in the case when $Q=GL(V)$ for some vector space $V$.
+\skv
+{\it Proof: }\rm ``$\Rightarrow$'' Let $u(x_1,\ldots, x_k)=v(x_1,\ldots, x_k)$ be a relation in $R$. Here the notations 
+$u(x_1,\ldots, x_k)$ and  $v(x_1,\ldots, x_k)$ indicate that both sides of the relations are words in $x_i$'s and their inverses. Since $\rho:G\to Q$ is a homomorphism and $\rho(x_i)=q_i$ for each $i$, we must have 
+$$\rho(u(x_1,\ldots, x_k))=u(\rho(x_1),\ldots, \rho(x_k))=u(q_1,\ldots, q_k)$$ (here $u(q_1,\ldots, q_k)$ is the expression obtained 
+from $u(x_1,\ldots, x_k)$ by replacing each $x_i$ by $q_i$). Likewise $\rho(v(x_1,\ldots, x_k))=v(q_1,\ldots, q_k)$. Thus, the equality $u(x_1,\ldots, x_k)=v(x_1,\ldots, x_k)$ forces $u(q_1,\ldots, q_k)=v(q_1,\ldots, q_k)$.
+\skv
+
+\sk ``$\Leftarrow$'' Conversely, suppose that for every relation $u(x_1,\ldots, x_k)=v(x_1,\ldots, x_k)$ from $R$ we have the corresponding equality $u(q_1,\ldots, q_k)=v(q_1,\ldots, q_k)$ in $Q$. Define $\rho:G\to Q$ by
+$$\rho(w(x_1,\ldots,x_k))=w(q_1,\ldots, q_k).$$
+In other words, we take $g\in G$, represent it as word  $w(x_1,\ldots,x_k)$ in $x_i^{\pm 1}$ (which we always can since $G$ is generated by $x_1,\ldots, x_k$) and send it to the same word in $q_1,\ldots, q_k$. It is straightforward to see that $\rho$ constructed
+in this way will be a homomorphism (and will send each $x_i$ to $q_i$) as long as it is WELL defined.
+
+\sk So why is $\rho$ well defined? Suppose that some $g\in G$ is represented by two different words $w(x_1,\ldots, x_k)$
+and $w'(x_1,\ldots, x_k)$, that is, we have a relation $w(x_1,\ldots, x_k)=w'(x_1,\ldots, x_k)$ in $G$. Since $R$ is a set of defining relations, we can show that this relation holds in $G$ ONLY using relations from $R$. But by assumption for each relation
+$a(x_1,\ldots, x_k)=b(x_1,\ldots, x_k)$ from $R$ the corresponding relation $a(q_1,\ldots, q_k)=b(q_1,\ldots, q_k)$ in $Q$ holds. 
+Hence using these relations, we can also show that $w(q_1,\ldots, q_k)=w'(q_1,\ldots, q_k)$, which means precisely that 
+$\rho$ is well-defined.
+$\square$
+\skv
+\centerline{\bf Presentation for the abelianization.}
+\skv
+{\bf Theorem~B: }\it Suppose that $G$ has a presentation $G=\la x_1,\ldots, x_k \mid R\ra$. Then its abelianization 
+$G^{ab}$ has a presentation $G^{ab}=\la x_1,\ldots, x_k \mid R\cup C\ra$ where $C$ is the set of commutation relations:
+$C=\{x_i x_j=x_j x_i: i<j\}$.
+\skv
+{\it ``Proof'': }\rm (stated quite informally). In general, if we start with a presentation for some group $X$ and add some relations, we get a presentation for some quotient of $X$. It is easy to see that if any two generators of a group commute, then the group is abelian. Thus, the presentation $\la x_1,\ldots, x_k \mid R\cup C\ra$ defines an abelian quotient of $G$. 
+
+\sk We know that relations $R$ must hold in $G^{ab}$ (since $G^{ab}$ is a quotient of $G$) and relations $C$ must hold in $G^{ab}$
+since $G^{ab}$ is abelian. This means that $G^{ab}$ is a quotient of the group $\widetilde G$ given by the presentation  $\la x_1,\ldots, x_k \mid R\cup C\ra$. But we know that $\widetilde G$ is an abelian quotient of $G$ and $G^{ab}$ is the LARGEST abelian quotient of $G$. Thus, the only way $G^{ab}$ could be a quotient of $\widetilde G$ is if it is the quotient by the trivial subgroup,
+and the latter means precisely that $\la x_1,\ldots, x_k \mid R\cup C\ra$ is a presentation for $G^{ab}$.
+$\square$
+
+
+\skv
+{\bf Corollary~C: }\it If $Q$ is abelian group and $G$ is any group, then there is a natural bijection between $Hom(G,Q)$
+and $Hom(G^{ab},Q)$ where $Hom(X,Y)$ is the set of homomorphisms from a group $X$ to a group $Y$.
+
+{\it ``Proof'': }\rm
+Recall that Corollary~C was already proved in class (Lemma~17.2). We now give another (somewhat informal) proof using Theorems~A and B. For simplicity of notation we shall assume that $G$ is generated by finitely many elements $x_1,\ldots, x_k$.
+
+\sk Choose a presentation $\la x_1,\ldots, x_k\mid R\ra$ for $G$. By Theorem~B, $G^{ab}$ then has a presentation  $\la x_1,\ldots, x_k\mid R\cup C\ra$ where $C$ is the set of commutation relations between the generators.
+By Theorem~A we can construct all homomorphisms from $G$ to $Q$ by sending generators $x_1,\ldots, x_k$ of $G$ to $k$-tuples 
+$(q_1,\ldots,q_k)$ of elements of $Q$ satisfying the relations $R$. Likewise, homomorphisms from $G^{ab}$ to $Q$ must send generators of $G$ to $k$-tuples $(q_1,\ldots,q_k)$ satisfying the relations $R\cup C$ (and this is the only restriction). But since $Q$ is abelian, the elements  $(q_1,\ldots,q_k)$ will automatically satisfy the relations $C$. Thus, the images of $x_1,\ldots, x_k$ under homomorphisms from $G^{ab}$ to $Q$ satisfy exactly the same restrictions as in the case of homomorphisms from $G$ to $Q$, which yields a natural bijection between $Hom(G^{ab},Q)$ and $Hom(G,Q)$.
+$\square$
+\end{document}
