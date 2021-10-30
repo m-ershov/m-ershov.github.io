@@ -1,0 +1,144 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\Tr {{\rm Tr}}
+\def\sk {\hskip .3cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\Ker{\mathrm {Ker}}
+\def\End{\mathrm {End}}
+\def\Hom{\mathrm {Hom}}
+\def\Irr{\mathrm {Irr}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#8. Due Saturday, November 6th}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: online class notes (Lectures 16 and 17) and Steinberg, parts of 4.2-4.4. {\bf Note:} We have not yet covered the material from Lecture 17 in class (will do so on Tuesday, Nov 2); however, several problems in this assignment are based on that material, and you are strongly encouraged to start reading before we get to that material in class.
+\skv
+
+2. Next week we will state and start proving orthogonality relations for characters (Theorem 17.1 from online notes) --
+see online Lectures 17, 18 and 19. The corresponding material in Steinberg is in sections 4.2, 4.3 and 4.4, but in a rather different order. 
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the assignment. Do not to look at the hint(s) until you seriously tried to solve the problem without it.
+\skv
+{\bf 1.*} Prove that $[S_n,S_n]=A_n$.
+\skv
+{\bf 2.} Let $G$ be a group, $N$ a normal subgroup of $G$ and let $\pi:G\to G/N$ be the natural projection. 
+\begin{itemize}
+\item[(a)] Given a representation $\rho: G/N\to GL(V)$ of $G/N$, define the representation $\widetilde \rho: G\to GL(V)$ of $G$
+by $$\widetilde \rho(g)=\rho\circ \pi(g)=\rho(gN). \eqno (***)$$ Prove that $\widetilde \rho$ is irreducible $\iff$ $\rho$ is irreducible. Also
+prove that two representations $\rho_1$ and $\rho_2$ of $G/N$ are equivalent $\iff$ the corresponding representations 
+$\widetilde \rho_1$ and $\widetilde \rho_2$ of $G$ are equivalent.
+\item[(b)] Now fix a field $F$. Let
+\begin{itemize}
+\item $\Irr(G)$ be the set of equivalence classes of irreducible representations of $G$ over $F$;
+\item $\Irr(G/N)$ the set of equivalence classes of irreducible representations of $G/N$ over $F$;
+\item $\Irr(G,N)$ the set of all $[\rho]\in \Irr(G)$ such that $N\subseteq \Ker\rho$.
+\end{itemize}
+(here $[\rho]$ is the equivalence class of the representation $\rho$). Define the map $\Phi:\Irr(G/N)\to \Irr(G)$ by $$\Phi([\rho])=[\widetilde \rho]$$ (where $\widetilde \rho$ is defined by (***)). Explain why $\Phi$
+is well defined and injective (this follows immediately from (a)) and then prove that $\Im(\Phi)=\Irr(G,N)$.
+\end{itemize}
+{\bf Remark:} In Lecture~17 (online Lecture~14) we considered the map $\Phi$ in a special case when we proved that for any group $G$ there is a natural bijection between 1-dimensional representations of $G$ and 1-dimensional representations of its abelianization $G^{ab}$. However the case of 1-dimensional representations is slightly easier, as two 1-dimensional representations are equivalent if and only if they are equal, so in that case
+one does not have to worry about the equivalence classes in the definition of $\Phi$.
+\skv
+{\bf 3.} Let $(\rho_1,V_1)$ and $(\rho_2,V_2)$ be representations of a group $G$ over the same field. Let 
+$(\rho_1\oplus \rho_2, V_1\oplus V_2)$ and $(\rho_1\otimes \rho_2, V_1\otimes V_2)$ be their direct sum and tensor product, respectively. Prove that
+\begin{itemize}
+\item[(i)] $\chi_{\rho_1\oplus \rho_2}(g)=\chi_{\rho_1}(g)+\chi_{\rho_2}(g)$ for all $g\in G$
+\item[(ii)] $\chi_{\rho_1\otimes \rho_2}(g)=\chi_{\rho_1}(g)\cdot\chi_{\rho_2}(g)$ for all $g\in G$
+\end{itemize}
+\skv
+{\bf 4.} Online Lecture~17 states what should be the character of the unique (up to equivalence) 2-dimensional irreducible complex representation of $S_4$ based on our knowledge of the rest of the character table. Now prove this claim using Theorem~17.1. Include all the relevant calculations and try to make your argument as efficient as possible.
+\skv
+{\bf 5.} Compute the character table for a cyclic group of order $3$ (with full justification). 
+\skv
+{\bf 6.} Compute the character table for the alternating group $A_4$ (with detailed justification) and explicitly construct its irreducible complex representations. First prove that $[A_4,A_4]=V_4$, the Klein $4$-group. Recall that
+$V_4=\{e, (12)(34), (13)(24), (14)(23)\}$.
+\skv
+{\bf Note:} The description of conjugacy classes of $A_n$ is similar to that of $S_n$. Note that since $A_n$
+is normal in $S_n$, every conjugacy class of $S_n$ is either contained in $A_n$ or has empty intersection with $A_n$,
+but a single conjugacy class of $S_n$ contained in $A_n$ may split into several conjugacy classes of $A_n$. In other words, two elements of $A_n$ may be conjugate in $S_n$, but not conjugate in $A_n$. The following result (which is not an official part of homework, but which are you encouraged to prove as an exercise) describe exactly when and what kind of splitting occurs:
+\skv
+
+Let $g\in A_n$ and let $K(g)$ be its conjugacy class in $S_n$. Let $C(g)$ be the centralizer of $g$ in $S_n$, that is,
+$C(g)=\{x\in S_n:\, gx=xg\}$.
+
+\begin{itemize}
+\item[(a)] Suppose that $C(g)\not\subseteq A_n$, that is, $C(g)$ contains an odd permutation. Then $K(g)$ is a single conjugacy class of $A_n$, that is, any two elements of $K(g)$ are conjugate in $A_n$.
+\item[(b)] Suppose that $C(g)\subseteq A_n$. Then $K(g)$ is a disjoint union of two conjugacy classes of $A_n$. One
+of these is $K_{A_n}(g)$, the conjugacy class of $g$ in $A_n$, and the other is $K_{A_n}(xgx^{-1})$ where $x\in S_n$
+is any odd permutation.
+\end{itemize}
+\skv
+
+{\bf 7.} Let $G$ be a group and $(\rho,V)$ a representation of $G$. 
+\begin{itemize}
+\item[(a)] Prove that for any $v\in V$, the smallest $G$-invariant subspace of $V$ containing $v$ 
+is the span of the set $\pi(G)v$ where $\pi(G)v=\{\pi(g)v: g\in G\}$.
+\item[(b)] Now assume that $G$ is finite and $(\rho,V)$ is cyclic. Prove that $\dim(V)\leq |G|$.
+\end{itemize}
+\newpage
+{\bf Hint for 1:} Prove the inclusions $A_n\subseteq [S_n,S_n]$ and $[S_n,S_n]\subseteq A_n$ separately. For the first one use the fact that $A_n$ is generated by $3$-cycles. For the second one use basic properties of the commutator subgroup discussed in class. 
+\end{document}
