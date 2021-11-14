@@ -1,0 +1,190 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=9in
+\textwidth=5.58in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+\def\Hom{{\rm Hom}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\eps{{\varepsilon}}
+\def\char{{\rm char\,}}
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\dim{{\rm dim}}
+\def\Ker{{\rm Ker}}
+\def\diag{{\rm diag}}
+
+\bf\centerline{Bilinear Forms and Group Representations}
+\bf\centerline{Fall 2021. Midterm \#2. }\rm
+\vskip .1cm
+\bf\centerline{Due on Tuesday, November 16th, by 11:59pm}\rm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments (do not skip steps). State clearly and FULLY any result you are referring to. Partial credit for incorrect solutions, containing steps in the right direction, may be given.
+If you are unable to solve a problem (or a part of a problem), you may still use its result
+to solve a later part of the same problem or a later problem in the exam.
+
+\vskip .1cm
+{\bf Scoring: } The exam contains 6 problems, each of which is worth 10 points. The best 5 scores will count towards your total, so the maximum possible score is 50.
+
+\vskip .1cm
+
+{\bf Rules: } You are NOT allowed to discuss midterm problems with anyone else except me.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] your class notes and online notes posted on collab
+\item[(ii)] homework solutions (both your solutions and solutions posted on collab)
+\item[(iii)] the books `Representation Theory of Finite Groups' by Benjamin Steinberg,
+`Linear Algebra' by Friedberg, Insel and Spence and `Linear Algebra Done Wrong' by Treil
+\end{itemize}
+The use of other books or online sources is NOT allowed.
+\skv
+
+\skv
+{\bf 1.} Let $G$ be a group and $H$ a subgroup of $G$. Let $(\rho,V)$ be a representation of $G$, and let
+$V^H=\{v\in V: \rho(h)v=v \mbox{ for all }h\in H\}$ be the subspace of $H$-invariant vectors.
+\begin{itemize}
+\item[(a)] Assume that $H$ is normal in $G$. Prove that the subspace $V^H$ is $G$-invariant.
+\item[(b)] Give an example showing that if $H$ is not normal, then $V^H$ need not be $G$-invariant.
+\end{itemize}
+\newpage
+
+{\bf 2.} Let $(\alpha,V)$ and $(\beta,W)$ be representations of a group $G$. Let $(\alpha^*,V^*)$ be the dual
+of $(\alpha,V)$, and let $(\alpha^*\otimes\beta, V^*\otimes W)$ be the tensor product of the representations $(\alpha^*,V^*)$ 
+and $(\beta,W)$. Define the representation $(\gamma,\Hom(V,W))$
+of $G$ by $$(\gamma(g))(f)=\beta(g)\circ f\circ \alpha(g)^{-1}$$ for all $f\in \Hom(V,W)$. Prove that 
+$$(\gamma,\Hom(V,W))\cong (\alpha^*\otimes\beta, V^*\otimes W)$$ as representations of $G$. Make sure to provide all the details.
+\skv
+{\bf 3.} Let $G$ be the group of all matrices $\begin{pmatrix}a&b \\ 0& 1 \end{pmatrix}$ where $a,b\in\dbZ_5$ and $a\neq 0$.
+You can use without proof that $G$ has a presentation $\la x,y \mid x^4=y^5=e, xyx^{-1}=y^2\ra$ where 
+$x=\diag(2,1)=\begin{pmatrix}2&0 \\ 0& 1 \end{pmatrix}$ and $y=E_{12}(1)=\begin{pmatrix}1&1 \\ 0& 1 \end{pmatrix}$   
+(in the notation of HW\#7.2).
+\begin{itemize}
+\item[(a)] Prove that $G$ has $5$ conjugacy class with sizes $1,4,5,5,5$. You can use either the original definition or the presentation by
+generators and relations.
+\item[(b)] Now compute the character table of $G$ (with detailed justification).
+\end{itemize}
+\skv
+{\bf 4.} Let $G$ be a finite group, and suppose you are given the character table of $G$. Give a simple algorithm to determine which elements of $G$ lie in $[G,G]$ based on the character table. Here are some clarifications:
+\begin{itemize}
+\item[(i)] Given a column of the table, you should explain how to determine if the corresponding conjugacy class $K$ lies in $[G,G]$ (note that
+since $[G,G]$ is normal, any conjugacy class is either contained in $[G,G]$ or has empty intersection with $[G,G]$).
+\item[(ii)] Your algorithm should only refer to the entries of the table. 
+\item[(iii)] Make sure to prove that your algorithm works.
+\end{itemize}
+\skv
+{\bf 5.} %In all parts of this problem $F$ is a field (there are no restrictions on $F$ in parts (a) and (b)).
+\begin{itemize}
+\item[(a)] Let $(\rho,V)$ be a representation of a group $H$. Prove that $V$ always contains an irreducible subrepresentation $W$
+of $H$. {\bf Note:} Here it is essential that $\dim(V)<\infty$ 
+\item[(b)] Let $G$ be a finite group and $(\rho,V)$ an irreducible representation of $G$. Let $H$ be a subgroup of $G$, and let $W\subseteq V$
+be a nonzero subrepresentation of $H$ (that is, a nonzero $H$-invariant subspace; note that $W$ need not be $G$-invariant). Prove that 
+$$\dim(V)\leq [G:H]\cdot\dim(W).$$ Here $[G:H]$ is the index of $H$ in $G$ (by definition $[G:H]$ is the number of left cosets of $H$ in $G$).
+{\bf Hint:} try to argue similarly to HW\#8.7.
+\item[(c)] Now let $F$ be an algebraically closed field and let $G=D_{2n}$, the dihedral group of order $2n$. Prove that every irreducible representation of $G$ over $F$ has dimension $1$ or $2$. {\bf Hint:} use (a) and (b).
+\end{itemize}
+\skv
+{\bf 6.} Let $G=\la x| x^3=e\ra$ be a cyclic group of order $3$. The goal of this problem is to describe irreducible representations of $G$
+over an arbitrary field $F$.
+\begin{itemize}
+\item[(a)] Assume that $\char(F)=3$. Prove that the only irreducible representation of $G$ over $F$ is the trivial representation. 
+{\bf Hint:} $(a+b)^p=a^p+b^p$ in any field of characteristic $p>0$.
+\item[(b)] Now assume that $\char(F)\neq 3$ and $F$ contains a primitive $3^{\rm rd}$ root of unity, call it $\omega$ (that is, $\omega$
+has order $3$ as an element of the multiplicative group $F^{\times}$). Prove that $G$ has exactly $3$ irreducible representations over $F$
+(up to equivalence), and they are all $1$-dimensional
+ \item[(c)] Finally assume that $\char(F)\neq 3$ and $F$ contains no primitive $3^{\rm rd}$ root of unity. Prove that 
+ the only one-dimensional representation of $G$ over $F$ is the trivial representation and every irreducible representation of $G$ has dimension at most $2$. 
+
+\skv
+{\bf Hint:} By HW\#8.7 every cyclic (and hence every irreducible) representation $(\rho,V)$ of $G$ has $\dim(V)\leq 3$.
+Use the proof from HW\#8.7 (which can be made more explicit in the case when $G$ is cyclic) to show that for any cyclic representation
+$(\rho,V)$ of $G$ at least one of the following holds:
+\begin{itemize}
+\item[(i)] $\dim(V)\leq 2$
+\item[(ii)] $V$ contains a nonzero $G$-invariant vector $v$.
+\end{itemize}
+\end{itemize}
+\newpage
+\centerline{\bf Some linear algebra definitions/results}
+\skv
+Theorem~A, Lemma~B and Theorem~C below can be used without proof. In all statements below $F$ is a field (not necessarily algebraically closed), $V$ a finite-dimensional vector space over $F$ 
+and $A:V\to V$ a linear map.
+\skv
+{\bf Definition. }\rm An element $\lambda\in F$ is called an {\it $F$-eigenvalue} of $A$ if there exists a nonzero $v\in V$
+such that $Av=\lambda v$. 
+\skv
+Of course, this is a standard definition, but sometimes by eigenvalues of $A$ one means the roots of its characteristic polynomial
+$\chi_A(x)$ in some algebraic closure $\overline F$ of $F$ (not just roots that lie in $F$ itself).
+
+\skv
+{\bf Theorem A: }\it $F$-eigenvalues of $A$ are precisely the roots of $\chi_A(x)$ which lie in $F$. \rm
+\skv
+
+{\bf Definition. }\rm The {\it minimal polynomial} of $A$ if the unique {\bf monic} polynomial $\mu_A(x)$ satisfying the following properties:
+
+\begin{itemize}
+\item[(i)] $\mu_A(A)=0$
+\item[(ii)] $\deg \mu_A(x)\leq \deg p(x)$ for any nonzero polynomial $p$ such that $p(A)=0$. 
+\end{itemize}
+
+\skv
+{\bf Lemma B: }\it Let $p(x)\in F[x]$ be an arbitrary polynomial. Then $p(A)=0$ $\iff$ $p(x)$ is a multiple of $\mu_A(x)$,
+that is, $p(x)=\mu_A(x)q(x)$ for some polynomial $q(x)\in F[x]$.\rm
+\skv
+
+\skv
+{\bf Theorem C: } (relation between $\chi_A(x)$ and $\mu_A(x)$):\it
+\begin{itemize}
+\item[(1)] (Cayley-Hamilton Theorem) $\chi_A(A)=0$. By Lemma~B this is equivalent to saying that $\mu_A(x)$ divides $\chi_A(x)$
+\item[(2)] $\chi_A(x)$ and $\mu_A(x)$ have the same roots (not just in $F$, but also in the algebraic closure of $F$).
+\end{itemize}
+
+\end{document}
