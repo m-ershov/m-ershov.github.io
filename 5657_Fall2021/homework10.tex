@@ -1,0 +1,140 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\Ker {{\rm Ker}}
+\def\Im {{\rm Im}}
+\def\Tr {{\rm Tr}}
+\def\GL {{\rm GL}}
+\def\diag {{\rm diag}}
+\def\sk {\hskip .3cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\Ker{\mathrm {Ker}}
+\def\End{\mathrm {End}}
+\def\Hom{\mathrm {Hom}}
+\def\Irr{\mathrm {Irr}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\char{{\rm char}}
+
+\bf\centerline{Homework \#10. Due Saturday, December 4th}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: online notes (Lectures 20-23), class notes (Lecture 24-26; note that most of the material from Lectures 25 and 26 is not in the online notes) and Steinberg, 7.1 and 7.2. 
+\skv
+
+2. The main topic after Thanksgiving break will be Burnside's pq-theorem (Steinberg, Chapter 6).
+
+
+
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Problem 4 from Midterm\#2.
+
+\skv
+{\bf 2.} Recall that in HW\#8.7 we proved that if $(\rho,V)$ is any cyclic representation of a finite group $G$ over an arbitrary field, then 
+$\dim(V)\leq |G|$. Now prove that if $(\rho,V)$ is irreducible, then
+$\dim(V)\leq |G|-1$.
+\skv
+{\bf 3.} The goal of this problem is to explicitly decompose the regular representation $(\rho_{reg},\dbC[S_3])$ as a direct sum of irreducible representations of $S_3$. Recall that
+$S_3$ has 3 I$\dbC$R's: two one-dimensional (the trivial representation and the sign representation) and one two-dimensional (the standard representation) and that each I$\dbC$R appears in $\dbC[S_3]$ with multiplicity equal to its dimension (Proposition~21.3 in online notes).
+\begin{itemize}
+\item[(a)] Let $H=\la (1,2,3)\ra$ and consider $(\rho_{reg},\dbC[S_3])$ as a representation of $H$. Prove that $\dbC[S_3]=V_1\oplus V_2$ where both 
+$V_1$ and $V_2$ are $H$-invariant and equivalent (as $H$-representations) 
+to the regular representation of $H$.
+\item[(b)] Since $H\cong \dbZ_3$, online Lecture~21 shows how to explicitly decompose $\dbC[H]$, the regular representation of $H$, into a direct sum of 3 one-dimensional $H$-representations.
+Combining this with (a), we get an explicit decomposition
+$\dbC[S_3]=\oplus_{i=1}^6 W_i$ where each $W_i$ is a one-dimensional 
+and $H$-invariant. 
+
+Show that after a suitable renumbering of $W_1,\ldots, W_6$
+the following is true: $W_1\oplus W_2$ and $W_3\oplus W_4$ are both irreducible
+subrepresentations of $S_3$ (these are the copies of the standard representation we are supposed to get by Proposition~21.3), while $W_5\oplus W_6$ decomposes (in a different way) into a direct sum of the trivial and the sign representations of $S_3$. 
+\end{itemize}
+\skv
+{\bf 4.} (Steinberg, Exercise 7.5, reformulated). Let $p$ be a prime, and let 
+$G$ be the set of all functions from $\dbZ_p$ to $\dbZ_p$ which have the form
+$x\mapsto ax+b$ for some $a\in\dbZ_p^{\times}$ and $b\in\dbZ_p$.
+\begin{itemize}
+\item[(a)] Prove that $G$ is a group (with respect to composition) isomorphic to the group of matrices $\left\{\begin{pmatrix} a&b\\ 0&1\end{pmatrix}:
+a\in\dbZ_p^{\times}, b\in\dbZ_p\right\}$. Note that for $p=5$ this is the group
+from HW\#8.6.
+\item[(b)] The group $G$ has a natural action on $\dbZ_p$ (given by
+$g.x=g(x)$ for all $g\in G$ and $x\in\dbZ_p$). Prove that this action is
+$2$-transitive (see Steinberg 7.1 for the definition).
+\item[(c)] By Lemma~21.2(2) from online notes, the action from (b) yields a homomorphism
+$\phi:G\to S_p$. Composing $\phi$ with the standard representation of $S_p$,
+we obtain a $(p-1)$-dimensional representation of $G$. Deduce from (b) (and a suitable result from class) that this representation is irreducible. 
+\end{itemize}
+
+ 
+
+
+\skv
+{\bf 5.} Let $C$ be the cube in $\dbR^3$ whose vertices have coordinates 
+$(\pm 1, \pm 1,\pm 1)$. Let $G$ be the group of rotations of $C$, that is rotations in $\dbR^3$ which preserve the cube (you may assume that $G$ is a group without proof). Let $X$ be the set of $4$ main diagonals of $C$ (diagonals
+connecting the opposite vertices). Note that $G$ naturally acts on $X$ and therefore we have a homomorphism $\pi:G\to Sym(X)\cong S_4$.
+\begin{itemize}
+\item[(a)*] Prove that $\pi$ is an isomorphism.
+\item[(b)] Note that $G$ is naturally a subgroup of $\GL_3(\dbR)$ and hence
+also a subgroup of $\GL_3(\dbC)$, and let $\iota: G\to \GL_3(\dbC)$
+be the inclusion map. By (a) we get a representation $\iota\circ \pi^{-1}:
+S_4\to\GL_3(\dbC)$. Prove that this representation is equivalent to the tensor product of the standard and sign representations.
+\end{itemize}
+\newpage
+{\bf Hint for 5(a)} First show that $G$ acts transitively on the 8 vertices of $C$. Then show that the stabilizer of a fixed vertex has order $\geq 3$. This implies that $|G|\geq 24=|S_4|$. Finally, show that $\pi$ is injective (since $|G|\geq |S_4|$, this would force $\pi$ to be an isomorphism).
+\end{document}
