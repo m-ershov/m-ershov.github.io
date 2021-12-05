@@ -1,0 +1,180 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=9in
+\textwidth=5.58in
+%\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+\def\Hom{{\rm Hom}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\def\eps{{\varepsilon}}
+\def\Aut{{\rm Aut}}
+\def\End{{\rm End}}
+\def\Inn{{\rm Inn}}
+\def\dim{{\rm dim}}
+\def\Ker{{\rm Ker}}
+\def\SU{{\rm SU}}
+\def\U{{\rm U}}
+\def\GL{{\rm GL}}
+\def\Heis{{\rm Heis}}
+\def\Ind {{\rm Ind}\!\!}
+
+\bf\centerline{Bilinear Forms and Group Representations. Fall 2021.}
+\bf\centerline{Final exam.}\rm
+\vskip .1cm
+\bf\centerline{Due on Saturday, December 11th, by noon}\rm
+\vskip .3cm
+\vskip .3cm
+{\bf Directions: } Provide complete arguments (do not skip steps). State clearly and FULLY any result you are referring to. Partial credit for incorrect solutions, containing steps in the right direction, may be given.
+If you are unable to solve a problem (or a part of a problem), you may still use its result
+to solve a later part of the same problem or a later problem in the exam.
+
+\vskip .1cm
+{\bf Scoring: } The exam contains 7 problems, and the best 6 scores will count towards your total. Note that not all problems count with the same weight. The maximum possible score is 70, but the total of 64 will count as 100\%.
+\vskip .1cm
+
+{\bf Rules: } You are NOT allowed to discuss the final problems with anyone else except me.
+You may ask me any questions about the problems (e.g. if the formulation is unclear),
+but as a rule I will only provide minor hints. You may freely use the following resources:
+\begin{itemize}
+\item[(i)] your class notes and online notes posted on collab
+\item[(ii)] homework solutions (both your solutions and solutions posted on collab)
+\item[(iii)] the books `Representation Theory of Finite Groups' by Benjamin Steinberg,
+`Linear Algebra' by Friedberg, Insel and Spence and `Linear Algebra Done Wrong' by Treil
+\end{itemize}
+The use of other books or online sources is NOT allowed.
+\skv
+For problems (or their parts) marked with a *, a hint is given later in the exam. 
+\skv
+
+
+\skv
+{\bf 1.} (10 pts) Let $n\geq 2$, let $\U(n)$ be the group
+of $n\times n$ unitary matrices and let
+$\SU(n)$ be the subgroup of $\U(n)$ consisting of unitary matrices with determinant $1$.
+Let $D$ be the subgroup of diagonal matrices inside $G$.
+\begin{itemize} 
+\item[(a)] Prove that every $x\in \U(n)$ can be written
+as $x=dg$ where $g\in \SU(n)$ and $d$ is a scalar matrix. 
+\item[(b)] Prove that every element of $\SU(n)$ is conjugate (in $\SU(n)$) to some element of $D$.
+\item[(c)] Prove that if $n=2$, then every $g\in \SU(n)$ is conjugate to $g^{-1}$.
+\item[(d)] Prove that the assertion of (b) is false for $n>2$.
+\end{itemize}
+\skv
+{\bf 2.} (14 pts) Let $G$ and $H$ be groups and $G\times H$ their direct product.
+\begin{itemize}
+\item[(a)] Let $F$ be a field, let $(\rho_G,V_G)$ be a representation of $G$ over $F$ and $(\rho_H,V_H)$ a representation of $H$ over $F$. Prove that there exists a unique representation $(\rho, V_G\otimes V_H)$
+of $G\times H$ such that $$(\rho((g,h)))(u\otimes v)=\rho_G(g)u\otimes \rho_H(h)v$$ for all $g\in G,h\in H,
+u\in V_G$ and $v\in V_H$. In parts (b)-(d) below we denote the obtained representation $\rho$
+by $\rho_G\otimes \rho_H$.
+\item[(b)] Find the formula for the character of $\rho_G\otimes \rho_H$ in terms of the characters of $\rho_G$ and $\rho_H$.
+\end{itemize}
+In parts (c) and (d) assume that $G$ and $H$ are finite and $F=\dbC$. 
+\begin{itemize}
+\item[(c)] Prove that if $\rho_G$ and $\rho_H$ in (a) are irreducible, then $\rho_G\otimes \rho_H$ is also irreducible. 
+\item[(d)] Now prove that every irreducible representation of $G\times H$ is equivalent to $\rho_G\otimes \rho_H$ for some irreducible representations $\rho_G$ of $G$ and $\rho_H$ of $H$.
+\end{itemize}
+\skv
+{\bf 3.} (16 pts) Let $G$ be a group given by the presentation $$\langle x,y\mid x^4=y^3=1, x^{-1}yx=y^{-1}\rangle.$$
+You may use without proof that $|G|=12$.
+\begin{itemize}
+\item[(a)] Let $K=\la y\ra$. Prove that $|K|=3$, $K=[G,G]$
+and $G/K\cong \dbZ_4$.
+\item[(b)] Prove that $G$ has $6$ conjugacy classes with representatives $e,x,x^2$, $x^3,y$ and $x^2 y$.
+\item[(c)] Prove that $g=x^2$ has order $2$ and lies
+lies in the center of $G$.
+\item[(d)] Compute the character table of $G$. Provide all the details of your argument. {\bf Hint:} (c) (combined with a suitable
+result from class) gives you lots of information about the characters of non-1-dimensional representations of $G$.
+\end{itemize}
+\skv
+{\bf 4*.} (10 pts) Let $G$ be a finite group such that $|G|$ is a composite number, and let $(\rho,V)$ be an irreducible representation of $G$ over some field $F$. Prove that $\dim(V)\leq |G|-2$.
+\skv
+{\bf 5.} (10 pts) Let $G$ be a group, let $H=\la x\ra$ be a cyclic normal subgroup, and let $(\rho,V)$ be a representation of $G$ over a field $F$. Let $A=\rho(x)$, let 
+$Spec(A)$ be the set of eigenvalues of $A$,
+and for each $\lambda\in Spec(A)$ let
+$V_{\lambda}=\{v\in V: Av=\lambda v\}$.
+\begin{itemize}
+\item[(a)] Prove that $G$ permutes the subspaces 
+$\{V_{\lambda}\}$, that is, for each $g\in G$ and $\lambda\in Spec(A)$
+there exists $\lambda'\in Spec(A)$ (depending on both $\lambda$ and $g$)
+such that $\rho(g)V_{\lambda}\subseteq V_{\lambda'}$.
+\item[(b)] Now assume that $H$ lies in the center of $G$. Prove that
+each $V_{\lambda}$ is $G$-invariant.
+\end{itemize}
+\skv
+{\bf 6.} (10 pts)
+Let $p$ be a prime, $n\geq 2$ an integer and $G=\GL_n(\dbZ_p)$. Let 
+$X=\dbZ_p^n\setminus \{(0,\ldots, 0)\}$ be the set of nonzero vectors in $\dbZ_p^n$ (so that $|X|=p^n-1$).
+The group $G$ has a natural action on $X$ by left multiplication; denote this action by $\sigma$.
+\begin{itemize}
+\item[(a)] Prove that for every $u\in X$ there exists $g\in GL_n(\dbZ_p)$ such that $g.e_1=u$ 
+(here $e_i$ is the $i^{\rm th}$ element of the standard basis). Deduce that $\sigma$ is transitive. {\bf Hint:} reformulate the
+problem in terms of linear maps from $\dbZ_p^n$ to itself.
+\item[(b)] Let $u,v\in X$ be linearly independent vectors. Prove that there exists $g\in GL_n(\dbZ_p)$
+such that $g.e_1=u$ and $g.e_2=v$.
+\item[(c)] Now prove that $rk(\sigma)=p$ (recall that $rk(\sigma)$ is the number of orbits of $\sigma^2$). 
+{\bf Hint:} (b) implies that $\sigma^2$ has one big (``generic'') orbit. Start by describing it and then
+show that its complement decomposes into $p-1$ orbits.
+\end{itemize}
+
+\skv
+{\bf 7*.} (10 pts) Let $p$, $n$, $G$ and $X$ be as in Problem~6,
+and let $\dbC X$ be the corresponding permutation representation of $G$. Prove that $\dbC X$ decomposes as a direct sum of $p$ irreducible
+representations of $G$:
+$$\dbC X=\bigoplus_{k=1}^p V_k$$
+where $\dim V_k=\frac{p^n-1}{p-1}$ for $1\leq k\leq p-2$, $\dim V_{p-1}=\frac{p^n-1}{p-1}-1$ and
+$\dim V_p=1$.
+\skv
+
+\newpage
+{\bf Hint for \#4:} Explain why $G$ has at least one subgroup different from $G$ and $\{e\}$, call it $H$. Then use this $H$ and suitable results from HW\#10 and Midterm~\#2.
+\newpage
+{\bf Hint for \#7:} Use Problem~5(b) to decompose $\dbC X$ as a direct sum of $p-1$ subrepresentations
+of dimension $\frac{p^n-1}{p-1}$. You may use without proof that the group $\dbZ_p^{\times}$ is cyclic. Then show that one of these $p-1$ subrepresentations splits into two. Finally, use Problem~6 to argue that the obtained pieces cannot be decomposed any further. 
+\end{document}
