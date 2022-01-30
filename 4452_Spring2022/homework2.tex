@@ -1,0 +1,124 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#2. Due Saturday, February 5th, by 11:59pm in filedrop}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this homework assignment: Chapter 2, 3.1 and 3.2.
+\skv
+\skv
+2. For the classes next week. Tue, Feb 1: 3.1 and 4.1. Thu, Feb 3: 4.2-4.5. We will definitely not cover all the material from those sections, but I might touch on at least one topic from each section.
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Let $C$ be a code of Hamming distance $d$. Suppose that a codeword $c\in C$ was transmitted, let $w$ be the received word and $k$ the number of transmission errors, that is, $k=d(c,w)$. By Theorem~3.1(b) from class (= Theorem~2.5.10 from the book), if $d>2k$, then NND (nearest neighbor decoding) rule works correctly, that is, $c_w=c$ where $c_w$ is the decoded word (the result of applying NND to $w$).
+
+Now assume that $d=2k$. By Theorem~3.1(b) NND rule may not work correctly in this case
+(we did not prove this part of Theorem~3.1(b) in class, but it is proved in the book).
+Prove that NND still correctly determines the number of transmission errors, that is, $$d(c_w,w)=d(c,w)=k.$$
+
+\skv
+{\bf 2.} Let $k,r\in\dbN$, and let $C=Rep(k,r)$ be the repetition code with parameters $k$ (length of the original message) and $r$ (number of repetitions) over the binary alphabet $A=\{0,1\}$, that is, 
+$$C=\{v^r=\underbrace{v\ldots v}_{r\mbox{ times }}: v\in \{0,1\}^k\}.$$  
+The goal of this problem is to estimate the probability that NND works correctly for $C$ if we transmit over $BSC(p)$, the binary symmetric channel with crossover probability $p$, with $p<\frac{1}{2}$ (we started discussing this problem at the end
+of Lecture~3 on Thu, Jan 27). To simplify some of the formulas below we will assume
+that {\it $r$ is even}.
+
+Note that $C$ has length $n=kr$. In parts (a) and (b) below we assume that $k=1$, so $n=r$.
+\begin{itemize}
+\item[(a)] Assume that $k=1$. For each $0\leq i\leq r$ let $p(i)$ be the probability that exactly $i$ errors occur during the transmission. Prove that 
+$p(i)={r\choose i} p^i (1-p)^{r-i}$.
+%and deduce that $p(i)$ is strictly decreasing as a function of $i$.
+\item[(b)] We still assume that $k=1$. As discussed in Lecture~3, NND works correctly
+if and only if the number of transmission errors is $<\frac{r}{2}$. Thus, if
+$f(p,r)$ is the probability that NND works correctly, then
+$$f(p,r)=1-\sum\limits_{i=r/2}^r p(i)=1-\sum\limits_{i=r/2}^r {r\choose i} p^i (1-p)^{r-i}$$
+(recall that $r$ is assumed to be even).
+Prove that $$f(p,r)>1-(4p(1-p))^{r/2}$$ and deduce that if $p$ is fixed,
+then $f(p,r)\to 1$ as $r\to\infty$. 
+\item[(c)] Now assume that $k$ is arbitrary, and let $f(p,r,k)$ be the probability
+that NND works correctly. Prove that $f(p,r,k)=f(p,r)^k$ (where $f(p,r)$ is defined as in (b)). Deduce that if $p$ and $k$ are fixed, then $f(p,r,k)\to 1$ as $r\to\infty$.
+\end{itemize}
+{\bf Hints:} For (b) use the following facts (make sure to prove them first):
+\begin{itemize}
+\item[(i)] $g(i)=p^i (1-p)^{r-i}$ is decreasing as a function of $i$
+\item[(ii)] $\sum\limits_{i=0}^r {r\choose i}=2^r$.
+\end{itemize}
+For (c) explain why transmitting a codeword $c\in Rep(k,r)$ and then applying NND is essentially equivalent to independently transmitting $k$ codewords from $Rep(1,r)$ and then applying NND to each of them. Then use this observation to deduce the equality in (c).
+
+{\bf 3.} Problem 3.1, page 36
+
+{\bf 4.} Problem 3.2, page 36
+
+{\bf 5.} 
+\begin{itemize}
+\item[(a)] Use the Euclidean algorithm to find integers $u$ and $v$ such that $127u+35v=1$. If you have not studied this before, see Lecture~4 of my 3354 notes.
+\item[(b)] Use your answer in (a) to compute $35^{-1}$ in $\dbZ_{127}$. Make sure to explain your logic.
+\end{itemize}
+
+{\bf 6.} Problem 3.4, page 36. {\bf Hint:} (a) can be proved directly from the standard formula for binomial coefficients and
+basic divisibility properties. Then use (a) to solve both (b) and (c).
+
+{\bf 7.} Problem 3.5, page 36
+
+\end{document}
+
+
+
