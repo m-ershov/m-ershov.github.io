@@ -1,0 +1,103 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#3. Due Saturday, February 12th, by 11:59pm in filedrop}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 4.2-4.6
+\skv
+\skv
+2. Next week we will continue with the basic theory of linear codes (4.2-4.6). Then (probably next Wednesday) we will introduce binary Hamming codes (5.3.1, page 84). If there will be time left, we will go back to Chapter 4 and start discussing encoding and decoding for linear codes (4.7-4.8).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+%For problems (or their parts) marked with a *, a hint is given later in the assignment. Do not to look at the hint(s) %until you seriously tried to solve the problem without it.
+%\skv
+{\bf 1.} Let $F$ be a finite field, and let $Q$ be the set of all nonzero squares in $F$, that is, all nonzero elements of $F$ representable as $a^2$ for some $a\in F$.
+\begin{itemize}
+\item[(a)] Assume that $F$ has odd characteristic. Prove that $|Q|=\frac{|F|-1}{2}$.
+{\bf Hint:} Prove that for every nonzero $b\in F$ the equation $x^2=b$ has either no solutions (for $x$) in $F$ or exactly two solutions. 
+\item[(b)] Now assume that $F$ has characteristic $2$. Prove that $|Q|=|F|-1$, that is, every nonzero element of $F$ is a square. {\bf Hint:}
+Since $F$ is finite, it suffices to prove that the map $x\mapsto x^2$ from $F\setminus\{0\}$ to $F\setminus\{0\}$ is injective (one-to-one). The latter is not hard to prove directly (using the assumption ${\rm char\,} F=2$). 
+\end{itemize}
+For both parts you will likely need to use the fact that fields have no zero divisors (Lemma~3.1.3(ii) from the book).
+\skv
+
+{\bf 2.} Problem 4.2, page 66. Ignore the question about the number of bases, but make sure to prove your answer whether the given set is a subspace or not. If the set in question is a subspace, compute its dimension (also with proof).
+\skv
+{\bf 3.} Problem 4.3. {\bf Hint:} First count the number of ordered $k$-tuples $(v_1,\ldots, v_k)$ such that the vectors $v_1,\ldots, v_k$ are linearly independent. This can be done by using the argument from the proof of Theorem~4.1.15(ii).
+\skv
+
+{\bf 4.} Problem 4.15.
+
+{\bf 5.} Problem 4.20 (see 4.3 for the definition of weight)
+
+{\bf 6.} Problem 4.22.
+
+{\bf 7.} Problem 4.31. {\bf Note:} The book describes two algorithms for finding a generator matrix for a code (Algorithms~4.1 and 4.2 in Section 4.4) and one algorithm for finding a parity-check matrix (Algorithm~4.3 in Section 4.4),
+but does not provide justifications. For each algorithm we will either discuss in class next week why it works, or I will post an addendum to this assignment with an explanation. If you are using one of these algorithms in your solution to Problem~7, please clearly state which one you are using.
+\newpage
+{\bf Hint for 2.} If a code $C$ in this problem is linear, you just need to find a linearly independent subset $S$
+such that $Span(S)=C$.
+\end{document}
+
+
+
