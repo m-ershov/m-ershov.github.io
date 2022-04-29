@@ -1,0 +1,158 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\eps{{\varepsilon}}
+\def\phi{{\varphi}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#11. Due Tue, May 4th by 11:59pm in filedrop}\rm
+\skv
+
+\bf\centerline{Reading for this homework: }\rm
+\skv
+Online Lectures 23-25 and Chapter 7 in Lindell's notes.
+\skv
+\skv
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} 
+\begin{itemize}
+\item[(a)] Deduce from the binary Plotkin bound that for any $n,d\in\dbN$ with $n\leq 2d$ we have $A_2(n,d)\leq 4d$.
+\item[(b)] Now assume that $n>2d$. Prove that $B_2(n,d)\leq 2^{n-2d+2}\cdot d$, that is, for any binary linear code $C$ of length $n$ and distance $d$ we have $|C|\leq 2^{n-2d+2}\cdot d$. 
+
+{\bf Hint:} Given $m\leq n$, let us think of $\dbF_2^m$ as the subspace of
+$\dbF_2^n$ consisting of all vectors whose last $n-m$ coordinates are zero. Now consider the code $C'=C\cap \dbF_{2}^{2d}$.
+Show that the size of $C'$ can be bounded above using the Plotkin bound. Then use the fact that 
+$\dim(U\cap W)=\dim(U)+\dim(W)-\dim(U+W)$ for any vector subspaces $U$ and $W$ of a finite-dimensional vector space $V$,
+deduce the desired bound on $|C|$. 
+\item[(c)] Now let $\mathcal C=\{C_m\}_{m=1}^{\infty}$ be a sequence of binary linear codes. Assume that 
+$C_m$ is $[n_m,k_m,d_m]$-linear where $n_m\to\infty$ as $m\to\infty$. Also assume that the asymptotic relative distance 
+$\delta(\mathcal C)=\liminf_{m\to\infty}\delta(C_m)=\liminf_{m\to\infty} \frac{d_m-1}{n_m}$ satisfies
+$\delta(\mathcal C)\geq \frac{1}{2}$. Use (a) and (b) to prove that $R(\mathcal C)=0$. 
+
+Recall that $R(\mathcal C)=\liminf_{m\to\infty}R(C_m)=\liminf_{m\to\infty} \frac{k_m}{n_m}$. If you are not comfortable with
+liminf, you may assume that the limit in the definition of $\delta(\mathcal C)$ exists.
+\end{itemize}
+\skv
+{\bf 2.} Prove Lemma~24.1 from online notes.
+\skv
+{\bf 3.} Prove that an $[n,k,d]$-linear code over $\dbF_q$ satisfying the Gilbert-Varshamov bound can be constructed using at most $q^{n-k}\cdot k(n-k)$ additions in $\dbF_q$. 
+\skv
+
+{\bf Hint:} For the proof of the Gilbert-Varshamov bound see 5.2.2 in the book or online Lecture 23 (up to minor variations, both are essentially the same as the proof we gave in class in Lecture 15). To prove the above bound estimate (1) the number of columns of PCM that need to be computed, (2) the number of prohibited vectors at each step and (3)
+the number of additions needed to calculate each prohibited vector. 
+\skv
+{\bf 4.} Let $B=PCC_3$, the parity-check code of length $3$, and let $A$ be the zero-sum code of length $4$ over $\dbF_4$. Verify that the concatenated code $B\circ A$ is defined and compute its length, dimension, distance AND a generator matrix (equivalently,
+find its basis). 
+\skv
+
+{\bf Hint:} If $\phi$ is the map from the definition of the concatenated code (in the notations from class)
+and $S$ is a basis of $A$, then $\phi(S)$ is linearly independent, but it will usually not be a basis for $\phi(A)=B\circ A$. However, it is easy to describe a basis for $B\circ A$ in terms of $S$ and multiplication in $\dbF_{q^k}$ (the field over which
+$A$ is defined).
+\skv
+
+{\bf Warning:} The notations in class differ from those in online Lecture~25 and Lindell's Section 7.2. The map $\phi$ from class
+is called $\phi_*$ in online notes and Lindell's notes. It is not hard to see that the map $\phi$ in the online notes is given by $\phi(v)=R(v)G_B$ where $R$ is the restriction of scalars and $G_B$ is the generator matrix for $B$ whose rows are elements of the chosen basis.
+\skv
+{\bf 5.} Let $A=B=Rep(1,5)$, the simple binary repetition code of length $5$ (thus $Rep(1,5)=\{0^5,1^5\}$).
+\begin{itemize}
+\item[(a)] Prove that the concatenated code $B\circ A$ is defined and is equal to $Rep(1,25)$. 
+\end{itemize}
+The remainder of the problem investigates the following decoding rules for $B\circ A$:
+\begin{itemize}
+\item NND decoding (treating $B\circ A$ as a single code)
+\item N2SD decoding -- naive 2-stage decoding as defined in Lecture 27 on April 28.
+\item $EED_s$ decoding -- the errors and erasures decoding with the threshold $e_{min}=s$ (the definition, which we briefly discussed in class, is recalled below). In this example we can consider $EED_s$ for $s=0,1$ and $2$.
+\end{itemize}
+Note that in this example NND can correct up to $\lfloor \frac{25-1}{2}\rfloor=12$ errors, while N2SD can correct up
+to $(\lfloor \frac{5-1}{2}\rfloor+1)^2-1=8$ errors (as proved in Lecture 27).
+\begin{itemize}
+\item[(b)] Explain why in this example $EED_2$ coincides with N2SD. What property of $Rep(1,5)$ does this reflect?
+\item[(c)] Give an example where $9$ errors occur during the transmission, N2SD works incorrectly while $EED_1$ works correctly.
+\item[(d)] Give an example where  $12$ errors occur during the transmission, N2SD works correctly while $EED_1$ works incorrectly.
+\item[(e)] Now give an example where $12$ errors occur during the transmission, N2SD and $EED_1$ both work incorrectly, but
+$EED_0$ works correctly
+\item[(f)] (bonus) Prove that if $\leq 12$ erros occur during the transmission, then at least 1 of the following 3 rules -- N2SD,
+$EED_1$ or $EED_0$ works correctly.
+\end{itemize}
+
+{\bf Definitions of N2SD and $EED_s$.} We first briefly recall the definition of N2SD applied to the concatenated code $B\circ A$ where $B$ is $[n,k]$-linear over $\dbF_q$
+and $A$ is $[N,m]$-linear over $\dbF_{q^k}$. Take the received word $w\in \dbF_{q}^{nN}$, write it as $w=w_1\ldots w_N$ with 
+$w_i\in \dbF_{q}^{n}$, and for each $i$ decode $w_i$ using NND for $B$ to get the word $\gamma=\gamma_1\ldots\gamma_N$
+with $\gamma_i\in \dbF_{q}^{n}$. Then write each $\gamma_i$ as $\gamma_i=R(v_i)G_B$ (where $R:\dbF_{q^k}\to \dbF_{q}^k$ is the restriction of scalars) and decode $v=v_1\ldots v_N\in \dbF_{q^k}^N$ using NND for $A$.
+\skv
+
+Now fix a non-negative integer $s$ and define $EED_s$ as follows. For each $1\leq i\leq N$ define $\gamma_i$ as in N2SD,
+compute $d(\gamma_i,w_i)$ and call $\gamma_i$ {\it questionable} if $d(\gamma_i,w_i)>s$. Now let $v'$ be the word obtained
+from $v=v_1\ldots v_N$ defined in N2SD by replacing $v_i$ by the erasure symbol $?$ (we will use $?$ instead of the symbol used in class) whenever $\gamma_i$ is questionable. Now decode $v'$ using NND for $A$ ignoring the positions with the erasure symbol. Formally this means that we remove the erasure symbols $?$ from $v'$ and then decode using NND for $A'$ where $A'$ is the code
+obtained from $A$ by puncturing the coordinates where the erasure symbols occurred.
+\skv
+
+Let us see an example how this works for $A$ and $B$ in this problem. Suppose the received word is 
+$w=(1^4 0)(1^3 0^2)(1^3 0^2)(1^4 0)(1 0^4)$. N2SD will first decode it to $(1^5)(1^5)(1^5)(1^5)(0^5)$ (this is our $\gamma$).
+The corresponding $v$ is then $11110$ which will be decoded to $1^5\in A$ using NND for $A$. If we use $EED_1$,
+$v'$ will be $1??10$ since we have to correct more than $1$ error when $B$-decoding $w_2$ and $w_3$. Since
+this word has more $1$'s than $0$'s, it will still be decoded to $11111$.
+
+Now suppose $w=(1^4 0)(1^3 0^2)(1^3 0^2)(1^3 0^2)(1 0^4)$. If we apply N2SD, $v$ and the decoded word will be the same as in the
+previous case. However, if we apply $EDD_1$, $v'$ will be $1???0$ -- in this case NND for $A$ will randomly choose between
+$0^5$ and $1^5$.
+
+\end{document}
