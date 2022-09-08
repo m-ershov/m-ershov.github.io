@@ -1,0 +1,241 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Math 8851. Linear groups and Expander Graphs. }
+\vskip .1cm
+
+\bf\centerline{Suggested problems (through Lecture 11.)}\rm
+\vskip .2cm
+{\bf Problem 1.1.} Prove that if a finitely generated group $G$ is linear over a field of characteristic zero,
+then it is actually linear over $\mathbb C$. (We will probably discuss this problem in class shortly).
+\vskip .1cm
+{\bf Problem 1.2.} Prove that the symmetric group $S_n$ cannot be embedded in $GL_{n-2}(\mathbb C)$.
+\vskip .1cm
+{\bf Problem 1.3.} Work out the details of the counterexample to Jordan's theorem in characteristic $p>0$ described in Lecture~1. 
+\vskip .1cm
+{\bf Problem 4.1.} Let $R$ be a finitely generated domain of characteristic $0$ and $d\geq 2$ an integer.
+As we proved in class, the group $GL_d(R)$ (and any of its subgroups) is virtually residually-$p$
+for every prime $p$ outside certain finite set $B(R)$. For each of the rings 
+$R=\dbZ,\, \dbZ[1/2]$ and $\dbZ[(1+\sqrt{-3})/2]$ do the following:
+\begin{itemize}
+\item[(a)] Find the minimal possible set of bad primes $B(R)$, that is, the set of all primes $p$
+for which $GL_d(R)$ is not virtually residually-$p$.
+\item[(b)] For each $p\not\in B(R)$, give an explicit estimate on the index
+of a residually-$p$ subgroup of $GL_d(R)$ which is guaranteed to be residually-$p$.
+\end{itemize}
+\vskip .1cm
+{\bf Problem 5.1.} Recall Burnside's irreducibility criterion: if $F$ is an algebraically
+closed field, then a subgroup $G\subseteq GL_n(F)$ is irreducible if and only if
+$FG=Mat_n(F)$, that is, $G$ spans $Mat_n(F)$ as $F$-vector space.
+Deduce Burnside's irreducibility criterion from Schur's Lemma
+and the following theorem, called Jacobson's Density Theorem (it is directly related
+to the material discussed in Algebra-III, but may not have been stated there explicitly).
+\vskip .1cm
+{\bf Jacobson's Density Theorem:} \it Let $R$ be a ring with $1$ and $M$ an irreducible 
+left $R$-module. Let $S=End_R(M)$, and note that $M$ is naturally a left $S$-module.
+Prove that for any $a\in End_S(M)$ and any finite set of elements 
+$m_1,\ldots, m_d\in M$ there exists $r\in R$ such that $a m_i=r m_i$ for $1\leq i\leq d$.
+\rm
+\vskip .1cm
+{\bf Problem 5.2.} Let $F$ be a field which is not necessarily algebraically closed.
+Prove that Burnside's irreducibility criterion holds over $F$ if and only if
+there are no finite-dimensional division algebras over $F$ except $F$ itself.
+Do there exist such fields which are not algebraically closed?
+
+
+\vskip .1cm
+{\bf Problem 5.3.} Prove that a finitely generated torsion nilpotent group is finite.
+\vskip .1cm
+In Problems 6.1-6.3 all groups under consideration are subgroups of $GL_n(F)$ (with $F$ algebraically closed) with Zariski topology.
+\vskip .1cm
+{\bf Problem 6.1.} Prove that $G$ is connected if and only if $G$ is irreducible 
+(as topological space). By definition, a topological space is irreducible if it cannot be written as a union of two proper (not necessarily disjoint) closed subsets. 
+This has nothing to do with irreducibility of the action of $G$ on $V$.
+
+{\bf Oultine:} The backward direction is obvious. For the forward direction,
+assume that $G$ is connected. Since $G$ is a Noetherian topological space, it is
+the union of finitely many irreducible components $G_1,\ldots, G_k$ (by definition
+this means that $G_i$'s are closed irreducible subsets of $G$ which do not contain
+each other, and it is known that $G_i$'s are unique up to permutation). Show that $G$ naturally acts on the set $\{G_1,\ldots, G_k\}$ by left multiplication and that the stabilizer of $G_1$ is a closed subgroup of finite index in $G$. Then deduce that $G_1=G$.
+\vskip .1cm
+{\bf Problem 6.2.} Prove that if $G$ and $H$ are connected subgroups, then 
+the set $GH=\{gh: g\in G, h\in H\}$ is connected. Deduce that the subgroup
+generated by a family of connected subgroups is connected.
+\vskip .1cm
+{\bf Problem 6.3.} Let $H\subseteq G$ be subgroups of $GL_n(F)$, and let
+$\overline H$ be the Zariski closure of $H$ in $GL_n(F)$. Note that $\overline H\cap G$
+is the Zariski closure of $H$ in $G$. Prove that
+\begin{itemize}
+\item[(i)] $\overline H$ is a subgroup;
+\item[(ii)] if $H$ is solvable of length $k$, then $\overline H$ is also solvable
+of length $k$;
+\item[(iii)] if $H$ is connected, then $\overline H\cap G$ is connected;
+\item[(iv)] if $H$ is normal in $G$, then  $\overline H\cap G$ is normal in $G$.
+\end{itemize}
+\vskip .1cm
+Note that using Problems 6.1-6.3 one can justify the definition of the solvable radical
+of an algebraic group from Lecture~6. Recall that given an algebraic group $G$, we defined $R(G)$
+as the subgroup generated by all connected solvable normal subgroups of $G$. We claimed
+that $R(G)$ is itself connected, solvable and normal, and moreover that $R(G)$ is algebraic
+(that is, Zariski-closed). 
+
+First note $R(G)$ is normal by construction and connected by Problem 6.2. To prove that
+it is solvable we can appeal to the following theorem of Zassenhaus:
+\vskip .1cm
+{\bf Zassenhaus Theorem: }\it If $S$ is solvable subgroup of $GL_n(F)$, then the solvability
+length of $S$ is bounded above by a function of $n$.\rm
+\vskip .1cm
+However, there is a way around it. First, by Problem~6.3(i),(iii) and (iv), we can replace
+every subgroup in the generating set for $R(G)$ by its Zariski closure (which is contained
+in $G$ since $G$ is algebraic), so $R(G)$ is equal to the subgroup generated by all {\bf algebraic} connected solvable normal subgroups of $G$. Next we can use a standard result
+from dimension theory of affine varieties:
+\vskip .1cm
+{\bf Dimension Theorem: }\it If $X$ and $Y$ are irreducible affine varieties with $X\subseteq Y$
+and $X\neq Y$, then $\dim X<\dim Y$.\rm
+\vskip .1cm
+Algebraic subgroups of $GL_n(F)$ can naturally be considered as affine varieties
+of dimension $\leq n^2$. So by Dimension Theorem and Problems 6.1, 6.2 and 6.3(i)(iii), 
+if $A$ and $B$ are distinct algebraic connected solvable normal subgroups of $G$, then $\overline{AB}$ is also an algebraic connected solvable normal subgroup of $G$ of dimension strictly larger than $\max\{\dim A, \dim B\}$. Thus, if we 
+take $R$ to be an algebraic connected solvable normal subgroups of $G$ of maximal possible
+dimension, it must contain any other group with this property and thus must equal $R(G)$.
+This also shows that $R(G)$ is algebraic.
+\vskip .2cm
+Using Zassenhaus Theorem and repeating the above reasoning, one can show that every linear (not necessarily algebraic) group contains the largest normal solvable subgroup $Solv(G)$ (which contains any other subgroup with this property). One can the define $R(G)$ as the connected component of identity in $Solv(G)$. Note that $Solv(G)$ is sometimes also called the solvable
+radical of $G$.
+
+\vskip .1cm
+{\bf Problem 7.1.} Let $V$ be a finite-dimensional vector space and $G\subseteq GL(V)$.
+Prove that if $\chi_1,\ldots,\chi_m$ are distinct characters of $G$ and 
+$V_{\chi_1},\ldots, V_{\chi_m}$ the corresponding weight subspaces, then the sum
+$V_{\chi_1}+\ldots + V_{\chi_m}$ is direct.
+\vskip .1cm
+{\bf Problem 7.2.} Prove that if $G\subseteq GL(V)$ is a connected subgroup (with 
+respect to Zariski topology), then $[G,G]$ is also connected. {\bf Hint:} First prove that for a fixed $g\in G$,
+the map $x\mapsto xgx^{-1}$ from $G$ to $G$ is continuous and deduce that the conjugacy
+class of any element of $G$ is connected.
+\vskip .1cm
+{\bf Problem 7.3.} By a theorem of Maltsev stated at the end of Lecture 7, any solvable
+linear group $G\subseteq GL_n(F)$, with $F$ algebraically closed, has a normal triangularizable subgroup of finite index $\leq f(n)$ for some function $f:\mathbb N\to \mathbb N$. Deduce the Zassenhaus theorem stated above from  Maltsev's theorem.
+\vskip .1cm
+{\bf Problem 7.4.} Prove the following theorem of Platonov: if $F$ is an algebraically
+closed field of characteristic zero, then any virtually solvable subgroup $G\subseteq GL_n(F)$ has a normal triangularizable subgroup of finite index bounded by a function
+of $n$. {\bf Note:} The proof of this theorem is given, for instance, in Appendix~B
+of the following paper: 
+
+http://arxiv.org/pdf/1005.1881v1.pdf
+
+which by the way is directly related to part 3 of our class. The proof given there
+uses the fact that a reductive algebraic group is a torus, which is a basic result
+in the theory of algebraic groups, but is not so easy to prove from scratch. However,
+one can avoid using this fact by adapting our proof of Lie-Kolchin theorem. 
+\vskip .1cm
+{\bf Problem 8.1.} Use Problem 7.4 to prove that in characteristic zero
+Tits alternative holds true for non-finitely generated groups. Also give an example
+showing that in positive characteristic zero Tits alternative is false (in general) 
+for non-finitely generated groups.
+\vskip .1cm
+{\bf Problem 8.2.} Prove the (full version of) Claim 8.1 (in class
+we made an additional assumption that $g$ is diagonalizable).
+\vskip .1cm
+{\bf Problem 8.3.} Prove Claim 8.2.
+\vskip .1cm
+{\bf Problem 8.4.} Let $g=\small \begin{pmatrix} 2 & 0\\ 0& 1/2 \end{pmatrix}$.
+Find $f\in SL_2(\mathbb Q)$ and $k\in\dbN$ such that $g^k$ and $fg^kf^{-1}$
+generate a free subgroup. Then do the same for 
+$g=\small \begin{pmatrix} 2 & 1\\ 1& 1 \end{pmatrix}$ with an additional assumption
+that $f\in SL_2(\mathbb Z)$.
+\vskip .1cm
+{\bf Problem 9.1.} Prove Observation 9.0.
+\vskip .1cm
+{\bf Problem 9.2.} Let $K$ be a local field, $n$ a positive integer, and let
+$Dom_n(K)$ be the set of all $n\times n$ matrices over $K$ with dominant eigenvalue.
+Prove that $Dom_n(K)$ is open in the field topology on $Mat_n(K)$ (the field topology
+we mean the product topology coming from identification of $Mat_n(K)$ with $K^{n^2}$). 
+\vskip .1cm
+{\bf Problem 10.1.} Prove that if a linear group $G$ is Zariski-connected, then
+$G\times G$ is also Zariski-connected.
+\vskip .1cm
+{\bf Problem 11.1.} Prove that if $K/E$ is an arbitrary field extension and $n$
+a positive integer, then Zariski topology on $E^n$ is induced from the Zariski
+topology on $K^n$ under the natural embedding of $E^n$ into $K^n$. 
+\vskip .1cm
+{\bf Problem 11.2.} Prove Lemma 11.3: If $E$ is a finitely generated field, $n$
+a positive integer, $A\in Mat_n(E)$ and $\zeta$ is an eigenvalue of $A$ which
+is a root of unity (possibly $\zeta\not\in E$), then $\zeta^N=1$ for some $N$ which depends only on $E$ and $n$.
+{\bf Hint:} This can be proved in three steps as follows:
+\begin{itemize}
+\item[(i)] Reduce the problem to the case when $E$ is purely transcendental over
+the prime field $E_0$ (we used a similar trick in one of the previous lectures).
+\item[(ii)] Assuming that $E$ is purely transcendental over $E_0$, prove
+that $\deg_{E_0}(\zeta)\leq n$.
+\item[(iii)] Prove that the (multiplicative) order of $\zeta$
+is bounded by a function of its degree over $E_0$. Consider separately
+the cases of zero and positive characteristic.
+\end{itemize}
+\vskip .1cm
+The following two problems fill the missing details in the proof of Local Field Lemma (Lemma 11.2).
+\vskip .1cm
+{\bf Problem 11.3.} Let $\zeta\in \dbC$ be an algebraic integer such that
+$|\zeta|=1$ and $\zeta$ is not a root of unity, and let $m(x)$ be the minimal polynomial
+of $\zeta$ over $\dbQ$. Prove that $m(x)$ has a root $\eta$ with $|\eta|\neq 1$.  
+\vskip .1cm
+{\bf Problem 11.4.} Let $E$ be a finitely generated field of characteristic
+zero, $\zeta\in E$, $m(x)$ the minimal polynomial of $\zeta$ over $\dbQ$ and
+$\eta$ any complex root of $m(x)$. Prove that there exists an embedding $\iota:E\to\dbC$
+such that $\iota(\zeta)=\eta$.
+\end{document}
