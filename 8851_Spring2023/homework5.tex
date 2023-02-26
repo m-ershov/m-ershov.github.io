@@ -1,0 +1,154 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{url}
+
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Out{{\rm Out}}
+\def\Inn{{\rm Inn}}
+\def\IA{{\rm IA}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Math 8851. Homework \#5. To be completed by Thu, Mar 2}\rm
+\vskip .1cm
+
+\skv
+{\bf 1.} Let $G$ be a group. Prove that the following are equivalent:
+\begin{itemize}
+\item[(a)] $G$ arises as an HNN-extension, that is, there exists a group $H$, isomorphic subgroups
+$A$ and $B$ of $H$ and an isomorphism $\phi:A\to B$ such that $G\cong \la H,t\mid t^{-1}at=\phi(a)
+\mbox{ for all } a\in A\ra$.
+\item[(b)] There exists an epimorphism $\pi:G\to \dbZ$.
+\end{itemize}
+{\bf Hint:} For (b)$\Rightarrow$(a) use the fact that $\dbZ$ is a free group (of rank $1$).
+\skv
+{\bf 2.} Prove that if $G$ is an HNN extension, then $G$ acts on the associated tree $T$ without
+edge inversions. {\bf Note:} This is related to Problem~1. I am not sure you can use the result of 
+Problem~1, but solution to 1 should definitely help.
+
+\skv 
+{\bf 3.} Let $A_1,\ldots, A_k$ be a finite collection of groups, and consider the natural
+epimorphism $\pi$ from the free product $\ast_{i=1}^k A_i= A_1\ast A_2\ast\ldots \ast A_k$ to the direct product $\prod_{i=1}^k A_i$. The group $C=\Ker\pi$ is called the {\it Cartesian subgroup} of $\ast_{i=1}^k A_i$. The Cartesian subgroup $C$ is always free -- this is an immediate consequence of the Kurosh Subgroup Theorem which we will discuss next week (see the statement at the end of the problem). Note that if $A_1,\ldots, A_k$ are finite, then $G=\ast_{i=1}^k A_i$ is finitely generated and $C$ has finite index in $G$ and hence $C$ is also finitely generated (by the Schreier formula). The goal of this problem is to compute the rank of $C$ in this special case.
+
+The rank can be computed using the main theorem of Bass-Serre theory (which we will also discuss next week),
+but in this exercise we take a different approach based on the notion of rational Euler characterstic which is introduced below.
+\skv
+Let $\Omega$ be the smallest class of groups such that
+\begin{itemize}
+\item[(i)] $\Omega$ contains the trivial group $\{1\}$ and $\dbZ$
+\item[(ii)] $\Omega$ is closed under finite direct products
+\item[(iii)] $\Omega$ is closed under finite free products
+\item[(iv)] $\Omega$ is closed under taking finite index subgroups
+and finite index supergroups
+\end{itemize}
+For each group $G\in\Omega$ one can uniquely define the {\bf rational Euler characteristic}
+$\chi(G)\in\dbQ$ such that the following properties hold:
+\begin{itemize}
+\item[(a)] $\chi(\{1\})=1$ and $\chi(\dbZ)=0$
+\item[(b)] $\chi(G\ast H)=\chi(G)+ \chi(H)-1$ for any $G,H\in\Omega$ 
+\item[(c)] $\chi(G\times H)=\chi(G)\chi(H)$ for any $G,H\in\Omega$
+\item[(d)] If $G\in\Omega$ and $H$ is a subgroup of index $n$ in $G$,
+then $\chi(H)=n\chi(G)$.
+\end{itemize}
+The basic idea is that if $G$ is a group which has a finite CW-complex $X$
+as its classifying space, then one should have $\chi(G)=\chi(X)$, but
+then the definition of Euler characteristic has to be extended
+to a larger class of groups. An explanation of how this can be done
+is given in the following paper: 
+
+C.T.C. Wall, {\it Rational Euler characteristics.} 
+Proc. Cambridge Philos. Soc. 57 1961 182--184.
+\skv
+Now the actual problem begins. Let $A_1,\ldots, A_k$ be finite groups, set $n_i=|A_i|$,
+and let $F_r$ be a free group of rank $r$. Let  $G=A_1\ast A_2\ast\ldots\ast A_k\ast F_r$, 
+and let $C$ be the kernel of the natural epimorphism $G\to A_1\times A_2\times\ldots\times A_k$
+which sends $F_r$ to $\{1\}$ (if $r=0$, then $G=A_1\ast A_2\ast\ldots\ast A_k$ and
+$C$ is exactly the Cartesian subgroup).
+\begin{itemize}
+\item[(a)] Prove that $C$ is free (using the Kurosh Subgroup Theorem, see the statement below).
+\item[(b)] Use Euler characteristic to prove that $$rk(C)=\prod_{i=1}^k n_i (r+k-1-\sum_{i=1}^k\frac{1}{n_i})+1.$$
+%\item[(c)] Now assume that $k=2$ and $r=0$. Prove that $C$ is freely generated
+%by the set $\{[a,b]: a\in A_1\setminus\{1\},b\in A_2\setminus\{1\}\}$.
+\end{itemize}
+
+\begin{Theorem}[Kurosh Subgroup Theorem] Let $G=\ast_{\alpha\in I} G_{\alpha}$ be the free product of some
+family of groups $\{G_{\alpha}: \alpha\in I\}$ (here $I$ may be infinite). Then any subgroup of
+$G$ can be decomposed as a free product $F\ast(\ast_{\alpha\in I} H_{\alpha})$ where $F$ is free and
+each $H_{\alpha}$ is conjugate (in $G$) to a subgroup of $G_{\alpha}$.
+\end{Theorem}
+
+
+{\bf 4.} %(a) Explain why for any $n\in\dbN$ there are only finitely many isomorphism
+%classes of groups of order $n$.
+Let $G$ be a finitely generated group.
+\begin{itemize}
+\item[(a)] Prove that for any finite group $H$ there are only finitely many homomorphisms 
+from $G$ to $H$. {\bf Hint:} A homomorphism from $G$ is completely determined by its values 
+on generators.
+\item[(b)] Prove that for any $n\in\dbN$ there are only finitely many normal subgroups 
+of index $n$ in $G$. Then deduce that $G$ has only finitely many subgroups of index $n$.
+\end{itemize}
+
+\end{document}
+
+
+
