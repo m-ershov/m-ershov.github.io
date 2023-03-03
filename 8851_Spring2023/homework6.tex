@@ -1,0 +1,130 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{url}
+
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+\newtheorem* {Remark}	{\bf{Remark}}
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Out{{\rm Out}}
+\def\Inn{{\rm Inn}}
+\def\IA{{\rm IA}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Math 8851. Homework \#6. To be completed by Thu, Mar 16}\rm
+\vskip .1cm
+
+\skv
+{\bf 1.} Give an example of a group $G$ acting on an {\bf unoriented} tree $T$ with edge inversions such that
+\begin{itemize}
+\item[(i)] the quotient graph $G\backslash T$ is a loop
+\item[(ii)] $G$ cannot be decomposed as an HNN extension.
+\end{itemize}
+\begin{Remark}\rm Note that a group cannot act on an oriented tree $T$ with edge inversions 
+(since in that case $T$ contains edges $(v,w)$ and $(w,v)$ for some vertices $v$ and $w$ and thus
+$T$ is not a tree). Usually when one is taking about a group acting on a tree, it is assumed
+that the tree is unoriented. In class we implicitly assumed that groups acts on oriented trees; we did not
+lose any generality by doing so since we always required that the group acts without edge inversions. Indeed,
+if $G$ acts on an unoriented tree $T$ without edge inversions, it is not hard to show that one can always
+choose orientation on $T$ which is presereved under the action (pick one edge in every orbit of the action of
+$G$ on $E(T)$ and orient those edges arbitrarily; then there is a unique way to orient the remaining edges
+so that the orientation is preserved by the $G$-action).
+\end{Remark}
+\skv
+{\bf 2.} Recall the formula for the rank of the Cartesian subgroup of the free product of a finite
+family of finite groups from HW\#5.3(b):
+
+If $G_1,\ldots, G_k$ are finite groups and $C$ is the Cartesian subgroup of $\ast G_i$, that is, the
+kernel of the natural map $\ast G_i\to \prod G_i$, then
+$$\rk(C)=\prod_{i=1}^k |G_i| \left(k-1-\sum_{i=1}^k\frac{1}{|G_i|}\right)+1.$$
+Give another proof of this formula, this time using the Bass-Serre theory.
+
+{\bf Hint:} Let $G=\ast G_i$, realize $G$ as $\pi_1(\dbG, Y)$
+for some graph of groups $(\dbG,Y)$, as in the proof of the Kurosh Subgroup Theorem (KST), and consider the action of $G$ on the associated
+Bass-Serre tree $X$. The proof of KST shows that to compute the rank of
+$C$ it suffices to know the numbers of vertices and edges in the quotient
+graph $C\backslash X$. To compute these first prove the following lemma.
+
+\begin{Lemma} If $G$ is a group, $K$ is a finite subgroup of $G$ and
+$H$ is a finite index normal subgroup of $G$ such that $K\cap H=\{1\}$, then the number of orbits of the left-multiplication action of $H$ on $G/K$ is $\frac{[G:H]}{|K|}$.
+\end{Lemma}
+
+\skv
+{\bf 3.} Before doing this problem read about residually finite and hopfian groups in online Lecture~6. Prove Proposition~6.3 from online
+notes which asserts that a finitely generated residually finite group
+must be hopfian. {\bf Hint:} Let $G$ be finitely generated and $\phi:G\to G$ an epimorphism. Then $G/\Ker\phi\cong G$. Deduce that for any $n\in\dbN$ 
+there is a bijection between the set of all normal subgroups of index $n$ in $G$ 
+and the set of those normal sugbroups of index $n$ in $G$ which contain $\Ker\phi$. 
+Then use HW\#5.4 to show that $\Ker\phi$ must lie in the intersection of all
+finite index subgroups of $G$.
+\skv
+{\bf 4.} Given natural numbers $m$ and $n$, the Baumslag-Soliar group
+$BS(m,n)$ is defined by
+$$BS(m,n)=\la t,s \mid t^{-1}s^mt=s^n\ra.$$
+\begin{itemize}
+\item[(a)] Show that $BS(m,n)$ is an HNN-extension. 
+\item[(b)] Prove that there exists an epimorphism
+$\phi:BS(m,n)\to BS(m,n)$ such that $\phi(t)=t$ and $\phi(s)=s^2$.
+\item[(c)] Now assume that $m=2$ and $n=3$. Show that
+the elements $s$ and $s^t=t^{-1}st$ do not commute (use Britton's Lemma)
+while their images under $\phi$ from (b) commute. Deduce that
+$BS(2,3)$ is not Hopfian.
+\end{itemize}
+\end{document}
