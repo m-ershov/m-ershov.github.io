@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{url}
+
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+\newtheorem* {Remark}	{\bf{Remark}}
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker\,}}
+\def\Aut{{\rm Aut}}
+\def\Out{{\rm Out}}
+\def\Inn{{\rm Inn}}
+\def\IA{{\rm IA}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+\def\phi{{\varphi}}
+
+\bf\centerline{Math 8851. Homework \#7. To be completed by Thu, Mar 30}\rm
+\vskip .1cm
+
+\skv
+{\bf 1.} Let $\Omega$ be the set of all functions $f:\dbN\to \dbR_{\geq 0}$
+which are non-decreasing (that is, $f(n)\leq f(m)$ whenever $n\leq m$) -- note that any growth function
+$b_{G,S}$ lies in $\Omega$. It is not hard to show that the restriction of the relation $\preceq$ to $\Omega$
+can be defined by the following simpler condition (this is not part of the problem):
+$$f\preceq g \iff \mbox{ there exists }C\in\dbN \mbox{ such that }f(x)\leq Cg(Cx) \mbox{ for all }n\in\dbN.$$
+As before, define $f\sim g$ for $f,g\in\Omega$ if $f\preceq g$ and $g\preceq f$.
+
+Prove that the relation $\preceq$ on $\Omega$ is transitive and that $\sim$ is an equivalence relation.
+\skv
+
+{\bf 2.} Let $S_1$ and $S_2$ be finite generating sets for the same group $G$. Prove that $b_{G,S_1}\sim b_{G,S_2}$.
+Recall that
+$$B_{G,S}(n)=\{g\in G: l_{S}(g)\leq n\}\mbox{ and }b_{G,S}(n)=|B_{G,S}(n)|.$$
+\skv
+
+{\bf 3.} Let $H$ be a subgroup of a group $G$.
+\begin{itemize}
+\item[(a)] Prove that $b_H\preceq b_G$. Recall that for a group $\Gamma$, $b_{\Gamma}$ is the equivalece class of the functions $b_{\Gamma,S}$ where $S$ is a finite generating set for $\Gamma$ (all such functions are indeed equivalent by Problem~2).
+
+\item[(b)] Prove that if $H$ has finite index in $G$, then $b_H\sim b_G$.
+\end{itemize}
+\skv
+
+{\bf 4.} Let $G$ be an infinite group and $S$ a finite generating set for $G$. Prove that $b_{G,S}(n)\geq n$ for all $n$. 
+
+\skv
+{\bf 5.} Let $G$ be a group and $S$ a finite generating set for $G$. As before, for $n\in\dbZ_{\geq 0}$
+let $\Sigma_{G,S}(n)=\{g\in G: l_{S}(g)= n\}$ (the sphere of radius $n$) and $\sigma_{G,S}(n)=|\Sigma_{G,S}(n)|$. 
+The formal power series $f_{G,S}(t)=\sum\limits_{n=0}^{\infty} \sigma_{G,S}(n) t^n$ is called the {\it spherical growth series}
+of $G$ with respect to $S$.
+\begin{itemize}
+\item[(1)] Suppose $G=\la S\ra$ and $H=\la T\ra$ where $S,T$ are finite. Prove that
+$$f_{G\times H,S\cup T}(t)=f_{G,S}(t)\cdot f_{H,T}(t).$$
+\item[(2)] Let $G,H,S$ and $T$ be as in (1). Prove that
+$$f_{G* H,S\cup T}(t)=\frac{f_{G,S}(t)\cdot f_{H,T}(t)}{f_{G,S}(t)+f_{H,T}(t)-f_{G,S}(t)\cdot f_{H,T}(t)}.$$
+{\bf Hint:} Let $a=a(t)=f_{G,S}(t)-1$ and $b=b(t)=f_{H,T}(t)-1$. First argue that
+$f_{G* H,S\cup T}(t)=1+a+b+ab+ba+aba+bab+\ldots$ (this follows from the normal form of elements of a free product).
+
+\item[(3)] Let $G=\dbZ^d$ and $S=\{e_1,\ldots,e_d\}$ (the standard basis). Use (1) to compute precisely
+$f_{G,S}(t)$ and $\sigma_{G,S}(n)$.
+
+\item[(4)] Now let $X=\{x_1,\ldots, x_d\}$ and $F=F(X)$. Prove that $$f_{G,X}(t)=\frac{1+t}{1-(2d-1)t}$$
+in 2 different ways: using the formula $\sigma_{G,S}(n)=2d(2d-1)^n$ for $n\geq 1$ derived in class and then using (2).
+\end{itemize}
+\end{document}
