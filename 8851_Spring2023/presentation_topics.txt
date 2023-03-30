@@ -1,0 +1,56 @@
+1. Commutator test in Aut(F_2)
+
+See HW 3.5 for the statement and a reference
+
+
+2. Whitehead algorithm for Aut(F_n). 
+
+This is an algorithm which, given two k-tuples (u_1,..,u_k) and (v_1,...,v_k) in F_n, determines if there exists \phi in Aut(F_n) which sends the first k-tuple to the second one. Reference: Lyndon-Schupp, Section 1.4.
+
+
+3. Finite presentability of Aut(F_n). 
+
+Finite presentability of Aut(F_n) was originally proved by Nielsen in 1924 (just 3 year after his proved of finite generation which we discussed in class), but the argument was quite involved and non-algebraic. A more transparent and purely algebraic argument was given by McCool in 1970s. McCool's proof is closely related to the (algebraic) proof of the Whitehead algorthm (topic 2 above). Reference: Lyndon-Schupp, Section 1.4.
+
+
+4. Various embedding theorems using HNN extensions
+
+One possibility is to present a theorem of Higman-Higman-Neumann that every countable group can be embedded into a 2-generated group which has the same set of orders of torsion elements and some related results. A (much) more challenging option would be to discuss the Higman embedding theorem which describes which finitely generated groups can be embedded into finitely presented groups. Reference: Lyndon-Schupp, Sections 4.3 and 4.7. 
+
+
+5. Baumslag-Solitar groups
+
+This is a simple-to-define but very important family of groups which were originally introduced as the first examples of non-Hopfian group (see HW 6.4).
+Here is a link to an article on Encyclopedia of Math
+
+https://encyclopediaofmath.org/wiki/Baumslag-Solitar_group
+
+Other references: to be added. 
+
+
+6. Quasi-isometries
+
+Quasi-isometry is a fundamental notion in geometric theory which, in particular, enables one to relate the geometry of Cayley graphs of finitely generated groups to "real" geometric objects like Riemannian manifolds. One key result one could present is Schwarz-Milnor lemma and some of its basic applications. Reference: to be added.
+
+
+7. subgroup growth
+
+Given a finitely group G, the subgroup growth function s_G: N -> Z_{>=0} is defined by s_G(n) = number of subgroups of index n in G. This is perhaps the second most studied growth function after the word growth. There is an excellent book on the subject `Subgroup growth' by Lubotzky and Segal. A presention could give a general overview of the subject or concentrate on a particular theorem, e.g. estimation of the subgroup growth of free groups.
+
+
+8. Grigorchuk group
+
+(The first) Grigorchuk group was defined by Grigorchuk in 1980 and provided the first example of a group of intermediate growth (the latter result was proved by Grigorchuk in 1983). The Grigrorchuk group is an example of a branch group, one of the most important and actively studied classes in modern group theory. Reference: https://arxiv.org/abs/math/0607384  
+
+
+9. Various counterexamples to the general Burnside problem.
+
+The general Burnside problem asks whether every finitely generated torsion group (every element has finite order) is finite. The answer is negative, and
+the first counterexamples were given by Golod in 1964, but many other counterexamples of very different kinds have been constructed since then. In class I plan to discuss the construction of Osin and Schlage-Puchta (which is similar to Golod's construction, but is technically easier to justify). A presentation could discuss one or several others types of counterexamples.
+
+
+10. Various counterexamples to the von Neumann-Day problem. The von Neumann-Day problem asks whether every non-amenable group must contain a non-abelian free subgroup. As with the general Burnside problem, the answer is negative, and the first counterexamples were given by Ol'shanskii in 1980. Similar to the general Burnside problem, there are now many other types of counterexamples (in fact, many groups provde counterexamples to both questions). A particular interesting and technically simple construction was given relatively recently by Monod
+
+https://egg.epfl.ch/~nmonod/articles/vn.pdf
+
+His paper contains references to most other papers on this topic.
