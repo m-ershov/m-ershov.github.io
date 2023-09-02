@@ -1,0 +1,133 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Math 8851. Homework \#1. To be completed by 5pm on Fri, Sep 8}\rm
+\vskip .1cm
+Below [DDMS] refers to the book `Analytic pro-$p$ groups', 2nd edition by Dixon, du Sautoy, Mann and Segal.
+\skv
+{\bf 1.} Prove the implication (P2) $\Rightarrow$ (P1) in the statement about the equivalence of 4 definitions of a profinite group.
+That is, prove that if $G=\projlim\limits_{i\in I}F_i$ for some inverse system of finite groups $\{F_i\}_{i\in I}$, then 
+$G$ is a closed subgroup of $\projlim\limits_{i\in I}F_i$. 
+\skv
+{\bf 2.} (Problem 3(ii) after Chapter 1 in [DDMS], page 31). Prove the universal property of the profinite completion:
+Let $H$ be an abstract group, $\widehat H$ its profinite completion and $j:H\to \widehat H$ the canonical map. 
+Prove that for any profinite group $G$ and any homomorphism of abstract groups $\theta:H\to G$, there exists a unique continuous homomorphism $\widehat\theta: \widehat H\to G$ such that $\widehat\theta j=\theta$.
+\skv
+{\bf Hint:} As is typical for a proof of a universal property, it is the existence part that requires more work.
+First prove this for finite $G$, in which case one can describe $\widehat\theta$ quite explicitly. Then use the universal property of inverse limits to extend the result to the general case.
+\skv
+
+{\bf 3.} Let $G$ be a profinite group and $p$ a prime number. Prove that the following 4 conditions on $G$ are equivalent:
+\begin{itemize}
+\item[(i)] $G\cong \projlim_{i\in I}P_i$ for some inverse system of finite $p$-groups $\{P_i\}_{i\in I}$
+\item[(ii)] $G$ has a base of neighborhoods of $1$ consisting of open subgroups of $p$-power index
+\item[(iii)] Every open subgroup of $G$ has $p$-power index
+\item[(iv)] Every continuous finite quotient of $G$ is a $p$-group. Here by a continuous quotient of $G$ we mean the image of a continuous homomorphism from $G$ to another topological group, and finite groups are considered as discrete groups.
+\end{itemize}
+\skv
+{\bf 4.} Let $p$ be a prime, and let $\dbZ_p$ be the ring of $p$-adic integers, as defined in class, that is, 
+$\dbZ_p=\projlim\limits_{k\in \dbZ}\dbZ/p^k\dbZ$. Prove that
+\begin{itemize}
+\item[(a)] $\dbZ_p$ is a local ring whose unique maximal ideal is $p\dbZ_p$;
+\item[(b)] Every nonzero ideal of $\dbZ_p$ is equal to $p^k\dbZ_p$ for some $k\in \dbN$ and $\dbZ_p/p^k\dbZ_p\cong \dbZ/p^k\dbZ$.
+\end{itemize}
+You may use the representation of $\dbZ_p$ as ``power series in $p$'' discussed in class.
+\skv
+{\bf 5.} Let $p$ be a prime and $n\in\dbN$. Let $G=SL_n(\dbZ_p)$ and $H=SL_n^1(\dbZ_p)$, the first congruence subgroup of $SL_n(\dbZ_p)$,
+defined as the kernel of the natural projection map $SL_n(\dbZ_p)\to SL_n(\dbZ_p/p\dbZ_p)$, that is,
+$$SL_n^1(\dbZ_p)=\{g\in G : g\equiv 1\mod p\dbZ_p\}.$$ Prove that $G$ is a profinite group and $H$ is a pro-$p$ group.
+\skv
+{\bf Note:} The topology on $G$ and $H$ is induced from $Mat_{n}(\dbZ_p)$ where we identify $Mat_{n}(\dbZ_p)$ with $\dbZ_p^{n^2}$
+endowed with the product topology.
+\skv
+{\bf 6.} Let $\widehat\dbZ$ be the profinite completion of $\dbZ$ considered as a ring. Prove the isomorphism
+$$\dbZ\cong \prod_{p}\dbZ_p$$
+where $p$ ranges over all primes.
+\skv
+{\bf 7.} Let $G$ be an abstract group and $\Lambda$ a family of normal finite index subgroups of $G$ closed under finite intersection.
+Recall that in this case there exists a topology on $G$ (called the $\Lambda$-topology) which turns $G$ into a topological group and where
+$\Lambda$ is a base of neighborhoods of identity.
+
+Assume now that the $\Lambda$-topology admits a countable base of neighborhoods of $1$. Then there exists such a base $\{U_k\}_{k=1}^{\infty}$
+where $U_1\supseteq U_2\supseteq \cdots$ and each $U_i\in\Lambda$. Define the pseudometric $d$ on $G$ as follows:
+$$d(g,h)=\left\{
+\begin{array}{ll}
+0 & \mbox{ if }g^{-1}h\in U_k \mbox{ for all } k\in\dbN\\
+\frac{1}{k} &  \mbox{ if }g^{-1}h\not \in U_k \mbox{ and } k \mbox{ is smallest with this property.}
+\end{array}
+\right.
+$$
+\begin{itemize}
+\item[(a)] Prove that $d$ is indeed a pseudo-metric.
+\item[(b)] Let $\widetilde G$ be the completion of $G$ with respect to $d$ (the elements of $\widetilde G$ are equivalence classes
+of the Cauchy sequences of elements of $G$). Prove that if we define a binary operation $\cdot$ on $\widetilde G$
+by $[x_n]\cdot[y_n]=[x_n y_n]$ (here $[a_n]$ is the equivalence class of a Cauchy sequence $\{a_n\}$), then $\cdot$ is well defined
+and $(\widetilde G,\cdot)$ is a topological group.
+\item[(c)] Recall that the $\Lambda$-completion of $G$, denoted by $\widehat G_{\Lambda}$, is defined by
+${\widehat G}_{\Lambda}=\projlim\limits_{U\in \Lambda} G/U$. Prove that ${\widehat G}_{\Lambda}\cong (\widetilde G,\cdot)$ as topological groups.
+
+\noindent{\bf Hint:} It is probably helpful to first show that ${\widehat G}_{\Lambda}\cong \projlim\limits_{k\in\dbN} G/U_k$.
+\end{itemize}
+\end{document}
+
+
+
