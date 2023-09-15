@@ -1,0 +1,146 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Definition}    {Definition}
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Math 8851. Homework \#2. To be completed by 5pm on Fri, Sep 22}\rm
+\vskip .1cm
+Below [DDMS] refers to the book `Analytic pro-$p$ groups', 2nd edition by Dixon, du Sautoy, Mann and Segal.
+\skv
+{\bf 1.} Problem~7(c) from HW\#1. As suggested in the hint, first show that ${\widehat G}_{\Lambda}\cong \projlim\limits_{k\in\dbN} G/U_k$ (this reduces the problem to the case
+$\Lambda=\{U_k\}$). The latter is a special case of the following general statement:
+
+Let $\{X_i\}_{i\in I}$ be an inverse system of sets or groups, and let $J$ be a subset of $I$
+with the property that for every $i\in I$ there exists $j\in J$ with $j\geq i$. Then $J$
+is also a directed set, $\{X_j\}_{j\in J}$ is an inverse system (with the same transition maps)
+and $\projlim\limits_{j\in J}X_j\cong \projlim\limits_{i\in I}X_i$.
+\skv
+{\bf 2.} Let $G$ be a profinite group and $\Lambda$ a family of open normal subgroups closed under finite intersections with the property that $\bigcap_{N\in\Lambda} N=\{1\}$. Prove that
+$\Lambda$ is a base of neighborhoods of $1$ for $G$. {\bf Hint:} Show that $G$ is isomorphic
+to its $\Lambda$-completion $\widehat G_{\Lambda}$ as topological groups.
+\skv
+{\bf Note:} By contrast, if $G$ is an abstract group and $\Lambda$ is a family of finite index normal subgroups closed under finite intersections with the property that $\bigcap_{N\in\Lambda} N=\{1\}$,
+then $\Lambda$ need not form a base of neighborhoods of $1$ for the profinite topology on $G$,
+that is, there may exist a finite index subgroup $M$ of $G$ which does not contain any element of
+$\Lambda$. Can you think of a specific example where this happens?
+\skv
+
+{\bf 3.} Let $\Gamma$ be an abstract group, $G=\widehat\Gamma$ its profinite completion
+ and $\iota:\Gamma\to G$ the canonical map. Prove that the map $N\mapsto \overline{\iota(N)}$
+ establishes a bijection between finite index subgroups of $\Gamma$ and open subgroups of $G$.
+ 
+ {\bf Hint:} First consider the case where $\iota$ is injective (in which case we can identify 
+$\Gamma$ with a subgroup of $G$) and then deduce the general case. The proof of Lemma~7.6 from class
+(given at the beginning of Lecture~8) should be helpful for this problem.
+
+\skv
+{\bf 4.} Let $G$ be a non-trivial finite $p$-group. Prove that $[G,G]G^p$ is a proper subgroup
+of $G$ without using the fact that $[G,G]G^p=\Phi(G)$ in this case. {\bf Hint:} If
+$G=[G,G]G^p$ for some group $G$, the same is true for any quotient of $G$.
+
+\newpage
+{\bf 5.} 
+\begin{itemize}
+\item[(a)] Let $\dbF_p^{\infty}=\prod_{k\in\dbN}\dbF_p$ be the product of countably many copies
+of $\dbF_p$ (here considered just as a cyclic group of order $p$). Prove that $\dbF_p^{\infty}$
+has only countably many open subgroups, but uncountably many subgroups of index $p$ and deduce that
+$\dbF_p^{\infty}$ has a finite index subgroup which is not open.
+\item[(b)] Let $G$ be a pro-$p$ group which is not finitely generated (as usual topologically).
+Use Proposition~1.13 from the book and basic properties of Frattini subgroups to show that
+there exists a closed normal subgroup $K$ of $G$ such that $G/K\cong \dbF_p^{\infty}$. Deduce
+from (a) that $G$ has a finite index subgroup which is not open.
+\item[(c)] Let $\{F_i\}_{i\in\dbN}$ be a family of finite groups of pairwise coprime orders
+such that $\{d(F_i)\}$ is unbounded (recall that $d(\cdot)$ denotes the minimal number of generators). Prove that the profinite group $G=\prod\limits_{i\in \dbN}F_i$ is not finitely generated,
+but every finite index subgroup of $G$ is open.
+\end{itemize}
+
+\skv
+{\bf 6.} Problem~1.18(i) from [DDMS] (page 34).
+\skv
+Before the next problem we introduce a general definition.
+
+\begin{Definition}\rm Let $R$ be a ring with $1$ and $I$ an ideal of $R$ such that 
+$\bigcap_{n\in\dbN}I^n=\{0\}$. Define the {\it $I$-adic norm} on $R$ by $\|0\|=0$,
+and for a nonzero $x$ set $\|x\|=2^{-\deg(x)}$ where $\deg(x)\in\dbZ_{\geq 0}$ is the unique
+integer such that $x\in I^{\deg(x)}\setminus I^{\deg(x)+1}$ (as usual we set $I^0=R$).
+
+The {\it $I$-adic metric} on $R$ is defined by $d(x,y)=\|x-y\|$ (check that this is indeed a metric; in fact it is an ultra-metric). We say that $R$ is {\it $I$-adically complete} if it is a complete metric space with respect to 
+the $I$-adic metric (any $R$ embeds into its $I$-adic completion $\widehat R_I$
+which is always $I$-adically complete).
+\end{Definition}
+
+\skv
+{\bf 7.} Let $R$ and $I$ be as in the above definition. Assume that
+\begin{itemize}
+\item[(a)] $R/I$ is a finite field. Let $p=char(R/I)$
+\item[(b)] $I$ is finitely generated as an ideal
+\item[(c)] $R$ is $I$-adically complete. 
+\end{itemize}
+Prove that $G=1+I$ is a group and that it is a pro-$p$ group with respect
+to the toopology induced from the $I$-adic topology on $R$.
+
+One natural example of $R$ and $I$ satisfying (a)-(c) is $R=\dbZ_p$ ($p$-adics)
+and $I=p\dbZ_p$. Can you think of other examples?
+
+\end{document}
+
+
+
