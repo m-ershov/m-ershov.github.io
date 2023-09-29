@@ -1,0 +1,150 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Definition}    {Definition}
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+\def\lra{\longrightarrow}
+\def\str{\stackrel}
+
+\bf\centerline{Math 8851. Homework \#3. To be completed by 5pm on Fri, Oct 6}\rm
+\vskip .1cm
+Below [DDMS] refers to the book `Analytic pro-$p$ groups', 2nd edition by Dixon, du Sautoy, Mann and Segal.
+\skv
+{\bf 1.} This is a carryover from HW\#2, namely parts (b) and (c) of HW\#2.5. Note that there are new hints in both (b) and (c). 
+\begin{itemize}
+\item[(b)] Let $G$ be a pro-$p$ group which is not finitely generated (as usual topologically). Prove that there exists a closed normal subgroup $K$ of $G$ such that $G/K\cong \dbF_p^{\infty}$. {\bf Hint:} Use Proposition~1.13 from [DDMS] and the fact that every abelian pro-$p$ group of exponent $p$ is isomorphism to $\dbF_p^I=\prod\limits_{i\in I}\dbF_p$ for some set $I$ (this appears, e.g. as
+Theorem~5.7 in Wilson's book `Profinite groups'). Deduce from HW\#2.5(a)
+that $G$ has a finite index subgroup which is not open.
+\item[(c)] Let $\{F_i\}_{i\in\dbN}$ be a family of finite groups of pairwise coprime orders
+such that $\{d(F_i)\}$ is unbounded (recall that $d(\cdot)$ denotes the minimal number of generators). Prove that the profinite group $G=\prod\limits_{i\in \dbN}F_i$ is not finitely generated,
+but every finite index subgroup of $G$ is open. {\bf Hint:} Use one of the tricks from the proof of Lemma~1.18 in [DDMS]. Also keep in mind that a finite index subgroup of a topological group is open if and only if it is closed.
+\end{itemize}
+
+\skv
+{\bf 2.} Problem~1.18(i) from [DDMS] (page 34). This is another carryover from HW\#2 (no changes in this problem)
+\skv
+
+{\bf 3.} Let $X$ be an infinite set, $F(X)$ the free abstract group on $X$ and $\Lambda$ the set of all finite index normal
+subgroups $N$ of $F(X)$ such that $N$ contains all but finitely many elements of $X$. The group 
+$\widehat{F(X)}_{\Lambda}$ (the completion of $F(X)$ with respect to $\Lambda$) is called the free profinite group on $X$.
+\begin{itemize}
+\item[(a)] Prove that $|\Lambda|=|X|$. Deduce from HW\#2 that the set of open subgroups of $\widehat{F(X)}_{\Lambda}$ 
+has the same cardinality as $X$. In particular, if $X$ is countable, $\widehat{F(X)}_{\Lambda}$ is countably based.
+{\bf Note:} You may use without proof that $|X\times X|=|X|$ for any infinite set $X$.
+\item[(b)] State and prove a natural universal property satisfied by $\widehat{F(X)}_{\Lambda}$ (it should be a minor
+variation of the usual universal property for finitely generated free profinite groups).
+\end{itemize}
+\skv
+{\bf 4.} Let $G$ be a finitely generated pro-$p$ group and $d=d(G)$ its minimal number of generators.
+\begin{itemize}
+\item[(a)] Prove that if $X$ any (topological) generating set for $G$, then $X$ contains a subset $Y$ with $|Y|=d$
+which generates $G$. {\bf Hint:} Use the Frattini subgroup to reduce this problem to a basic fact from linear algebra.
+\item[(b)] Give an example showing that (a) is false for abstract groups.
+\end{itemize}
+\skv
+{\bf 5.} A topological group $G$ is called {\it Hopfian} if every epimorphism $\phi:G\to G$ is an isomorphism.
+ \begin{itemize}
+\item[(a)] Prove that any finitely generated profinite group is Hopfian. {\bf Hint: } use the fact that a finitely generated
+profinite group has finitely many subgroups of index $n$ for any $n\in\dbN$ as well as a general relation between closed and open subgroups in profinite groups. 
+\item[(b)] Now let $X$ be a finite set and $F=\widehat{F(X)}$, the profinite group on $X$. Let $Y$ be another finite generating set of $G$. We say that $Y$ is a {\it free generating set} for $F$ if the unique homomorphism $\phi:\widehat{F(Y)}\to F$ such that
+$\phi_{|Y}:Y\to F$ is the inclusion map is an isomorphism. Prove that $Y$ is a free generating set for $F$ if and only if $|Y|=|X|$.
+The same is true if we replace free profinite groups by free pro-$p$ groups.
+\end{itemize}
+\skv
+{\bf 6.} The goal of this problem is to find an explicit profinite presentation for $\dbZ_p$.
+Recall that $\dbZ_p$ is a free pro-$p$ group or rank $1$, so it has a pro-$p$ presentation $\la x |\,\,\,\, \ra$ (one generator and no relators). The same presentation in the category of profinite groups defines $\widehat{\dbZ}$. Since $\dbZ_p$ is procyclic,
+it still has a profinite presentation with 1 generator. Moreover, since any closed subgroup of a procyclic group is procyclic,
+$\dbZ_p$ has a profinite presentation with 1 generator and 1 relator. Finally, since every element of a procyclic group can be written as a profinite power of its generator, we deduce that $\dbZ_p$ has a profinite presentation $\la x | x^{\alpha}\ra$
+for some $\alpha\in\widehat{\dbZ}$. Describe $\alpha$ explicitly (and prove your answer).
+\skv
+
+{\bf 7.} In Lecture~12 we proved that $d(G)=\dim H^1(G,\dbF_p)$ for any finitely generated pro-$p$ group $G$ (as before $d(G)$
+is the minimal number of generators of $G$). Prove that the equality remains true even if $G$ is infinitely generated (the equality should be interpreted as equality of cardinal numbers, not just $\infty=\infty$). {\bf Note:} This is closely related to Problem~3.
+\skv
+{\bf 8.} Let $G$ be a profinite group and $A$ an abelian profinite group. As stated in class (Theorem~12.4) there is a natural bijection between the second cohomology group $H^2(G,A)$ (where we view $A$ as a trivial $G$-module) and $Ext(G,A)$, the set of
+equivalence class of topological central extensions of $G$ by $A$. This problem provides an outline of a proof of Theorem~12.4.
+
+\begin{itemize}
+\item[(a)] Given $C\in H^2(G,A)$, let $Z:G\times G\to A$ be a $2$-cocycle whose cohomology
+class is equal to $C$. Let $E$ be the set of pairs $\{(g,a): g\in G, a\in A\}$
+with multiplication given by 
+\begin{equation}
+\label{eq:cocycle}
+(g_1,a_1)\cdot (g_2,a_2)=(g_1 g_2, a_1+a_2+Z(g_1,g_2))
+\end{equation}
+Let $\mathcal E$ be the sequence $(1\to A\str{\iota}{\lra} E\str{\pi}{\lra}G\to 1)$ where
+where $\iota(a)=(1,a)$ and $\pi((g,a))=g$ for any $a\in A$ and $g\in G$.
+Prove that $\mathcal E$ is a topological central extension and that its equivalence class depends only on $C$, not on $Z$.
+
+\item[(b)] Conversely, let 
+$\mathcal E= (1\to A\str{\iota}{\lra}E\str{\pi}{\lra}G\to 1)$
+be an element of $Ext(H,A)$. Let $\psi: G\to E$ be a continuous section of $\pi$, 
+that is, a continuous map $G\to E$ such that $\pi\circ\psi=id_G$
+(such a section exists since $E$ and $G$ are profinite -- see, e.g. 1.3.3 in Wilson's book). 
+Define $Z:G\times G\to A$ by $$Z(g_1,g_2)=\iota^{-1}(\psi(g_1 g_2)^{-1}\psi(g_1)\psi(g_2)).$$
+Prove that $Z$ is a $2$-cocycle whose cohomology class $[Z]$ is independent of the choice of $\psi$.
+
+\item[(c)] Now prove that the maps $H^2(G,A)\to Ext(G,A)$ and $Ext(G,A)\to H^2(G,A)$ constructed in (a) and (b), respectively,
+are mutually inverse.
+\end{itemize}
+\end{document}
+
+
+
