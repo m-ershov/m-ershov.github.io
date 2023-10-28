@@ -1,0 +1,200 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Definition}    {Definition}
+\newtheorem {Theorem}    {Theorem}
+\newtheorem {Lemma} [Theorem]   {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.5in
+\textwidth=6in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+\def\lra{\longrightarrow}
+\def\str{\stackrel}
+
+\def\Gal{{\rm Gal\,}}
+\def\phi{{\varphi}}
+\def\eps{{\varepsilon}}
+\newcommand{\lla}{\la\!\la}
+\newcommand{\rra}{\ra\!\ra}
+
+\bf\centerline{Math 8851. Homework \#5. To be completed by 5pm on Fri, Nov 3}\rm
+\vskip .1cm
+{\bf 1.} This is an expanded version of Problem~3 in HW\#3. The remark after the problem gives a corrected statement of Problem~7 in HW\#3.
+
+Let $X$ be an infinite set, $F(X)$ the free abstract group on $X$ and $\Lambda$ the set of all open normal
+subgroups $N$ in $F(X)$ such that $N$ {\it contains all but finitely many elements} of $X$. The group 
+$\widehat{F(X)}_{\Lambda}$ (the completion of $F(X)$ with respect to $\Lambda$) is called the free profinite group on $X$. It will be denoted by $\widehat F(X)$.
+\begin{itemize}
+\item[(a)] Prove that $|\Lambda|=|X|$. Deduce from HW\#2 that the set of open subgroups of $\widehat F(X)$ 
+has the same cardinality as $X$. In particular, if $X$ is countable, $\widehat F(X)$ is countably based.
+{\bf Note:} You may use without proof that $|X\times X|=|X|$ for any infinite set $X$.
+\item[(b)] Let $H$ be a profinite group. A map $f:X\to H$ is called {\it 1-convergent} if any open
+subgroup $U$ of $H$ contains $f(x)$ for all but finitely many $x\in X$. Prove that the free profinite group 
+$\widehat F(X)$ satisfies the following universal property: If $H$ is a pro-$p$ group
+and $f:X\to H$ is any $1$-convergent map, then there exists a unique continuous homomorphism
+$f_*:\widehat F(X)\to H$ such that $f_* \circ \iota=f$ where $\iota: X\to \widehat F(X)$
+is the canonical inclusion.
+\end{itemize}
+A subset $X$ of a profinite group $H$ is called $1$-convergent if the inclusion map $X\to H$ is $1$-convergent.
+\begin{itemize}
+\item[(c)] Deduce the following from (b). Let $G$ be a profinite group and $X$ a (topological) $1$-convergent generating set of $G$. Then there exists a continuous epimorphism from $\widehat F(X)$ to $G$.
+\item[(d)] Let $G$ be a profinite group. 
+One can show (although this is non-trivial) that $G$ always has a $1$-convergent generating set. 
+Denote by $ON(G)$ the set of open normal subgroups of $G$. Prove that if $G$ is not finitely generated,
+then for any $1$-convergent generating set $X$ of $G$ we have $|X|=|ON(G)|$. {\bf Hint:} First prove
+that $|X|\leq |ON(G)|$ by constructing a finite-to-one map from $X$ to $ON(G)$. Then use (a) and (c)
+to prove that $|ON(G)|\leq |X|$.
+\end{itemize}
+{\bf Important remark:} HW\#3.7 claimed that $d(G)=\dim H^1(G,\dbF_p)$ for any pro-$p$ group $G$. If $G$
+is not finitely generated, this statement is actually incorrect (in general) if $d(G)$ denotes the minimal size of a generating set of $G$. However if for an infinitely generated $G$  we redefine
+$d(G)$ to be the common size of its 1-convergent generating sets (thus $d(G)=|ON(G)|$ by (d)), then the equality becomes correct.
+What we actually proved in Problem Session 3 is that if $G/\Phi(G)\cong \dbF_p^X$ (and we know this is always
+true for some $X$), then $\dim H^1(G,\dbF_p)=|X|$. One can deduce the corrected version of HW\#3.7 from this result and (d), but this requires some additional work. 
+\skv
+
+
+{\bf 2.} This is a corrected and expanded version of Problem~2 in HW\#4. 
+
+We start with some definitions. Let $A$ be an associative ring with $1$ and $M$ an $A$-bimodule. A map $f:A\to M$ is called a {\it derivation} if
+\begin{itemize}  
+\item[(1)] $f(a+b)=f(a)+f(b)$ for all $a,b\in A$;
+\item[(2)] $f(ab)=f(a).b+a.f(b)$ for all $a,b\in A$.
+\end{itemize}
+The set of all derivations from $A$ to $M$ (which is clearly an abelian group with respect to pointwise addition) will be denoted
+by $Der(A,M)$.
+
+If $G$ is a group and $M$ is a right $G$-module, a derivation from $G$ to $M$ is a map $f:G\to M$ satisfying 
+\begin{itemize}  
+\item[(3)] $f(gh)=f(g).h+f(g)$ for all $g\in G$.
+\end{itemize}
+Again we denote by $Der(G,M)$ the set of all derivations from $G$ to $M$, which is still an abelian group. 
+Recall that $Der(G,M)$ appeared in class in the course of the explicit description of the first cohomology,
+namely $$H^1(G,M)= Der(G,M)/IDer(G,M)$$ where $IDer(G,M)$ is the subgroup of inner derivations (maps of the form $g\mapsto m-m.g$
+\skv
+Now the actual problem begins.
+\begin{itemize}
+\item[(a)] Let $A$ be an associative ring with $1$ and $M$ an $A$-bimodule. Prove that for every $m\in M$
+the map from $A$ to $M$ given by $a\mapsto a.m-m.a$ is a derivation. Derivations of this form are called inner.
+\item[(b)] Let $G$ be a group and let $\eps:\dbZ[G]\to \dbZ$ be the unique homomorphism of abelian groups such that
+$\eps(g)=1$ for all $g\in G$. Prove that $\eps$ is a ring homomorphism and its kernel is the augmentation ideal $\omega_G$ of $\dbZ[G]$ (by definition from class $\omega_G$ is the ideal generated by all elements of the form $g-1$, $g\in G$).
+\item[(c)] Let $G$ be a group and $M$ a right $G$-module (and hence also a right $\dbZ[G]$-module). Prove that
+$M$ is actually a $\dbZ[G]$-bimodule where the left action is given by $r.m=\eps(r)m$ for all $r\in \dbZ[G]$ 
+and $m\in M$. Thus we can consider the spaces of derivations $Der(\dbZ[G],M)$ and $Der(G,M)$.
+Prove that the restriction map $R:Der(\dbZ[G],M)\to Der(G,M)$ is an isomorphism of
+abelian groups and that a derivation $D\in Der(\dbZ[G],M)$ is inner $\iff$ $R(D)$ is inner.
+\item[(d)] Again let $G$ be a group and $\omega_G$ the augmentation ideal. Prove that if $X$ generates $G$ as a group, then the
+set $\{x-1: x\in X\}$ generates $\omega_G$ as a right $G$-module (equivalently, $\dbZ[G]$-module).
+\item[(e)] Now assume that $G$ is a free group and $X$ is a free generating set for $G$. Then one can show (this is not part of the problem) that
+$\omega_G$ is a free right $\dbZ[G]$-module, freely generated by $\{x-1: x\in X\}$, that is, for any $f\in \omega_G$ there
+exist unique elements $\{D_x(f)\}_{x\in X}$ such that $$f=\sum\limits_{x\in X} (x-1)D_x(f)$$ (if $X$ is infinite, we implicitly require that only finitely many $D_x(f)$ are nonzero). Prove that for any $x\in X$ the map $\frac{\partial}{\partial x}: G\to \dbZ[G]$
+given by $\frac{\partial }{\partial x}(g)=D_x(g-1)$ is a derivation. It is called the (right) {Fox derivative} with respect to $x$.
+\end{itemize}
+\skv
+
+{\bf 3.} Recall that in Lecture~16 we proved the following theorem. 
+
+\begin{Theorem} 
+\label{thm:relator}
+Let $G$ be a finitely presented pro-$p$ group, and denote its minimal number of generators by $d(G)$ and its minimal number of relators by $r(G)$. Suppose that $G$ has a pro-$p$ presentation with $n$ generators and $m$ relators for some $n$ and $m$. Then $G$ also has a pro-$p$ presentation with $d(G)$ generators and $m-(n-d(G))$ relators.
+\end{Theorem}
+Prove the following lemma which was used in the proof of Theorem~\ref{thm:relator}.
+\begin{Lemma}
+\label{lem:relator}
+Let $\la X|R\ra$ be a pro-$p$ presentation of a pro-$p$ group $G$ where $X$ and $R$ are both finite (recall that this means that $G\cong F/N$ where $F=F_{\widehat p}(X)$ is the free pro-$p$ group on $X$ and $N=\lla R\rra$
+is the closed normal subgroup of $F$ generated by $R$). Suppose that $|X|>d(G)$. Then
+\begin{itemize}
+\item[(a)] At least one defining relator $r\in R$ lies outside of the Frattini subgroup $\Phi(F)$;
+\item[(b)] For any $r\in R\setminus \Phi(F)$ there exists a (topological) generating set $X'$ of $X$
+such that $r\in X'$ and $|X'|=|X|$ (so $X'$ is of minimal possible size). {\bf Hint:} How can you construct a minimal-size generating set for $F$ using $\Phi(F)$?  
+\end{itemize}
+\end{Lemma}
+\skv
+
+{\bf 4.} Let $G$ be a finitely presented pro-$p$ group, $d=d(G)$ and $r=r(G)$. Thus, replacing $G$
+by an isomorphic group, we can assume that $G=F/N$ where $F$ is a free pro-$p$ group of rank $d$
+and $N$ is (topologically) generated by $r$ elements as a normal subgroup of $F$. 
+In class we proved that any non-split TCE (topological central extension) of $G=F/N$ by $\dbF_p$ is
+equivalent to an extension of the form 
+$$\mathcal E_{K,\iota}=(1\to \dbF_p\str{\iota}{\lra} F/K\str{\pi}{\lra}F/N\to 1)$$
+where 
+\begin{itemize}
+\item[(i)] $K$ is a closed normal subgroup of $F$ such that $K\subseteq N$, $N/K$ is a central
+subgroup of order $p$ in $F/K$,  $\pi:F/K\to F/N$ is the natural projection and 
+\item[(ii)] $\iota:\dbF_p\to N/K$ is any isomorphism. 
+\end{itemize}
+Prove that if $\mathcal E_{K,\iota}$ is equivalent to $\mathcal E_{K',\iota'}$, then $K'=K$ and $\iota'=\iota$
+(this was a key step in proving that the number of equivalence classes of TCE's of $G$ by $\dbF_p$
+is equal to $p^{r(G)}$). 
+\skv
+{\bf Hint:} Suppose that $\mathcal E_{K,\iota}$ and $\mathcal E_{K',\iota'}$ are equivalent, and let
+$\phi:F/K\to F/K'$ be an isomorphism establishing the equivalence. First show that
+there exists a (continuous) homomorphism $\widetilde \phi: F\to F$ such that  
+$$\widetilde \phi(x)\equiv x\mod N\mbox{ for all }x\in F$$ and $\widetilde \phi$ induced $\phi$, that
+is, $\pi_{K'}\circ\widetilde \phi=\phi\circ \pi_K$ where $\pi_K:F\to F/K$ and $\pi_{K'}:F\to F/K'$
+are the natural projections. Then using the fact that $N\subseteq \Phi(F)=[F,F]F^p$ (why is this true?)
+show that $$\widetilde \phi(x)\equiv x\mod [F,N]N^p \mbox{ for all }x\in N.$$ Finally deduce that
+$K'=K$, $\phi$ is the identity map and $\iota'=\iota$ (in this order).
+\skv
+ 
+
+{\bf 5.} In Lecture~20 we will prove a generalization of Hilbert's Theorem~90 due to Noether which states
+that $H^1(\Gal(K/F),K^{\times})=0$ for any finite Galois extension $K/F$ (as we already proved in class,
+once we know this for finite Galois extensions, we get the same result for arbitrary Galois extensions).
+
+Assume now that $K/F$ is cyclic, that is, $\Gal(K/F)$ is cyclic. Prove that in this case
+the above theorem is equivalent to the classical version of Hilbert's Theorem~90 as usually stated in Algebra-II:
+any element $a\in K$ of norm $1$ can be written as $a=\frac{b}{\sigma(b)}$ for some $b$ where
+$b$ is a fixed (in advance) generator of $\Gal(K/F)$. 
+\end{document}
