@@ -1,0 +1,132 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#4. Due Saturday, February 17th, by 11:59pm on Canvas}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 4.2-4.8
+\skv
+\skv
+2. The main topics next week we will be decoding for linear codes (4.8) and Hamming codes(5.3.1, page 84). 
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\skv
+{\bf Note:} The order of problems below roughly follows the order in which material was covered in class. In each problem you are allowed to use the results of earlier problems from HW\#4 or any problem from HW\#1-3 or any theorem from the book (up to Ch 4) or from class, but state clearly what you are using.
+\skv
+
+{\bf 1.} (practice, no need to turn in). Recall that most linear codes have more than one generator matrix (GM)
+and more than one parity-check matrix (PCM). This problem gives a simple characterization of all GMs/PCMs for a given code in terms of a particular GM/PCM.
+
+So let $C$ be an $[n,k]$-linear code over a field $F$, and let $G$ be a GM for $C$.
+
+\begin{itemize}
+\item[(a)] Prove that if $G'$ is an arbitrary GM for $C$, there exists an invertible $k\times k$ matrix $P$ such that
+$G'=PG$.
+\item[(b)] Conversely, prove that for any invertible $k\times k$ matrix $P$, the matrix $G'=PG$ is a GM for $C$.
+\item[(c)] Prove that the analogues of (a) and (b) hold if we replace GMs by PCMs and $k$ by $n-k$.
+\end{itemize}
+{\bf Note:} see page 3 for a detailed hint.
+\skv
+
+{\bf 2.} Problem 4.18.
+\skv
+
+{\bf 3.} Problem 4.21.
+\skv
+
+{\bf 4.} Problem 4.40.
+\skv
+
+{\bf 5.}(a) Let $C$ be a $[10,5]$-linear code over some finite field $F$. Suppose that $C$ has a generator matrix $G$ in standard form, so that
+$G=(I_5 | A)$ for some $A\in Mat_{5\times 5}(F)$. Prove that $C$ is {\bf self-dual} if and only if $A^{T}A=-I_5$ (equivalently $A$ is invertible and $A^{-1}=-A^T$). {\bf Hint:} Use Problem~1 and Theorem~7.1 from class
+relating a GM in standard form to a PCM. 
+\skv
+
+(b) Give an example of a self-dual {\bf binary} $[10,5,2]$-linear code. Make sure to explain why your code has distance $2$.
+\skv
+
+(c) Prove that there is no self-dual {\bf binary} $[10,5,3]$-linear code.
+\skv
+
+(d) {\bf Bonus:} Now prove that there is no self-dual {\bf binary} $[10,5,4]$-linear code. 
+\skv
+
+{\bf Hint for (c) and (d):} Use the fact that $A^T A=I_n$ for a square matrix $A$ 
+$\iff$ the columns of $A$ are orthogonal to each other and $v\cdot v=1$ for every column of $A$. (c) follows quite easily from this fact, (a) and something else you proved earlier. It takes more work prove (d).
+\skv
+{\bf 6.} Problem 4.37. 
+\skv
+
+{\bf 7.} Problem 4.32. {\bf Note:} Formally, this problem does not fit the setup of Section 4.7 in the book. What is meant here is that we use $C$ to encode each letter individually and then concatenate the results.
+\skv
+
+\newpage
+{\bf Hint for 1.} (a) Since $G$ is a GM for $C$ and rows of $G'$ are elements of $C$, each row of $G'$ can be expressed as a linear combination of rows of $G$. Show that the latter is equivalent to saying that $G'=PG$ for some $k\times k$
+matrix $P$. Then prove that $P$ is invertible by contradiction: assume that $P$ is not invertible, deduce that 
+${\rm rk}(G')<k$, and then explain why the latter is impossible.
+
+(b) Reversing the argument from (a), use the equality $G'=PG$ to show that $Rowspace(G')\subseteq Rowspace(G)$. Then using the fact that $P$ is invertible, deduce the opposite inclusion $Rowspace(G)\subseteq Rowspace(G')$ and thus
+$Rowspace(G')=Rowpsace(G)$. Now deduce that rows of $G'$ are linearly independent and conclude that $G'$ is a GM for $C$.
+\end{document}
+
+
+
