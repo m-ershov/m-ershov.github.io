@@ -1,0 +1,109 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#6. Due Saturday, March 16th, by 11:59pm on Canvas}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 5.1-5.4 and 5.7.
+\skv
+\skv
+2. Plan for next week: Gilbert-Varshamov bound (5.2). Polynomial rings and basic theory of finite fields (3.2 and parts of 3.3). If time left, we will start talking about cyclic codes (7.1).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.}  Recall that if $C$ is a code of length $n$ and $I$ is a proper subset of $\{1,\ldots,n\}$, the punctured code $C_I$ is a code of length
+$n-|I|$ obtained from $C$ by puncturing the $i^{\rm th}$ coordinate for every $i\in I$ (from every $c\in C$). Prove part (b) of Lemma~13.1 from class: $$d(C_I)\geq d(C)-|I|.$$
+\skv
+
+{\bf 2.} In parts (a) and (b) of this problem assume that $d\geq 2$.
+\begin{itemize}
+\item[(a)] Prove that $A_q(n,d)\leq A_q(n,d-1)$. In other words, fix an alphabet $A$ with $|A|=q$ and prove the following: if there exists
+an $(n,M,d)$-code $C$ over $A$, there also exists an $(n,M,d-1)$-code $C'$ over $A$. You should give a precise argument; do not try to say this is obvious or something like that.
+\item[(b)] Now prove that $A_q(n,d)\leq A_q(n-1,d-1)$. {\bf Hint:} use punctured codes.
+\item[(c)] Now use (b) and induction to give another proof of the Singleton bound: $A_q(n,d)\leq q^{n-d+1}$.
+\end{itemize}
+\skv
+
+{\bf 3.} Problem 5.7. 
+\skv
+
+{\bf 4.}
+\begin{itemize}
+\item[(a)] Show that the all-one vector $(1, 1,\ldots , 1)$ of length $24$ lies in the extended binary Golay code $G_{24}$.
+\item[(b)] Assume without proof that $G_{24}$ contains (exactly) $759$ words of weight $8$. Use this fact and (a) to prove that the distribution of weights in $G_{24}$ is given by Table~5.5 on page 109. 
+\end{itemize}
+\skv
+
+
+{\bf 5.} This problem deals with the Golay code $G_{23}$.
+\begin{itemize}
+\item[(a)] Use Problem~4(b) to prove that possible weights of elements of $G_{23}$ are $0,7,8,11,12,15,16$ and $23$. Make sure to prove that each of those numbers actually arises as the weight of some element of $G_{23}$.
+\item[(b)] Let $w\in \dbF_2^{23}$ with $wt(w)=4$. Let $c_{w}\in G_{23}$ be the result of applying NND decoding (with respect to $G_{23}$) to $w$.
+Use (a) and the fact that $G_{23}$ is perfect (as shown in class) to prove that $d(w,c_w)=3$ and $wt(c_w)=7$. 
+\end{itemize}
+\skv
+
+{\bf 6.} Problem~5.19. {\bf Note:} Simplex codes $S(r,q)$ are defined at the end of 5.3.2, page 88.
+\skv
+
+{\bf 7.} Use the result of Problem~5.19 to show that the simplex codes $S(r,q)$ attain the Griesmer bound.
+\skv
+\end{document}
