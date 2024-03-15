@@ -1,0 +1,127 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#7. Due Saturday, March 23rd, by 11:59pm on Canvas}\rm
+\vskip .1cm
+All reading assignments and references to exercises, definitions etc. are from our main book `Coding Theory: A First Course' by Ling and Xing 
+\vskip .1cm
+
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 5.2, 5.3, 5.5 and 5.6.
+\skv
+\skv
+2. Plan for next week: Finish polynomial rings and basic theory of finite fields (3.2 and parts of 3.3; see also online lecture 15 from Spring 2020). Cyclic codes (7.1 and start 7.2; see also online lectures 16 and 17 from Spring 2020).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Let $r\geq 2$ be an integer.
+\begin{itemize}
+\item[(a)] Assume that $d\geq 3$. Prove that there is no binary $[2^r,2^r-r,d]$-linear code.
+\item[(b)] Given an example of a  binary $[2^r,2^r-r-1,4]$-linear code.
+\end{itemize}
+\skv
+{\bf 2.} Problem~5.14. 
+\skv
+{\bf 3.} Prove the first part of the {\bf binary} Plotkin bound (part (i) of Theorem~5.5.3 in the case $n<2d$). {\bf Note:} In class we proved a slightly weaker bound, namely, $A_2(n,d)\leq \floor{\frac{2d}{2d-n}}$ instead of $A_2(n,d)\leq 2\floor{\frac{d}{2d-n}}$. You may look up the proof on wikipedia,
+
+\url{https://en.wikipedia.org/wiki/Plotkin_bound}
+
+but note that there is an unjustified statement in that proof.
+\skv
+
+{\bf 4.} Combining the sphere-packing bound with the first inequality
+of Corollary~5.2.7 (which is essentially a reformulation of the Gilbert-Varshamov bound), we get that for any prime power $q$ and any 
+integers $1\leq d\leq n$ we have
+$$q^{n-\ceil{\log_q(V_q^{n-1}(d-2)+1)}}\leq B_q(n,d)\leq A_q(n,d)
+\leq\frac{q^n}{V_q^n(\floor{\frac{d-1}{2}})}. \eqno (***)$$
+Verify that in the case $n=\frac{q^{r}-1}{q-1}$ and $d=3$ (these are the length and the distance of the Hamming code $Ham(r,q)$), the expressions on the left-hand and the right-hand side of (***) are equal. {\bf Note:} This a rare case when a lower bound and an upper bound (on the size of a code) obtained from very general considerations coincide with each other.
+\skv
+{\bf 5.} Use the Gilbert-Varshamov bound to show that there exists a
+$[8,3,4]$-linear binary code. Then use the algorithm from the proof of the Gilbert-Varshamov bound to explicitly construct an $[8,3,4]$-linear binary code.
+The point of this problem is to construct such a code using a specific algorithm;
+just defining a code in some other way and proving it is an $[8,3,4]$-linear code
+will not be an acceptable solution.
+\skv
+
+{\bf 6.} Problem~5.37 (see Problem~5.36 for the relevant definitions).
+\skv
+
+{\bf 7.} The Hadamard codes $\{{\rm Hdr}(k)\}_{k=0}^{\infty}$ are binary codes defined inductively by
+${\rm Hdr}(0)=\{0,1\}$ and $${\rm Hdr}(k)=\{ww, w\overline{w}: w\in {\rm Hdr}(k-1)\} \mbox{ for }k\geq 1$$ where $\overline{w}$ is the word obtained from $w$ by flipping  every symbol, and $ww$ and $w\overline{w}$ are concatenations.
+For instance, ${\rm Hdr}(1)=\{00,01,11,10\}$, 
+${\rm Hdr}(2)=\{0000,0011,0101,0110,1111,1100,1010, 1001\}$ (note that
+${\rm Hdr}(0)$ and ${\rm Hdr}(1)$ are full codes of length $1$ and $2$, respectively, but ${\rm Hdr}(k)$ is not full for $k\geq 2$)  
+\begin{itemize}
+\item[(a)] List all the elements of ${\rm Hdr}(k)$ for $k=3$ and $k=4$.
+
+\item[(b)] Prove that ${\rm Hdr}(k)$ is a $(2^{k},2^{k+1},2^{k-1})$-code for $k\geq 1$.
+
+{\bf Note:} The statements about the length and size of ${\rm Hdr}(k)$ follow easily from the definition, but you should still explain why they hold. For the statement about the distance it is convenient to prove the following stronger result by induction: $d({\rm Hdr}(k))=2^{k-1}$ AND ${\rm Hdr}(k)$ is closed under inversion, that is, ($w\in Hdr(k) \Rightarrow \overline{w}\in {\rm Hdr}(k)$).
+\end{itemize}
+\skv
+
+
+\end{document}
+
+
