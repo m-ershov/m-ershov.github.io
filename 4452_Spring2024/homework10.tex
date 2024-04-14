@@ -1,0 +1,103 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\eps{{\varepsilon}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Homework \#10, due Thu, April 25th by 11:59pm on Canvas}\rm
+\skv
+
+\bf\centerline{Reading and plan for the next week: }\rm
+\skv
+1. For this homework assignment read 7.5, 6.1 and 6.2 in Lindell's notes and online notes (Lectures 20-23 from this semester and Lectures 19-22
+from Spring 20 -- content is mostly the same, but there are some differences).
+\skv
+2. Plan for the next week. Asymptotically good codes and concatenated codes (lectures 23-25 from Spring 20). These topics are not in our main book. They are discussed in Lindell's notes (see 4.1, 4.2 and Chapter 7), although these sections contain considerably more material than what we will cover in class.
+
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Prove Lemma 22.2 from class (=Lemma~21.2 from Spring 20 notes). In the proof make sure to use the formal definition given in class. 
+{\bf Hint:} for the second part (dealing with burst error correction) it may be convenient to ``negate the definition of an
+$E$-error correcting code'', that is, to rewrite the definition in the form ``A code $C$ is NOT $E$-error correcting $\iff$ ...''
+\skv
+{\bf 2.} Prove the error detection part of Theorem~23.2 restated below. Let $C$ be an $[n,k,d]$-linear code over $\dbF_{p^r}$, and
+let $C_{\dbF_p}$ be the code over $\dbF_p$ obtained from $C$ by restriction of scalars (see Lecture~23 for the definition).
+\begin{itemize}
+\item[(a)] Prove that $C_{\dbF_p}$ is $[nr,kr,d']$-linear for some $d'\geq d$.
+\item[(b)] Assume that $C$ is $m$-burst error detecting for some $m$. Prove that $C_{\dbF_p}$ is $m(r-1)+1$-burst error detecting.
+You should also think how you would prove the analogous statement for burst error correction, but it is optional to write down the latter proof.
+\end{itemize}
+\skv
+{\bf 3.} Let $n\geq 2$ be an integer and let $C$ be a BINARY MDS code of length $n$. Prove that $C$ is a trivial MDS code, that is,
+$C$ is equal to the full code $\dbF_2^n$, $PCC_n$ or the simple repetition code $Rep(1,n)$.
+
+{\bf Hint:} Let $k=\dim(C)$. Assuming that $C\neq F^n$, we get that $k<n$, so that PCM of $C$ is non-empty. After replacing 
+$C$ by an equivalent code, we can assume that $C$ has a PCM $H$ in the standard form, so that the last $n-k$ columns of $H$
+form the identity matrix. Now use a suitable theorem to show that there are very few choices for the remaining columns of $H$
+and eventually deduce that $k=n-1$ or $k=1$, and in each case $H$ is unique, with the corresponding codes being $PCC_n$ and $Rep(1,n)$.
+Note that this would only prove that $C$ is equivalent to $PCC_n$ or $Rep(1,n)$. You still have to explain why $C$ is EQUAL to one of those codes.
+\skv
+
+{\bf 4.} Let $C$ be a narrow-sense RS (Reed-Solomon) code over $\dbF_7$ (as defined near the end of Lecture~21) of dimension $k=4$ (such a code is unique up to the choice of primitive element $\alpha$). Write down explicitly a GM for $C$ (for your choice of $\alpha$), a PCM for $C$ and the generator polynomial for $C$ (all matrix entries and coefficients of the polynomial in your answer should be explicit elements of $\dbF_7$).
+\skv
+
+{\bf 5.} Give a new proof of the fact that GRS codes are MDS using polynomial representation of GRS codes (see the section
+``Encoding and explicit description of elements of $GRS_k(\vec{\alpha}, \vec{v})$'' in Lecture~21). You only need to use the description obtained in this section, not the original definition. {\bf Hint:} use the fact that for any field $F$, a nonzero polynomial of degree $m$ over $F$ cannot have more than $m$ roots.
+\skv
+\end{document}
