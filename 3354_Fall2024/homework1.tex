@@ -1,0 +1,162 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#1. Due on Friday, September 6th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures: 1, the beginning of 2 (Example 2.1) and the beginning of 3 (subsection 3.1). From Hungerford:
+the beginning of Appendix B (pp. 509-512) and the beginning of Appendix C.
+
+2. For next week's classes: Online lectures 3 and 4. I am planning to skip the content of Lecture 2 for now, but it would not hurt to go over it as well. From Hungerford: Appendix C, 1.1 and 1.2.
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\bf{Problem 1: }\rm Let $R$ be a commutative ring with $1$.
+Prove the following equalities using only the ring axioms and 
+results proved  in class or online lectures.
+\begin{itemize}
+\item[(a)] $-(xy)=(-x)y$ for all $x,y\in R$ 
+\item[(b)] $(-1)(-1)=1$ 
+\item[(c)] $(-x)(-y)=xy$ for all $x,y\in R$
+\item[(d)] $x(y-z)=xy-xz$ for all $x,y,z\in R$ 
+\end{itemize}
+\bf{Hint: }\rm Additive cancellation law (proved in lecture 1) can be used to solve
+many questions of this type as follows. Suppose that we want to prove inequality of
+the from $a=b$. By additive cancellation law, if we prove that $a+c=b+c$ for some $c\in R$,
+we can conclude that $a=b$. Note that the implication would work for any $c$, so $c$
+is for us to choose. The idea is to choose $c$ in such a way that both expressions $a+c$
+and $b+c$ can be simplified (using ring axioms) so that after simplification it becomes
+easy to prove that $a+c=b+c$.
+\skv
+Recall that by definition $x-y=x+(-y)$.
+\skv
+\bf{Problem 2: }\rm Let $F$ be a field, and suppose that
+$xy=0$ for some $x,y\in F$. Prove that $x=0$ or $y=0$.
+\bf{Hint: }\rm Consider two cases: $x=0$ (in this case there is nothing
+to prove) and $x\neq 0$. Recall that in a field every nonzero
+element has multiplicative inverse.
+\skv
+\skv
+\bf{Problem 3: }\rm Let $X$ be any set, and let $R=\mathcal P(X)$ (the power set of $X$), that is,
+$R$ is the of all subsets of $X$. As in online lecture 2, define addition $+$ and multiplication $\cdot$ on $R$ by setting $A\cdot B=A\cap B$ (intersection) 
+and $A+B=(A\cup B)\setminus (A\cap B)=(A\setminus B)\cup (B\setminus A)$ (symmetric difference =`exclusive or') 
+for arbitrary $A,B\in R$ (that is, for arbitrary  $A,B\subseteq X$).
+Prove that $R$ with these operations is a commutative ring with $1$. 
+
+{\bf Note:} Multiplication axioms (M0)-(M3) are checked in online lecture 3, so you only need
+to check the addition axioms (A0)-(A4) and distributivity. You may want to read the beginning of Appendix~B in Hungerford before
+doing this problem.
+
+
+{\bf Hint:} To check associativity of addition ($(A+B)+C=A+(B+C)$), take an arbitrary element $x\in X$,
+and consider $8$ cases: case 1 ($x\in A$, $x\in B$, $x\in C$), case 2 ($x\in A$, $x\in B$, $x\not \in C$)
+etc. In each case show that $x$ belongs to both $(A+B)+C$ and $A+(B+C)$ or does not belong to either of
+those sets. 
+\skv
+\skv
+\skv
+\bf{Problem 4: }\rm Prove by induction that the following equalities hold for any $n\in\dbN$:
+\begin{itemize}
+\item[(a)] $1^2+2^2+\ldots+ n^2=\frac{n(n+1)(2n+1)}{6}$ 
+\item[(b)] $a+ar+ar^2+\ldots+ar^{n-1}=a\frac{1-r^n}{1-r}$ where $a,r\in\dbR$ and $r\neq 1$
+\end{itemize}
+
+\skv
+\bf{Problem 5: }\rm Consider the following ``proof'' by induction:
+For each $n\in\dbN$ let $P(n)$ be the statement
+$$\sum_{i=0}^n 2^i= 2^{n+1}. \eqno (***)$$
+{\bf Claim: } $P(n)$ is true for all $n\in\dbN$.
+\skv
+\skv{\it Proof: } ``$P(n-1)\Rightarrow P(n)$.'' Assume that $P(n-1)$ is true
+for some $n\in\dbN$. Then $\summ_{i=0}^{n-1} 2^i = 2^n.$ Adding $2^n$
+to both sides, we get $\summ_{i=0}^{n-1} 2^i + 2^n =2^n+2^n,$
+whence $\summ_{i=0}^{n} 2^i=2^{n+1}$, which is precisely $P(n)$.
+Thus, $P(n)$ is true.
+\skv
+By the principle of mathematical induction, $P(n)$ is true for all $n$. $\square$
+\begin{itemize}
+\item[(a)] Show that the statement $P(n)$ is false (it is actually false for any $n$).
+\item[(b)] Explain why the above ``proof'' does not contradict the principle of
+mathematical induction, that is, find a mistake in the above ``proof''
+(Hint: the mistake is in the general logic).
+\end{itemize}
+
+\skv
+\bf{Problem 6: }\rm In online lecture~3 it is proved that for every $n\in\dbN$
+there exist $a_n,b_n\in\dbZ$ such that $(1+\sqrt{2})^n=a_n+b_n\sqrt{2}$. Moreover,
+it is shown that such $a_n$ and $b_n$ satisfy the following recursive relations:
+$a_1=b_1=1$ and $a_{n+1}=a_n+2b_n$, $b_{n+1}=a_n+b_n$ for all $n\in\dbN$.
+\begin{itemize}
+\item[(a)] Use the above recursive formulas and mathematical induction to prove that
+$a_n^2-2b_n^2=(-1)^n$ for all $n\in\dbN$.
+\item[(b)] Prove that for all $n\in\dbN$ there exist $c_n,d_n\in\dbZ$ such that
+$(1+\sqrt{3})^n=c_n+d_n\sqrt{3}$.
+\item[(c)] (bonus) Find a simple formula relating $c_n$ and $d_n$ (similar to the one in (a))
+and prove it. 
+\end{itemize}
+\end{document}
