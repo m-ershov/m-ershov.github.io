@@ -1,0 +1,145 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#2. Due on Thursday, September 12th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures 2 and 3. From Hungerford: Appendix C, 1.1 and 1.2.
+
+2. For next week's classes: Online lectures 4, 5 and beginning of 6. From Hungerford: 1.2, 1.3 and the beginning of 2.1.
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\skv
+\bf{Problem 1: }\rm
+Given $n,k\in\mathbb Z$ with
+$0\leq k\leq n$, define the binomial coefficient
+$n\choose k$ by $${n\choose k}=\frac{n!}{k!(n-k)!}$$
+(recall that $0!=1$).
+\begin{itemize}
+\item[(a)] Prove that ${n\choose k}={{n-1}\choose k} + {{n-1}\choose {k-1}}$
+for any $1\leq k< n$ (direct computation).
+
+\item[(b)] Now prove the binomial theorem: for every $a,b\in\mathbb R$
+and $n\in\mathbb N$,
+$$(a+b)^n=\sum_{k=0}^n {n\choose k} a^{n-k} b^{k}=
+{n\choose 0} a^n +{n\choose 1} a^{n-1}b+\ldots+{n\choose {n-1}} a b^{n-1}+{n\choose n} b^n.$$
+\bf{Hint: }\rm Use induction on $n$. For the induction step write\newline
+$(a+b)^{n+1}=(a+b)^{n}\cdot (a+b)$ and use part (a).
+\end{itemize}
+\skv
+{\bf Note:} In Problems 2 and 3 below we assume that $R$ is an ordered ring (see definition in online Lecture~2) and $R_{>0}$ is its set of positive elements. Recall that if $R$ is an ordered ring, given $x,y\in R$, we write $x>y$ if $x-y\in R_{>0}$. Also, by definition $x<y$ is the same as $y>x$, $x\geq y$ means
+$x>y$ or $x=y$ and $x\leq y$ means $x<y$ or $x=y$. In online Lecture~2 (Example 2.4) it is proved that $>$ is a transitive relation:
+if $x>y$ and $y>z$, then $x>z$.
+
+\skv
+{\bf Problem 2:} Let $R$ be an ordered ring. Prove the following basic properties of the relation $>$:
+\begin{itemize}
+\item[(a)] ($<$ is anti-symmetric): there are no elements $x,y\in R$ such that $x<y$ and $y<x$.
+\item[(b)] If $x>y$, then $x+z>y+z$ for all $z\in R$, that is, one can add a fixed element to both sides of an inequality. Recall
+that we argued in Lecture~1 that the corresponding property for equalites holds simply because $+$ is a binary operation (and does not
+use any axioms of addition). Explain why the situation is different for inequalities.
+\item[(c)] If $x>y$ and $z>0$, then $xz>yz$.
+\end{itemize}
+
+\skv
+{\bf Problem 3:}
+\begin{itemize}
+\item[(a)] Let $R$ be an ordered ring. Prove that $x^2>0$ for every nonzero $x\in R$.
+{\bf Hint:} Consider two cases.
+\item[(b)] Use (a) to prove that $\dbC$ (complex numbers) is not an ordered ring (no matter how we try
+to define the set of positive elements).
+\end{itemize}
+\skv
+{\bf Problem 4:} 
+\begin{itemize}
+\item[(a)] 
+Use the induction axiom (called the Induction Property on page 4 of online Lecture~3) to
+prove (formally) that $n\geq 1$ for all $n\in\dbZ_{>0}$
+\item[(b)] Let $x,y\in\dbZ$ with $x>y$. Use (a) to prove that $x\geq y+1$.
+\end{itemize}
+\skv
+{\bf Problem 5 (bonus)}: Deduce the well-ordering principle (axiom (Z3) on page 3 of online Lecture~3) from the induction axiom.
+
+{\bf Hint:} Let $Q(n)$ be some property of subsets of $\dbZ_{>0}$, and let $P(n)$ be the statement
+``Every subset of $\dbZ_{>0}$ satisfying $Q(n)$ has the smallest element.'' You are free to define
+$Q(n)$ in any way you like. Your goal is to define $Q(n)$ in such a way that
+\begin{itemize}
+\item[(i)] Every non-empty subset of $\dbZ_{>0}$ satisfies $Q(n)$ for some $n$.
+\item[(ii)] You can prove $P(1)$ directly.
+\item[(iii)] You can prove the implication $P(n)\Rightarrow P(n+1)$ for all $n$.
+\end{itemize}
+
+\skv
+\bf{Problem 6: }\rm Let $a,b,c\in\dbZ$ such that $c\mid a$ and $c\mid b$. Prove {\it directly
+from definition of divisibility} that $c\mid (ma+nb)$ for any $m,n\in\dbZ$ (do not refer
+to any divisibility properties proved in class).
+\skv
+\bf{Problem 7: }\rm Let $a,b,c\in\dbZ$ such that $c\mid ab$. Is it always true that $c\mid a$ or $c\mid b$?
+If the statement is true for all possible values of $a,b,c$, prove it; otherwise give a counterexample.
+\end{document}
