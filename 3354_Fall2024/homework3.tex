@@ -1,0 +1,142 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#3. Due on Thursday, September 19th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures 4 and 5. From Hungerford: 1.2 and 1.3
+
+2. For next week's classes: Online lectures 6 and 8. From Hungerford: 2.1, 2.2 and the beginning of 2.3. Note: I am planning to skip
+the majority of the content of the online lecture 7, including the Chinese Remainder Theorem, but I still recommend reading this material before you start working on the following homework (HW\#4).
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\skv
+\bf{Problem 1: }\rm
+\begin{itemize}
+\item[(a)] Prove that $9\mid (10^k-1)$ for all $k\in\dbN$.
+\item[(b)] Prove that a positive integer is divisible by $9$ if and only if the sum of its digits is divisible by $9$.
+{\bf Hint:} Given an integer $n$, let $a_k a_{k-1}\ldots a_0$ be its decimal expansion (so that $a_k,\ldots, a_0$
+are the digits of $n$). Start with the formula for $n$ in terms of $a_k,\ldots, a_0$ and then use (a) and basic divisibility
+properties to prove (b).
+\end{itemize}
+\skv
+\bf{Problem 2: }\rm Let $a=382$ and $b=26$. Use the Euclidean algorithm to compute $gcd(a,b)$
+and find $u,v\in \dbZ$ such that $au+bv=gcd(a,b)$.
+\skv
+\bf{Problem 3: }\rm Prove the key lemma, justifying the Euclidean algorithm:
+
+\bf{Lemma: }\rm Let $a,b\in\dbZ$ with $b>0$. Divide $a$ by $b$ with remainder: $a=bq+r$.
+Then $\gcd(a,b)=\gcd(b,r)$.
+
+\bf{Hint: }\rm Show that the pairs $\{a,b\}$ and $\{b,r\}$ have the same set of common divisors,
+that is, 
+\begin{itemize}
+\item[(i)] if $c\mid a$ and $c\mid b$, then $c\mid r$ (and so $c$ divides both $b$ and $r$)
+\item[(ii)] if $c\mid b$ and $c\mid r$, then $c\mid a$ (and so $c$ divides both $a$ and $b$).
+\end{itemize}
+\bf{Problem 4: }\rm Let $a,b\in\dbZ$, not both $0$, let $d=\gcd(a,b)$,
+and let $$S=\{x\in \dbZ: x=am+bn\mbox{ for some }m,n\in\dbZ\}.$$ By Bezout identity (part (a) of GCD Theorem 
+as stated in online notes), $d$ is the smallest positive element of $S$, and a natural problem is to describe
+all elements of $S$.
+\begin{itemize}
+\item[(a)] Prove that if $k$ is any element of $S$, then $d\mid k$.
+\item[(b)] Prove that if $k\in\dbZ$ and $d\mid k$, then $k\in S$. 
+\end{itemize}
+Note that by combining parts of (a) and (b), we deduce that 
+$$S=d\,\dbZ=\{x\in\dbZ: x=dm \mbox { for some }m\in\dbZ\}.$$
+
+\skv
+\bf{Problem 5: }\rm 
+Let $a,b\in\dbZ$, and let $p_1,\ldots, p_k$ be the set of all primes
+which divide $a$ or $b$ (or both). By UFT (unique factorization theorem), we can write
+$a=p_1^{\alpha_1}p_2^{\alpha_2}\ldots p_k^{\alpha_k}$ and $b=p_1^{\beta_1}p_2^{\beta_2}\ldots p_k^{\beta_k}$
+where each $\alpha_i$ and each $\beta_i$ is a non-negative integer (note: some exponents may be
+equal to zero since some of the above primes may divide only one of the numbers $a$ and $b$).
+For instance, if $a=12$ and $b=20$, our set of primes is $\{2,3,5\}$, and we write
+$12=2^1\cdot 3^2\cdot 5^0$ and $20=2^2\cdot 3^0\cdot 5^1$.
+\begin{itemize}
+\item[(a)] Prove that $a\mid b$ $\iff$ $\alpha_i\leq \beta_i$ for each $i$. {\bf Hint:} The backwards direction (``$\Leftarrow$'')
+can be proved directly from the definition of divisibility. One way to prove the forward direction (``$\Rightarrow$'') is to
+imitate the proof of the unique factorization theorem, as presented in class.
+ 
+\item[(b)] Give a formula for $gcd(a,b)$ in terms of $p_i$'s, $\alpha_i$'s and $\beta_i$'s
+and justify it using the definition of GCD.
+\item[(c)] Give a formula for the least common multiple of $a$ and $b$ in terms of $p_i$'s, $\alpha_i$'s and $\beta_i$'s. No proof is necessary.
+\end{itemize}
+\skv
+\bf{Problem 6: }\rm Let $a,b,c\in\dbZ$ be such that $a\mid c$, $\,\,b\mid c$ and $gcd(a,b)=1$.
+Prove that $ab\mid c$.
+\bf{Note: }\rm There are (at least) two solutions: the first one uses prime factorization, 
+and the second one uses the Coprime lemma (Lemma 5.1 in online notes; in class we proved it at the end of Lecture~4).  
+\skv
+\bf{Bonus Problem: }\rm Prove that there are infinitely many primes of the form $4k+3$ with $k\in\dbN$.
+{\bf Hint:} This can be done using a suitable variation of Euclid's proof that there are infinitely many primes.
+Note that the analogous statement about primes of the form $4k+1$ is also true, but cannot be proved using the same method.
+It may be convenient to use congruences in your argument, although this is by no means necessary.
+\end{document}
