@@ -1,0 +1,138 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#4. Due on Thursday, September 26th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures 6, 8 and parts of 7, 9 (note: there are some relevant examples we have not discussed in class). 
+From Hungerford: 2.1 and 2.2.
+
+2. For next week's classes: Online lecture 9. From Hungerford: 2.3 and parts of 4.1-4.3, 5.1. 
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\skv
+\bf{Problem 1: }\rm Suppose that $x\equiv y\mod n$. Prove that $x^m\equiv y^m\mod n$ for all $m\in\dbN$
+using induction on $m$.
+\skv
+\bf{Problem 2: }\rm Find all solutions for each of the following congruences:
+\begin{itemize}
+\item[(a)] $8x\equiv 7\mod 203$
+\item[(b)] $2x\equiv 4\mod 6$
+\item[(c)] $2x\equiv 1\mod 6$
+\end{itemize}
+\bf{Warning: }\rm Theorem 6.5 from online notes is not applicable to (b) and (c).
+\skv
+\bf{Problem 3: }\rm $\empty$
+\begin{itemize}
+\item[(a)] Prove that $x^2\equiv 0,1$ or $4\mod 5$ for any $x\in \dbZ$.
+\item[(b)] Use (a) to show that the equation $3a^2-5b^2=1$ has no integer solutions.
+\end{itemize}
+\skv
+{\bf Note:} There is a similar example in the online notes (see the end of Lecture~6 and the beginning of Lecture~7).
+\skv
+\bf{Problem 4: }\rm Compute $[38]^{-1}$ in $\dbZ_{83}$. {\bf Hint:} The proof of Theorem~9.1 from online notes (also proved at the end of class on Wed, Sep 18) shows how to reduce this problem to another computational problem that was explicitly discussed in class.
+\skv
+
+The following definitions will be used in some of the remaining problems:
+
+Let $R$ be a commutative ring with $1$. An element $a\in R$ is called
+\begin{itemize}
+\item[(a)] {\it invertible} if there exists $b\in R$ such that $ab=1$;
+\item[(b)] {\it zero divisor} if $a\neq 0$ and there exists NONZERO $b\in R$ such that
+$ab=0$; 
+\item[(c)] {\it idempotent} if $a^2=a$.
+\end{itemize}
+\skv
+
+\bf{Problem 5: }\rm Let $R$ be a commutative ring with $1$. 
+Prove that no element of $R$ can be both invertible 
+and a zero divisor. {\bf Hint:} This is very similar to Problem~2 in Homework\#1.
+\skv
+
+\bf{Problem 6: }\rm Do each of the following for $n=8$ AND $n=10$. 
+\begin{itemize}
+\item[(a)] Compute the multiplication table in $\dbZ_n$.
+\item[(b)] Use the multiplication table to find all invertible elements of $\dbZ_n$. 
+\item[(c)] Use the multiplication table to find all zero divisors of $\dbZ_n$. How are your answers in (b) and (c) related to each other?
+\item[(e)] Use the multiplication table to find all idempotents of $\dbZ_n$.
+\end{itemize}
+\skv
+\skv
+\bf{Problem 7: }\rm Let $p$ be a prime. Prove that $\dbZ_p$ has no idempotents apart from $[0]$ and $[1]$.
+\skv
+\bf{Bonus Problem: }\rm Let $n\geq 2$ be an integer. Prove that the following are equivalent:
+\begin{itemize}
+\item[(a)] $n=p_1\ldots p_k$ where $p_1,\ldots, p_k$ are distinct primes (possibly $k=1$), that is, 
+in the prime factorization of $n$ all the exponents are equal to $1$.
+\item[(b)] if $[x]\in\dbZ_n$ is any nonzero element, then $[x]^2\neq [0]$.
+\end{itemize}
+{\bf Hint:} It is probably easiest to prove the implication (b)``$\Rightarrow$''(a) by contrapositive. Assume that $n$ is not a product of distinct primes. Then one can write $n=p^2m$ for some prime $p$ and $m\in\dbN$.
+Find $x$ (which can be explicitly expressed in terms of $p$ and $m$) such that $[x]\neq [0]$ in $\dbZ_n$, but
+$[x]^2=[0]$.
+\end{document}
