@@ -1,0 +1,149 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#5. Due on Thursday, October 3rd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lecture 8 and 9. 
+From Hungerford: 2.3, 4.1 and 4.2.
+
+2. For next week's classes: Online lecture 10. From Hungerford: 4.2 and parts of 4.3, 5.1 and 7.1. 
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\bf{Preface to problem 1: }\rm
+Recall from the previous homework that for 
+$n,k\in\mathbb Z$ with $0\leq k\leq n$, the binomial coefficient
+$n\choose k$ is defined by ${n\choose k}=\frac{n!}{k!(n-k)!}$
+(where $0!=1$). Also recall the binomial theorem:
+for every $a,b\in\mathbb R$
+and $n\in\mathbb N$,
+$$(a+b)^n=\sum_{k=0}^n {n\choose k} a^{n-k} b^{k}=
+{n\choose 0} a^n +{n\choose 1} a^{n-1}b+\ldots+{n\choose {n-1}} a b^{n-1}+{n\choose n} b^n.$$
+Note that $n\choose k$ is always an integer -- this is not obvious from definition,
+but it is (almost) obvious from the binomial theorem.
+\skv
+\bf{Problem 1: }\rm Suppose that $p$ is prime and $0<k<p$. Prove that
+$p\mid {p\choose k}$. \bf{Hint: }\rm First prove the following lemma:
+Suppose that $n,m\in\mathbb Z$, $p$ is prime, $m\mid n$, $p\mid n$ and
+$p\nmid m$. Then $p\mid \frac{n}{m}$ (this follows from Euclid's lemma). 
+\skv
+\bf{Problem 2: }\rm In both parts of this problem $p$ is a prime number.
+\begin{itemize}
+\item[(a)] Prove the little Fermat's theorem: $n^p\equiv n\mod p$ for any $n\in\mathbb N$.
+\item[(b)] Reformulate (a) as an equality in $\mathbb Z_p$. Your reformulation should be of the form
+``for all $x\in\mathbb Z_p$ we have $f(x)=0$ where $f:\mathbb Z_p\to\mathbb Z_p$ is a certain explicit function''
+ \end{itemize}
+\bf{Hint for (a): }\rm Fix $p$ and use induction on $n$. For the  induction
+step use the result of Problem~1.
+\skv
+\bf{Problem 3: }\rm Let $X=\mathbb R^2$ (the set of ordered pairs of real numbers) and define a relation $\sim$ on $X$ by
+$$(x_1,y_1)\sim (x_2,y_2)\iff x_1+y_1=x_2+y_2.$$
+\begin{itemize}
+\item[(a)] Prove that $\sim$ is an equivalence relation. 
+\item[(b)] Describe equivalence classes with respect to $\sim$. {\bf Hint:} there is a very easy geometric description if you think of elements of $X$ as points on the Euclidean plane.
+\end{itemize}
+ \skv
+\bf{Problem 4: }\rm Define a relation $\sim$ on $\dbZ$ by
+$$x\sim y\iff x^3\equiv y^3\mod 4.$$
+\begin{itemize}
+\item[(a)] Prove that $\sim$ is an equivalence relation. 
+\item[(b)] Find the number of equivalence classes with respect to $\sim$ and describe (explicitly) each class.
+\end{itemize}
+{\bf Hint for (b):} The equivalence classes with respect to $\sim$ are closely related to congruence classes mod $4$. Once you figure out the relationship (and why it holds), it is fairly easy to finish the problem.
+\skv
+\bf{Problem 5: }\rm Let $R$ be a commutative ring with $1$ and $R[x]$ the ring of polynomials with coefficients in $R$. Prove the following properties of the degree function:
+\begin{itemize}
+\item[(a)] $\deg(f+g)\leq \max\{\deg(f),\deg(g)\}$ for all $f,g\in R[x]$
+\item[(b)] $\deg(f+g) = \max\{\deg(f),\deg(g)\}$ for all $f,g\in R[x]$ such that $\deg(f)\neq \deg(g)$
+\item[(c)] $\deg(fg)\leq \deg(f)+\deg(g)$
+\item[(d)] If $R$ has no zero divisors (such $R$ is called a domain), then $\deg(fg)=\deg(f)+\deg(g)$
+\item[(e)] Find a specific $n$ and $f\in \dbZ_n[x]$ such that $f$ is non-constant (that is, $\deg(f)>0$), but $f$ is invertible.
+{\bf Hint:} Part (d) (and what we proved earlier) yields certain restrictions on the possible values of $n$.
+ \end{itemize}
+\skv
+\bf{Problem 6: }\rm Let $f(x)=x^4-1$ and $g(x)=x^2+3x+1$, and consider $f$ and $g$ either as polynomials in $\mathbb Z_5[x]$ or 
+$\mathbb Z_7[x]$ (in both cases the coefficients of $f$ and $g$ should be interpreted as congruence classes mod $5$ and mod $7$,
+respectively). In both cases do the following:
+\begin{itemize}
+\item[(a)] divide $f$ by $g$ with remainder
+\item[(b)] Compute $gcd(f,g)$
+\item[(c)] Find explicit polynomials $u(x)$ and $v(x)$ such that $gcd(f(x),g(x))=f(x)u(x)+g(x)v(x)$. 
+ \end{itemize}
+{\bf Note:} We will talk about gcd in class on Monday, Sep 30 (see also 4.2 in Hungerford), but the following information should be sufficient
+to solve this problem. If $F$ is a field and $f(x),g(x)\in F[x]$, not both $0$, $gcd(f(x),g(x))$ is defined to be the MONIC polynomial
+of largest possible degree which divides both $f(x)$ and $g(x)$ (a polynomial is called monic if its leading coefficient is $1$).
+We will prove that $gcd(f(x),g(x))$ always exists and is unique.
+
+Similarly to $\mathbb Z$, one can prove that $gcd(f(x),g(x))$ is the unique monic polynomial of smallest possible degree representable
+as $f(x)u(x)+g(x)v(x)$ for some $u(x),v(x)\in F[x]$. Moreover, one can find the gcd itself as well as $u$ and $v$ from the above representation
+using the Euclidean algorithm essentially in the same way as for $\mathbb Z$. The only real difference is that while in the case of $\mathbb Z$,
+gcd is the last nonzero remainder in the first part of the Euclidean algorithm, in the polynomial case the last nonzero remainder is a constant multiple of the gcd (to get the actual gcd, one just needs to divide that remainder by its leading coefficient).
+\end{document}
+
+
