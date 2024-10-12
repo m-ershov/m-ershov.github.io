@@ -1,0 +1,190 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#5. Due on Thursday, October 17th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lecture 10 and 11. 
+From Hungerford: 4.3, 7.1 and 7.2
+
+2. For next week's class: Online lecture 12 and beginning of Lecture 13. From Hungerford: 7.3. 
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\bf{Preface to problem 1: }\rm
+Let $F$ be a field. Recall that we defined irreducible polynomials in $F[x]$ as follows. Let $f\in F[x]$.
+\begin{itemize}
+\item[(i)] First assume that $f$ is monic. Then we say that $f$ is {\it irreducible} if $f\neq 1$ and the only monic divisors of
+$f$ in $F[x]$ are $1$ and $f$.
+\item[(ii)] In general we say that $f$ is irreducible if $f\neq 0$ and the polynomial $\frac{f}{LC(f)}$ (which must be monic)
+is irreducible. Here $LC(f)$ is the leading coefficient of $f$.
+\end{itemize}
+Note that the definition immediately implies that constant polynomials are never irreducible, while polynomials of degree $1$
+are always irreducible.
+
+
+\skv
+\bf{Problem 1: }\rm 
+\begin{itemize}
+\item[(a)] Let $F$ be an arbitrary field and let $f(x)\in F[x]$ with $\deg(f)=2$ or $3$. Prove that $f(x)$ is NOT irreducible $\iff$
+$f(x)=(x-a)g(x)$ for some $g(x)\in F[x]$ and $a\in F$. Do not assume any results about irreducibility (you can freely use any general facts about fields as well as previously established properties of the degree function).
+\item[(b)] Give an example showing that the assertion of part (a) is false for polynomials of degree $4$ (at least for some field $F$).
+\item[(c)] Let $p$ be a prime (so that $\dbZ_p$ is a field). Find the number of irreducible monic polynomials of degree $2$ in $\dbZ_p[x]$.
+{\bf Hint:} First use (a) to find the number of monic polynomials of degree $2$ which are reducible (that is, not irreducible).
+\item[(d)] List explicitly all irreducible monic polynomials of degree $2$ in $\dbZ_3[x]$. {\bf Hint:} This should follow from your proof in (c).
+\end{itemize}
+
+\bf{Problem 2: }\rm In each of the following examples determine whether the given set $G$ is a group with respect to a given operation. If $G$ is a group,
+prove why (that is, verify all the axioms); if $G$ is not a group,
+state at least one axiom which does not hold and explain why.
+\begin{itemize}
+\item[(a)] $G=(\dbR\setminus\dbQ,+)$, the set of all irrational numbers with addition
+\item[(b)] $G=(\dbQ_{>0},\cdot)$, the set of all POSITIVE rational numbers with multiplication
+\end{itemize}
+\skv
+{\bf Note:} For (b) use the following definition of $\dbQ_{>0}$: a rational number lies in $\dbQ_{>0}$ if it can be written
+as $\frac{a}{b}$ for some $a,b\in\dbZ_{>0}$ (but do not assume any other facts about inequalities in $\dbQ$).
+\skv
+\bf{Problem 3: }\rm Let $G=\dbR\setminus\{-1\}$ be the set of real numbers different from $-1$,
+and define the binary operation $*$ on $G$ by $x*y=x+y+xy$. Prove that $(G,*)$ is a group,
+find its identity element and an explicit formula for the inverse of $x$. {\bf Warning:} None of the four axioms in this example is obvious. 
+\skv
+\bf{Problem 4: }\rm Let $R$ be a ring with $1$ (not necessarily commutative), and let
+$R^{\times}$ be the set of invertible elements of $R$, that is,
+$$R^{\times}=\{a\in R: \mbox{ there exists }b\in R\mbox{ such that }ab=ba=1\}.$$
+Prove that $R^{\times}$ is closed with respect to multiplication (that is, if $x,y\in R^{\times}$, then $xy\in R^{\times}$). As mentioned in class, this is the main thing 
+one needs to check to show that $R^{\times}$ is a group with respect to multiplication.
+\skv
+\bf{Problem 5: }\rm Compute the multiplication tables for the groups $\dbZ_7^{\times},\dbZ_8^{\times}$ and $\dbZ_{10}^{\times}$ (here the superscript $\times$
+has the same meaning as in Problem~4). 
+%Recall that invertible elements of $\dbZ_n$ are described 
+%in Theorem~9.1.
+\skv
+In Problem 6 and 7 below we use multiplicative notation in groups.
+\skv
+\bf{Problem 6: }\rm In Lecture~12 on Mon, October 7th, we started analyzing the possible structure of the multiplication tables
+for groups of order $4$. Using the Sudoku property, we proved that if $G$ is a group of order $4$ and $G$ contains an element $x$ such that $x^2\neq e$, then $G=\{e,x,x^2,x^3\}$, and the multiplication table is as follows:
+\skv
+\centerline{
+\begin{tabular}{c|c|c|c|c|c|c|c|c|}
+ & $e$ & $x$ & $x^2$ & $x^3$  \\
+\hline $e$ & $e$ & $x$ & $x^2$ & $x^3$  \\
+\hline $x$ & $x$ & $x^2$ & $x^3$ & $e$  \\
+\hline $x^2$ & $x^2$ & $x^3$ & $e$ & $x$  \\
+\hline $x^3$ & $x^3$ & $e$ & $x$ & $x^2$  \\
+\hline
+\end{tabular}}
+(here the entries in the first column and the first row are the row and column labels, respectively).
+\skv
+Thus, it remains to consider groups $G$ of order $4$ such that $g^2=e$ for all $g\in G$. Let $G$ be such a group, and let
+$x\neq y$ be any distinct non-identity elements of $G$. Prove that $G=\{e,x,y,xy\}$ and compute its multiplication table
+with full justification. The answer should be determined uniquely.
+
+
+
+\skv
+\bf{Problem 7: }\rm A group $G$ is called {\it abelian} (=commutative)
+if $xy=yx$ for ALL $x,y\in G$.
+Prove that a group $G$ is abelian $\iff$ $(xy)^2=x^2 y^2$ for all $x,y\in G$.
+\skv
+{\bf Note/warning:} By definition $g^2=g*g$ where $*$ is the group operation.
+To prove that a group $G$ is abelian, you need to 
+show that $xy=yx$ for ALL $x,y\in G$ (you cannot pick $x$ and $y$ that you like).
+
+
+\bf{Problem 8: }\rm Let $F$ be a field. Recall from Lecture~10 that $GL_2(F)$ denotes the set of all {\bf invertible } $2\times 2$ matrices with coefficients in $F$. The set $GL_2(F)$ is a group with respect to matrix multiplication
+(the identity element of $GL_2(F)$ is the identity matrix, and the inverse of
+$A\in GL_2(F)$ is the inverse matrix in the usual sense).
+In order to determine whether a $2\times 2$ matrix $A$ lies in $GL_2(F)$
+one can use the following result from linear algebra:
+
+\skv
+\bf{Theorem: }\it Let $F$ be a field and let $n\geq 2$ be an integer. Then an $n\times n$
+matrix $A\in Mat_n(F)$ is invertible if and only if $\det(A)\neq 0$.\rm
+\skv
+
+Also recall that the determinant of a $2\times 2$  matrix is given by the formula 
+$$\det
+\begin{pmatrix}a&b\\ c&d
+\end{pmatrix}=ad-bc.$$
+Thus, $GL_2(F)=\left\{\begin{pmatrix}a&b\\ c&d
+\end{pmatrix}: a,b,c,d\in F \mbox{ and }ad-bc\neq 0.\right\}$
+\begin{itemize}
+\item[(a)] Prove the following formula for inverses in $GL_2(F)$:
+$${\begin{pmatrix}a&b\\ c&d
+\end{pmatrix}}^{-1}=(ad-bc)^{-1}\begin{pmatrix}d&-b\\ -c&a
+\end{pmatrix}.$$
+Recall that if $\lam\in F$ is a scalar, then by definition 
+$\lam \begin{pmatrix}a&b\\ c&d \end{pmatrix}=\begin{pmatrix}\lam a&\lam b\\ \lam c&\lam d \end{pmatrix}$
+{\bf Hint:} Computation will be very short if use a suitable part of Theorem~11.1.
+\item[(b)] Let $F=\dbZ_7$ and $A=\begin{pmatrix}[1]&[2]\\ [3]&[4]\end{pmatrix}$. Find $A^{-1}$ (and simplify your answer).  Answer the same question for $F=\dbZ_5$.
+\end{itemize}
+\end{document}
+
+
