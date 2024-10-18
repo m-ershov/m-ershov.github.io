@@ -1,0 +1,192 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#7. Due on Thursday, October 24th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lecture 12 and parts of lecture 13. 
+From Hungerford: 7.3
+
+2. For next week's classes: Online lectures 13 and 14 and the beginning of Lecture 15. From Hungerford: 7.3 and the beginning of 7.4. 
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Problem 1.} Let $D_8$ be the octic group, that is, the group of isometries of a square. As discussed in class, $D_8$ has 8 elements: 4 rotations (by integer multiplies of $\frac{\pi}{2}$) and 4 reflections. Denote by $r$ the counterclockwise rotation by $\frac{\pi}{2}$ and by $s$ the reflection with respect to the line $y=0$. Prove that $D_8=\{e,r,r^2,r^3,s,sr,sr^2,sr^3\}$ (since we already know that $|D_8|=8$, this amounts to checking that the 8 listed elements are distinct) and compute its multiplication table (with full justification). 
+\skv
+
+{\bf Note:} Unlike a similar problem in HW\#6 where you dealt with an abstract group, you can compute every entry of the multiplication table by direct computation, but this is definitely not the most efficient way to solve this problem. In fact, it suffices to compute just one of the (non-obvious) entries directly, and then the rest of the table can be determined using general group axioms (and their consequences we proved) as well as the orders of $r$ and $s$ (the order of a group element is defined at the beginning of online lecture 13).
+
+\bf{Problem 2: }\rm Let $G$ be a group such that $x^{-1}=x$ for all $x\in G$.
+Prove that $G$ is abelian. {\bf Note:} This can be deduced from Problem~7 in HW\#5
+or proved independently.
+\skv
+\bf{Problem 3: }\rm Let $G$ be a group and let $H=\{x\in G: x^2=e\}$, the set of
+all elements of $G$ whose square is the identity element. 
+\begin{itemize}
+\item[(a)] Assume that $G$ is abelian. Prove that $H$ is a subgroup of $G$.
+Clearly indicate where you use that $G$ is abelian. 
+\item[(b)] Give an example of a non-abelian group $G$ such that $H$ is not a subgroup
+(and prove your answer).
+{\bf Hint:} you have seen such a group before.
+\end{itemize}
+\skv
+\bf{Problem 4: }\rm Let $G$ be a group and $H$ and $K$  subgroups of $G$.
+\begin{itemize}
+\item[(a)] Prove that the intersection $H\cap K$ is a subgroup of $G$.
+\item[(b)] Prove that the union $H\cup K$ is a subgroup of $G$ if and only if
+$H\subseteq K$ or $K\subseteq H$. \bf{Hint: }\rm The backward (``$\Leftarrow$'')
+direction is easy. For the forward (``$\Rightarrow$'') direction
+do a proof by contrapositive: assume that $K$ does not contain $H$
+and $H$ does not contain $K$. This means that there exist
+$x,y\in G$ such that $x\in H$, but $x\not\in K$, and $y\in K$, but $y\not\in H$.
+Now prove by contradiction that $xy$ does not belong to $H$ or $K$. Why does
+this finish the proof?
+\item[(c)] (practice) Let $A$ be some set (possibly infinite), and let 
+$\{H_{\alpha}\}_{\alpha\in A}$ be any collection  of subgroups of $G$ 
+indexed by elements of $A$. Prove that the intersection of all these subgroups 
+$\cap_{\alpha\in A} H_{\alpha}$ is a subgroup of $G$.
+\end{itemize}
+\bf{Problem 5: }\rm 
+\begin{itemize}
+\item[(a)] Recall that if $G$ is a group and $a\in G$,
+the centralizer $C(a)$ is the set of all elements of $G$ which commute with $a$,
+that is,
+$$C(a)=\{x\in G : xa=ax\}.$$
+Prove that $C(a)$ is a subgroup. Note that the proof is started in online Lecture~12.
+Finish that proof (it remains to show that $C(a)$ is closed under inversion).
+\item[(b)] Given a group $G$, let $Z(G)$ be the set of all $x\in G$
+which commute with every element of $G$, that is,
+$$Z(G)=\{x\in G: xg=gx \mbox{ for all } g\in G.\}$$
+The set $Z(G)$ is called the {\it center of $G$}.
+Prove that $Z(G)$ is a subgroup of $G$ without doing any computations.
+{\bf Hint:} use Problem~4.
+\end{itemize}
+\skv
+
+
+\bf{Problem 6: }\rm Let $F$ be a field and let $n\geq 2$ be an integer. Recall that $GL_n(F)$ is the group of all {\bf invertible } 
+$n\times n$ matrices with entries in $F$ (with respect to multiplication).
+Also recall that a matrix $A$ with entries in $F$ is invertible $\iff$ $\det(A)\neq 0$.
+\begin{itemize}
+\item[(a)] (practice) It is a well-known fact that if $A$ and $B$ are any $n\times n$ matrices over some commutative
+ring, then $\det(AB)=\det(A)\det(B)$. Verify this formula (by direct computation) for $n=2$.
+\item[(b)] Let $SL_2(F)=\left\{\begin{pmatrix}a&b\\ c&d
+\end{pmatrix}: a,b,c,d\in F \mbox{ and }ad-bc=1\right\},$ that is, $SL_2(F)$ is the set of all
+$2\times 2$ matrices with entries in $F$ and determinant equal to $1$. Use (a) to prove that
+$SL_2(F)$ is a subgroup of $GL_2(F)$.
+\end{itemize}
+
+\bf{Problem 7: }\rm Again let $F$ be a field and $G=GL_2(F)$. For each of the following sets $H$ prove that
+$H$ is a subgroup of $G$ and determine whether $H$ is abelian or not.
+\begin{itemize}
+\item[(a)] $H=\left\{ \begin{pmatrix}1 & x\\ 0 & 1\end{pmatrix} : x\in F\right\}$
+\item[(b)] $H=\{A\in G: A=\begin{pmatrix}a & b\\ 0 & 1\end{pmatrix} \mbox { for some }a,b\in F\}=
+\left\{ \begin{pmatrix}a & b\\ 0 & 1\end{pmatrix} : a,b\in F, a\neq 0\right\}$
+\item[(c)] \begin{multline*}H=\{A\in G: A=\begin{pmatrix}a & b\\ -b & a\end{pmatrix} \mbox { for some }a,b\in F\}=
+\left\{ \begin{pmatrix}a & b\\ -b & a\end{pmatrix} : a,b\in F, a^2+b^2\neq 0\right\}
+\end{multline*}
+\end{itemize}
+\skv
+ 
+\bf{Problem 8: }\rm Recall that for a ring $R$ with $1$ we denote by $R^{\times}$
+the group of invertible elements of $R$ with respect to multiplication.
+For each of the following groups $G$, determine
+whether it is cyclic or not. If it is cyclic, find ALL generators
+(note: to prove that a group is cyclic it suffices to find one generator).
+\skv
+\sk (i) $G=\dbZ_7^{\times}$, \sk (ii) $G=\dbZ_9^{\times}$, \sk (iii) $G=\dbZ_{12}^{\times}$.
+\skv
+\bf{Problem 9 (practice): }\rm Let $G=(\dbZ,+)$, integers with respect to addition, and let
+$H$ be a subgroup of $G$. Prove that $H=n\dbZ$ for some $n\in\dbZ$ (recall that
+$n\dbZ=\{0,\pm n,\pm 2n,\ldots\}$ is the set of all integer multiples of $n$). 
+The sketch of proof is given below.
+\skv
+Since $H$ is a subgroup, $H$ must contain the identity element
+($0$ in this case). If $H$ consists of $0$ alone, then $H=0\cdot \dbZ$, and the assertion
+of the theorem holds. Otherwise, we can assume that there exists a nonzero element $z\in H$.
+\begin{itemize}
+\item[(a)] Prove that $H$ contains at least one positive integer $y$. \bf{Hint: }\rm if $z>0$, 
+we can set $y=z$; if $z<0$, do something else.
+\item[(b)] Prove that $H$ contains $m\dbZ$ for any $m\in H$.
+\item[(c)] Let $n$ be the smallest positive element of $H$ (why does such $n$ exist?).
+Prove that $H=n\dbZ$. \bf{Hint: }\rm assume not. Since $H$ contains $n\dbZ$ by part (b),
+the only way $H$ may not equal $n\dbZ$ is if there exists
+$x\in H$ such that $x\not\in n\dbZ$. Use division with remainder to obtain contradiction
+with the choice of $n$.
+\end{itemize}
+\bf{Bonus: }\rm Let $G$ be a group and let $H$ be a {\bf finite} subset of $G$ which is closed under multiplication
+(that is, $x,y\in H$ implies $xy\in H$). Prove that $H$ must be a subgroup. Then give an example showing that
+the assertion of the problem would be false if we did not assume that $H$ was finite.
+
+{\bf Hint:} Fix $a\in H$, and start by showing that there exists $x\in H$ such that $ax=a$ (this is where the assumption
+that $H$ is finite is needed). Note that $ax=a$ $\iff$ $x=e$ (where the forward direction holds by the cancellation law), 
+but you cannot assume that $e\in H$ to begin with.
+\end{document}
+
+
