@@ -1,0 +1,188 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+
+\bf\centerline{Homework \#8. Due on Thursday, October 31st, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures 13, 14, 15 and the beginning of 16A. 
+From Hungerford: part of 7.3 (starting with Cyclic Groups on page 206) and 7.4. 
+
+2. On Mon, Oct 28 we will continue talking about isomorphisms of groups, then move to homomorphisms of groups and briefly discuss homomorphisms of rings as well. On Wed, Oct 30 we will talk about symmetric groups. 
+Reading for next week's classes: Online lectures 15, 16 and 17. We may also discuss some material from 16A. 
+From Hungerford: 7.4, 7.5 and 3.3.
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Problem 1.}
+\begin{itemize}
+\item[(a)] Prove that every cyclic group is abelian.
+\item[(b)] Give an example of an abelian group which is not cyclic (with proof).
+\end{itemize}.
+\skv
+
+
+\bf{Problem 2: }\rm Let $x$ be an element of a group $G$, let $n=o(x)$, and assume that $n<\infty$.
+Let $d$ be a positive divisor of $n$. Prove directly from definition of the order that $o(x^d)=\frac{n}{d}$.
+\skv
+{\bf Warning:} to prove that an element $y$ has order $m$ it is not sufficient to check that $y^m=e$; you also
+need to show that $m$ is the minimal positive integer with this property; equivalently, you also need to show
+that $y^k\neq e$ when $1\leq k\leq m-1$.
+\skv
+
+\bf{Problem 3: }\rm (practice)
+Theorem~14.1 from online notes is applicable to any finite cyclic group $G$ and any generator $x$ of $G$.
+If $G=(\dbZ_n,+)$ for some $n$, we can use $x=[1]$ as a generator, in which case all assertions of the Theorem
+can be restated directly in terms of $n$. For instance, part (i) would say:
+``Every subgroup of $\dbZ_n$ is cyclic and is equal to $\la [d]\ra$
+where $d$ is a positive divisor of $n$''. Restate other parts of Theorem~14.1 in a similar way.
+
+
+\bf{Problem 4: }\rm  
+\begin{itemize}
+\item[(a)]  Use the restatement of Theorem~14.1 from Problem~2 to do find all generators of $(\dbZ_{12},+)$ and $(\dbZ_{15},+)$
+\item[(b)] Find all subgroups of  $(\dbZ_{24},+)$ and $(\dbZ_{36},+)$ and draw the subgroup lattices for these groups.
+See the end of
+\skv
+\url{https://math.libretexts.org/Bookshelves/Abstract_and_Geometric_Algebra/First-Semester_Abstract_Algebra\%3A_A_Structural_Approach_(Sklar)/04\%3A_Subgroups/4.02\%3A_Subgroup_Proofs_and_Lattices}
+\skv
+for the definition and the subgroup lattice.
+\end{itemize}
+\skv
+\bf{Problem 5: }\rm In Homework\#7 it was shown that the group $G=\dbZ_9^{\times}$ is cyclic with generators $[2]$ and $[5]$ (and no other generators). Use Theorem~14.1 to show that once we found $[2]$ to be a generator of $G$, we can deduce that $[5]$ is also a generator and that there are no other generators without explicitly computing any other cyclic subgroups. 
+\skv
+\bf{Problem 6: }\rm (practice)  Prove  that
+the relation $\cong$ of ``being isomorphic'' is
+an equivalence relation (Claim 15.1 from online Lecture~15).
+
+\bf{Hint: }\rm To prove that $\cong$ is symmetric, show that
+if $\phi: G\to G'$ is an isomorphism, then the inverse map
+$\phi^{-1}:G'\to G$ is also an isomorphism. Since the inverse
+of a bijection is a bijection, you only  need to show that
+$\phi^{-1}(uv)=\phi^{-1}(u)\phi^{-1}(v)$ for all $u,v\in G'$.
+To prove this, take any $u,v\in G'$, and let $x=\phi^{-1}(u), y=\phi^{-1}(v)$.
+Then $\phi(x)=u$ and $\phi(y)=v$; at this point you
+can use the fact that $\phi$ is a isomorphism.
+\skv
+\bf{Problem 7: } \rm (practice)
+Let $G=(\dbZ_6,+)$ and $G'=(\dbZ_7^{\times},\cdot)$.
+Prove that $G'\cong G$ and find an explicit isomorphism $\phi:G\to G'$.
+\skv
+
+\bf{Problem 8: }\rm Let $G$ be a group from Problem~3 in Homework \#6:
+$G=\dbR\setminus\{-1\}$ as a set, and the operation $*$ on $G$ is defined by
+$x*y=xy+x+y$. Prove that $(G,*)$ is isomorphic to $(\dbR\setminus\{0\},\cdot)$
+and find an explicit isomorphism between those groups.
+\skv
+\skv
+\bf{Problem 9: }\rm (practice) Let $\phi:G\to G'$ be an isomorphism, and let
+ $g\in G$.
+\begin{itemize}
+\item[(a)] Prove by induction that $\phi(g^n)=\phi(g)^n$
+for every $n\in\dbN$.
+\item[(b)] Prove that if $n\in\dbN$, then $g^n=e_G$ if and only
+if $\phi(g)^n=e_{G'}$ (where $e_G$ is the identity element of $G$
+and $e_{G'}$ is the identity element of $G'$). {\bf Hint:} Use (a)
+and the fact that an isomorphism must send identity element to identity element
+(this will be proved in class next week).
+\item[(c)] Use (b) to prove that $o(g)=o(\phi(g))$ (Proposition~15.3 from online notes). 
+Thus isomorphisms preserve orders of elements.
+\end{itemize}
+\skv
+\bf{Problem 10: }\rm Let $G$ be a group and $g,h\in G$.
+\begin{itemize}
+\item[(a)] Prove that the elements $ghg^{-1}$ and $h$ have the same order
+by direct computation.
+\item[(b)] Now prove that $ghg^{-1}$ and $h$ have the same order
+without any computations by using Problem 9(c) and Example~3 from online Lecture~15.
+\item[(c)] Prove that $gh$ and $hg$ have the same order.
+{\bf Hint:} Use (a) (or (b)).
+\end{itemize}
+\bf{Hint for (a): }\rm Let $n=o(h)$, so that $h^n=e$. Start by showing that
+$(ghg^{-1})^n=e$ as well (if you do not see how to do
+this, start with $n=2$, see the pattern, then generalize). As explained in the warning to \#1,
+this is not the end of the problem.
+\skv
+Before doing Problems 11, read about the direct products of groups (either the beginning of online Lecture 16A or 9.1 in Hungerford).
+Before doing Problem 12, also read about the quaternion group (see Exercise 16 after 7.1, page 181 in Hungerford).
+\skv
+{\bf Problem 11: }\rm Let $G$ and $H$ be groups.
+\begin{itemize}
+\item[(a)] Prove that the direct product $G\times H$ is abelian if and only if 
+$G$ and $H$ are both abelian.
+\item[(b)] Let $\widetilde G=\{(g,e_H): g\in G\}$ be the subset of $G\times H$ consisting of all elements whose second component is $e_H$. Prove that $\widetilde G$ is a subgroup of $G\times H$ and that this
+subgroup is isomorphic to $G$.   
+\end{itemize}
+\skv
+
+{\bf Problem 12: }\rm Prove that the following 5 groups (all of which have order $8$) are pairwise non-isomorphic (that is,
+any two of them are not isomorphic to each other): $\dbZ_8$, $\dbZ_{4}\times \dbZ_2,\dbZ_2\times \dbZ_2\times \dbZ_2$, $D_8$ (the octic group)
+and $Q_8$ (the quaternion group). Later we will show that any group of order $8$ is isomorphic to one of those 5 groups. 
+\end{document}
+
+
