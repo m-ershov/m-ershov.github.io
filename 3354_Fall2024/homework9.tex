@@ -118,14 +118,15 @@ and if such $\phi$ exists, it is given by the formula $$\phi(x^k)=h^k\mbox{ for 
 In other words, a homomorphism from a cyclic group is uniquely determined by where it sends a generator (but there is no guarantee that every choice of the image of a generator can be extended to an homomorphism)
 
 
-\item[(b)] Now prove that the map $\phi$ given by the formula (***) from (a) is a homomorphism if and only if it is well defined.
-Note that $\phi$ may not be well defined since for a given $g\in G$ there may be more than one value of $k$ such that
+\item[(b)] Assume that there exists a (well-defined) map $\phi:G\to H$ satisfying the formula (***) from (a). Prove that $\phi$ is a homomorphism.
+Note that $\phi$ given in (***) may not be well defined since for a given $g\in G$ there may be more than one value of $k$ such that
 $g=x^k$.
-\item[(c)] Assume that $G$ is infinite. Prove that the map $\phi$ from (***) is always well defined.
-\item[(d)] Now assume that $G$ is finite and let $n=|G|=o(x)$. Fix $h\in H$ and let $\phi$ be the corresponding map from (***).
+\item[(c)] Assume that $G$ is infinite. Prove that for any $h\in H$ there exists a map $\phi:G\to H$ satisfying (***) for all $k\in\dbZ$ (Note that $\phi$ is a homomorphism by (b))
+
+\item[(d)] Now assume that $G$ is finite and let $n=|G|=o(x)$. Fix $h\in H$.
 Prove that the following are equivalent:
 \begin{itemize}
-\item[(i)] $\phi$ is well defined
+\item[(i)] There exists a map $\phi:G\to H$ satisfying (***) (for your chosen $h$ and all $k\in\dbZ$)
 \item[(ii)] $h^n=e$
 \item[(iii)] $o(h)$ divides $n$.
 \end{itemize}
