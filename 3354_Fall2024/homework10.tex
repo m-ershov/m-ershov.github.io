@@ -1,0 +1,214 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\lam{{\lambda}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+
+\def\Aut{{\rm Aut\,}}
+\def\Ker{{\rm Ker\,}}
+\def\phi{{\varphi}}
+
+
+\bf\centerline{Homework \#10. Due on Thursday, November 21st, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Reading: }\rm
+\skv
+1. For this assignment: Online lectures 17, 20 and the note `Even and odd permutations' (right before Lecture~1 on the Spring 2016 webpage). From Hungerford: 7.5, 8.1 and 8.2.
+
+2. For next week's classes: online lectures 20 (normal subgroups) and 22 (quotient groups). If we have time, we will also discuss some of the content from lecture 21 (conjugacy classes and more on symmetric groups).
+From Hungerford: 8.2 for Monday's class and 8.3 for Wednesday's class.
+\skv
+Online lectures are currently posted on the Spring 2016 webpage
+\skv
+
+\skv
+\centerline{\url{https://m-ershov.github.io/3354_Spring2016/}}
+\skv
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+\bf{Problem 1: }\rm
+%As usual, let $S_n$ be the group of permutations of the set $\{1,\ldots,n\}$.
+Two elements $f$ and $g$ of $S_n$
+are said to have the same \bf{cycle type }\rm
+if their disjoint cycle forms contain the same number of
+cycles of each length. For instance, elements
+$(1,5,6)(2,3)(4,7)$ and $(1,7,8)(4,5)(3,6)$ of $S_8$
+have the same cycle type.
+\begin{itemize}
+\item[(a)] Show that elements of $S_6$ have 11 distinct cycle
+types. For each cycle type list one element of that type.
+\item[(b)] Use (a) to determine possible orders of elements of $S_6$.
+\end{itemize}
+\skv
+
+\bf{Problem 2: }\rm 
+\begin{itemize}
+\item[(a)] Let $f,g\in S_n$ be two transpositions,
+that is, $f=(i,j)$ and $g=(k,l)$ for some $i,j,k,l$.
+What are the possible orders of the product $fg$?
+\bf{Note: }\rm By definition, a transposition is just a cycle of length $2$.
+\bf{Hint: }\rm Consider three cases depending on
+the size of the set $\{i,j\}\cap \{k,l\}$
+(note that $\{i,j\}\cap \{k,l\}$ is empty if and only $f$ and $g$
+are disjoint cycles).
+
+\item[(b)] (practice) Answer the same question when $f$ is a transposition
+and $g$ is a cycle of length $3$.
+\end{itemize}
+\skv
+
+
+\skv
+\bf{Problem 3: }\rm Recall that by Cayley's theorem every group $G$ is isomorphic to a subgroup of $Sym(G)$, the symmetric
+group on $G$ (considered just as a set). Also recall that we proved Cayley's theorem by showing that the following map
+$\phi:G\to Sym(G)$ is an injective homomorphism (and hence its image $\phi(G)$ is a subgroup of $Sym(G)$ isomorphic to $G$):
+$$\phi(g)=\phi_g\mbox{ for all }g\in G \mbox{ where }\phi_g\in Sym(G)\mbox{ is defined by }\phi_g(x)=gx\mbox{ for all }x\in G.$$
+Note that we can describe each permutation $\phi_g$ using the cycle notation except that the entries in the cycles will be
+elements of $G$ rather than integers from $1$ to $n$ for some $n$. Here is an example:
+let $G=\dbZ_5=\{[0],[1],[2],[3],[4]\}$ and $g=[2]$. Then $\phi_{[2]}\in Sym(G)$ is given by $\phi_{[2]}(x)=[2]+x$ for all $x\in \dbZ_5$.
+We can write $\phi_{[2]}$ using the two-line notation as follows: 
+$$\phi_{[2]}=\begin{pmatrix} [0] & [1] & [2] & [3] & [4]\\ [2] & [3] & [4] & [0] & [1] 
+\end{pmatrix}.$$ 
+In the cycle form we have $\phi_{[2]}=([0],[2],[4],[1],[3])$.
+
+\begin{itemize}
+\item[(a)] Describe $\phi$ explicitly by computing $\phi(g)$ for every $g\in G$ in the cycle form (as in the above example) for each of the following groups:
+$G=\dbZ_4$,  $G=\dbZ_2\times \dbZ_2$, $G=S_3$. {\bf Note:} For the last two groups, denote their elements by $g_1,\ldots, g_n$
+(in any order), so that the value of $\phi(g)$ can be written as product of cycles in the symbols $g_1,\ldots, g_n$ rather than more complicated expressions.
+\item[(b)] Prove that the following property holds for every finite group: if $g\in G$ and $m=o(g)$, then
+$\phi(g)$ is a product of $\frac{n}{m}$ disjoint cycles of length $m$.
+\end{itemize}
+
+\skv
+\bf{Problem 4: }\rm Problem~5(b) on the second midterm except that this time you are asked to prove that your $\phi$ is  
+a homomorphism.
+\skv
+\bf{Problem 5: }\rm Before doing this problem read about even and odd permutations
+either in the book or in the online notes (Spring 16 webpage, right before Lecture~1).
+\begin{itemize} 
+\item[(a)] Write the permutation
+$(1,2)(3,4,5)(6,7,8,9)(10,11,12)(13,14)$ as a product of transpositions.
+\item[(b)] Let $f\in S_n$ be a cycle of length $k$. Prove that $f$ is even if $k$ is odd,
+and $f$ is odd if $k$ is even.
+\item[(c)] Let $f\in S_n$. Write $f$ as a product of disjoint cycles $f=f_1 f_2\ldots f_r$, and let $k_i$ be the length of $f_i$ for each $i$. Suppose that the ``length sequence'' $\{k_1, k_2,\ldots, k_r\}$ contains $a$ even numbers and $b$ odd numbers.
+For instance, the length sequence of the permutation in part (a) is $\{2,3,4,3,2\}$,
+so $a=3$ and $b=2$.
+\skv
+Among the following 4 statements exactly one is correct. Find the correct statement and prove it.
+
+\sk (i) $f$ is even if and only if $a$ is even
+
+\sk (ii) $f$ is even if and only if $a$ is odd
+
+\sk (iii) $f$ is even if and only if $b$ is even
+
+\sk (iv) $f$ is even if and only if $b$ is odd
+\end{itemize}
+\skv
+{\bf Note:} In Problems~6(b)(c) and 9 below which deal with the octic group $D_8$, use the notations from class (or HW\#7.1).
+\skv
+\bf{Problem 6: }\rm Let $G$ be a group and $H$ a subgroup of $G$.
+In each of the following examples describe the left cosets of $H$ (in $G$). Find the number of distinct cosets
+and list all elements in each coset. 
+\begin{itemize}
+\item[(a)] $G=\dbZ_{12}$, $H=\la [3]\ra$.
+\item[(b)] $G=D_8$, $H=\la r \ra$ (the rotation subgroup).
+\item[(c)] $G=D_8$, $H=\la s\ra$ (recall that $s$ is the reflection  wrt $y=0$).
+\end{itemize}
+
+\skv
+\bf{Problem 7: }\rm Let $G$ be a group and $H$ a subgroup of $G$.
+\begin{itemize}
+\item[(a)] Let $g\in G$. Prove that $gH=H$ if and only if $g\in H$. 
+State the analogous result for right cosets.
+\item[(b)] Suppose that $H$ has index $2$ in $G$. Prove that $H$ is normal in $G$
+(you will likely need (a) for your proof). \bf{Note: }\rm Usually, to prove 
+that a subgroup is normal, conjugation criterion (Theorem~20.2) is easier to use 
+than definition, but this problem is a rare exception.
+\bf{Hint: }\rm see the end of the assignment. 
+\end{itemize}
+\skv
+
+\bf{Problem 8: }\rm Let $G$ be a group of order $8$. 
+\begin{itemize}
+\item[(a)] Prove that exactly one of the following holds:
+\begin{itemize}
+\item[(i)] $G$ is cyclic (and hence has isomorphic to $\dbZ_8$);
+\item[(ii)] $G$ is not cyclic, but has an element of order $4$
+\item[(iii)] $g^2=e$ for all $g\in G$. 
+\end{itemize}
+Note that in case (iii) $G$ is abelian by HW\#7.1, and using the classification
+of finite abelian groups (see Lecture~16A), one can deduce that $G$ is isomorphic to $\dbZ_2\times\dbZ_2\times \dbZ_2$.
+ \item[(b)] Suppose now that we are in case (ii) above, let $x\in G$ be an element of order $4$. Prove
+that for any $y\in G$ we have $yxy^{-1}=x$ or $yxy^{-1}=x^3$. 
+{\bf Hint:} Use Problem~7 and a problem from an earlier homework.
+\item[(c)] Still in case (ii), let $x$ be as in (b) and choose any $y\in G\setminus\la x\ra $. Prove that
+$G=\{e,x,x^2,x^3,y,yx,yx^2,yx^3\}$ and $y^2=e$ or $y^2=x^2$.
+\end{itemize}
+\skv
+
+\bf{Problem 9: }\rm Let $G=D_8$. 
+\begin{itemize}
+\item[(a)] Find $Z(G)$, the center of $G$.
+\item[(b)] Prove that $D_8$ has exactly 10 sugbroups and describe them explicitly (by listing all of their elements) using notations from class (equivalently, HW\#7.1). {\bf Hint:} Most subgroups of $D_8$ are cyclic and those are easy to describe.
+Prove that if $H$ is a subgroup of $D_8$ which is non-cyclic and proper (not equal to the entire group), then $H$ is isomorphic to $\dbZ_2\times \dbZ_2$ -- this already imposes substantial constraints on $H$. Then use the multiplication table
+from HW\#7.1 to find all such subgroups.
+\item[(c)] For each subgroup of $D_8$,
+determine whether it is normal or not. 
+\end{itemize}
+\end{document}
