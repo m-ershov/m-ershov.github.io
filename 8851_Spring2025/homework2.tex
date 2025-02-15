@@ -1,0 +1,134 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.7in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\centerline{\bf Math 8851. Homework \#2. To be completed by 6pm on Thu, Feb 6} 
+\skv
+\vskip .1cm
+1 (extended version of HW\#1.1). Let $G$ be a group and $S$ a generating set of $G$. 
+\begin{itemize}
+\item[(a)] Prove that the following are equivalent:
+\begin{itemize}
+\item[(i)] $G$ is free and $S$ is a free generating set of $G$. By definition this means that every element of $G$
+can be uniquely written as a reduced word $\prod\limits_{i=1}^n s_i^{\eps_i}$ with $s_i\in S$ and $\eps_i=\pm 1$
+(reduced means that $s_i\neq s_{i+1}$ whenever $\eps_{i+1}=-\eps_i$).
+\item[(ii)] The Cayley graph $Cay(G,S)$ is a tree and $S$ has no elements of order $2$.
+\end{itemize}
+\item[(b)] Describe all groups $G$ with the property that $Cay(G,S)$ is a tree for some generating set $S$ of $G$.
+\end{itemize}
+\skv
+2. Let $(X,R)$ be a group presentation, $G=\la X|R \ra$, and let $\mathcal D$ be a van Kampen diagram over $(X,R)$. Prove that one can label the vertices of $\mathcal D$ by elements of $G$ such that whenever $e$ is an oriented edge from a vertex $v$ to a vertex $w$ we have $L(w)=L(v)L(e)$ (where $L(\cdot)$ denotes the label of a vertex or an edge). Moreover, show that if we fix a base vertex $v_0$,
+then $L(v_0)$ can be chosen to be any element of $G$, and once
+$L(v_0)$ is chosen, all other vertex labels are uniquely determined.
+{\bf Hint:} Use van Kampen's lemma.
+\skv
+3. Let $X=\{a,b\}$, $R=\{aba^{-1}b^{-1}\}$ and $G=\la X | R \ra\cong\dbZ^2$.
+\begin{itemize}
+\item[(a)] Let $w=a^2b^2a^{-2}b^{-2}$, and let $\mathcal D$ be the disk van Kampen diagram 
+of area $4$ from the example in Lecture~9 with $L(\partial \mathcal D)=w$. Use the proof of van Kampen's lemma
+to explicitly write $w$ in the form $\prod_{i=1}^4 u_i r_i^{\pm 1}u_i^{-1}$ with
+$u_i\in F(X)$ and $r_i=aba^{-1}b^{-1}$ (as the only element of $R$ in this case).
+\item[(b)] Now reverse the process from (a): start with the factorization found in (a),
+construct the corresponding `lollipop' diagram, call it $\mathcal D'$, and show that
+after edge cancellations in $\partial \mathcal D'$ (as defined below), one obtains the original diagram $\mathcal D$ from (a).
+\end{itemize}
+
+Here is what we formally mean by an edge cancellation. Suppose that $e_1$ and $e_2$
+are consecutive edges of $\partial \mathcal D'$ (as we traverse $\partial \mathcal D'$ in some direction) which have the same label $x\in X$ and point in opposite directions.
+As we traverse $e_1$, we move from some vertex $u$ to some vertex $v$, and then
+as we traverse $e_2$, we move from $v$ to some vertex $w$ (which may coincide with $u$).
+
+\begin{itemize}
+\item[(i)] If $w\neq u$, we start by gluing the edges $e_1$ and $e_2$, identifying 
+$u$ and $w$. If after this process the vertex $u=w$ becomes a leaf, we also remove the entire edge $e_1=e_2$.
+\item[(ii)] If $w=u$, we remove the edges $e_1$ and $e_2$ possibly together with any cells of $\mathcal D'$ enclosed between $e_1$ and $e_2$.
+\end{itemize}
+You should convince yourself that each of the operations (i) and (ii) results in a valid van Kampen diagram whose boundary label is obtained from $L(\partial \mathcal D')$
+by the cancellation of the subword $x x^{-1}$ or $x^{-1} x$ corresponding to the edges
+$e_1$ and $e_2$.
+\skv
+4. Prove that if $(X,R)$ is a (finite) Dehn presentation of some group $G$ and $\delta$ is the associated Dehn function,
+then $\delta(n)\leq n$ for all $n\in\dbN$.
+\skv
+5. Let $G=\dbZ^2$, consider its standard presentation $G=\la a,b\mid [a,b]=1\ra$, and let $\delta$ be the associated function.
+\begin{itemize}
+\item[(a)] Prove that $\delta(n)\leq {n\choose 2}$ for all $n$.
+\item[(b)] Find a specific constant $K>0$ such that $\delta(n)\geq Kn^2$ for all sufficiently large $n$.
+\item[(c)] How do the answers to (a) and (b) change if we consider $\dbZ^n$ for some $n>2$ with the presentation 
+$\la a_1,\ldots, a_n \mid [a_i,a_j]=1 \mbox{ for all }i<j\ra$?
+\end{itemize}
+{\bf Hint:} For (a) first describe a simple algorithm which reduces any 
+$w\in F(\{a,b\})$ such that $w=_{G}1$ to the identity element in at most 
+${n\choose 2}$ steps where $n=\|w\|$. Then deduce that $Area(w)\leq {n\choose 2}$
+(the argument for this part should be similar to your solution to Problem~4). One way to solve (b) is to follow the proof of ``(4)$\Rightarrow$ (1)'' in Theorem~10.4 (since you are dealing with a specific and very simple presentation, you can give better bounds than the proof in the general case). 
+
+\skv
+6. Let $G$ be a hyperbolic group. Prove that $G$ has only finitely many conjugacy classes of torsion elements (that is, elements of finite order). {\bf Hint:} Let
+$(X,R)$ be a Dehn presentation for $G$ (which exists by Theorem~10.4). Prove that
+there are only finitely many torsion elements which are representable by a cyclically
+reduced word in $X$ (first you probably need to figure out why having a
+cyclically reduced representative is helpful).
+\end{document}
+
+
+
