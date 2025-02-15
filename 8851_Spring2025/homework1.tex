@@ -1,0 +1,179 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.7in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\bf\centerline{Math 8851. Homework \#1. To be completed by 6pm on Thu, Feb 6}\rm
+\vskip .1cm
+1. Let $G$ be a group and $S$ a generating set of $G$. Prove that the following are equivalent:
+\begin{itemize}
+\item[(a)] $G$ is free and $S$ is a free generating set of $G$. By definition this means that every element of $G$
+can be uniquely written as a reduced word $\prod\limits_{i=1}^n s_i^{\eps_i}$ with $s_i\in S$ and $\eps_i=\pm 1$
+(reduced means that $s_i\neq s_{i+1}$ whenever $\eps_{i+1}=-\eps_i$).
+\item[(b)] The Cayley graph $Cay(G,S)$ is a tree and $S$ has no elements of order $2$.
+\end{itemize}
+\skv
+2. A metric space $(X,d)$ is called {\it ultrametric} if 
+$$d(x,z)\leq \max\{d(x,y),d(y,z)\}\mbox{ for all }x,y,z\in X.$$
+Prove that an ultrametric metric space $(X,d)$ is $0$-Gromov hyperbolic, that is, satisfies condition $Hyp_{G}(0)$:
+$$(x|y)_w\geq \min\{(x|z)_w,(y_z)_w\}\mbox{ for all } x,y,z,w\in X.$$ Recall that by definition 
+$(u|v)_w=\frac{1}{2}(d(u,w)+d(v,w)-d(u,v))$.
+\skv
+3. Let $\delta\geq 0$. Prove that the following two conditions on a metric space $(X,d)$ are equivalent:
+\begin{itemize}
+\item[(a)] $(X,d)$ is $\delta$-Gromov hyperbolic, that is, $$(x|y)_w\geq \min\{(x|z)_w,(y_z)_w\}-\delta$$ for all $x,y,z,w\in X$.
+\item[(b)] $(X,d)$ satisfies the ``4-point condition'': 
+$$d(x,y)+d(w,z)\leq \max\{d(x,z)+d(y,w), d(x,w)+d(y,z)\}+2\delta\mbox{ for all }x,y,z,w\in X.$$ 
+\end{itemize}
+\skv
+4. Prove that the relation of being quasi-isometric is an equivalence relation. The main thing to prove here is that
+if there exists a quasi-isometry $f:(X,d_1)\to (Y,d_2)$, then there also exists a quasi-isometry $g:(Y,d_2)\to (X,d_1)$.
+\skv
+5. We start with the corrected definition of quasi-geodesics. Let $\lam,C\in\dbR$ with $\lam\geq 1$ and $C\geq 0$.
+Let $(X,d)$ be a metric space. A (possibly non-continuous) path $p:I\to X$ is called a $(\lam,C)$-quasi-geodesic if
+$p$ is a $(\lam,C)$-quasi-isomteric embedding of $I$ into $X$, that is, if
+$\frac{|t'-t|}{\lam}-C \leq d(p(t),p(t'))\leq \lam|t'-t|+C$ for all $t,t'\in I$.
+
+\begin{itemize}
+\item[(a)] Let $(X,d_X)$ and $(Y,d_Y)$ be metric spaces. Suppose that $f:X\to Y$ is a $(K,\eps)$-quasi-isometry and
+$p:I\to X$ a $(\lam,C)$-quasi-geodesic (for some $K,\eps,\lam,C$). Prove that $f\circ p: I\to Y$ is a $(\mu,D)$-quasi-geodesic
+for some $\mu$ and $D$ which depend only on $K,\eps,\lam$ and $C$ (also find an explicit formula for $\mu$ and $D$).
+\item[(b)] Use (a) and Morse Lemma to prove the following characterization of hyperbolicity for geodesic metric spaces
+(stated as Corollary 5.3 in class):
+A geodesic metric space $X$ is hyperbolic if and only if for any $\lam,C\in\dbR$ with $\lam\geq 1$ and $C\geq 0$
+there exists $\delta=\delta(\lam,C)$ such that every $(\lam,C)$-quasi-geodesic triangle in $X$ is $\delta$-slim
+(that is, any side lies in the closed $\delta$-neighborhood of the union of the other two sides).
+\end{itemize}
+\skv
+6. Use the \u Svar\u c-Milnor lemma to prove that if $G$ is any finitely generated group and $H$ is a finite index subgroup of $G$,
+then $H$ and $G$ are quasi-isometric. {\bf Note:} 
+\begin{itemize}
+\item[(i)] As usual, we consider finitely generated groups as metric spaces with respect to the word metric associated to some finite generating set
+(different choices of generating sets yield quasi-isometric spaces).
+\item[(ii)] The fact that a finite index subgroup of a finitely generated group is always finitely generated is not hard to prove directly,
+but it can also be deduced from the same application of  the \u Svar\u c-Milnor lemma you would use to solve Problem~6.
+\end{itemize}
+\skv
+7. Prove that the following groups are NOT hyperbolic:
+\begin{itemize}
+\item[(a)] $\dbZ^2$.
+\item[(b)] (generalization of (a)) $A\times B$ where $A$ and $B$ are finitely generated infinite groups.
+\end{itemize}
+{\bf Hint for (b):} Choose any finite generating sets $S$ for $A$ and $T$ for $B$, so that $S\cup T$ generates $A\times B$.
+Show that for every $K\in\dbR$ one can find two geodesics $p$ and $q$ in $Cay(G,S)$ which share the same endpoints such that 
+$dist(p,q)>K$. Why would this imply that $Cay(G,S)$ is not hyperbolic?
+
+\skv
+8. Given nonzero integers integers $m$ and $n$, the Baumslag-Solitar group $BS(m,n)$ is defined by $BS(m,n)=\la a,b \mid ba^m b^{-1}=a^n\ra)$.
+None of the Baumslag-Solitar groups are hyperbolic. The goal of this problem is to show that $BS(1,2)$ is not hyperbolic. The same proof
+works for $BS(1,n)$ for all $n>2$ (with little additional effort the proof can also be extended to negative $n$).
+
+You may use with out proof that $BS(1,2)$ is isomorphic to the group of $2\times 2$ matrices of the form 
+$\begin{pmatrix}2^i & j \\ 0 & 1 \end{pmatrix}$ with $i,j\in\dbZ$ where $a=\begin{pmatrix}1 & 1 \\ 0 & 1 \end{pmatrix}$
+and $b=\begin{pmatrix}\sqrt{2} & 0 \\ 0 & \frac{1}{\sqrt{2}} \end{pmatrix}$. The fact that this group of matrices is a quotient of $BS(1,2)$ is straightforward
+to check from the presentation. What requires some work is to show that one does not need additional defining relations for this matrix group.
+
+Below we set $S=\{a,b\}$ and define $\ell_S$ to be the corresponding word length function on $BS(1,2)$.
+
+\begin{itemize}
+\item[(i)] Prove the following double inequality for every $j\in\dbZ$ and $i\in \dbZ_{\geq 0}$:
+\begin{gather}
+\max\{i,|j|\}\leq \ell(a^{2^i} b^j)\leq |j|+2i+1\\
+\max\{i,|j|\}\leq \ell(b^j a^{2^i})\leq |j|+2i+1.
+\end{gather}
+{\bf Hint:} For the upper bound find an explicit word of that length representing the above element. For the lower bound use the matrix representation (what can use say about the entries of a matrix representing some element of word length $m$ in terms of $m$)?
+
+\item[(ii)] Use (i) (both the result and the proof) to find specific $\lam$ and $C$ and a path $p_i$ from $1$ to $a^{2^i}$
+which is $(\lam,C)$-quasi-geodesic for all $i$. Your path will likely be a geodesic (in the graph theory sense) but
+that might require more work to prove.
+
+\item[(iii)] Now use a simple trick to construct another  $(\lam,C)$-quasi-geodesic $p_i'$ from $1$ to $a^{2^i}$ using $p_i$
+and show that $dist(p_i,p_i')\to \infty$ as $i\to \infty$. Deduce that $BS(1,2)$ is not hyperbolic.
+
+\end{itemize}
+
+
+\skv
+9. Prove that if $G$ and $H$ are hyperbolic groups, their free product $G*H$ is also hyperbolic. 
+
+{\bf Hint:} Much of this hint is about providing technical simplification for the argument.
+Let $G$ be any finitely generated group, $S$ a finite generating set for $G$ and $d_S$ the associated word metric.
+While $(G,d_S)$ is technically not a geodesic metric space, one can talk about geodesics in it in the graph theory
+sense (a geodesic between two vertices $v$ and $w$ in a connected graph is an edge-path from $v$ to $w$ containing the smallest possible number of edges). With this notion of geodesics, one can define the condition $Hyp_S(\delta)$ exactly as we defined it for geodesic metric spaces,
+and then we will say that $(G,d_S)$ is $\delta$-hyperbolic if it satisfies $Hyp_S(\delta)$. It follows immediately from the definitions that if the Cayley graph $Cay(G,S)$ (considered as a metric graph) satisfies $Hyp_S(\delta)$, then $(G,d_S)$ satisfies $Hyp_S(\delta)$. Conversely, if $(G,d_S)$ satisfies $Hyp_S(\delta)$, then $Cay(G,S)$ satisfies $Hyp_S(\delta')$ for some
+$\delta'$ depending only on $\delta$. Thus, $(G,d_S)$ is $\delta$-hyperbolic for some $\delta$ if and only if $Cay(G,S)$
+is hyperbolic, but $(G,d_S)$ is usually easier to work with.
+
+
+Now back to Problem~9. Choose any finite generating sets $S$ for $G$ and $T$ for $H$, in which case $S\cup T$ is a generating set for $G*H$, and suppose that $(G,d_S)$ is $\delta_G$-hyperbolic and $(H,d_T)$ is $\delta_H$-hyperbolic. 
+Show that every geodesic in $(G*H,d_{S\cup T})$ can be obtained in a simple way from geodesics in
+$(G,d_S)$ and $(H,d_T)$ and deduce that $(G*H,d_{S\cup T})$ is $\delta$-hyperbolic for $\delta=\max\{\delta_G,\delta_H\}$.
+
+For the purposes of this problem it is convenient to think of elements of $G*H$ as formal expressions of the form 
+$\prod_{i=1}^n g_i h_i$ where each $g_i\in G$, each $h_i\in H$ and all $g_i$ and $h_i$ are non-trivial except possibly
+$g_1$ and $h_n$. The product of two such expressions is concatenation followed by ``obvious'' cancellations
+(for instance, if $u$ ends with some $h\in H$ and $v$ starts with $h^{-1}$ for the same $h$, there will be a cancellation in the product $uv$).
+
+\end{document}
+
+
+
