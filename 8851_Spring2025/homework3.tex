@@ -1,0 +1,139 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+\newtheorem* {Definition}    {Definition}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.7in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\centerline{\bf Math 8851. Homework \#3. To be completed by 6pm on Thu, Mar 6} 
+\skv
+\skv
+{\bf 1.} (Problem~5 from HW\#2) Let $G=\dbZ^2$, consider its standard presentation $G=\la a,b\mid [a,b]=1\ra$, and let $\delta$ be the associated function.
+\begin{itemize}
+\item[(a)] Prove that $\delta(n)\leq {n\choose 2}$ for all $n$.
+\item[(b)] Find a specific constant $K>0$ such that $\delta(n)\geq Kn^2$ for all sufficiently large $n$.
+\item[(c)] How do the answers to (a) and (b) change if we consider $\dbZ^n$ for some $n>2$ with the presentation 
+$\la a_1,\ldots, a_n \mid [a_i,a_j]=1 \mbox{ for all }i<j\ra$?
+\end{itemize}
+{\bf Hint:} For (a) first describe a simple algorithm which reduces any 
+$w\in F(\{a,b\})$ such that $w=_{G}1$ to the identity element in at most 
+${n\choose 2}$ steps where $n=\|w\|$. It should be somewhat similar to Dehn's algorithm. Then deduce that $Area(w)\leq {n\choose 2}$
+The argument for this part should be similar to your solution to HW\#2.4. One way to solve (b) is to follow the proof of ``(4)$\Rightarrow$ (1)'' in Theorem~10.4 (since you are dealing with a specific and very simple presentation, you can give better bounds than the proof in the general case). 
+
+\skv
+{\bf 2.} (Problem~6 from HW\#2 with an extended hint). Let $G$ be a hyperbolic group. Prove that $G$ has only finitely many conjugacy classes of torsion elements (that is, elements of finite order).
+
+{\bf Hint:} Fix a Dehn presentation $(X,R)$ for $G$ (which exists by Theorem~10.4). 
+Let $C$ be a conjugacy class of torsion elements in $G$, let $g\in C$ be an element of smallest possible word length (with respect to $X$)
+and choose any word $w\in F(X)$ which represents $g$ and such that $\|w\|=\|g\|$. Note that $w$ must be cyclically reduced (explain why).
+Let $n$ be the order of $g$, so that $w^n$ is a relator of $G$.  Apply a single step of Dehn's algorithm to $w^n$ and deduce
+that one of the following must hold:
+
+\begin{itemize}
+\item[(i)] some conjugate of $g$ is representable by a word shorter than $w$.
+\item[(ii)] some cyclic shift of $w$ is a subword or some relator $r\in R^*$. 
+\end{itemize}
+
+Note that case (i) is ultimately impossible as it would contradict the choice of $g$, so (ii) must always occur. Deduce that there are only
+finitely many choices for $w$ and hence also for $g$ and for $C$.
+\skv
+
+{\bf 3.} Let $X$ be any finite set, let $w\in F(X)$ be a non-trivial word, and let $R=\{w^n\}$ for some $n\in\dbN$ (thus $R$ is a $1$-element set).
+Prove that the presentation $(X,R)$ satisfies $C'(\frac{1}{n})$. {\bf Note:} Recall that when we are searching for pieces of a presentation,
+we need to consider all relators from $R^*$, the symmetrization of $R$, not just $R$ itself.
+\skv
+
+{\bf 4.} Prove Lemma~15.4 from class. Let $X=\{a,b\}$ be a 2-element set. Prove that for any real number $\alpha>0$ and any $k,M\in\dbN$ there exist
+cyclically reduced words $u_1,\ldots, u_k\in F(X)$ such that $\|u_i\|>M$ for all $i$ and $R=\{u_1,\ldots, u_k\}$ considered as a set of relations satisfies $C'(\alpha)$.
+\skv
+
+{\bf 5.} Let $G$ be a non-cyclic group such that any generating set of $G$ contains an element of order $2$ (for example, $G$ could be any dihedral group). Use Greendlinger's Lemma (either algebraic or geometric version) to prove that $G$ does not admit any presentation satisfying $C'(\lambda)$ for $0\leq \lambda\leq \frac{1}{6}$.
+
+\skv
+Before Problem~6, we introduce the definition of a Schreier transversal and state Schreier's theorem. Let $F$ be a free group and fix
+a free generating set $X$ for $F$. 
+
+\begin{Definition}\rm
+Let $H$ be a subgroup of $F$. A subset $T$ of $F$ is a called a (right) {\it Schreier transvseral} for $H$ in $F$ if
+\begin{itemize}
+\item[(a)] $T$ is a right transversal, that is, $T$ contains exactly one element from each right coset $Hg$ with $g\in G$;
+\item[(b)] for any $t\in T$, any prefix of $t$ (considered a word in $X\sqcup X^{-1}$) must also be in $T$. This includes
+the empty prefix, so in particular we must have $1\in T$. 
+\end{itemize}
+\end{Definition}
+It is not difficult to show that every subgroup has a Schreier transversal. Below once a Schreier transversal $T$ has been fixed,
+we will use the following notation: given $g\in F$, we will denote by $\overline{g}$ the unique element of $T$ such that
+$Hg=H\overline{g}$.
+
+\begin{Theorem}[Schreier]
+Let $F$, $X$ and $H$ be as above, and let $T$ be a Schreier transversal for $H$ in $F$. For each $t\in T$ and $x\in X$
+let $u_{t,x}=tx(\overline{tx})^{-1}$. Then the elements of the form $u_{t,x}$ which are not equal to $1$ are all distinct and
+form a free generating set for $H$.
+\end{Theorem}
+\skv
+
+{\bf 6.} Let $X=\{a,b\}$ be a 2-element set. Let $F=F(X)$, let $\pi:F\to\dbZ$ be the unique homomorphism such that $\pi(a)=1$
+and $\pi(b)=0$, and let $H=\Ker(\pi)$. 
+\begin{itemize}
+\item[(a)] Prove that $T=\{a^i: i\in\dbZ\}$ is a Schreier transversal for $H$ in $F$;
+\item[(b)] Now use Schreier's theorem to find an explicit free generating set for $H$.
+\end{itemize}
+\end{document}
