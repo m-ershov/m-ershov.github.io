@@ -1,0 +1,143 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\newtheorem* {Theorem}    {Theorem}
+\newtheorem* {Lemma}    {Lemma}
+\newtheorem* {Definition}    {Definition}
+
+
+\begin{document}
+ \pagenumbering{gobble}
+\baselineskip=16pt
+\textheight=8.7in
+\textwidth=6.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\Ker{{\rm Ker}}
+\def\rk{{\rm rk}}
+\def\summ{{\sum\limits}}
+
+\centerline{\bf Math 8851. Homework \#5. To be completed by 6pm on Thu, Apr 10} 
+\skv
+\skv
+
+{\bf 1.} Problem 6 from HW\#4.
+\skv
+
+{\bf 2.} Problem 7 from HW\#4.
+\skv
+
+Recall that in Lecture~23 we proved that for any hyperbolic group $G$, any torsion subgroup $T$ of $G$ is finite and moreover is conjugate
+to a subgroup of a ball of a fixed radius (in fact, the radius only depends on the hyperbolicity constant of $G$). That proof was fairly long and quite technical. If we only wanted to prove that any finite subgroup of $G$ is conjugate to a subgroup of a ball of a fixed radius, that could be done with much less work. The next two problems outline a simpler proof of the latter fact. 
+
+
+We start with the definition of a center of a bounded subset. Let $X$ be a proper metric space and $A$ a bounded subset of $X$.
+For any $x\in X$ let $r_A(x)$ be the minimum $r\in \dbR$ such that $A$ is contained in $B_r(x)$, the ball of radius $r$ centered at $x$
+(it is easy to see that such minimum always exists). Then $r_A(x)$ considered as a function of $x$ is continuous and goes to $\infty$ if $x\to \infty$, so by properness of $X$, it attains a minimum which we denote by $r_A$ and call the {\it radius of $A$}. A {\it center of $A$}
+is any point such that $r_A(x)=r_A$. The set of centers of $A$ is denoted by $Cent(A)$ (note that a set can have more than one center).
+\skv
+
+{\bf 3.} Let $X$ be a proper hyperbolic geodedic space satisfying $Hyp_{slim}(\delta)$, and let $A$ be a bounded subset of $X$. Prove that
+for any $x,y\in Cent(A)$ we have $d(x,y)\leq 4\delta$. 
+
+{\bf Hint:} choose a geodesic $[x,y]$, and let $m$ be its midpoint. By definition of $r_A$,
+there exists $a\in A$ such that $d(a,m)\geq r_A$. Consider a geodesic triangle $[x,y,a]$ and apply $Hyp_{slim}(\delta)$ condition to the
+point $m\in [x,y]$. After some calculations you should be able to prove that either $d(x,m)\leq 2\delta$ or $d(y,m)\leq 2\delta$ (depending on whether $m$ is closer to $[x,a]$ or $[y,a]$). Since $m$ is the midpoint of $[x,y]$, either inequality implies that $d(x,y)\leq 4\delta$.
+
+\skv
+{\bf 4.} Now let $G$ be a hyperbolic group, $S$ some finite generating set of $G$, and suppose that $X=Cay(G,S)$ satisfies 
+$Hyp_{slim}(\delta)$. Prove that $F$ is conjugate to a subgroup of $B_{4\delta+1}(e)$. 
+
+{\bf Hint:} Let $x$ be any center of $F$ in $X$
+(it need not be a vertex) and choose $g\in G$ such that $d(g,x)\leq \frac{1}{2}$. Let $A=g^{-1}F$ and $H=g^{-1}Fg$. Prove that
+\begin{itemize}
+\item[(i)] $A$ has a center $y$ with $d(y,e)\leq \frac{1}{2}$
+\item[(ii)] the set $Cent(A)$ is invariant under left-multiplication by any $h\in H$.
+\end{itemize}
+Then deduce from (i),(ii) and Problem~3 that $H\subseteq B_{4\delta+1}(e)$.
+\skv
+
+The next problem deals with the topology on the boundary of a hyperbolic space $X$. We start by recalling some notations from class.
+Fix a base point $p\in X$. Let $Geo_p(X)$ denote the set consisting of all geodesic rays $\gamma:[0,\infty)\to X$ and all geodesic paths 
+$\gamma:[0,T]\to X$ with $\gamma(0)=p$, all parameterized with respect to arc length. Extend each geodesic path $\gamma:[0,T]\to X$ to a map defined on $[0,\infty)$ by setting $\gamma(t)=\gamma(T)$ for all $t>T$.
+
+Next fix $K>2\delta$. Given $\gamma\in Geo_p(X)$ and $n\in\dbN$, define $V_{n}(\gamma)$ to be the set of all $\alpha\in Geo_p(X)$
+such that $d(\gamma(n),\alpha(n))<K$. Lemma~25.5 from class (which we did not prove) asserts that for a fixed $\gamma$, the images of the sets 
+$V_{n}(\gamma)$, $n\in\dbN$, in $\partial X$, form a base of (not necessarily open) neighborhoods of $\gamma(\infty)$ in $\partial X$.
+%(by definition, a collection $\mathcal B$ of subsets of a topological space $X$ is a base of neighborhoods for some $x\in X$ if
+%every $B\in \mathcal B$ contains some open subset $U$ containing $x$ and every open subset $U$ containing $x$ contains some $B\in\mathcal B$).
+
+Note that $V_{n}(\gamma)$ is clearly open in $Geo_p(X)$, so if the relation $\sim$ on $Geo_p(X)$ is trivial (which is the case in both examples in Problem~5 below), the image of $V_n(\gamma)$ in $\partial X$ is also open.
+\skv
+{\bf 5.}
+\begin{itemize} 
+\item[(a)] Let $X=\dbH^2$ in the upper half-plane model, $p=(1,0)$ and $\gamma$ the geodesic ray starting at $p$ and going straight down (the boundary point represented by $\gamma$ is $(0,0)$). Set $K=2$ (this satisfies $K>2\delta$, but in fact when there are no equivalent geodesics,
+any $K>0$ could be used). For each $n\in\dbN$ compute the set $V_n(\gamma)\cap \partial \dbH^2$ -- drawing the picture will likely be helpful.
+You may use without proof that any circle in $\dbH^2$ is also a Euclidean circle (albeit with a different center).
+
+\item[(b)] Now let $X=T_d$, the regular tree of degree $d\geq 3$. Fix a vertex $p$ of $X$, and as in class, view $X$ as a tree rooted at $p$,
+drawn upside down, withe the root at the top. Thus, elements of $Geo_p(X)$ are precisely downwards paths (finite or infinite). 
+Since $\delta=0$ in this example, we can assume that $K<1$. Describe explicitly the sets $V_n(\gamma)$ for a geodesic ray $\gamma$.
+
+\item[(c)] Now use your answer in (b) and Lemma~25.5 from class to prove that $\partial T_d$ is homeomorphic to a countable product of finite sets of cardinality $\geq 2$ (it is known that any such product is homeomorphic to the Cantor set).
+\end{itemize}
+\skv
+{\bf 6.} Let $G$ be a hyperbolic group and $g\in G$ an element of infinite order. Prove that 
+\begin{itemize}
+\item[(a)] the elementary subgroup $E(g)$ is self-normalizing in $G$, that is, if $hE(g)h^{-1}=E(g)$ for some $h\in G$, then $h\in E(g)$. 
+{\bf Hint:} Use the fact that $\la g\ra$ has finite index in $E(g)$.
+\item[(b)] Prove that $hE(g)h^{-1}=E(hgh^{-1})$ for any $h\in G$.
+\end{itemize}
+As an immediate consequence of (b), we deduce that for any infinite hyperbolic group $G$, either $G$ is equal to $E(g)$ for some $g$
+(and hence $G$ is virtually cyclic) or $G$ contains infinite order elements $g$ and $k$ such that $E(g)\neq E(k)$.
+\skv
+{\bf 7.} Use boundaries to show that a free group or any rank cannot be quasi-isometric to any surface group 
+$$S_g=\la a_1,b_1,\ldots, a_g, b_g \mid \prod_{i=1}^g [a_i,b_i]=1\ra.$$
+
+\end{document}
