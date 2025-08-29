@@ -1,0 +1,154 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#1. Due on Thursday, September 4th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link)
+\skv
+
+1. On Mon, Sep 1, we will briefly go over the axiomatic definition of real numbers, followed by two ways to explicitly construct real
+numbers -- Dedekind cuts and equivalence classes of Cauchy sequences of rational numbers. See 1.2 in Pugh and Chapter 1 in Rudin for Dedekind cuts and 5.1-5.3 in Tao I for Cauchy sequences.
+\skv
+\skv
+2. On Wed, Sep 3, we will discuss some basic results about cardinalities of sets -- see 1.4 in Pugh, 2.1 in Rudin and 3.6 in Tao I. If time allows,
+we will also start talking about metric spaces  -- 2.1 in Pugh, 2.2 in Rudin and 1.1 in Tao II. 
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 1.} Give a detailed and rigorous proof of the fact that 
+$$\lim\limits_{n\to\infty}\frac{2n+3}{3n+4}=\frac{2}{3}$$
+directly from the definition of limit of a sequence.
+\skv
+
+{\bf 2.} Define the function $f:\mathbb R\to\mathbb R$ by $f(x)=x^2$. Prove that $f$ is continuous at $x=45$ directly from the $\eps$-$\delta$
+definition of continuity.
+\skv
+
+{\bf 3.} Let $\{a_n\}_{n=1}^{\infty}$ be a sequence of real numbers. Prove that $\{a_n\}$ converges if and if only if
+both subsequences $\{a_{2n}\}$ and $\{a_{2n+1}\}$ converge and $\lm_{n\to\infty}a_{2n}=\lm_{n\to\infty}a_{2n+1}$.
+\skv
+
+{\bf 4.} Let $A$ and $B$ be non-empty subsets of $\dbR$ such that $a\leq b$ for all $a\in A$ and $b\in B$.
+Prove that $A$ is bounded above, $B$ is bounded below and $\sup(A)\leq \inf(B)$. {\bf Hint:} First show that $\sup(A)\leq b$ for every $b\in B$.
+
+\skv
+
+{\bf 5.} This problem defines the upper limit (or limit superior) of a sequence of real numbers, denoted by $\limsup$. 
+Unlike the usual limit,
+$\limsup$ is defined for every sequence, but can equal $\infty$ or $-\infty$. Let $\{a_n\}_{n=1}^{\infty}$
+be a sequence of real numbers. If $\{a_n\}$ is NOT bounded from above, we set $\limsup a_n =\infty$. For the rest of the problem we assume 
+that $\{a_n\}$ is bounded from above. 
+
+\hskip .6cm For each $n\in\dbN$ let $A_n=\{a_n, a_{n+1}, a_{n+2},\ldots\}$ be the set of all elements of this sequence starting with $a_n$ (thus $A_1\supseteq A_2\supseteq A_3\supseteq \ldots$). Define $s_n=\sup(A_n)$. For some explicit examples see 6.4 in Tao I.
+\begin{itemize}
+\item[(a)] Prove that the sequence $\{s_n\}$ is non-increasing, that is, $s_1\geq s_2\geq s_3\ldots$
+\item[(b)] Deduce from (a) that the sequence $\{s_n\}$ either converges (to a real number) or tends to $-\infty$. We define $\limsup a_n$ (the upper limit of the original sequence) by $\limsup a_n=\lim s_n$. 
+\item[(c)] Prove that $\limsup a_n=-\infty$ if and only if $a_n$ does NOT tend to $-\infty$.
+\item[(d)] Assume that $a_n$ does NOT tend to $-\infty$, so that $\limsup a_n$ is a real number. Prove that $\limsup a_n$ is the largest
+possible limit of a subsequence of $\{a_n\}$. {\bf Hint:} Let $L=\limsup a_n$. First show that there is a subsequence of $\{a_n\}$
+which converges to $L$; then show that if $\{a_{n_k}\}$ is any convergent subsequence, then $\lim_{k\to\infty} a_{n_k}\leq L$.
+\end{itemize}
+
+\skv
+{\bf 6.} Let $X$ be a set and $\{f_n:X\to\mathbb R\}_{n=1}^{\infty}$ a sequence of functions from $X$ to $\mathbb R$. Let $f:X\to\mathbb R$
+be a function.
+One says that
+\begin{itemize}
+\item[(a)] $f_n$ converges to $f$ {\it uniformly} if for every $\eps>0$ there exists $N\in\mathbb N$ (depending only on $\eps$) such that $|f_n(x)-f(x)|<\eps$
+for all $n>N$ and all $x\in X$.
+\item[(b)] $f_n$ converges to $f$ {\it pointwise} if for every $\eps>0$ and every $x\in X$ there exists $N\in\mathbb N$ (depending on $\eps$ and $x$) such that $|f_n(x)-f(x)|<\eps$ for all $n>N$.
+\end{itemize}
+Write down the {\bf negations} of these properties, that is, define what the following mean:
+\begin{itemize}
+\item[(c)] $f_n$ does not uniformly converge to $f$; 
+\item[(d)] $f_n$ does not converge pointwise to $f$.
+\end{itemize}
+\skv
+In both (c) and (d) the formulations should be similar to those in (a) and (b) above and should avoid expressions like ``it is not true that (...)''
+where (...) is some complicated statement.
+\skv
+
+{\bf 7.} Deduce the Intermediate Value Theorem and Extreme Value Theorems directly from the following four results
+(which will be proved later in the course):
+\begin{itemize}
+\item[(1)] Let $I=[a,b]$ be a closed bounded interval in $\dbR$, and consider $I$ as a metric space with the standard metric
+($d(x,y)=|x-y|$). Then $I$ is compact and connected.
+\item[(2)] Let $S\subseteq \dbR$ be a subset which is both compact and connected (again with respect to the standard metric).
+Then $S=\emptyset$ or $S=[a,b]$ for some $a,b\in\dbR$ with $a\leq b$.
+\item[(3)] Let $X$ and $Y$ be metric spaces and $f:X\to Y$ be a continuous function. If $X$ is connected, then $f(X)$ is connected (as usual $f(X)=\{f(x): x\in X\}$ is the image (=range) of $f$).
+\item[(4)] Let $X$ and $Y$ be metric spaces and $f:X\to Y$ be a continuous function. If $X$ is compact, then $f(X)$ is compact.
+\end{itemize}
+{\bf Note:} The definitions of compactness and connectedness for metric spaces are given in Chapter~2 of both Pugh and Rudin, but they are not needed for this problem (all you need to know is that these are certain properties of metric spaces).
+
+\skv
+{\bf 8.} Let $f:[a,b]\to\mathbb R$ be a function, and suppose that there are only finitely many $x\in [a,b]$ such that $f(x)\neq 0$. Prove that
+$f$ is (Riemann)-integrable on $[a,b]$ and that $\int\limits_{a}^b f(x)dx=0$. You are allowed to use the definition of the Riemann integral and its linearity properties:
+\begin{itemize}
+\item[(i)] If $f$ and $g$ are integrable on $[a,b]$, then $f+g$ is integrable on $[a,b]$ and 
+$\int\limits_{a}^b (f(x)+g(x))dx=\int\limits_{a}^b f(x)dx+\int\limits_{a}^b g(x)dx$
+
+\item[(ii)] If $f$ is integrable on $[a,b]$ and $\lam\in\mathbb R$, then $\lam f$ is integrable on $[a,b]$ and
+$\int\limits_{a}^b \lam f(x) dx=\lam \int\limits_{a}^b f(x)dx$.
+\end{itemize}
+\end{document}
+
+
+
