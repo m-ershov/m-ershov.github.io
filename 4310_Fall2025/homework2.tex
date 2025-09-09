@@ -94,7 +94,7 @@ that $\lim\limits_{n\to\infty}(x_n-y_n)=0$.
 \skv
 {\bf 3.} The goal of this problem is to prove Theorem~2.10 from online Lecture~3 which asserts that $\dbR$ has the LUB property. 
 \begin{itemize}
-\item[(a)] For each $n\in\dbZ_{\geq 0}$ let $Z_n=\{z\in\dbQ: z=\frac{m}{2^n}: m\in\dbZ\}$. Use the well-ordering principle to show that any
+\item[(a)] For each $n\in\dbZ_{\geq 0}$ let $Z_n=\{z\in\dbQ: z=\frac{m}{2^n}\mbox{ for some } m\in\dbZ\}$. Use the well-ordering principle to show that any
 subset of $Z_n$ which is non-empty and bounded below has the minimal element (the well-ordering principle asserts that any non-empty subset of
 $\dbN$ has the minimal element).
 \item[(b)] Now let $A$ be a subset of $\dbR$ which is non-empty and bounded above. For each $n\in\dbN$ let
@@ -135,7 +135,7 @@ If you need a hint, see Problem~1.39 in Pugh or 2.2 in Rudin or Problem 6 in
 \skv
 {\bf 7.} Let $a\leq b$ be real numbers and $X=C[a,b]$, the set of all continuous functions
 from $[a,b]$ to $\dbR$. Define the functions $d_{unif}:X\times X\to\dbR_{\geq 0}$ and $d_{int}:X\times X\to\dbR_{\geq 0}$ 
-by $$d_{unif}(f,g)=\max\limits_{x\in X} |f(x)-g(x)| \mbox{ and }d_{int}(f,g)=\int\limits_{a}^b |f(x)-g(x)|\,dx.$$
+by $$d_{unif}(f,g)=\max\limits_{t\in [a,b]} |f(t)-g(t)| \mbox{ and }d_{int}(f,g)=\int\limits_{a}^b |f(t)-g(t)|\,dt.$$
 \begin{itemize}
 \item[(a)] Prove that $(X,d_{unif})$ is a metric space (the metric $d_{unif}$ is called the {\bf uniform metric})
 \item[(b)] (practice) Prove that $(X,d_{int})$ is a metric space (the metric $d_{int}$ is called the {\bf integral metric})
