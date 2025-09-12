@@ -1,0 +1,182 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#3. Due on Thursday, September 18th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link).
+\skv
+
+The main topics next week (Mon, Sep 15 + Wed, Sep 17) will be convergence in metric spaces, continuous functions between metric spaces, complete metric spaces and  completions of metric spaces. This is the order in which I covered these topics in 2018, but this time I may talk about complete spaces and completions before continuity. References: for convergence see 2.1 in Pugh, 3.1 in Rudin and 1.1 in Tao II; for continuity see 2.2 and 2.3.1 in Pugh, 4.1 and 4.2 in Rudin and
+2.1 and 2.2 in Tao II; for complete metric spaces see 2.3.4 in Pugh and 1.4 in Tao II (there is also a brief description of completions at the end of 1.4 in Tao II).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints and practice problems: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. Parts of problems marked as `practice'
+should be completed, but need not included in your submission.
+\skv
+{\bf 1.}  Let $f:A\to B$ be a function. Give a detailed proof of the following properties:
+\begin{itemize}
+\item[(a)] $f^{-1}(U\cap V)=f^{-1}(U)\cap f^{-1}(V)$ for all $U,V\subseteq B$
+\item[(b)] $f(f^{-1}(D))\subseteq D$ for all $D\subseteq B$. Give an example showing that the inclusion may be strict.
+\item[(c)] $f^{-1}(f(C))\supseteq C$ for all $C\subseteq A$. Give an example showing that the inclusion may be strict.
+\end{itemize}
+{\bf Note:} Once we start talking about continuous functions, preimages will play a key role, and the goal of this problem
+is to give you extra practice with preimages.
+\skv
+{\bf 2.} This is an extended version of Problem~3(d) from HW\#2. The statement of 3(d) itself is part (d) below; earlier parts establish auxiliary results which should help with the proof of part (d).
+\begin{itemize}
+\item[(a)] Prove that $\dbR$ (constructed as in Lecture~2) has the Archimedean property, that is, for every $\alpha\in\dbR$ there exists $M\in\dbN$
+such that $\alpha<M$. Recall that by definition $\alpha$ is the equivalence class of some Cauchy sequence $(a_n)$ with $a_n\in\dbQ$,
+$M\in\dbN$ is viewed as the class of the constant sequence $M,M,\ldots$ and the definition of inequalities between real numbers is given on
+page 5 of online Lecture~2 (after Lemma~2.5).
+\item[(b)] Let $a,b\in\dbR$. Use the Archimedean property to prove that the following are equivalent: 
+\begin{itemize}
+\item[(i)] $a\leq b$ (by definition this means $a<b$ or $a=b$);
+\item[(ii)] $a<b+\frac{1}{n}$ for all $n\in\dbN$.
+\end{itemize}
+\item[(c)] As in HW\#2.3, define $Z_n=\{z\in\dbQ: z=\frac{m}{2^n}\mbox{ for some } m\in\dbZ\}$. Use the Archimedean property and
+HW\#2.3(b) to prove that for all $a,b\in\dbR$ with $a<b$ there exists $z$ such that $a<z<b$ and $z\in Z_n$ for some $n\in\dbN$.
+\item[(d)] Now let $A\subseteq\dbR$ be a non-empty bounded above subset. Define the Cauchy sequence $(x_n)$ as in HW\#2.3, and let
+$x=[x_n]$. Prove that $x=\sup(A)$. 
+
+\hskip .1cm
+{\bf Hint:} By definition of supremum, we first need to show that $x$ is an upper bound for $A$
+and then show that $x\leq y$ for any upper bound $y$ for $A$. For the first part, start by showing that for any fixed $k$ we have
+$x_k< x+\frac{1}{2^{k-1}}$ (this should follow from your calculation in the solution to HW\#2.3(c)) and then use (b) and definition of $x_k$.
+For the second part, argue by contradiction -- assume that $A$ has an upper bound $y<x$ and deduce from (c) that $A$ has an upper bound $z<x$
+such that $z\in Z_m$ for some $m\in\dbN$. Finally, show that this inequality contradicts the definition of the sequence $(x_n)$.  
+\end{itemize}
+
+\skv
+{\bf 3.} Let $(X,d)$ be a metric space and $S$ is a subset of $X$. Prove that $S$ is open $\iff$ $S$ is the union
+of some collection of open balls (which could be centered at different points).
+\skv
+{\bf 4.} 
+\begin{itemize}
+\item[(a)*] Use Problem~2 to prove Theorem~5.8 from online notes: Let $X$ be a metric space, and suppose that $S\subseteq Y\subseteq X$. Then $S$ is open in $Y$ $\iff$ $\exists$ an open subset $U$ of $X$ such that $S=U\cap Y$.
+\item[(b)] Now use (a) to prove a direct analogue of (a) for closed sets: Let $Z\subseteq Y$. Then $Z$ is closed as a subset of $Y$ $\iff$ $Z=Y\cap K$ for some closed subset $K$ of $X$. Deduce that if $Z$ is closed in $X$, then $Z$ is closed in $Y$. {\bf Note:} this should be essentially a set-theoretic proof -- you just need the statement of (a), definiton of a closed set and some basic set-theoretic identities.
+\end{itemize}
+\skv
+{\bf 5.} Given a metric space $(X,d)$, a point $x\in X$ and $\eps>0$, define
+$B_{\eps}(x)=\{y\in X: d(y,x)\leq \eps\}$, called the {\it closed ball of radius
+$\eps$ centered at $x$}. 
+\begin{itemize}
+\item[(a)] Prove that $B_{\eps}(x)$ is always a closed subset of $X$.
+\item[(b)] Deduce from (a) that $\overline{N_{\eps}(x)}\subseteq B_{\eps}(x)$,
+that is, the closure of the open ball of radius $\eps$ centered at $x$
+is contained in the respective closed ball.
+\item[(c)] Is it always true that $\overline{N_{\eps}(x)}= B_{\eps}(x)$?
+Prove or give a counterexample.
+\end{itemize}
+\skv
+{\bf 6.} Let $(X,d)$ be a metric space and $S$ a subset of $X$. Prove that the following three conditions are equivalent. The set $S$ is called {\it bounded} if it satisfies either of those conditions:
+\begin{itemize}
+\item[(i)] There exists $x\in X$ and $R\in\dbR$ such that $S\subseteq  N_{R}(x)$.
+\item[(ii)] For any $x\in X$ there exists $R\in\dbR$ such that $S\subseteq N_{R}(x)$.
+\item[(iii)] The set $\{d(s,t): s,t\in S\}$ is bounded above as a subset of $\dbR$.
+\end{itemize}
+\skv
+\skv
+{\bf Definition:} Let $(X,d)$ be a metric space and $\eps>0$. A subset $S$ of $X$
+is called an {\it $\eps$-net} if for any $x\in X$ there exists $s\in S$
+such that $d(x,s)<\eps$. In other words, $S$ is an $\eps$-net if 
+$X$ is the union of open balls of radius $\eps$ centered at elements of $S$.
+
+
+{\bf 7.} Let $S$ be a subset of a metric space $(X,d)$. Prove that the following
+are equivalent:
+\begin{itemize}
+\item[(i)] The closure of $S$ is the entire $X$;
+\item[(ii)]  $U\cap S\neq\emptyset$ for any non-empty open subset $U$ of $X$;
+\item[(iii)] $S$ is an $\eps$-net for every $\eps>0$.
+\end{itemize}
+The subset $S$ is called {\it dense} (in $X$) if it satisfies these equivalent conditions.
+
+\skv
+{\bf 8.} A metric space $(X,d)$ is called {\bf ultrametric} if for any $x,y,z\in X$
+the following inequality holds:
+$$d(x,z)\leq \max\{d(x,y), d(y,z)\}.$$ 
+(Note that this inequality is much stronger than the triangle inequality). 
+If $X$ is any set and $d$ is the discrete metric on $X$, then clearly $(X,d)$ is ultrametric.
+A more interesting example of an ultrametric space will be given in the next homework.
+\skv
+Prove that properties (i) and (ii) below hold in any ultrametric space $(X,d)$
+(note that both properties are counter-intuitive since they are very far from
+being true in $\dbR$).
+\begin{itemize}
+\item[(i)] Take any $x\in X$, $\eps>0$ and take any $y\in N_{\eps}(x)$. Then
+$N_{\eps}(y)=N_{\eps}(x)$. This means that if we take an open ball of fixed
+radius around some point $x$, then for any other point $y$ from that open ball, the open
+ball of the same radius, but now centered at $y$, coincides with the original ball.
+In other words, any point of an open ball happens to be its center.
+\item[(ii)] Prove that a sequence $\{x_n\}$ in $X$ is Cauchy $\iff$
+for any $\eps>0$ there exists $M\in\dbN$ such that $d(x_{n+1},x_n)<\eps$
+for all $n\geq M$. {\bf Note:} The forward implication holds in any metric
+space. 
+\end{itemize}
+\newpage
+{\bf Hint for \#3(a):} Let $x\in Y$ and $\eps>0$. Express $N_{\eps}^Y(x)$ in terms of $N_{\eps}^X(x)$ and $Y$.
+
+\end{document}
