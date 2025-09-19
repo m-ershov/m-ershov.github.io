@@ -1,0 +1,164 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#3. Due on Thursday, September 25th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link).
+\skv
+
+Next week (Mon, Sep 22 + Wed, Sep 24) will talk about compactness. We will introduce two a priori different notions of compactness for metric spaces -- sequential compactness and covering compactness, prove that they are equivalent to each other and also discuss the relationship between compactness and other basic notions we defined in the last two weeks, including completeness and continuity. References: 2.4 in Pugh, 1.5 and 2.3 in Tao II and 2.3 and 4.3 in Rudin.
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+{\bf 1.} Let $(x_n)$ be a sequence in a metric space $(X,d)$,
+and let $x$ be some element of $X$. Prove that the following
+conditions are equivalent:
+\begin{itemize}
+\item[(i)] some subsequence of $(x_n)$ converges to $x$
+\item[(ii)] for every $\eps>0$ there are infinitely many $n$
+for which $x_n\in N_{\eps}(x)$.
+\end{itemize}
+When proving the implication (ii)$\Rightarrow$(i) make it clear how you use that $x_n\in N_{\eps}(x)$ for infinitely many $n$
+(and not just for some $n$).
+\skv
+{\bf 2.*} Prove Theorem~6.7 from class which asserts the following: Let $X$ and $Y$ be metric spaces and $f:X\to Y$
+a function. Then $f$ is continuous if and only if it sends convergent sequences to convergent sequences, that is,
+for any convergent sequence $(x_n)$ in $X$, the sequence $(f(x_n))$ converges in $Y$. {\bf Note:} As discussed in class, the forward direction follows immediately from the sequential characterization of continuity at a point (Theorem~6.5 from class).  To prove the reverse direction you need to show that if $x_n$ converges to $x$, then
+$f(x_n)$ must converge to $f(x)$ (and not some other element of $Y$). 
+\skv
+\skv
+{\bf 3.} Let $X$ be any set with discrete metric ($d(x,y)=1$ if $x\neq y$ and
+$d(x,y)=0$ if $x=y$), and let $Y$ be an arbitrary metric space.
+\begin{itemize}
+\item[(a)] Let $(x_n)$ be a sequence in $X$. Prove that $(x_n)$ converges if and only if $(x_n)$ is Cauchy if and only if
+it is eventually constant, that is,
+there exists $M\in\dbN$ and $x\in X$ such that $x_n=x$ for all $n\geq M$.
+\item[(b)] Prove that any function $f:X\to Y$ is continuous in two different ways: first using sequential definition of continuity and then
+using the $\eps$-$\delta$ definition.
+\end{itemize}
+\skv
+{\bf 4.} $\empty$
+\begin{itemize}
+\item[(a)] Let $(X,d_X)$ and $(Y,d_Y)$ be metric spaces, and let $f:X\to Y$ be a function such that
+$$d_Y(f(u),f(v))\leq d_X(u,v) \mbox{ for all } u,v\in X.$$
+Prove that $f$ is continuous.
+\item[(b)] Let $(X,d)$ be a metric space, and fix $a\in X$. Use (a) to prove that the function $f:X\to\dbR$ (where $\dbR$ is equipped with the usual metric)
+given by $f(x)=d(a,x)$ is continuous. Warning: be careful with absolute values.  
+\end{itemize}
+\skv
+{\bf 5.} Let $X$ be an arbitrary metric space and $f:X\to\dbR$ a continuous function (where $\dbR$ is equipped with standard metric).
+\begin{itemize}
+\item[(i)] Prove that the sets $\{x\in X: f(x)>0\}$  and $\{x\in X: f(x)<0\}$ are open and the set $\{x\in X: f(x)=0\}$ is closed
+\item[(ii)] Prove that if $g:X\to\dbR$ is another continuous function, then the set $\{x\in X: f(x)=g(x)\}$ is closed 
+\end{itemize}
+\skv
+{\bf 6.} Let $(x_n)$ be a Cauchy sequence in some metric space $X$, and suppose that $(x_n)$ contains a convergent (in $X$) subsequence. Prove that $(x_n)$ converges in $X$.  
+\skv
+{\bf 7.} Let $Z$ be a metric space and let $Y$ be a dense subset of $Z$. Suppose that
+every Cauchy sequence in $Y$ converges in $Z$. Prove that $Z$ is complete.
+\skv
+\skv
+{\bf 8.} Let $p$ be a fixed prime number. Define the function
+$|\cdot|_p: \dbQ\to\dbR_{\geq 0}$ as follows: given a nonzero
+$x\in\dbQ$, we can write $x=p^a \frac{c}{d}$ for some $a,c,d\in \dbZ$
+where $c$ and $d$ are not divisible by $p$ .
+Define $|x|_p=p^{-a}$ (note that the above representation
+is not unique, but it is easy to see that $a$ is uniquely determined by $x$). For instance, 
+$$\left|\frac{9}{20}\right|_{p}=
+\left\{
+\begin{array}{ll}
+\frac{1}{9}&\mbox{ if } p=3\\
+4&\mbox{ if } p=2\\
+5&\mbox{ if } p=5\\
+1&\mbox{ for any other } p.\\
+\end{array}
+\right.$$
+Also define $|0|_p=0$.
+Now define the function $d_p:\dbQ\times \dbQ\to \dbR_{\geq 0}$
+by $d_p(x,y)=|y-x|_p$.  
+\begin{itemize}
+\item[(a)] Prove that $(\dbQ,d_p)$ is an ultrametric space.
+(Note: the completion of this metric space is usually denoted by
+$\dbQ_p$ is called {\it $p$-adic numbers}).
+\item[(b)] Describe explicitly the set $N_1(0)$ (the open ball
+of radius $1$ centered at $0$) in $(\dbQ,d_p)$.
+\item[(c)] Let $d$ be the standard metric on $\dbQ$ (that is, $d(x,y)=|y-x|$
+where $|\cdot|$ is the usual absolute value).
+Give examples of sequences $\{x_n\}$ and $\{y_n\}$ in $\dbQ$ such that
+\begin{itemize}
+\item[(i)] $x_n\to 0$ in $(\dbQ,d_p)$ but $\{x_n\}$ is unbounded
+as a sequence in $(\dbQ,d)$ 
+\item[(ii)] $y_n\to 0$ in $(\dbQ,d)$ but $\{y_n\}$ is unbounded
+as a sequence in $(\dbQ,d_p)$ 
+\end{itemize}
+\end{itemize}
+\skv
+\newpage
+{\bf Hint for 2:} Argue by contradiction. Assume that there exists a sequence $(x_n)$ in $X$ such that $x_n\to x$, but $f(x_n)\to L$ for some $L\neq f(a)$. Then use $(x_n)$ to construct another convergent sequence $(u_n)$ 
+such that the sequence $(f(u_n))$ has two subsequences converging to different limits.
+
+\end{document}
