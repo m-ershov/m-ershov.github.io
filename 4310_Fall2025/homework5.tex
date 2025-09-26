@@ -1,0 +1,162 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#5. Due on Thursday, October 2nd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link).
+\skv
+
+Next week (Mon, Sep 29 + Wed, Oct 1) will continue talking about compactness and its relation with other properties of metric space. 
+The main topic on Monday will be `compactness vs completeness' -- see Lectures~10 and 11 from Fall 18 (this material is not discussed in detail in any of our main books). The main topic on Wednesday will be compactness and continuity -- see 2.4.3-2.4.6 in Pugh, 4.3 in Rudin and 2.3 in Tao II. If time allows, we will also start talking about connectedness -- see 2.5 in Pugh, 4.4 in Rudin and 2.4 in Tao II.
+
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+{\bf 1.} Let $K=\{\frac{1}{n}: n\in\dbN\}\cup\{0\}$. Prove that $K$ is covering compact in two different ways:
+\begin{itemize}
+\item[(i)] by showing that $K$ is closed and bounded as a subset of $\dbR$.
+\item[(ii)*] directly from definition of covering compactness.
+\end{itemize}
+\skv
+{\bf 2.} Let $(X,d)$ be a metric space and $Y$ a subset of $X$.
+\begin{itemize} 
+\item[(a)] Suppose that $X$ is sequentially compact and
+$Y$ is a closed subset of $X$. Prove that $Y$ is also sequentially compact.
+\item[(b)*] Now assume that $Y$ is covering compact. Prove that
+$Y$ is closed in $X$ (we are not assuming anything about $X$).
+\end{itemize}
+{\bf Note:} Since sequential compactness is equivalent to compactness for
+metric spaces, the results of parts (a) and (b) of this problem are equivalent to 
+Lemma~8.7 (which proved the analogous result for covering compactness) and Theorem 8.2 (which proved the analogous result
+for sequential compactness). The point of this exercise is to prove the results working directly
+with the specified version of compactness.
+\skv
+{\bf 3.}  Let $(X_1,d_1)$ and $(X_2,d_2)$ be metric spaces. Let $X=X_1\times X_2$,
+and define the function $d:X\times X\to\dbR_{\geq 0}$ by
+$$d((x_1,x_2),(y_1,y_2))=d_1(x_1,y_1)+d_2(x_2,y_2).$$
+\begin{itemize}
+\item[(a)] (practice) Prove that $(X,d)$ is a metric space.
+\item[(b)*] Assume that $(X_1,d_1)$ and $(X_2,d_2)$ are both sequentially compact.
+Prove that $(X,d)$ is also sequentially compact.
+\end{itemize}
+
+\skv
+{\bf 4*.} Let $X$ be a metric space. Prove that $X$ is covering compact $\iff$
+$X$ satisfies the following property called the {\it finite intersection property}: 
+\begin{itemize}
+\item[] Let $\{K_{\alpha}\}$ be any collection of closed subsets of $X$
+such that for any finite subcollection $K_{\alpha_1},\ldots, K_{\alpha_n}$,
+the intersection $K_{\alpha_1}\cap \ldots\cap K_{\alpha_n}$ is non-empty.
+Then the intersection of all sets in $\{K_{\alpha}\}$ is non-empty. 
+\end{itemize}
+\skv
+{\bf 5*.} Let $X=C[a,b]$, considered as a metric space with uniform metric $d_{unif}$
+(as defined in Problem~7 in HW\#2). Prove that the set $B_1({\bf 0})$, the closed ball of radius $1$ centered at 
+$\bf 0$ in $X$, is not sequentially compact. Here $\bf 0$ is the function which is identically $0$.
+\skv
+{\bf 6.} Let $X$ be a set, and let $d_1$ and $d_2$ be two different metrics on $X$.
+We will say that $d_1$ and $d_2$ are {\it topologically equivalent} if a subset
+$S$ of $X$ is open with respect to $d_1$ $\iff$ it is open with respect to $d_2$.
+\begin{itemize}
+\item[(a)*] Assume that the notions of convergence in the metric spaces $(X,d_1)$ and $(X,d_2)$ coincide,
+that is, if $(x_n)$ is any sequence in $X$, then $(x_n)$ converges in $(X,d_1)$ if and only if 
+$(x_n)$ converges in $(X,d_2)$. Prove that $d_1$ and $d_2$ are topologically equivalent.
+\item[(b)] Suppose now that there exist real numbers $A,B > 0$ such that
+$d_1(x,y)\leq A d_2(x,y)$ and $d_2(x,y)\leq B d_1(x,y)$ for all $x,y\in X$. Use (a) to
+prove that $d_1$ and $d_2$ are topologically equivalent.
+\item[(c)] Now use (b) to prove that the Euclidean and Manhattan metrics on $\dbR^n$
+are topologically equivalent.
+\end{itemize}
+\skv
+
+\skv
+\newpage
+{\bf Hint for \#1(ii):} Let $\{U_{\alpha}\}$ be any open cover of $K$. One of the $U_{\alpha}$
+must contain $0$. What can you say about that $U_{\alpha}$?
+\newpage
+{\bf Hint for 2(b):} Argue by contradiction, that is, prove that if $Y$ is not closed in $X$, then $Y$ is not
+covering compact. 
+In class we proved that the half-open interval $[0,1)$ is not covering compact by constructing an explicit
+open cover without a finite subcover. Try to generalize that argument to the case where $Y$ is an arbitrary non-closed
+subset of some metric space $X$.
+
+\newpage
+{\bf Hint for 3(b):} Take any sequence in $X$ -- it has the form $((a_n,b_n))$
+for some $a_n\in X_1$ and $b_n\in X_2$. Since $X_1$ is sequentially compact,
+$(a_n)$ has a convergent subsequence $(a_{n_k})$. Now look at the sequence
+$(b_{n_k})$. Since $X_2$ is sequentially compact, it has a convergent 
+subsequence $(b_{n_{k_s}})_{s\in\dbN}$. Now prove that the subsequence
+$((a_{n_{k_s}},b_{n_{k_s}}))$ of $((a_n,b_n))$ converges.
+\newpage
+{\bf Hint for \#4:} There is a natural bijection between open covers of $X$
+and collections of closed subsets with empty intersection (here we consider open covers in the special case $S=X$).
+\newpage
+{\bf Hint for \#5:} Use a result from one of the previous homeworks. 
+\newpage
+{\bf Hint for \#6(a):} It may be easier to prove that a subset $S$ of $X$ is closed with respect to $d_1$ if and only if
+it is closed with respect to $d_2$. How can you express the condition `$S$ is closed' in terms of convergence of sequences?
+\end{document}
