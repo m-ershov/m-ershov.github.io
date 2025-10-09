@@ -1,0 +1,167 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#6. Due on Thursday, October 16th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link).
+\skv
+
+Plan for next class (Wed, Oct 15): Continuity and connectedness, continued (2.5 in Pugh, 4.4 in Rudin and 2.4 in Tao II). Completions of metric spaces (2.10 in Pugh and Exercise 1.4.8 in Tao II). If time allows, we will also briefly talk about uniform continuity 
+(4.6 in Pugh, 4.3 in Rudin and 2.3 in Tao II). There is a brief section about uniform continuity at the end of online Lecture~11, but we did not discuss it in class so far.
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+\skv
+
+{\bf 1.} Complete the proof of the backwards direction of Theorem~12.2 from class (which asserts the any interval in $\dbR$ is connected). Recall that we 
+\begin{itemize}
+\item[(i)] proved the result for closed bounded intervals (intervals of the form $[a,b]$) and 
+\item[(ii)] explained how to prove the result for intervals of the form $[a,b)$ using (i) and Lemma~12.6 (=Problem~4 in this assignment).
+\end{itemize}
+Prove the backwards direction of Theorem~12.2 in the remaining cases.
+
+\skv
+{\bf 2*.} Let $X$ be a metric space. Prove that $X$ is disconnected 
+if and only if there exists a continuous function $f:X\to\dbR$
+such that $f(X)=\{1,-1\}$. \skv
+{\bf 3.} $\empty$
+\begin{itemize}
+\item[(a*)] Let $X$ be a disconnected metric space, so that
+$X=A\sqcup B$ for some non-empty closed subsets $A$ and $B$. 
+Prove that if $C$ is any connected subset of $X$, then
+$C\subseteq A$ or $C\subseteq B$.
+\item[(b*)] A metric space $X$ is called {\it path-connected}
+if for any $x,y\in X$ there exists a continuous function 
+$f:[0,1]\to X$ such that $f(0)=x$ and $f(1)=y$ (informally,
+this means that any two points in $X$ can be joined by a path in $X$).
+Prove that any path-connected metric space is connected.
+\end{itemize}
+
+{\bf 4*.} Let $X$ be a metric space, $\{X_{\alpha}\}_{\alpha\in I}$ a collection (not necessarily finite)
+of subsets of $X$ such that $\cap_{\alpha\in I} X_{\alpha}$ is non-empty and
+$\cup_{\alpha\in I} X_{\alpha}=X$. Prove that if each $X_{\alpha}$ is connected, then $X$ is connected. 
+\skv 
+ 
+{\bf 5.} (practice) Metric spaces $(X,d_X)$ and $(Y,d_X)$ are called {\bf isometric} if there exists a bijection
+$f:X\to Y$ such that $d_Y(f(a),f(b))=d_X(a,b)$ for all $a,b\in X$. Prove that all abstract properties of
+metric spaces introduced in this class are preserved under isometries, that is, if $(X,d_X)$ and $(Y,d_Y)$
+are isometric and $X$ is compact, then $Y$ is compact; if $X$ is connected, then $Y$ is connected etc.
+\skv 
+ 
+{\bf 6.} Let $(X,d_X)$ and $(Y,d_Y)$ be metric spaces. Recall that the Cartesion product
+$X\times Y$ is a metric space with metric $d$ given by $d((x_1,y_1),(x_2,y_2))=d_X(x_1,x_2)+d_Y(y_1,y_2)$ 
+\begin{itemize}
+\item[(a)] Prove that for every $x\in X$, the subset $\{x\}\times Y=\{(x,y): y\in Y\}$ of $X\times Y$
+is isometric to $Y$. Likewise for every $y\in Y$, the subset $X\times \{y\}=\{(x,y): x\in X\}$ is isometric to $X$.
+\item[(b*)] Prove that if $X$ and $Y$ are both connected, then $X\times Y$ connected.
+\end{itemize}
+
+\skv
+{\bf 7.} The goal of this problem is to prove that any open subset of $\dbR$ (with standard metric)
+is a {\bf disjoint} union of countably many open intervals.
+
+So, let $U$ be any open subset of $\dbR$.
+\begin{itemize}
+\item[(a)] Define the relation $\sim$ on $U$ by setting $x\sim y$ $\iff$ $x=y$ or 
+($x<y$ and $[x,y]\subset U$) or ($y<x$ and $[y,x]\subset U$). Prove that $\sim$ is an equivalence
+relation.
+\item[(b*)] Let $A$ be an equivalence class with respect to $\sim$. Show that $A$ is an open interval.
+\item[(c*)] Deduce from (b) that $U$ is a disjoint union of open intervals. Then prove that the number
+of those intervals is at most countable. 
+\end{itemize}
+\skv
+{\bf 8.}  Use Problem~6 to show that the analogue of Problem~7 does not hold in $\dbR^2$, that is,
+there exist open subsets of $\dbR^2$ which are not representable as disjoint unions of open discs
+(an open disc is an open ball in $\dbR^2$).
+\skv
+
+\newpage
+
+
+{\bf Hint for 2:} For the ``$\Rightarrow$'' direction, assume that $X=A\sqcup B$
+with $A, B$ closed and non-empty and define a function $f:X\to \dbR$ with desired properties
+in terms of $A$ and $B$.
+\newpage
+{\bf Hint for 3(a):} Use the inheritance principle. 
+\vskip 8cm
+{\bf Hint for 3(b):} Use (a) and Theorem~12.3 from class. 
+
+\newpage
+{\bf Hint for 4:} Assume that $X$ is disconnected and use 3(a) to reach a contradiction.
+\newpage
+{\bf Hint for 6(b):} By 5 and 6(a) all subsets of the form $X\times\{y\}$ and $\{x\}\times Y$
+are connected. Start with this fact and use Problem~4 twice. Drawing a picture in the case
+$X=Y=[0,1]$ will likely be helpful.
+\newpage
+{\bf Hint for 7(a):} When proving transitivity consider several cases depending on the relative order of the 3 elements involved in the
+statement of transitivity. 
+\newpage
+{\bf Hint for 7(b):} First use an earlier homework problem to prove that $A$ is connected. Then use Theorem~12.3 from class.
+\newpage
+{\bf Hint for 7(c):} Use the fact that $\dbQ$ is countable.
+
+\end{document}
