@@ -1,0 +1,174 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+
+\bf\centerline{Homework \#7. Due on Thursday, October 23rd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week:}\rm
+\skv
+Below Pugh stands for `Real Mathematical Analysis' by Charles Pugh, Rudin for `Principles of Mathematical Analysis' by Walter Rudin, Tao I for `Real Analysis I' by Terrence Tao and Tao II for `Real Analysis II' by Terrence Tao. Pugh, Tao I and Tao II are freely available via UVA subscription (use Springer Link).
+\skv
+
+{\bf Plan for next week:} Uniform Convergence (4.1 in Pugh, 7.1-7.3 in Rudin and 3.1-3.3 in Tao II) and Banach's Contraction Mapping Theorem (4.5 in Pugh, 9.3 in Rudin and 6.6 in Tao II).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+\skv
+\skv
+{\bf 1.} (practice) Let $X$ be a metric space and $Y$ a subset of $X$. Prove that if $X$ is complete and $Y$ is closed in $X$, then $Y$ is complete. {\bf Note:} In class we proved an analogous result with `complete' replaced by `compact' (Theorem~8.7). We also proved a related result involving completeness: if $Y$ is complete, then $Y$ is closed in $X$ (this is part of Theorem~10.1).
+\skv
+{\bf 2.} The goal of this problem is to fill in the details of the construction of the completion of a metric space discussed in Lecture~13. 
+
+We start by recalling the notations introduced in class. Let $(X,d)$ be a metric space. Let $\Omega=\Omega(X)$ be the set of all Cauchy sequences
+$(x_n)_{n\in\dbN} $ with $x_n\in X$ for each $n$. Define the relation $\sim$
+on $\Omega$ by setting $$(x_n)\sim (y_n) \iff \lim_{n\to\infty} d(x_n,y_n)=0.$$ 
+\begin{itemize}
+\item[(a)] Prove that $\sim$ is an equivalence relation.
+\end{itemize}
+Now let $\widehat X=\Omega/\sim$, the set of equivalence classes with respect to
+$\sim$. The equivalence class of a sequence $(x_n)$ will be denoted by $[x_n]$.
+Given an element $x\in X$, we will denote
+by $[x]\in \widehat X$ the equivalence class of the constant sequence all of whose 
+elements are equal to $x$.   
+\skv
+Now define the function $D:\widehat X\times \widehat X\to \dbR_{\geq 0}$ by setting
+$$D([x_n],[y_n])=\lim_{n\to\infty} d(x_n,y_n) \eqno (***)$$
+\begin{itemize}
+\item[(b)*] Prove that the limit on the right-hand side of (***) always exists and that the
+function $D$ is well-defined (that is, if $[x_n]=[x'_n]$ and $[y_n]=[y'_n]$, then
+$\lim_{n\to\infty} d(x_n,y_n)=\lim_{n\to\infty} d(x'_n,y'_n)$). 
+
+\item[(c)] Prove that $(\widehat X, D)$ is a metric space.
+\end{itemize}
+\skv
+
+
+
+{\bf 3.} (Distance from a point to a subset).
+Let $(X,d)$ be a metric space. Given a point $x\in X$
+and a subset $Z$ of $X$, we define $d(x,Z)$ (the distance from $x$ to $Z$)
+by $$d(x,Z)=\inf\{d(x,z): z\in Z\}.$$
+Note that one indeed has to take infimum, not minimum. There may be no
+$z\in Z$ which is closest to $x$.
+\begin{itemize}
+\item[(a)] Prove that $d(x,Z)=0$ $\iff$ $x\in\overline Z$.
+\item[(b*)] Prove that $d(x,Z)\geq d(y,Z)-d(x,y)$ for all $x,y\in X$ and 
+$Z\subseteq X$
+\item[(c)] Now fix $Z\subseteq X$, and define $d_Z:X\to \dbR$ by
+$d_Z(x)=d(x,Z)$. Use (b) to prove that $d_Z$ is continuous.
+\end{itemize}
+\skv
+{\bf 4*.} Again let $(X,d)$ be a metric space. Let $a\in X$ and
+$K$ a compact subset of $X$. Prove that there exists $k\in K$ such that $d(a,k)=d(a,K)$
+(this is equivalent to saying that the set $\{d(a,z): z \in K\}$
+has the minimal element). 
+
+{\bf 5.} 
+$\empty$
+\begin{itemize}
+\item[(a)] Theorem~40 in Pugh states the following: Let $X,Y$ are metric metric spaces, assume that $X$ is a compact, and assume that
+$f:X\to Y$ is continuous and bijective. Then $f^{-1}:Y\to X$ is also continuous. Give a short proof of this theorem by combining Corollary~7.4, Theorem~8.2, Theorem~8.7 and Theorem~11.1 from class (note that in Theorems~8.2 and 8.7 we can now replace
+sequential compactness and covering compactness by just `compactness' as we already proved the equivalence of the two versions of compactness). The respective references in Pugh are Theorem~11, equivalence of (i) and (iii), Theorem~26, Theorem~32 and Theorem~36.
+
+\item[(b)] Now give an example of metric spaces $X$ and $Y$ and 
+a function $f:X\to Y$ such that $f$ is continuous and bijective, but $f^{-1}:Y\to X$
+is not continuous (so that the assumption that $X$ is compact in (a) is essential).
+\end{itemize}
+\skv
+Before solving Probelms~6 and 7 below read the subsection on uniform continuity at the end of Lecture~11.
+\skv
+{\bf 6.} (practice) Read (and understand) the proof of Theorem~42 in Pugh which asserts that if $f:X\to Y$ is continuous and $X$ is compact, then $f$ is uniformly continuous.
+
+\skv
+{\bf 7*.} Let $f:\dbR\to\dbR$ be a differentiable function.
+\begin{itemize}
+\item[(a)] Assume that $f'$ is bounded, that is,
+there exists $M\in\dbR$ such that $|f'(x)|\leq M$ for all $x\in\dbR$.
+Prove that $f$ is uniformly continuous.
+\item[(b)] Now assume that $f'(x)\to \infty$ as $x\to \infty$.
+Prove that $f$ is not uniformly continuous.
+\end{itemize}
+%Recall the concept of the {\bf completion} of a metric space introduced in Lecture~13.
+%\skv
+{\bf 8.} Consider functions $f_n: \dbR_{\geq 0}\to \dbR$
+given by $f_n(x)=\frac{1}{nx+1}$. Let $0\leq a\leq b$
+be real numbers. Prove that $\{f_n\}$ converges uniformly
+on $[a,b]\iff$ $a>0$ or $a=b=0$. Include all the details!
+\skv
+
+\newpage
+{\bf Hint for 2(b):} For the existence of the limit prove that the sequence $(d(x_n,y_n))$ is Cauchy
+using the inequality $d(x,w)\leq d(x,y)+d(y,z)+d(z,w)$.
+
+\newpage
+{\bf Hint for 3(b):}  If $S$ is a subset of $\dbR$ bounded below and $\alpha\in\dbR$, how to show that
+$\inf(S)\geq \alpha$?
+
+\newpage
+{\bf Hint for 4:} Apply Corollary 11.2 to a suitable function.
+
+\newpage
+{\bf Hint for 7:} Use the Mean Value Theorem.
+
+\end{document}
