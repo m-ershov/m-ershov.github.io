@@ -1,0 +1,145 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\uncon{{\rightrightarrows}}
+
+
+
+\bf\centerline{Homework \#8. Due on Thursday, October 30th, 11:59pm on Canvas}\rm
+\vskip .1cm
+{\bf Note:} Lecture 14 on Monday, Oct 20th covered almost the same content as Lecture~14 from Fall 2018. Lecture 15 on Wednesday, Oct 22nd
+covered subsection 15.1 in Lecture~15 from Fall 2018 and Theorem~17.2 in Lecture~17 from Fall 2018.   
+\skv
+{\bf Plan for next week:} Monday, Oct 27th: Arzela-Ascoli Theorem, equicontinuity and compactness in function spaces 
+(4.3 in Pugh, 7.6 in Rudin and online Lecture 18 from Fall 2018). Wednesday, Oct 29th:
+start talking about the Stone-Weierstrass Theorem (4.4 in Pugh, 7.7 in Rudin and online Lecture 19 from Fall 2018).
+\skv
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+{\bf 1.} This problem describes a fancy way to show that closed bounded intervals
+in $\dbR$ are connected. A metric space $(X,d)$ is called {\it chain-connected} if for any $x,y\in X$ and $\delta>0$
+there exists a finite sequence $x_0,x_1,\ldots, x_n$ of points of $X$
+such that $x_0=x$, $x_n=y$ and $d(x_i,x_{i+1})<\delta$ for all $i$. 
+\begin{itemize}
+\item[(a)*] Let $X$ be metric space which is compact and chain-connected.
+Prove that $X$ is connected. 
+
+\item[(b)] Prove that a closed bounded interval $[a,b]\subseteq \dbR$
+is chain-connected and deduce from (a) that $[a,b]$ is connected.
+\end{itemize}
+\skv
+{\bf 2.} Let $X$ be a set and let $(f_n)_{n=1}^{\infty}, f$ be functions from $X$ to $\dbR$.
+Suppose that $f_n\uncon f$ on $X$.
+\begin{itemize}
+\item[(i)] Prove that if each $f_n$ is bounded, then $f$ is bounded.
+\item[(ii)] Assume that $f$ is bounded. Prove that there exists $M\in\dbN$ and $C\in \dbR$ such that $|f_n(x)|\leq C$ for all
+$n\geq M$ and $x\in X$. In other words, prove that the sequence $(f_n)$ becomes uniformly bounded after we remove the first few terms at the beginning.
+\item[(iii)] Give examples showing that both (i) and (ii) become false if we only assume that $f_n\to f$ pointwise on $X$.
+\end{itemize}
+\skv
+{\bf 3.} Let $X$ be a metric space and $(f_n),f$ functions from $X$ to $\dbR$.
+Suppose that $f_n\uncon f$ on $X$ and each $f_n$ is uniformly continuous.
+Prove that $f$ is uniformly continuous. {\bf Hint:} Imitate the proof
+of Theorem~14.3.
+\skv
+
+\skv
+{\bf 4.} Problem~5 on p. 263 in Pugh (see Exercise~3.36 for the definition of jump and removable discontinuities). A clarification on the statement: in each part of the problem you are given some property (P) of functions; the question is the following: if each $f_n$ has property (P), is it always true that the limiting function $f$ also has (P). In part (e) countable should mean `infinite countable'.
+\skv
+{\bf 5.} Problem~7.3:15 from Bergman's supplement to Rudin (page 79),
+see
+\skv
+\centerline{\url{http://math.berkeley.edu/~gbergman/ug.hndts/m104_Rudin_exs.pdf}}
+\skv
+You can assume that the functions are real-valued (not complex-valued); also $J$ denotes
+the natural numbers.
+\skv
+{\bf 6.} Let $X$ be a set and let $\Omega=Func(X,\dbR)$ be the set of all functions $f:X\to \dbR$.
+Prove that uniform convergence on $\Omega$ is metrizable, that is, there exists a metric $D$ on $\Omega$
+such that a sequence $(f_n)$ in $\Omega$ converges uniformly on $X$ to some $f\in\Omega$ $\iff$
+$f_n\to f$ in the metric space $(\Omega, D)$.
+
+Recall that in Lecture~15 we proved that the uniform convergence is metrizable on the space $B(X)$ of all bounded functions $f:X\to\dbR$,
+and that in this case one can define metric $d_{unif}:B(X)\times B(X)\to\dbR_{\geq 0}$ by
+$$d_{unif}(f,g)=\sup_{x\in X}|f(x)-g(x)|. \eqno (***)$$
+To solve this problem think how to modify the above formula, so that $D(f,g)$ is defined for any $f$ and $g$ and 
+the restriction of $D$ to $B(X)$ gives a metric topologically equivalent to $d_{unif}$.
+\skv
+{\bf 7.} Let $a,b\in\dbR$ with $a<b$, and let $(f_n)$
+be a sequence of differentiable functions from $[a,b]$ to $\dbR$.
+Suppose that the sequence $(f'_n)$ is uniformly bounded. Prove that the sequence $(f_n)$ is equicontinuous.
+Deduce that if $(f_n)$ is also uniformly bounded, then it has a uniformly convergent subsequence.
+\skv
+
+
+
+
+\newpage
+{\bf Hint for 1(a):}  Assume that $X$ is disconnected,
+and use Problem~2 from HW\#7 and uniform continuity to reach a contradiction.
+\newpage
+{\bf Hint for 6:} Look for $D$ which coincides with $d_{unif}$ on pairs of functions $(f,g)$ such that
+$|f(x)|\leq 1$ for all $x$ and $|g(x)|\leq 1$ for all $x$. (Here $1$ does not play any special role; it can be replaced by
+any positive real number). Alternatively, Problem~116 on p.138 in Pugh implicitly provides a hint.
+
+\end{document}
