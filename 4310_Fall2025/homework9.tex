@@ -1,0 +1,162 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\calF{{\mathcal F}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\uncon{{\rightrightarrows}}
+
+
+
+\bf\centerline{Homework \#9. Due on Thursday, November 16th, 11:59pm on Canvas}\rm
+\vskip .1cm
+{\bf Brief summary of this week's lectures:} In Lecture 16 on Monday, Oct 27th we proved Arzela-Ascoli theorem and then used it to characterize compact subsets of $(C(X),d_{unif})$ (where $X$ is a compact metric space). The content was very similar to that of Lecture~18 from Fall 2018. 
+
+\hskip .4cm
+In Lecture 17 on Wednesday, Oct 29th
+we gave a proof of Weierstrass Approximation Theorem -- it was the same proof as proof \#1 in Pugh (pp. 229-232) except that the second identity involving Bernstein polynomials was proved using a probabilistic argument. The statement of Weierstrass Approximation Theorem
+(no proof) and some of its applications are discussed in Lecture~19 from Fall 2018
+
+\skv
+{\bf Plan for next week:} Monday, Nov 3rd: Stone-Weierstrass Theorem (4.4 in Pugh, 7.7 in Rudin and online Lecture 20 from Fall 2018).
+We may need part of lecture on Wednesday to finish the proof. Wednesday, Nov 5th: Banach's Fixed Point Theorem (AKA Contraction Mapping Theorem) (4.5 in Pugh, 9.3 in Rudin and 6.6 in Tao II). If time left, we will also start talking about Picard's theorem about the existence
+and uniqueness of solutions to ODEs (also 4.5 in Pugh).
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+\skv
+{\bf 1.} In both parts of this problem $X$ is a set, $B=Func(X,[0,1])$, the set of all functions from $X$ to $[0,1]$ (the closed interval $[0,1]$ in $\dbR$),
+$(f_n)$ is a sequence in $B$, and $f\in B$. 
+\begin{itemize}
+\item[(a)] Suppose that $X=\{x_1,\ldots, x_n\}$ is finite and define a metric $d$ on $B$ by 
+$d(f,g)=\sum_{i=1}^n |f(x_i)-g(x_i)|$ (you do not need to prove that $d$ is a metric). Prove that the following are equivalent:
+\begin{itemize}
+\item[(i)] $(f_n)$ converges to $f$ in the metric space $(B,d)$; 
+\item[(ii)] $(f_n)$ converges to $f$ uniformly on $X$;
+\item[(iii)] $(f_n)$ converges to $f$ pointwise on $X$.
+\end{itemize}
+\item[(b*)] Now suppose that $X$ is countably infinite. Define a metric $d$ on $B$ such that
+conditions (i) and (iii) from (a) are equivalent, that is,
+$(f_n)$ converges to $f$ in the metric space $(B,d)$ $\iff$ $(f_n)$ converges to $f$ pointwise on $X$. 
+\skv
+
+{\bf 2.} Let $X$ be a totally bounded metric space and $\calF\subseteq C(X)$ an equicontinuous family. Prove that
+$\calF$ is uniformly bounded if and only if $\calF$ is pointwise bounded. 
+\skv
+
+{\bf 3.} Define the functions $f_n:\dbR\to\dbR$ by
+$f_n(x)=\left\{
+\begin{array}{ll}
+\frac{|x|}{n} &\mbox{ if } |x|\leq n\\
+1 &\mbox{ if } |x|> n
+\end{array}
+\right.$ 
+Prove that the sequence $(f_n)$ is uniformly bounded and equicontinuous,
+but does not have a uniformly convergent subsequence. This shows that
+Arzela-Ascoli Theorem does not hold for $X=\dbR$.
+\skv
+
+{\bf 4.} (practice) Theorem~16.4 from class asserts that if $X$ is a compact metric space, $C(X)$ is the space
+of all continuous functions $X\to\dbR$ with uniform metric and $\calF$ is a subset of $C(X)$, then $\calF$ is compact
+$\iff$ $\calF$ is closed (with respect to $d_{unif}$), uniformly bounded and equicontinuous. We proved the backwards direction
+in class, and for the forward direction it remains to show that if $\calF$ is compact, then $\calF$ is equicontinuous. Prove
+this implication or read (and understand) the proof in Pugh (see Theorem~18 on p. 228).  
+
+\skv
+{\bf 5.} Let $X$ be a compact metric space.
+\begin{itemize}
+\item[(a)] Let $a\in X$. Prove that the evaluation map $eval_a:C(X)\to\dbR$ given by $eval_a(f)=f(a)$ is continuous (as usual
+the metric on $C(X)$ is the uniform metric).
+\item[(b)*] Now let $K$ be a closed subset of $\dbR$ and let $\Omega=\{f\in C(X): f(X)\subseteq K\}$. Use (a) and to prove that $\Omega$ is a closed subset of $C(X)$.
+\end{itemize}
+\skv
+
+{\bf 6.}$\empty$
+\begin{itemize}
+\item[(a)*] Prove that the (direct) analogue of Weierstrass Approximation Theorem
+does not hold for $C(\dbR)$, the space continuous functions from $\dbR$ to $\dbR$:
+Show that there exists $f\in C(\dbR)$ which cannot
+be uniformly approximated by polynomials, that is, there is no
+sequence of polynomials $(p_n)$ s.t. $p_n\uncon f$ on $\dbR$.
+\item[(b)*] Now prove that the following (weak) version of 
+Weierstrass Approximation Theorem holds for $C(\dbR)$: for any $f\in C(\dbR)$
+there exists a sequence of polynomials $(p_n)$ s.t. 
+$p_n\uncon f$ on $[a,b]$ for any closed interval $[a,b]$
+(of course, the point is that a single sequence will work
+for all intervals).
+\end{itemize}
+\skv
+
+{\bf 7.} Let $a<b$ be real numbers and let $\mathcal P_{even}[a,b]\subseteq C[a,b]$ be the set of all even polynomials (that is, polynomials which only involve even
+powers of $x$). Use Stone-Weierstrass Theorem to prove that $\mathcal P_{even}[a,b]$ is dense in $C[a,b]$ $\iff$ $0\not\in (a,b)$.
+\end{itemize}
+
+\newpage
+{\bf Hint for 2(b):} Write $X=\{x_1,x_2,\ldots\}$. One cannot define $d$ by $$d(f,g)=\sum_{i=1}^{\infty} |f(x_i)-g(x_i)|$$
+since the series on the right need not converge. Think how to modify this formula to resolve the convergence issue.
+\newpage
+{\bf Hint for 5:} Represent $\Omega$ as the intersection of a certain (possibly infinite) collection of sets and use (a) and characterization of continuity in terms of closed sets to show that each set in that collection is closed.
+
+\newpage
+{\bf Hint for 6(a):} Use the fact that any non-constant polynomial $p(x)$ tends to $\pm\infty$ as $x\to\infty$.
+\newpage
+{\bf Hint for 6(b):} Use the $\eps$-reformulation of the Weierstrass Approximation Theorem (that is, reformulation involving $\eps$)
+and apply it on different bounded intervals, with the length of the interval depending on $\eps$.
+\end{document}
