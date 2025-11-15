@@ -1,0 +1,220 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\calF{{\mathcal F}}
+\def\Im{{\mathrm{Im}}}
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\uncon{{\rightrightarrows}}
+
+
+
+\bf\centerline{Homework \#10. Due on Monday, November 24th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\skv
+{\bf Plan for the next 3 classes (Mon, Nov 17, Wed, Nov 19 and Mon, Nov 24):} Measurable sets and measurable functions -- I plan to follow online Lectures from 2018 pretty closely (the corresponding lectures are 22-24). Alternative references: Kolmogorov-Fomin (Sections 25 and 28), Pugh (6.1, 6.2 and 6.6) -- very interesting approach, but apart from 6.1,  very different from what we will do in class, 
+Rudin (11.2 and 11.4) and Tao II (Chapter 7).
+
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Note on hints: } Most hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which hint is available are marked with *. 
+\skv
+\skv
+{\bf 1.} ({\bf Density of trigonometric polynomials}). Let $\lam\in\dbR$. A function $f:\dbR\to \dbR$ is called {$\lam$-periodic} if
+$f(x+\lam)=f(x)$ for all $x\in\dbR$. Denote by $Func_{\lam}(\dbR,\dbR)$ the set of all $\lam$-periodic functions $f:\dbR\to\dbR$ and
+by $C_{\lam}(\dbR)$ the set of all continuous $\lam$-periodic functions $f:\dbR\to\dbR$.
+
+\hskip .4cm
+Now let $S^1=\{(x,y)\in\dbR^2: x^2+y^2=1\}$ be the unit circle in $\dbR^2$, and define the function
+$\Phi:Func(S^1,\dbR)\to Func(\dbR,\dbR)$ (where $Func(X,Y)$ is the set of all functions from $X$ to $Y$) by
+$$(\Phi(f))(t)=f(\cos(t),\sin(t))\mbox{ for all }f\in Func(S^1,\dbR)\mbox{ and }t\in\dbR.$$
+
+\begin{itemize}
+\item[(a)] (practice) Prove that $\Phi$ is injective and $\Im(\Phi)=Func_{2\pi} (\dbR)$, the set of all $2\pi$-periodic functions.
+\item[(b)]* (practice) Prove that $\Phi$ maps $C(S^1)$ onto $C_{2\pi} (\dbR)$. Moreover, show that 
+$\Phi$ restricted to $C(S^1)$ is both an isometry from $C(S^1)$ to $C_{2\pi} (\dbR)$ (with respect to the uniform metrics)
+and an isomorphism of algebras (the latter means that $\Phi$ preserves addition, multiplication and scalar multiplication).
+\item[(c)] Use (b) to derive the following variation of the Stone-Weierstrass Theorem (in the case $X=\dbR$). 
+Let $A\subseteq C_{2\pi}(\dbR)$
+be an algebra. Suppose that $A$ vanishes nowhere and separates points on $[0,2\pi)$. Then $A$ is dense in 
+$C_{2\pi}(\dbR)$.
+\item[(d)] For each $k\in\dbN$ define $f_k,g_k:\dbR\to\dbR$ by $f_k(x)=\cos(kx)$ and $g_k(x)=\sin (kx)$. Note that
+$f_k,g_k\in C_{2\pi}(\dbR)$. Let $$\Omega=\{\mathbf 1, f_k,g_k: k\in\dbN\}$$ (here $\mathbf 1$ is the constant function equal
+to $1$ at any point), and let $A=Span(\Omega)$, the set of (finite) linear
+combinations of functions from $\Omega$ with real coefficients (such functions are called {\bf trigonometric polynomials}).
+Use (c) to prove that $A$ is dense in $C_{2\pi}(\dbR)$ (you will likely need to use some trigonometric identities).  
+\end{itemize}
+\skv
+{\bf Remark:} An alternative formulation of (d) is that for any $f\in C_{2\pi}(\dbR)$, there exists a sequence of trigonometric polynomials
+uniformly converging to $f$ on $\dbR$. If you are familiar with Fourier series, you may be tempted to think that the partial sums of the Fourier series of $f$ provide a sequence of such trigonometric polynomials. However, this is not true in general. If $f$ is merely assumed to be continuous, the Fourier series does not even have to converge pointwise. Requiring that $f$ is differentiable is sufficient to deduce that the Fourier series converges to $f$ pointwise, but is not sufficient for uniform convergence. 
+
+
+
+\skv
+{\bf 2.} ({\bf Newton's method}) This is a well-known method for approximating roots (zeroes) of a function. The goal of this problem is to provide justification for this method using the proof of the Contraction Mapping Theorem given in Lecture 19 (on Monday, Nov 10); the same proof is given in Pugh, pp.240-241. 
+
+\hskip .4cm
+The setup for Newton's method is as follows. Let $[a,b]\subseteq \dbR$ be a closed bounded interval, and let $f$ be a real-valued function
+which is defined and twice differentiable on some open interval containing $[a,b]$. Suppose in addition that
+\begin{itemize}
+\item[(i)] $f(a)<0$ and $f(b)>0$;
+\item[(ii)] there exists $C>0$ such that $f'(x)\geq C$ for all $x\in [a,b]$, so in particular $f$ is increasing on $[a,b]$;
+\item[(iii)] there exists $M>0$ such that $|f''(x)|\leq M$ for all $x\in [a,b]$.
+\end{itemize}
+Conditions (i) and (ii) and the Intermediate Value Theorem imply that $f$ has a unique root on $[a,b]$, that is, there exists
+a unique $\tau\in [a,b]$ such that $f(\tau)=0$.
+
+\hskip .4cm
+Now define the function $g:[a,b]\to\dbR$ by $$g(x)=x-\frac{f(x)}{f'(x)}.$$ Geometrically, $g(x)$ is the $x$-intercept of the tangent
+line to the graph of $f$ at the point $(x,f(x))$ (see, e.g., the wikipedia page on Newton's method for a picture). Note that
+$g(x)=x$ $\iff$ $f(x)=0$, so the unique root of $f$ (which we denoted above by $\tau$) is equal to the unique fixed point of $g$.
+
+\hskip .4cm Now we get to the actual problem. Given $\eps>0$, let $I_{\eps}=[\tau-\eps,\tau+\eps]$. Prove that if
+$\eps$ is sufficiently small, then $g$ is defined on $I_{\eps}$ and moreover
+\begin{itemize}
+\item[(1)] there exists $q<1$ such that $|g(x)-g(y)|\leq q|x-y|$ for all $x,y\in I_{\eps}$;
+\item[(2)] $g(I_{\eps})\subseteq I_{\eps}$.
+\end{itemize}
+(It is more convenient to prove things in this order). Note that (i) and (ii) imply that $g$ is a contraction from $I_{\eps}$ to $I_{\eps}$.
+
+\hskip .4cm 
+Hence the proof of the Contraction Mapping Theorem given in class implies that if we pick any $x_0\in I_{\eps}$ (with $\eps$
+satisfying (1) and (2)) and define the sequence $(x_n)$ by $x_n=g(x_{n-1})$ for all $n\in\dbN$, then $(x_n)$ converges to $\tau$.
+This is the Newton's method.
+
+\skv
+{\bf 3*.} The goal of this problem is to show that in the statement of the Contraction Mapping Theorem, one cannot replace
+the condition `$f:X\to X$ is a contraction' by $d(f(x),f(y))<d(x,y)$ for all distinct $x, y\in X$. Thus, you are asked to give 
+an example (with proof) of a complete metric space $X$ and a map $f:X\to X$ such that $d(f(x),f(y))<d(x,y)$ for all distinct $x, y\in X$,
+but $f$ has no fixed point.
+\skv
+
+\skv
+{\bf 4.} (practice) Let $A_1,A_2,B_1$ and $B_2$ be subsets of the same set. Prove
+that
+\begin{itemize}
+\item[(a)] $(A_1\cup A_2)\triangle (B_1\cup B_2)\subseteq (A_1\triangle B_1)\cup (A_2\triangle B_2)$
+\item[(b)] $(A_1\cap A_2)\triangle (B_1\cap B_2)\subseteq (A_1\triangle B_1)\cup (A_2\triangle B_2)$
+\end{itemize}
+As in Lecture~22 from Fall 2018, $A\triangle B$ is the symmetric difference of $A$ and $B$ defined by
+$$A\triangle B=(A\cup B)\setminus (A\cup B)=(A\setminus B)\sqcup (B\setminus A).$$
+
+Recall that both formulas were used in verification of properties of Lebesgue measure.
+\skv
+{\bf 5.} In all parts of this problem $X=\dbR$ or $\dbR^2$, and $m$ denotes the Lebesgue measure on $X$.
+\begin{itemize}
+\item[(a)*] Prove that every open subset of $X$ is measurable. Deduce that every closed subset of $X$
+is measurable.
+\end{itemize}
+Now let $\Omega_0, \Omega_1, \Omega_2,\ldots $ be the following collections of subsets of $X$. First define 
+$\Omega_0$
+to be the set of all subsets of $X$ which are either open or closed. For each $k\geq 1$ define $\Omega_k$
+to be the set of all subsets which can be represented either as a countable union or a countable intersection
+of subsets from $\Omega_{k-1}$.   
+\begin{itemize}
+\item[(b)] Deduce from (a) that each set in each $\Omega_k$ is measurable.
+\item[(c)] Assume that $X=\dbR$ and $S=\dbQ$. Does there exist $k\in\dbN$ such that $S\in \Omega_k$? If yes, what
+is the smallest such $k$?
+\item[(d)] Same question as (c) for $S=\dbR\setminus \dbQ$. 
+\end{itemize}
+\skv
+{\bf 6.} $\empty$
+\begin{itemize}
+\item[(a)] Let $A$ be a countable subset of $\dbR$.
+Prove that $A$ has measure zero (that is, $A$ is measurable and $m(A)=0$).
+\item[(b)] Prove that the (standard) Cantor set $C$ has measure $0$ (see p.105 in Pugh for the definition of the standard Cantor set).
+\end{itemize}
+\skv
+{\bf 7.} The goal of this problem is to construct a non-measurable subset of $\dbR$.
+\begin{itemize}
+\item[(a)] Define a relation $\sim$ on $\dbR$ by $x\sim y$ $\iff$ $y-x\in\dbQ$. Prove that $\sim$ is an equivalence relation.
+\item[(b)] Explain why each equivalence class with respect to $\sim$ contains some a real number in $[0,1]$. Thus, there
+exists a subset $V$ of $[0,1]$ which contains exactly one element from each equivalence (this step requires axiom of choice).
+\item[(c)] Prove that the sets $\{q+V: q\in \dbQ\cap [-1,1]\}$ are pairwise disjoint. Next prove that if
+$W=\sqcup_{q\in \dbQ\cap [-1,1]}(q+V)$, then $[0,1]\subseteq W\subseteq [-1,2]$. 
+\item[(d)] Now use (c) and basic properties of the Lebesgue measure to prove that $V$ is not measurable. {\bf Hint:}
+Argue by contradiction and consider the cases $m(V)=0$ and $m(V)>0$ separately.
+\end{itemize}
+\skv
+{\bf 8.} $\empty$
+\begin{itemize}
+\item[(a)] Let $A,B$ and $C$ be subsets of the same set. Prove that $$A\triangle C\subseteq (A\triangle B)\cup (B\triangle C)$$
+\item[(b)] Now let $X=[0,1]$ or $[0,1]^2$. Let $A$ be a subset of $X$, and suppose that for every $\eps>0$ there exists a measurable subset $B\subseteq X$ such that $m^*(A\triangle B)<\eps$. Prove that $A$ is measurable.
+\end{itemize}
+\skv
+\newpage
+{\bf Hint for 1(b):} The inclusion  $\Phi(C(S^1))\subseteq C_{2\pi} (\dbR)$ is straightforward. To prove the equality use the fact
+that the map $\psi:t\mapsto (\cos(t),\sin(t))$ from $\dbR$ to $S^1$ is locally injective (any point $t\in \dbR$ has a neighborhood
+on which $\psi$ is injective) and show that if $I\subseteq \dbR$ is a closed interval on which $\psi$ is injective, then
+the inverse map $\psi^{-1}:\psi(I)\to I$ is also continuous -- this can be deduced immediately from one of HW\#7 problems.
+
+\newpage
+{\bf Hint for 3:} You can find such an example where $X=[a,\infty)$ for some $a\in\dbR$ (the value of $a$ is not essential here).
+First find a natural sufficient condition for a differentiable function $f:X\to X$ to satisfy 
+$|f(x)-f(y)|<|x-y|$ for all distinct $x, y\in X$. Then determine what it means geometrically for $f$ to have no fixed points.
+Now try to draw a graph of a function satisfying both conditions and then find an explicit formula for such function (and prove that it has desired properties).
+
+ 
+\newpage
+{\bf Hint for 5(a):}
+Show that any open subset of $\dbR^2$ can be written as a union
+of squares whose endpoints have rational coordinates. 
+\end{document}
+
