@@ -1,0 +1,156 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+%\textheight=8.8in
+\textwidth=6.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\Im{{\rm Im}}
+\def\eps{{\varepsilon}}
+\def\summ{{\sum\limits}}
+\def\uncon{{\rightrightarrows}}
+\def\supp{{\rm supp}}
+
+\bf\centerline{Homework \#11. Due on Friday, Dec 5, 11:59pm on Canvas}\rm
+\vskip .1cm
+\skv
+{\bf Plan for the next 2 classes (Mon, Dec 1 and Wed, Dec 8)}: Lebesgue integral. References: 2018 lecture notes (Lectures~25 and 26),
+Kolmogorov-Fomin (Sections 29 and 30), Pugh (6.6) and Rudin (11.6). Note that Pugh's approach to Lebesgue integration is very different from the one we are discussing in class, but is also very interesting and geometrically intuitive, so make sure to read that section.
+Also a warning that in Rudin simple functions are required to have finite (rather than countable) image.
+\skv
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+{\bf 0.} Read about the Riemann/Darboux integral in Pugh (starting on p. 264 in Pugh until at least the end of p. 267). The definitions of the Riemann and Darboux integrals are different, but they lead to equivalent notions of integrability and the same value of the integral (Theorem~20 on p. 267).
+\skv
+
+\skv
+{\bf 1.} Let $D:\dbR\to\dbR$ be the Dirichlet function (defined by
+$D(x)=1$ if $x\in\dbQ$ and $0$ if $x\not\in\dbQ$), and let $a<b$ be real numbers.
+\begin{itemize}
+\item[(a)]  Prove that $D$ is Lebesgue-integrable on $[a,b]$  and that
+$\intl_{[a,b]}D\,dm=0$.
+\item[(b)] Prove that $D$ is not Riemann-integrable on $[a,b]$.
+\end{itemize}
+Make sure you did the reading in Problem 0 before solving this. 
+\skv
+{\bf 2*.} Let $(f_n: [a,b]\to\dbR)_{n=1}^{\infty}$ be a sequence of measurable functions, and let $A$ be the set of all $x\in [a,b]$ such that $(f_n(x))$ converges.
+Prove that $A$ is measurable.
+\skv
+{\bf 3.} Given a function $f:[a,b]\to\dbR$, let $\Gamma(f)$ be the graph of $f$, that is, $$\Gamma(f)=\{(x,f(x)): x\in [a,b]\}\subset \dbR^2.$$ Let $m$ denote the Lebesgue measure on $\dbR^2$. In each part of this problem prove that
+$\Gamma(f)$ has measure $0$ (each part is a generalization of the previous part, but please do not deduce (a) from (b) or (b) from (c) as there are easier constructions that work for (a) and (b))
+\begin{itemize}
+\item[(a)] $f(x)=x$;
+\item[(b)*] $f$ is an arbitrary continuous function;
+\item[(c)*] $f$ is an arbitrary measurable function.
+\end{itemize}
+{\bf Note:} A standard way to prove that a set $A$ has measure $0$ is to show that
+for every $\eps>0$ one can find a set $A_{\eps}$ containing $A$ with $m^*(A_{\eps})<\eps$.
+\skv
+{\bf 4.} Let $C$ be the standard Cantor set, and let $H:[0,1]\to [0,1]$ be the Cantor function AKA the Devil staircase function (see p.187 in Pugh).
+\begin{itemize}
+\item[(a)] Prove that $m(H(C))=1$. This shows that a continuous function may send a set of measure zero to a set of positive measure.
+\item[(b)*] Compute $\intl_{[0,1]} H\,dm$. 
+\item[(c)] (bonus) Modify the construction of $H$ to show that for every $\eps>0$ there exists a {\bf strictly} increasing continuous function $f_{\eps}:[0,1]\to [0,1]$ such that $m(H_{\eps}(C))>1-\eps$.
+\end{itemize}
+\skv
+{\bf 5.} Let $A_1\supseteq A_2\supseteq \ldots$ be a nested chain of measurable subsets of $\dbR$ or $\dbR^2$ with
+$m(A_1)<\infty$. Prove that $m\left(\bigcap\limits_{n=1}^{\infty}A_n\right)=\lim\limits_{n\to\infty}m(A_n)$. {\bf Hint:} Use countable additivity of $m$.
+
+\skv
+{\bf 6.} Let $(f_n:[a,b]\to\dbR)_{n=1}^{\infty}$ be a sequence of measurable functions, and let $f:[a,b]\to\dbR$ be a measurable function.
+Given $\delta>0$, define $$E_n(\delta)=\{x\in [a,b]: |f_n(x)-f(x)|\geq \delta\}.$$
+It is not difficult to deduce from Lemmas~23.3-23.5 that the sets $E_n(\delta)$ are always measurable.
+One say that {\it $(f_n)$ converges to $f$ in measure} if $\lim\limits_{n\to\infty}m(E_n(\delta))=0$ for any $\delta>0$.
+\begin{itemize}
+\item[(a)] Assume that $f_n\to f$ pointwise on $[a,b]$. Prove that $(f_n)$ converges to $f$ in measure. {\bf Hint:} Define
+$R_n(\delta)=\bigcup_{k=n}^{\infty}E_k(\delta)$. Prove that $\bigcap_{n=1}^{\infty}R_n(\delta)=\emptyset$ and use Problem~5.
+\item[(b)]* Now give an example where $(f_n)$ converges to $f$ in measure, but the sequence $(f_n(x))$ diverges for all $x\in [a,b]$.
+{\bf Note:} One can show that if $(f_n)$ converges to $f$ in measure, then some subsequence $f_{n_k}$ converges to $f$
+almost everywhere which means that the set $\{x: f_{n_k}(x)\not\to f(x)\}$ has measure zero.
+\end{itemize}
+\skv
+{\bf 7.} Let $X$ be a metric space and $A\subseteq X$. Then
+\begin{itemize}
+\item $A$ is a called an $F_{\sigma}$-set if $A$ is a countable union of closed sets;
+\item $A$ is a called a $G_{\delta}$-set if $A$ a countable intersection of open sets.
+\end{itemize}
+
+\begin{itemize}
+\item[(i)] Prove that $A$ is an $F_{\sigma}$-set $\iff$
+$X\setminus A$ is a $G_{\delta}$-set.
+\item[(ii)] Prove that the collection of all $F_{\sigma}$-sets in $X$ is closed under countable 
+unions and the collection of all $G_{\delta}$-sets in $X$ is closed under countable 
+intersections.
+\item[(iii)*] Let $X=\dbR$ (with standard metric). Prove that every open subset of $X$ is an $F_{\sigma}$-set and every closed subset of $X$ is a $G_{\delta}$-set.
+\end{itemize}
+
+
+\newpage
+{\bf Hint for 2:} Use Cauchy criterion to express the set in question in terms of sets of the form
+$\{x: |f_n(x)-f_m(x)|<\frac{1}{k}\}$ using countable unions and countable
+intersections.
+\newpage
+{\bf Hint for 3(b):} Use uniform continuity to cover $\Gamma(f)$ by a finite union of rectangles whose total area is less than a given $\eps>0$.
+\newpage
+{\bf Hint for 3(c):} Let $(s_n)$ be the sequence of simple functions uniformly converging to $f$ from the proof of Theorem~23.8 (by construction these $s_n$ approximate $f$ from below), and let $s_n'$ be the analogous sequence approximating $f$ from above (using the ceiling function instead of the floor function). How to use
+$(s_n)$ and $(s_n')$ to find a set of small measure containing $\Gamma(f)$. Drawing the picture will almost certainly be helpful.
+   
+\newpage
+{\bf Hint for 4(b):} Since $C$ has measure $0$, we have $\intl_{[0,1]} H\,dm=
+\intl_{[0,1]\setminus C} H\,dm$ (explain why). And the restriction of $H$ to 
+$[0,1]\setminus C$ is a simple function, so its integral can be computed just by summing a certain series. 
+
+\newpage
+{\bf Hint for 6(b):} One can find such an example where $f$ is identically zero and $\Im(f_n)=\{0,1\}$ for each $n\in\dbN$.
+\newpage
+{\bf Hint for 7(iii):} Start by showing that every open interval is an $F_{\sigma}$-set. Once this is done, the rest follows by direct combination of previously known results.
+
+\end{document}
