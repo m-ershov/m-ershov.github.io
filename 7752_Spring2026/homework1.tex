@@ -1,0 +1,123 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 1, to be submitted on Canvas by 11:59pm on Fri, Jan 23rd.}\rm
+\vskip .2cm
+{\bf Plan for the next 2 classes (Jan 20 and 22):} Tensor products of modules (continued) and tensor products of algebras (10.4).  
+Start nodules over PIDs (12.1).
+\vskip .1cm
+
+{\bf Note:} All rings are assumed to have $1$. DF = Dummit and Foote.
+\vskip .1cm
+
+{\bf Problem 1.} Let $R$ be a commutative ring.
+An $R$-module $M$ is called {\it torsion} if for any $m\in M$
+there exists nonzero $r\in R$ such that $rm=0$. An $R$-module $M$ is called {\it divisible} 
+if for any nonzero $r\in R$ we have $rM=M$. In other words, $M$ is divisible if
+for any $m\in M$ and nonzero $r\in R$ there exists $x\in M$ such that $rx=m$.
+
+\begin{itemize}
+\item[(a)] Suppose that $M$ is a torsion $R$-module and $N$ is a divisible $R$-module.
+Prove that $M\otimes_R N =\{0\}$.
+
+\item[(b)] Let $M=\dbQ/\dbZ$ considered as a $\dbZ$-module. Prove that
+$M\otimes _{\dbZ} M=\{0\}$.
+\end{itemize}
+
+{\bf Problem 2.} Let $R$ be a commutative ring, $\{N_{\alpha}\}$ a collection
+of $R$-modules and $M$ another $R$-module.
+
+\begin{itemize}
+\item[(a)] ([DF, problem 14, p.376]) Prove that $M\otimes (\oplus N_{\alpha})\cong \oplus (M\otimes N_{\alpha})$ as $R$-modules (tensor products are over $R$).
+
+\item[(b)] ([DF, problem 15, p. 376]) Show by example that $M\otimes (\prod N_{\alpha})$ need not be isomorphic to $\prod (M\otimes N_{\alpha})$. {\bf Hint:} Use the result of one of the previous problems on p. 376.
+\vskip .1cm
+\end{itemize}
+
+\bf{Problem 3. }\rm Let $R$ be a commutative domain, and let $M$ be a free 
+$R$-module with basis $e_1,\ldots, e_k$. Prove that the element
+$e_1\otimes e_2+e_2\otimes e_1\in M\otimes M$ is not representable as a simple tensor
+$m\otimes n$ for some $m,n\in M$.
+\skv
+\bf{Problem 4. }\rm Problem 16 on p.376 of DF.
+\skv
+\bf{Problem 5. }\rm Problem 17 on pp.376-377 of DF. 
+\skv
+\bf{Problem 6. }\rm Problem 21 on p.377 of DF.
+\skv
+
+\bf{Problem 7. }\rm 
+\begin{itemize}
+\item[(a)] Let $V$ be a finite-dimensional vector space over $\dbC$
+(complex numbers). Note that $V$ can also be considered as a vector space over $\dbR$,
+but $\dim_{\dbR} (V)=2 \dim_{\dbC}(V)$. Prove that $V\otimes_{\dbC} V$ is not isomorphic
+to $V\otimes_{\dbR} V$ as vector spaces over $\dbR$ and compute their dimensions over $\dbR$.
+
+\item[(b)] Let $R$ be a commutative integral domain and $F$ its field of fractions. Prove that
+$F\otimes_{R} F\cong F\otimes_{F} F\cong F$ as $F$-modules.
+
+\skv
+
+{\bf Note:} As we will explain in Lecture~3, if $T$ and $S$ are rings,
+$M$ is a left $T$-module and $N$ is an $(S,T)$-bimodule, then $N\otimes_T M$ is a left $S$-module where the action of $S$
+on simple tensors is given by $s(n\otimes m)=(sn)\otimes m$ for all $s\in S, m\in M, n\in N$. The $F$-module structures on $F\otimes_{R} F$ and
+$F\otimes_{F} F$ are given by this construction (in both cases $S=M=N=F$ and $T=R$ in the first case and $T=F$ in the second case).
+\end{itemize}
+\skv
+\bf{Problem 8. }\rm Problem 25 on p.377 of DF.
+\end{document}
