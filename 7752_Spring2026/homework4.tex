@@ -1,0 +1,107 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\Aut{{\rm Aut}}
+\def\Hom{{\rm Hom}}
+\def\GL{{\rm GL}}
+\def\SL{{\rm SL}}
+\def\SNF{{\rm SNF}}
+\def\rk{{\rm rk}}
+\def\lam{{\lambda}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 4, to be submitted on Canvas by 6pm on Sat, Feb 14th.}\rm
+\vskip .2cm
+{\bf Plan for the next 2 classes (Feb 10 and 12):}  Jordan Canonical Form (12.3 in DF; Lecture 8 from Spring 21 and Lecture 12+ from Spring 10). Start talking about Representation Theory of Groups.
+\vskip .1cm
+
+%{\bf Note on hints:} Some hints are given at the end of the assignment, each on a separate page.
+%Problems (or parts of problems) for which a hint is available at the end are marked with *.
+
+\skv
+{\bf Problem 1:} Let $F$ be a field, $a(x)=x^n+\sum\limits_{k=0}^{n-1}a_k x^k\in F[x]$ a non-constant monic polynomial,
+and let $A=C_{a(x)}$ be its companion matrix. Prove by direct computation that 
+$\SNF(xI-A)=diag(\underbrace{1,\ldots,1}_{n-1\mbox{ times }},a(x))$.
+\skv
+
+{\bf Problem 2:} DF, Problem 6, page 488. 
+\skv
+
+{\bf Problem 3:} Determine the number of possible RCFs of $8\times 8$ matrices $A$ over $\dbQ$ with 
+$\chi_A(x)=x^8-x^4$. Explain your argument in detail.
+\skv
+{\bf Problem 4: } \rm Prove that two $3\times 3$ matrices
+over some field $F$ are similar if and only if they have the same minimal and characteristic 
+polynomials. Give an example showing that this does not hold for $4\times 4$ matrices.
+\skv
+{\bf Problem 5: } Find the number of distinct conjugacy classes in the group $\GL_3(\dbF_2)$ (where $\dbF_2$ is the field with
+$2$ elements) and specify one element in each conjugacy class.
+\skv
+{\bf Problem 6: } \rm
+Prove that there is no matrix $A\in Mat_{10}(\dbQ)$ satisfying $A^4=-I$ (where $I$ is the identity matrix).
+\skv
+{\bf Problem 7: }\rm DF, Problem~15 on page 500. {\bf Hint:} This problem does not require long and tedious computations.
+\skv
+{\bf Problem 8: }\rm DF, Problem~20 on page 501. Also find an explicit $P\in \GL_n(F)$ such that $A=PBP^{-1}$ where $A$ and
+$B$ are the two matrices in the form (you may choose which one
+is $A$ and which one is $B$).
+\skv
+{\bf Problem 9:} Let $V$ be an $n$-dimensional vector space over some field $F$,
+and let $T:V\to V$ be a {\bf nilpotent} $F$-linear map. Prove that $T^n=0$ in two different ways:
+\begin{itemize}
+\item[(a)] using JCF
+\item[(b)] without using JCF or RCF, but instead looking at the sequence of kernels $\{\Ker(T^k)\}_{k=1}^{\infty}$. 
+\end{itemize}
+\end{document}
