@@ -1,0 +1,164 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+\def\char{{\rm char}}
+\def\wt{{\rm wt}}
+\def\Aut{{\rm Aut}}
+\def\Hom{{\rm Hom}}
+\def\End{{\rm End}}
+\def\GL{{\rm GL}}
+\def\SL{{\rm SL}}
+\def\SNF{{\rm SNF}}
+\def\tr {{\rm tr}}
+\def\rk{{\rm rk}}
+\def\lam{{\lambda}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 5, to be submitted on Canvas by 11:59pm on Fri, Feb 27th.}\rm
+\vskip .2cm
+{\bf Plan for the next 2 classes (Feb 24 and 26):} Unitary and unitarizable representations. Proof of Maschke's theorem
+over $\mathbb C$. Schur's Lemma and representations of abelian groups. Start talking about characters and character tables
+(time permitting)
+
+\vskip .1cm
+
+%{\bf Note on hints:} Some hints are given at the end of the assignment, each on a separate page.
+%Problems (or parts of problems) for which a hint is available at the end are marked with *.
+
+\skv
+{\bf Problem 1:} Let $F$ be a field. Use JCF to prove that any square matrix $A\in Mat_n(F)$ is similar to its transpose $A^T$. You
+can assume without proof that any field can be embedded into an algebraically closed field (we will prove this later this semester).
+
+\skv
+{\bf Problem 2:} Let $G$ be a group, $F$ a field and $V$ a vector space over $F$. Prove (including all the details)
+that there is a natural bijection between linear representations of $G$ of the form $(\rho,V)$ and $FG$-module
+structures on $V$ which extend the given $F$-vector space structure on $V$.
+
+
+\skv
+{\bf Problem 3:} (Schur's Lemma) This problem collects several (related) results (parts (a),(b) and (d) below), each of which may be referred to as Schur's Lemma.
+\begin{itemize}
+\item[(a)] Let $R$ be a ring, $M$ and $N$ irreducible (left) $R$-modules and $f:M\to N$ a homomorphism of $R$-modules.
+Prove that $f$ is either an isomorphism or the zero map.
+\item[(b)] Let $R$ be a ring and $M$ an irreducible $R$-module. Prove that $\End_R(M)$, the ring of endomorphisms
+of $M$ as an $R$-module, is a division ring (a division ring is defined in the same way as a field except that multiplication need not be commutative).
+\item[(c)] Let $G$ be a group, $g\in Z(G)$ an element of the center of $G$, and $(\rho,V)$ a linear representation of $G$ over some field $F$.
+Prove that for any $\lambda\in F$, the map $\rho(g)-\lam I:V\to V$ lies in $\End_{FG}(V)$ (where $V$ is a considered as an $FG$-module
+via the correspondence from Problem~2).
+\item[(d)] In the setting of (c), assume that $F$ is algebraically closed and $V$ is finite-dimensional and irreducible. Use (b) and (c)
+to prove that $\rho(g)=\lam I$ for some $\lam\in F$. In other words, if we are given a finite-dimensional irreducible representation over an algebraically closed field, then any central element must act as a scalar operator. 
+\end{itemize}
+\skv
+{\bf Problem 4:} (Lemma~11.2 from class) Let $R$ be a ring and $M$ an $R$-module. We will say that $M$ has {\it the complement property} if for every submodule $N$ of $M$ there exists a submodule $P$ such that $M=N\oplus P$. By Theorem~11.1 from class, $M$ has the complement
+property if and only if $M$ is completely reducible. However, the proof of Theorem~11.1 relies on Lemma~11.2, and the main goal of this problem is to prove the latter, so we need this temporary terminology for this problem.
+
+\begin{itemize}
+\item[(a)] Suppose that $M=P\oplus Q$ for some submodules $P$ and $Q$. Prove that if $N$ is any submodule containing $P$, then
+$N=P\oplus (N\cap Q)$.
+\item[(b)] Deduce from (a) that if $M$ has the complement property, then so does any submodule of $M$.
+\item[(c)] Now prove Lemma~11.2 from class which asserts that if $M$ has the complement property, then any
+nonzero submodule $L$ of $M$ contains an irreducible submodule.
+\end{itemize}
+\skv
+{\bf Hint for (c):} First use (b) to reduce (c) to the case $L=M=Rx$ for some nonzero $x\in M$. Use Zorn's Lemma to show 
+that $M$ contains a maximal submodule $N$ not containing $x$. Now show that $M/N$ is irreducible and then use
+the complement property of $M$ to deduce that it contains an irreducible submodule.
+
+\skv
+{\bf Problem 5:} Let $n\in \dbN$, $[n]=\{1,\ldots,n\}$ and $S_n$ the symmetric group on $[n]$. Let $F$ be any field
+and $(\rho, V)$ the permutation representation of $S_n$ over $F$ corresponding to the defining action of $S_n$
+on $[n]$. Up to equivalence, we can think of $V$ simply as $F^n$, in which case $\rho:S_n\to \GL(F^n)$
+is given by $(\rho(\sigma))(e_i)=e_{\sigma(i)}$ where $\{e_1,\ldots, e_n\}$ is the standard basis of $F^n$.
+\begin{itemize}
+\item[(a)] Let $Z=F(e_1+\ldots+e_n)$ and $W=\{(x_1,\ldots, x_n)\in F^n :\sum x_i=0\}$. Prove that
+$Z$ and $W$ are both subrepresentations of $V$.
+\item[(b)] Prove that $V=W\oplus Z$ if and only if $\char(F)$ does not divide $n$.
+\item[(c)]* Assume that $\char(F)$ does not divide $n!$. Prove that $W$ is an irreducible representation of $S_n$
+(see a hint at the end of the assignment).
+\end{itemize}
+
+
+\skv
+{\bf Problem 6:} Let $R$ be a commutative ring with $1$, let $M_1, M_2,N_1$ and $N_2$ be $R$-modules, and let
+ $\phi:M_1\to M_2$ and $\psi: N_1\to N_2$ be homomorphisms of $R$-modules. 
+\begin{itemize}
+\item[(a)] Prove that there exists a unique linear map $\phi\otimes \psi: M_1\otimes N_1\to M_2\otimes N_2$ such that 
+$(\phi\otimes \psi)(m\otimes n)=\phi(m)\otimes \psi(m)$ for all $m\in M_1$ and $n\in N_1$.
+\item[(b)] Now assume that $R$ a field, $M_1,M_2,N_1,N_2$ are finite-dimensional (as vector spaces over $R$),
+and choose bases $\alpha_i$ for $M_i$ and $\beta_i$ for $N_i$ for $i=1,2$. Note that
+$\gamma_i=\alpha_i\otimes \beta_i=\{x_i\otimes y_i: x_i\in\alpha_i, y_i\in\beta_i\}$ is a basis for $M_i\otimes N_i$.
+Consider the matrices $A=[\phi]_{\alpha_1}^{\alpha_2}$, $B=[\psi]_{\beta_1}^{\beta_2}$ and
+$C=[\phi\otimes\psi]_{\gamma_1}^{\gamma_2}$. Prove that if $\gamma_1$ and $\gamma_2$ are ordered in a suitable way,
+then $C$ is the Kronecker product of $A$ and $B$ as defined below.
+\item[(c)] In the setting of (b), assume that $M_1=M_2$ and $N_1=N_2$. Prove that $$\tr(\phi\otimes \psi)=\tr(\phi)\tr(\psi).$$ 
+{\bf Note:} If $V$ is a finite-dimensional vector space and $T:V\to V$ a linear map, we defines $\tr(T)=\tr([T]_{\beta})$
+where $\beta$ is any basis of $T$. The right-hand side does not depend on $\beta$ since similar matrices have the same trace.
+\end{itemize}
+{\bf Kronecker product:} Let $R$ be a commutative ring, and let $A=(a_{ij})\in Mat_{k\times l}(R)$ and $B\in Mat_{m\times n}(R)$.  
+The Kronecker product of $A$ and $B$ is a $km\times ln$-matrix over $R$ defined as a block matrix:
+$$
+\begin{pmatrix}a_11 B & \ldots &a_{1l}B\\
+\vdots& \ddots & \vdots\\
+a_k1 B & \ldots &a_{kl}B.
+\end{pmatrix} 
+ $$
+ \newpage
+ {\bf Hint for 6(c):}  Given $v\in F^n$, denote by $\wt(w)$ (the {\it weight} of $w$) the number of nonzero coordinates of $w$.
+ Now show that if $w\in W$ and $\wt(w)>2$, then there exists $g\in G$ such that $w'=\sigma(g)w-w$ is nonzero
+ and $\wt(w')<\wt(w)$. Deduce that every nonzero $S_n$-invariant subspace of $W$ contains a vector of weight $2$.
+ It remains to show that if $w\in W$ and $\wt(w)=2$, then the smallest $G$-invariant subspace of $W$ 
+ containing $w$ is the entire $W$, which can be proved by a direct computation.
+\end{document}
