@@ -1,0 +1,172 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+\def\char{{\rm char}}
+\def\wt{{\rm wt}}
+\def\Aut{{\rm Aut}}
+\def\Hom{{\rm Hom}}
+\def\End{{\rm End}}
+\def\Im{{\rm Im}}
+\def\GL{{\rm GL}}
+\def\SL{{\rm SL}}
+\def\SNF{{\rm SNF}}
+\def\tr {{\rm tr}}
+\def\rk{{\rm rk}}
+\def\lam{{\lambda}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 6, to be submitted on Canvas by 11:59pm on Fri, Mar 13th.}\rm
+\vskip .2cm
+{\bf Plan for the next 2 classes (Mar 10 and 12):} Character tables (continued) and orthogonality relations for characters
+(see Lectures 16-19 from Math 5657 notes).
+Decompositions of the regular representations as a direct sum of irreducibles, time permitting (see Lectures 20-21 from Math 5657 notes).
+\vskip .1cm
+
+%{\bf Note on hints:} Some hints are given at the end of the assignment, each on a separate page.
+%Problems (or parts of problems) for which a hint is available at the end are marked with *.
+
+\skv
+{\bf Problem 1:} Let $V$ be an inner product space.
+\begin{itemize}
+\item[(a)] (practice, no need to turn in) Prove that for any subspace $W$ of $V$ we have $V=W\oplus W^{\perp}$.
+\item[(b)] Now assume that $(\rho,V)$ is a unitary representation of a group $G$. Prove that if $W\subseteq V$
+is a subrepresentation, then so is $W^{\perp}$.
+\end{itemize}
+\skv
+{\bf Problem 2:} Let $A=(a_{ij})\in Mat_n(\dbC)$. The matrix  $A^*=\overline{A^T}$ (the conjugate transpose of $A$) is called
+the {\it adjoint matrix} of $A$. Note that $(A^*)_{ij}=\overline{a_{ji}}$. The matrix $A$ is called unitary if $A^*A=AA^*=I$, that is, if $A$ is invertible and $A^*=A^{-1}$.
+\begin{itemize}
+\item[(1)] Prove that the following are equivalent for a given $A$:
+\begin{itemize}
+\item[(a)] $A$ is unitary;
+\item[(b)] Rows of $A$ form an orthonormal basis of $\dbC^n$ (with respect to the Hermitian dot product);
+\item[(c)] Columns of $A$ form an orthonormal basis of $\dbC^n$ (with respect to the Hermitian dot product).
+\end{itemize}
+\item[(2)] Now assume that $(\rho,V)$ is a unitary representation of a group $G$, and let $\beta$ be an orthonormal basis for $V$.
+Prove that $(\rho,V)$ is unitary $\iff$ $[\rho(g)]_{\beta}$ is unitary for each $g\in G$.
+\end{itemize}
+\skv
+
+{\bf Problem 3:} The goal of this problem is to prove the general case of Maschke's Theorem: \it If $G$ is a finite group and $F$ is any field with
+$\char(F)\nmid |G|$, then any representation of $G$ over $F$ is completely reducible. \rm
+
+\sk By Theorem~11.1 from class, we just need to show that every representation of $G$ over $F$ has the complement property:
+
+{\bf Lemma:} \it Let $G$ and $F$ be as above, $(\rho,V)$ a representation of $G$ over $F$ and $W$ a $G$-invariant subspace. Then there exists a $G$-invariant subspace $U$ such that $V=W\oplus U$. \rm
+
+\sk To prove the lemma, consider the following maps. Choose any subspace $Z$ of $V$ such that $V=W\oplus Z$ and
+let $P: V\to W$ be the projection onto $W$ along $Z$, that is, $P$ is the unique linear map such that $P(w)=w$ for all $w\in W$ and $P(Z)=0$. Now define $Q:V\to V$ by
+$$Q(v)=\frac{1}{|G|}\sum\limits_{g\in G}\rho(g)^{-1} P \rho(g) (v).$$
+Prove that 
+\begin{itemize}
+\item[(i)] $Q(w)=w$ for all $w\in W$ and $\Im(Q)=W$. Deduce that $Q^2=Q$.
+\item[(ii)] $\Ker(Q)$ is $G$-invariant
+\end{itemize}
+Deduce from (i) that $V=W\oplus \Ker(Q)$ and therefore $U=\Ker(Q)$ has the desired property.
+\skv
+{\bf Problem 4:}
+\begin{itemize}
+\item[(a)] Let $M$ and $Q$ be modules over some ring $R$. Suppose that $M$ is completely reducible and $Q$ is a quotient of $M$.
+Prove that $M$ has a submodule isomorphic to $Q$.
+\item[(b)] Use (a) and Maschke's theorem to prove thatif $G$ is a finite group and $F$ is a field with $\char(F)\nmid |G|$,
+then for any irreducible representation $V$ of $G$, there is a subrepresentation of the regular representation $F[G]$ equivalent to $V$.
+
+Recall that the regular representation is the permutation representation associated to the left multiplication action of $G$ on itself.
+As an $F[G]$-module, this representation is just a free module of rank~$1$.
+\end{itemize}
+\skv
+{\bf Problem 5:} In Lecture~12 we proved that if $G$ is an abelian group, then any finite-dimensional irreducible representation of $G$ over an algebraically closed field is one-dimensional. 
+\begin{itemize}
+\item[(a)] Let $n>2$ be an integer. Construct an finite-dimensional irreducible representation of $\dbZ/n\dbZ$ over $\dbR$ (reals) which is not one-dimensional. {\bf Hint:} Recall that we completely described representations of cyclic groups over arbitrary fields in Lecture 10.
+\item[(b)] Prove that any irreducible representation of $\dbZ/2\dbZ$ over any field is one-dimensional.
+\item[(c)] Describe (with proof) all finite abelian groups $G$ such that any irreducible representation of $G$ over any field is one-dimensional.
+\end{itemize}
+{\bf Problem 6:} In all parts of this problem include ALL relevant computations.
+
+Let $G=D_{2n}$ be the dihedral group of order $2n$. Recall that $G$ has a presentation 
+$G=\la r,s \mid r^n=1, s^2=1, srs^{-1}=r^{-1}\ra$. 
+\begin{itemize}
+\item[(a)] Let $\omega\in\dbC$ be an $n^{\rm th}$ root of unity (that is, $\omega^n=1$). Prove that $G$ has a representation 
+$\rho_{\omega}:G\to \GL_2(\dbC)$ such that $\rho(r)=\begin{pmatrix}\omega & 0\\ 0 &\omega^{-1}
+\end{pmatrix}$ and $\rho(s)=\begin{pmatrix}0 & 1\\ 1 &0\end{pmatrix}$
+\item[(b)] Prove that the representation $\rho_{\omega}$ in part (a) is irreducible if and only if $\omega\neq \pm 1$.
+\item[(c)] Let $\omega_1$ and $\omega_2$ be $n^{\rm th}$ roots of unity different from $\pm 1$. Prove that 
+$\rho_{\omega_1}\cong \rho_{\omega_2}$ (as representations of $G$) $\iff$ $\omega_2=\omega_1$ or $\omega_2=\omega_1^{-1}$.
+\item[(d)] Since we can think of isometries of a regular $2n$-gon as invertible linear operators on $\dbR^2$, we get a 2-dimensional representation of $G$ ``for free'' (simply representing the elements of $D_{2n}$ by their matrices with respect to the standard basis).
+If we assume that $r$ is the counterclockwise rotation by $\frac{2\pi}{n}$ and $s$ is the reflection with respect to the $x$-axis, 
+the corresponding $\rho$ is given by $\rho(r)=\begin{pmatrix}\cos\frac{2\pi}{n} & -\sin\frac{2\pi}{n}\\ \sin\frac{2\pi}{n} &\cos\frac{2\pi}{n}\end{pmatrix}$ and $\rho(s)=\begin{pmatrix}1 & 0\\ 0 &-1\end{pmatrix}$. Note that technically $\rho$ is a real representation
+(a homomorphism from $G$ to $GL_2(\dbR)$), but since every $2\times 2$ real matrix can be thought of as a  $2\times 2$ complex matrix,
+we can think of $\rho$ as a complex representation. Prove that this $\rho$ is equivalent to some $\rho_{\omega}$ from part (a),
+explicitly find such $\omega$ as well as a matrix $T\in GL_2(\dbC)$ such that $T^{-1}\rho(g) T=\rho_{\omega}(g)$ for all $g\in G$. 
+\item[(e)] Recall that the number of one-dimensional complex representations of a finite group $G$ is equal to $|G^{ab}|$. 
+Prove that $[G,G]=\la r^2\ra$ (hint: there is no need to compute the commutator of two arbitrary elements). Deduce that $|G^{ab}|=2$
+if $n$ is odd and $|G^{ab}|=4$ if $n$ is even. Then describe all one-dimensional complex representations of $G$ explicitly
+(it is enough to specify the images of $r$ and $s$ under these representations).  
+\end{itemize}
+We will soon prove that every complex irreducible representation of $D_{2n}$ is 1-dimensional or 2-dimensional and, in the latter case,
+isomorphic to some $\rho_{\omega}$ as in part (a).
+\skv
+{\bf Problem 7:} Let $(\alpha,V)$ and $(\beta,W)$ be representations of the same group over the same field. The {\it tensor product} of these representations is the representation $(\rho, V\otimes W)$ where $\rho(g)=\alpha(g)\otimes \beta(g)$ for each $g\in G$ (in the notations
+from Problem~6 in HW\#5). In other words, $\rho(g)\in GL(V\otimes W)$ is the unique linear map such that $\rho(g)(v\otimes w)=
+(\alpha(g)v)\otimes (\beta(g)w)$ for all $v\in V$ and $w\in W$.
+\begin{itemize}
+\item[(a)] Prove that $(\rho, V\otimes W)$ is indeed a representation, that is, $\rho: G\to GL(V\otimes W)$ is a homomorphism.
+\item[(b)] Prove that if $(\alpha,V)$ is NOT irreducible and $W\neq 0$, then $(\rho,V\otimes W)$ is not irreducible either.
+\item[(c)] Now prove that if $(\alpha,V)$ is irreducible and $\dim(W)=1$, then $(\rho,V\otimes W)$ is irreducible.
+\end{itemize}
+\skv
+
+\end{document}
