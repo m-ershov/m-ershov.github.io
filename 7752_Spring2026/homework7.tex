@@ -1,0 +1,168 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+\def\char{{\rm char}}
+\def\wt{{\rm wt}}
+\def\Aut{{\rm Aut}}
+\def\Hom{{\rm Hom}}
+\def\End{{\rm End}}
+\def\Irr{\mathrm {Irr}}
+\def\Im{{\rm Im}}
+\def\GL{{\rm GL}}
+\def\SL{{\rm SL}}
+\def\SNF{{\rm SNF}}
+\def\tr {{\rm tr}}
+\def\rk{{\rm rk}}
+\def\lam{{\lambda}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf\centerline{Homework \# 7, to be submitted on Canvas by 11:59pm on Fri, Mar 20th.}\rm
+\vskip .2cm
+{\bf Plan for the next 2 classes:} On Tue, March 17 we will prove part 1 of Theorem~14.1 (the number of equivalence classes of irreducible complex representations of a finite group $G$ is equal to the number of conjugacy classes of $G$). This is proved in Lectures 20-21 in Fall 2017 notes. On Thu, March~19 we will discuss various consequences of Theorem~14.1, including the decomposition of the regular representations as a direct sum of irreducibles. Most of these are discussed in Lectures 17, 19 and 21 from Fall 2017.
+\vskip .1cm
+
+{\bf Note on hints:} Some hints are given at the end of the assignment, each on a separate page.
+Problems (or parts of problems) for which a hint is available at the end are marked with *.
+
+\skv
+{\bf 1.} Let $G$ be a group, $N$ a normal subgroup of $G$ and let $\pi:G\to G/N$ be the natural projection. 
+\begin{itemize}
+\item[(a)] Given a representation $\rho: G/N\to \GL(V)$ of $G/N$, define the representation $\widetilde \rho: G\to \GL(V)$ of $G$
+by $$\widetilde \rho(g)=\rho\circ \pi(g)=\rho(gN). \eqno (***)$$ Prove that $\widetilde \rho$ is irreducible $\iff$ $\rho$ is irreducible. Also
+prove that two representations $\rho_1$ and $\rho_2$ of $G/N$ are equivalent $\iff$ the corresponding representations 
+$\widetilde \rho_1$ and $\widetilde \rho_2$ of $G$ are equivalent.
+\item[(b)] (practice, no need to turn in) Now fix a field $F$. Let
+\begin{itemize}
+\item $\Irr(G)$ be the set of equivalence classes of irreducible representations of $G$ over $F$;
+\item $\Irr(G/N)$ the set of equivalence classes of irreducible representations of $G/N$ over $F$;
+\item $\Irr(G,N)$ the set of all $[\rho]\in \Irr(G)$ such that $N\subseteq \Ker\rho$.
+\end{itemize}
+(here $[\rho]$ is the equivalence class of the representation $\rho$). Define the map $\Phi:\Irr(G/N)\to \Irr(G)$ by $$\Phi([\rho])=[\widetilde \rho]$$ (where $\widetilde \rho$ is defined by (***)). Explain why $\Phi$
+is well defined and injective (this follows immediately from (a)) and then prove that $\Im(\Phi)=\Irr(G,N)$.
+\end{itemize}
+\newpage
+{\bf 2.} Let $(\rho,V)$ be a representation of a group $G$. Recall that the dual representation $(\rho^*,V^*)$ is defined by
+$\rho^*(g)(f)=f\circ \rho(g)^{-1}$ for all $f\in V^*$. Prove Claim~15.2 from class:
+\begin{itemize}
+\item[(1)] $(\rho^*,V^*)$ is indeed a representation
+\item[(2)] If $\beta$ is any basis of $V$ and $\beta^*$ is the dual basis of $V^*$, then $[\rho^*(g)]_{\beta^*}=([\rho(g)]^{-1}_{\beta})^T$
+\end{itemize}
+\skv
+{\bf Note:} Part (2) has almost nothing to do with representation theory. Given an operator $A\in \End(V)$, its adjoint
+$A^*\in \End(V^*)$ is defined by $A^*(f)=f\circ A$ (this notion of adjoint is related to but slightly different from adjoints in complex
+inner product spaces). Note that the homomorphism $\rho^*$ from the definition of the dual representation can be expressed in terms of adjoints as follows:
+$$ \rho^*(g)=(\rho(g)^{-1})^* \mbox{ for all }g\in G.$$
+What you really need to prove is that $[A^*]_{\beta^*}=([A]_{\beta})^T$ for any $A$.
+\skv
+{\bf 3*.} Describe all irreducible complex representations of $S_4$ and compute its character table. 
+\skv
+\skv
+{\bf 4.}  Now describe all irreducible complex representations of the alternating group $A_4$ and compute its character table.
+First prove that $[A_4,A_4]=V_4$, the Klein $4$-group defined by
+$V_4=\{e, (12)(34), (13)(24), (14)(23)\}$.
+\skv
+{\bf Note:} The description of conjugacy classes of $A_n$ is similar to that of $S_n$. Note that since $A_n$
+is normal in $S_n$, every conjugacy class of $S_n$ is either contained in $A_n$ or has empty intersection with $A_n$,
+but a single conjugacy class of $S_n$ contained in $A_n$ may split into several conjugacy classes of $A_n$. In other words, two elements of $A_n$ may be conjugate in $S_n$, but not conjugate in $A_n$. The following result (which may have been proved in Algebra-I is not an official part of homework, but which are you encouraged to prove as an exercise) describe exactly when and what kind of splitting occurs:
+\skv
+
+Let $g\in A_n$ and let $K(g)$ be its conjugacy class in $S_n$. Let $C(g)$ be the centralizer of $g$ in $S_n$, that is,
+$C(g)=\{x\in S_n:\, gx=xg\}$.
+
+\begin{itemize}
+\item[(a)] Suppose that $C(g)\not\subseteq A_n$, that is, $C(g)$ contains an odd permutation. Then $K(g)$ is a single conjugacy class of $A_n$, that is, any two elements of $K(g)$ are conjugate in $A_n$.
+\item[(b)] Suppose that $C(g)\subseteq A_n$. Then $K(g)$ is a disjoint union of two conjugacy classes of $A_n$. One
+of these is $K_{A_n}(g)$, the conjugacy class of $g$ in $A_n$, and the other is $K_{A_n}(xgx^{-1})$ where $x\in S_n$
+is any odd permutation.
+\end{itemize}
+\skv
+\newpage
+
+{\bf 5.} A representation $(\rho,V)$ of a group $G$ over a field $F$ is called {\it cyclic} if $V$ is cyclic as an $FG$-module,
+that is, generated as an $FG$-module by a single element. More explicitly, $(\rho,V)$ is cyclic if there exists $v_0\in V$
+such that the smallest $G$-invariant subspace of $V$ containing $v_0$ is the entire $V$.
+\begin{itemize}
+\item[(a)] Prove that any irreducible representation is cyclic.
+\item[(b)] Let  $(\rho,V)$ be a cyclic representation of a finite group $G$. Prove that $\dim(V)\leq |G|$.
+\item[(c)] Now let  $(\rho,V)$ be an irreducible representation of a finite group $G$. Prove that $\dim(V)\leq |G|-1$.
+\end{itemize}
+\skv
+{\bf 6.} Let $G$ be a group, $N$ a normal subgroup of $G$ and $(\rho,V)$ a representation of $G$ over a field $F$.
+\begin{itemize}
+\item[(a)] Prove that $V^N=\{v\in V: \rho(n)v=v\mbox{ for all }n\in N\}$ is a subrepresentation of $(\rho,V)$.
+\item[(b)] Given a homomorphism
+ $\lam:N\to F^{\times}$, define $$V_{\lam}(N)=\{v\in V: \rho(n)v=\lam(n)v\mbox{ for all }n\in N\}$$
+(thus, $V^N=V_{\mathbf 1}$ where $\mathbf 1:N\to F^{\times}$ is the trivial map). Prove that for every $g\in G$
+and every $\lam:N\to F^{\times}$ we have $\rho(g)(V_{\lam})=V_{\mu}$ for some $\mu$ (depending on $\lam$ and $g$).
+\end{itemize}
+\skv
+{\bf 7.} Given a field $F$, the \emph{Heisenberg group over $F$} is the group $Heis(F)$ consisting of all $3\times 3$ upper unitriangular matrices in $GL_3(F)$, that is, matrices of the form $\begin{pmatrix}1&a&c\\ 0& 1& b\\ 0&0&1\end{pmatrix}$
+with $a,b,c\in F$. Denote by $E_{ij}(\lam)$ the matrix which has 1's on the diagonal, $\lam$ in the position $(i,j)$ and $0$
+everywhere else.
+
+Let $G=Heis(\dbZ_p)$ for some prime $p$.
+\begin{itemize}
+\item[(a)] Prove that $[G,G]=\{E_{13}(\lam):\lam\in \dbZ_p\}$ and that 
+$G^{ab}\cong \dbZ_p\times \dbZ_p$.
+\item[(b)] Let $x=E_{12}([1])$, $y=E_{23}([1])$ and $z=E_{13}([1])$ where $[1]$ is the unity element of $\dbZ_p$. Prove that $$G=\la x,y,z \mid x^p=1, y^p=1, z^p=1, xz=zx, yz=zy, x^{-1}y^{-1}xy=z\ra.$$
+\item[(c)] Describe all one-dimensional complex representations of $G$.  
+\end{itemize}
+\newpage
+{\bf Hint for 3:} Since $S_4$ has $5$ conjugacy class, it has exactly $5$ equivalence classes of irreducible complex representations,
+and $3$ of those $5$ have already been described in class. To construct one of the remaining $2$ representations
+use Problem~1 and the fact that $S_4/V_4\cong S_3$ (where $V_4$ is the Klein $4$-group). Then use a general construction  to 
+find the last irreducible complex representation of $S_4$.
+\end{document}
