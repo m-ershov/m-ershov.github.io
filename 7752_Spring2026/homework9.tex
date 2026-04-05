@@ -85,10 +85,55 @@ References: 13.5 and 14.1 in Dummit and Foote, Lectures 17-19 from Spring 2010 a
 %Problems (or parts of problems) for which a hint is available at the end are marked with *.
 
 \skv
-{\bf 1.} Representation theory problem (to be added)
-
+{\bf 1.} Let $\sigma$ be an action of a group $G$ on a finite set $X$, and let $(\dbC X)_{\sigma}$ be the corresponding
+permutation representation of $G$ over $\dbC$ (here $\dbC X$ is the underlying space and the subscript $\sigma$ is just
+used to explicitly refer to $\sigma$ in the notation). The representation $\dbC X$ decomposes as a direct sum of two subrepresentations:
+$(\dbC X)_{\sigma} = W_{\sigma}\oplus W_{\sigma}^{\perp}$ where $W_{\sigma}=\dbC(\sum\limits_{x\in X}x)$ and $
+W_{\sigma}^{\perp}$ is the orthogonal complement
+with respect to the Hermitian dot product on $\dbC X$ (under the natural identification between $\dbC X$ and $\dbC^{|X|}$),
+that is, $$W_{\sigma}^{\perp}=\{\sum \lam_x x\in \dbC X: \sum \lam_x =0\}$$ (note that if $G=S_n$ and $\sigma$ is the definining action
+of $G$ on $\{1,\ldots, n\}$, then $W_{\sigma}^{\perp}$ is the standard representation of $S_n$), The main goal of this problem is to
+find a simple criterion for the representation $W_{\sigma}^{\perp}$ to be irreducible.
 \skv
-{\bf 2.} Representation theory problem (to be added)
+Going back to the original setup, let $\sigma$ be an action of a group $G$ on a set $X$ with $|X|>1$. 
+\begin{itemize}
+\item Denote by $\sigma^2$ the {\it diagonal} action of $G$ on $X\times X$ given by $g.(x,y)=(gx,gy)$.  
+\item Note that $\sigma^2$ stabilizes the diagonal $D(X)=\{(x,x)\in X\}\subset X\times X$ and hence also 
+$(X\times X)\setminus D(X)$. Denote by $\sigma(2)$ the restriction of $\sigma^2$ to $(X\times X)\setminus D(X)$.
+\end{itemize}
+The {\it rank} of $\sigma$ (denoted $\rk(\sigma)$) is defined to be the number of orbits of $\sigma(2)$.
+Note that $\rk(\sigma)=1$ $\iff$ $\sigma$ is {\it 2-transitive}, that is, if $G$ acts transitively 
+on the ordered pairs of distinct elements of $X$.
+\skv
+Now the actual problem begins. Recall that if $V$ is a representation of $G$, by $V^G$ we denote the subspace of global fixed points.
+\begin{itemize}
+\item[(a)] Let  $\tau$ be an action of a group $G$ on a set $X$, and let $F$ be a field.
+Prove that $\dim((FX)_{\tau}^G)$ is equal to the number of orbits of $\tau$. {\bf Hint:} We proved this in class in the case of 
+the conjugation action of $G$ on itself. The proof in the general case is analogous.
+\item[(b)] Now assume that $\sigma$ is an action of a finite group $G$ on a finite set $X$, and let
+$\chi_{\sigma}$ be the character of the $(\dbC X)_{\omega}$. Prove that 
+$$\la \chi_{\sigma},\chi_{\sigma}\ra=\frac{1}{|G|}\sum\limits_{g\in G}\chi_{\sigma^2}(g).$$
+\item[(c)] Now applying (a) to $\tau=\sigma^2$ (and $F=\dbC$) and a suitable result from Lecture~15, deduce
+that $\la \chi_{\sigma},\chi_{\sigma}\ra$ is equal to the number of orbits of $\sigma^2$. 
+\item[(d)] Finally use (c) to prove that $W^{\perp}_{\sigma}$ (as defined above)
+is irreducible if and only if $|X|=2$ or $\rk(\sigma)=1$. {\bf Hint:} Consider separately the cases where
+$\sigma$ is transitive and $\sigma$ is not transitive.
+\end{itemize}
+
+
+
+{\bf 2.} Let $p$ be a prime, and let 
+$G$ be the set of all functions from $\dbF_p$ to $\dbF_p$ which have the form
+$x\mapsto ax+b$ for some $a\in\dbF_p^{\times}$ and $b\in\dbF_p$.
+\begin{itemize}
+\item[(a)] Prove that $G$ is a group (with respect to composition) isomorphic to the group of matrices $\left\{\begin{pmatrix} a&b\\ 0&1\end{pmatrix}:
+a\in\dbF_p^{\times}, b\in\dbF_p\right\}$. Note that for $p=5$ this is the group
+from Problem~3 on Midterm \#2.
+\item[(b)] The group $G$ has a natural action on $\dbF_p$ (given by
+$g.x=g(x)$ for all $g\in G$ and $x\in\dbF_p$). Prove that this action is
+$2$-transitive. By Problem~1, this gives a more conceptual proof of the irreducibility of the $4$-dimensional representation
+you had to construct in Problem~3 on Midterm \#2. 
+\end{itemize}
 \skv
 \skv
 {\bf 3.} \rm 
