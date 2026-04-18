@@ -1,0 +1,176 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=15pt
+\textheight=8.4in
+\parindent=0pt
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .12cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\Ker{{\rm Ker\,}}
+\def\phi{\varphi}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+\def\char{{\rm char}}
+\def\wt{{\rm wt}}
+\def\Aut{{\rm Aut}}
+\def\Gal{{\rm Gal}}
+\def\Hom{{\rm Hom}}
+\def\End{{\rm End}}
+\def\Mat{{\rm Mat}}
+\def\Irr{\mathrm {Irr}}
+\def\Im{{\rm Im}}
+\def\GL{{\rm GL}}
+\def\SL{{\rm SL}}
+\def\SNF{{\rm SNF}}
+\def\tr {{\rm tr}}
+\def\rk{{\rm rk}}
+\def\lam{{\lambda}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+
+\bf
+\begin{center}
+{Homework \# 11, due on Canvas by 6pm on Sat, Apr 26th.}\rm
+\end{center}
+\vskip .2cm
+\rm
+
+{\bf Plan for the next 2 classes:} More on Galois correspondence, including further examples (14.4 in DF, Lecture 21 from Spring 2010 and Lectures 16-17 from Spring 2021). Cyclic extensions, including Hilbert's Theorem 90 and Kummer's Theorem (14.3 in DF, Lecture 23 from Spring 2010 and Lecture 19 from Spring 2021).
+\vskip .1cm
+
+%{\bf Note on hints:} Some hints are given at the end of the assignment, each on a separate page.
+%Problems (or parts of problems) for which a hint is available at the end are marked with *.
+
+\skv
+{\bf Problem 1:} Let $p$ be a prime, $n$ a positive integer and
+$\Phi_n(x)=x^{p^n}-x\in \mathbb F_p[x]$. Prove that $\Phi_n(x)$ is equal to the product
+of all monic irreducible polynomials in $\mathbb F_p[x]$ whose degrees divide $n$
+(where each polynomial occurs with multiplicity one). {\bf Hint:} Reformulate the question in terms of $\overline{\mathbb F_p}$-roots
+of $\Phi_n(x)$.
+\skv
+
+{\bf Problem 2:} Let $K\subset\dbC$ be the splitting field of $f(x)=x^4-2$ over $\dbQ$.
+
+\begin{itemize}
+\item[(a)] Choose an order on the set of roots of $x^4-2$ and describe the associated embedding
+of $\Gal(K/\dbQ)$ to $S_4$.
+
+\item[(b)] Describe all subgroups of $\Gal(K/\dbQ)$ and the corresponding subfields of $K$ (with proof).
+
+\end{itemize}
+
+\skv
+{\bf Problem 3:} Let $p$ and $q$ be distinct primes with $q>p$,
+and let $K/F$ be a Galois extension of degree $pq$. Prove that
+\begin{itemize}
+\item[(a)] There exists a field $L$ with $F\subseteq L\subseteq K$ and $[L:F]=q$
+
+\item[(b)] There exists a unique field $M$ with $F\subseteq M\subseteq K$ and $[M:F]=p$.
+\end{itemize}
+\skv
+
+\skv
+{\bf Problem 4:} Let $K/F$ and $L/F$ be Galois extensions.
+
+\begin{itemize}
+\item[(a)] Prove that the extension $KL/F$ is also Galois and there is a natural
+embedding $\iota:\Gal(KL/F)\to \Gal(K/F)\times \Gal(L/F)$.
+
+\item[(b)]
+Assume now that $K/F$ and $L/F$ are both finite. Prove that the map $\iota$ in (a)
+is an isomorphism if and only if $K\cap L=F$.
+\end{itemize}
+
+{\bf Problem 5:} \rm Before doing this problem, read the first half
+of Section 14.4 in DF (pp. 591-593).
+
+{\bf Definition~1:} Let $L/F$ be a finite separable extension
+and let $\overline F$ be an algebraic closure of $F$ containing $L$.
+A subfield $L'$ of $\overline F$ is called
+{\bf conjugate to $L$ over $F$} if $L'=\sigma(L)$ for some $F$-embedding of
+$\sigma$ into $\overline F$. Note that $L/F$ is Galois if and
+only if $L$ does not have any $F$-conjugates besides $L$ itself.
+\skv
+{\bf Definition~2:} A finite extension $K/F$ is called
+a {\bf $p$-extension} if $K/F$ is Galois and $Gal(K/F)$ is a $p$-group.
+\skv
+\begin{itemize}
+\item[(a)] Let $L/F$ be a separable extension of degree $n$, and
+let $K$ be the Galois closure of $L$ over $F$ (see p. 594 in DF or subsection 19.2 in Lecture~19 from Spring~2010 for the definition). 
+Prove that $K$ can be written as a compositum $L_1L_2\ldots L_n$
+where $L_1,\ldots L_n$ are (not necessarily distinct) conjugates of
+$L$ over $F$.
+
+\item[(b)] Let $K/F$ and $L/F$ be finite $p$-extensions. Prove
+that $KL/F$ is also a $p$-extension.
+
+\item[(c)] Suppose $K/L$ and $L/F$ are both $p$-extensions, and
+let $M$ be the Galois closure of $K$ over $F$ (note: we do
+not know whether $K/F$ is Galois or not). Prove that
+$M/F$ is also a $p$-extension. {\bf Hint:} first use (b) to show that
+$M/L$ is a $p$-extension.
+
+\item[(d)] Now assume only that $L/F$ is a separable extension
+with $[L:F]$ a power of $p$, and let $M$ be the Galois closure
+of $L$ over $F$. Prove that $[M:F]$ need not be a power of $p$.
+\end{itemize}
+\skv
+{\bf Problem 6:} Let $p$ be a prime, $K=\mathbb F_p(t)$, the field of rational functions in one variable over $\dbF_p$.
+Let $\sigma:K\to K$ be the unique automorphism of $K$ such that $\sigma(t)=t+1$ and $G=\langle \sigma\rangle$ (clearly
+$G$ is cyclic of order $p$). Let $F=K^G$. Find an explicit element $s$ such that $F=\dbF_p(s)$ and prove your answer.
+\skv
+{\bf Problem 7:} 
+Let $E/F$ be a field extension, let $K_1$ and $K_2$ be subfields of $E$ containing $F$,
+and assume that the extensions $K_1/F$ and $K_2/F$ are finite. Let $K_1 K_2$ be the composite
+field of $K_1$ and $K_2$. Prove that the $F$-algebra $K_1\otimes_F K_2$ is a field if and only if
+$$[K_1 K_2: F]=[K_1: F][K_2: F].$$ {\bf Hint:} Use the universal property of tensor products to relate
+$K_1\otimes_F K_2$ and $K_1 K_2$.
+\skv
+{\bf Problem 8:} Let $K/F$ be a finite Galois extension of degree $n$. Prove that
+$K\otimes_F K\cong \underbrace{K\times\ldots\times K}_{n \mbox{ times }}$ as $K$-algebras. {\bf Hint:} Use the
+Primitive Element Theorem to represent the second $K$ in $K\otimes_F K$ in a suitable way, so that the tensor
+product can be computed using techniques we discussed at the start of the semester.
+\end{document}
