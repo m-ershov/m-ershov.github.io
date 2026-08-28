@@ -1,0 +1,152 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\Mat{{\rm Mat}}
+
+
+
+\bf\centerline{Homework \#1. Due on Thursday, Sep 3rd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf\centerline{Plan for next week (Aug 31, Sep 2):}\rm More examples of vector spaces, subspaces, spans, linear independences, bases and dimension  (sections 1.2-1.5 and parts of 1.6 of the book Linear Algebra by Friedberg, Insel and Spence). 
+\skv
+{\bf Notations:} $\dbN=\{1,2,\ldots\}$ denotes the natural numbers.
+Given a field $F$ and $n,m\in\dbN$, the set of $n\times m$ matrices with entries in $F$ is denoted by $\Mat_{n\times m} (F)$.
+The notation $\Mat_n(F)$ is a shortcut for $\Mat_{n\times n}(F)$. 
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+
+{\bf Problem 1:} Let $F$ be a field, and let $A\in \Mat_{n\times m}(F)$ and $B\in \Mat_{m\times k}(F)$ for some $n,m,k\in\dbN$. Prove that $(AB)^T = B^T A^T$ where $X^T$ is the transpose of a matrix $X$. Include all the details.
+
+\skv
+\bf{Problem 2: }\rm Let $F$ be a field and $n\in\dbN$. Given $A=(a_{ij})\in \Mat_n(F)$, the {\it trace of $A$},
+denoted by $\tr(A)$, is the sum of all diagonal entries of $A$:
+$$\tr(A)=\sum_{i=1}^n a_{ii}.$$
+\begin{itemize}
+\item[(a)] Prove that $\tr(\lam A+\mu B)=\lam\, \tr(A)+\mu\, \tr(B)$ for all $A,B\in \Mat_n(F)$ and $\lam,\mu\in F$.
+\item[(b)] Let $\mathfrak{sl}_n(F)=\{A\in \Mat_n(F): \tr(A)=0\}$. Prove that $\mathfrak{sl}_n(F)$
+is a subspace of $\Mat_n(F)$ (where $\Mat_n(F)$ is considered as a vector space over $F$ with respect
+to the usual matrix addition and scalar multiplication).
+\item[(c)] Prove that  $\tr(AB)=\tr(BA)$ for all $A,B\in \Mat_{n\times n}(F)$. 
+\end{itemize}
+\skv
+
+\bf{Problem 3: }\rm Let $F$ be a field. In both parts below $V=F^2=\{(a,b):a,b\in F\}$ as a set. In each part determine (with proof)
+whether $V$ is a vector space with respect to given operations. If your answer is yes, find an explicit formula for the zero element
+of $V$ (note that the zero element need not equal $(0,0)$):
+
+\begin{itemize}
+\item[(a)] addition is defined in the usual way: $(a,b)+(c,d)=(a+c,b+d)$, and scalar multiplication is defined by $\lam(a,b)=(\lam a,b)$ for all $\lam \in F$ and $(a,b)\in V$;
+\item[(b)] addition is defined by $(a,b)+(c,d)=(a+c,b+d+1)$, and scalar multiplication is defined by $\lam(a,b)=(\lam a, \lam b+\lam-1)$
+\end{itemize}
+\skv
+
+\bf{Problem 4: }\rm Let $V$ be the vector space of all polynomials with real coefficients (that is, all functions $f:\dbR\to\dbR$
+of the form $f(x)=\sum\limits_{i=0}^n a_i x^i$ for some $n\in\dbN$ and $a_0,\ldots, a_n\in\dbR$). For each of the following
+subsets $W$ of $V$ determine (with proof) if $W$ is a subspace of $V$:
+\begin{itemize}
+\item[(a)] $W=\{f\in V: f(1)\geq 0 \}$;
+\item[(b)] $W=\{f\in V: f(1)=f(2) \}$.
+\end{itemize}
+\skv
+\bf{Problem 5: }\rm Let $F$ be a field, $n\in\dbN$ and $V=F^n=\{(x_1,\ldots, x_n): x_i\in F\mbox{ for each }i\}$. We view $V$ as a vector space with respect to the usual addition and scalar multiplication. Let $W=\{(x_1,\ldots,x_n)\in V: \sum\limits_{i=1}^n x_i=0\}$.
+\begin{itemize}
+\item[(a)] Prove that $W$ is a subspace of $V$.
+\item[(b)] Now assume $F$ is finite. Find $|W|$ (with proof). The answer should be expressed in terms of $|F|$ and $n$. {\bf Note:}
+As explained in Lecture~1, basic examples of finite fields are $\dbZ_p$ (integers mod $p$) for any prime $p$, but not every finite field
+is of this form (even up to isomorphism).  
+\end{itemize}
+\skv
+\bf{Problem 6: }\rm Let $V$ be a vector space over a field $F$. Let
+$W_1$ and $W_2$ be subspaces of $V$.
+\begin{itemize}
+\item[(a)] Prove that $W_1\cup W_2$ is a subspace of $V$ if and only if $W_1\subseteq W_2$
+or $W_2\subseteq W_1$.
+\item[(b)] Prove that $W_1+W_2$ is a subspace of $V$, where by definition 
+$W_1+W_2=\{w_1+w_2: w_1\in W_1, w_2\in W_2\}$. 
+\item[(c)] Prove that $W_1+W_2$ is the smallest subspace of $V$ containing $W_1$ and $W_2$,
+that is, if $W$ is any subspace of $V$ containing $W_1$ and $W_2$, then $W$ contains $W_1+W_2$.
+\end{itemize}
+\skv
+\bf{Problem 7: }\rm Let $V$ be a vector space over $\dbC$ (complex numbers).
+\begin{itemize}
+\item[(a)] Explain why $V$ is also a vector space over $\dbR$ (reals) and $\dbQ$ (rationals) with respect to the same operations.
+\end{itemize} 
+According to (a), given a subset $W$ of $V$, we can ask whether it is a $\dbC$-subspace (that is, a subspace of $V$
+considered as a vector space over $\dbC$), and $\dbR$-subspace or a $\dbQ$-subspace. These are 3 different notions.
+For example, it is easier to be an $\dbQ$-subspace than an $\dbR$-subspace since to be a $\dbQ$-subspace $W$
+only needs to be closed under addition and multiplications by rationals, while to be a $\dbR$-subspace, it needs
+to be also closed under multiplications by all reals.
+
+In parts (b) and (c) $V=\dbC$ (where the vector space addition is the addition in $\dbC$ and the scalar multiplication is
+the usual multiplication).
+
+\begin{itemize}
+\item[(a)] Prove that the only $\dbC$-subspaces of $V$ are $V$ itself and $\{0\}$.
+\item[(b)] Describe all $\dbR$-subspaces of $V$ (and prove that there are no other subspaces).
+You may use any results from the Chapter 1 of the book, but state your references clearly.
+\end{itemize}
+
+\skv
+
+\bf{Problem 8: }\rm Let $V$ be a vector space over a field $F$ and $S=\{v_1,v_2\}$ a subset of $V$ containing precisely two elements.
+Prove that $S$ is linearly dependent $\iff$ $v_1$ is a scalar multiple of $v_2$ or $v_2$ is a scalar multiple of $v_1$.
+(By definition, $w$ is a scalar multiple of $v$ if $w=\lam v$ for some $\lam\in F$).
+\end{document}
+
+
+
