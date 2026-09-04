@@ -1,0 +1,172 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+
+
+
+\bf\centerline{Homework \#2. Due on Thursday, Sep 10th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 1.4-1.6
+
+\bf{Plan for next week (Sep 7,9): }\rm  1.6 (bases and dimension), 2.1 (linear transformations, kernels and images), maybe start 2.2
+(matrix of a linear transformation). 
+\skv
+In this homework you can use Theorems~A and B below. They are both proved in 1.6 (Theorem~B is stated slightly differently) and will also be proved in class on Mon, Sep 7.
+
+Let $V$ be a vector space over a field $F$. In class we defined $V$ to be {\it finite-dimensional} if $V$ has a finite spanning set.
+We then immediately proved that if $V$ is finite-dimensional, then $V$ has a finite basis (Lemma~3.5 from class).
+\skv
+{\bf Theorem A: }\rm Let $V$ be a finite-dimensional vector space. Then any two bases of $V$ have the same (finite) cardinality. This common cardinality is called the dimension of $V$.
+\skv
+{\bf Theorem B: }\rm Let $V$ be a vector space of finite dimension $n$, and let $S$ be a subset of $V$ with $|S|=n$. Then
+$S$ is a basis $\iff$ $S$ is spanning $\iff$ $S$ is linearly independent. 
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+
+{\bf Problem 1:} Let $V$ be a vector space over a field $F$.
+\begin{itemize}
+\item[(a)] Prove Lemma 3.4(1) from class: If $S$ is a linearly independent subset of $V$ which is not a basis, there exists a
+linearly independent subset $T$ of $V$ which strictly contains $S$ (that is, $T\supseteq S$ and $T\neq S$). {\bf Hint:} This
+can be proved similarly to one of the directions in Lemma 3.2 from class.
+\item[(b)] Assume that $V$ is infinite-dimensional (that is, $V$ is not finite-dimensional, as defined at the beginning of this homework).
+Use (a) to prove that $V$ contains an infinite linearly independent subset. 
+\end{itemize}
+
+\skv
+Before the next problem we introduce the notion of characteristic of a field. Given a field $F$ and $n\in\dbN$, we define $n_F\in F$
+by $n_F=\underbrace{1_F+\ldots+1_F}_{n\mbox{ times }}$ ($1_F$ added to itself $n$ times). If $n_F\neq 0_F$ for all $n\in\dbN$, one
+defines the characteristic of $F$ (denoted $\char(F)$) to be $0$; otherwise, $\char(F)$ is the smallest $n$ such that $n_F=0_F$.
+For example, $\char(\dbQ)=\char(\dbR)=\char(\dbC)=0$ while $\char(\dbZ_p)=p$ for any prime $p$. It is not difficult to show that
+$\char(F)$ is either $0$ or a prime number for any field $F$.
+
+ \skv 
+{\bf Problem 2:} Let $F$ be a field, $V$ a vector space over $F$ and $u,v\in V$ distinct elements such that $\{u,v\}$ is linearly independent. 
+\skv
+\begin{itemize}
+\item[(a)] Prove that $u+v\neq v$ and
+$\{u+v,v\}$ is linearly independent.
+\item[(b)] Assume that $\char(F)\neq 2$. Prove that $u+v\neq u-v$ and
+$\{u+v,u-v\}$ is linearly independent. 
+
+Note that if $\char(F)=2$, then $v+v=0_V$ for any $v$ (since $v+v=1_F\cdot v +1_F\cdot v=
+(1_F+1_F)\cdot v=2_F\cdot v=0_F\cdot v=0_V$), so $-v=v$ and hence $u-v=u+v$. 
+\end{itemize}
+
+
+\skv 
+{\bf Problem 3:} Let $F$ be a field, $n\in\dbN$ and $\mathcal P_n(F)$ the vector space of all polynomials of degree $\leq n$
+with coefficients in $F$. Let $S$ be a subset of $\mathcal P_n(F)$ such that $0\not\in S$ and any two elements
+of $S$ have distinct degrees. Prove that $S$ is linearly independent. There is a minor hint at the end of the assignment.
+\skv
+
+ \bf{Problem 4: }\rm 
+\begin{itemize}
+\item[(a)] Let $p$ be a prime, $n\geq 1$ an integer, and let $V=\dbZ_p^n$, the standard $n$-dimensional vector space
+over $\dbZ_p$ (integers mod $p$). How many elements does $V$ have?
+\item[(b)] Find all ordered bases for $\dbZ_2^2$. How many unordered bases does it have?
+(An unordered basis is a basis in the usual sense; an ordered basis is a basis with a chosen order on its elements).
+\item[(c)] Now let $p$ be any prime. How many ordered bases does $\dbZ_p^2$ have? 
+\end{itemize}
+{\bf Hint for (b) and (c):} Use Problem~8 from HW\#1 and one of the results stated at the beginning of this assignment.
+See the end of the assignment for an additional hint for (c). 
+\skv
+ \bf{Problem 5: }\rm Let $F$ be a field, $X$ a set and $V=\Func(X,F)$, the set of all functions from $X$ to $F$. 
+As discussed in Lecture~2, $V$ has a natural structure of a vector space over $F$. For each $x\in X$ define
+the function $\delta_x\in V$ by $\delta_x(y)=0$ for all $y\neq x$ and $\delta_{x}(x)=1$. Let $S=\{\delta_x: x\in X\}$.
+\begin{itemize}
+\item[(a)] Prove that the set $S$ is always linearly independent.
+\item[(b)] Assume that $S$ is finite. Prove that $S$ is spanning for $V$ (and hence by (a) is a basis for $V$).
+\item[(c)] Now prove that if $S$ is infinite, then $S$ is not spanning for $V$. {\bf Hint:} you can find a simple
+explicit function which does not lie in $\Span(V)$.
+\end{itemize}
+\skv
+ \bf{Problem 6: }\rm Let $F$ be a field and $V=\Mat_n(F)$ the vector space of all $n\times n$
+matrices over $F$. For each $1\leq i,j\leq n$ let $e_{ij}\in \Mat_n(F)$ denote the matrix
+whose $(i,j)$-entry is equal to $1$ and all other entires are equal to $0$.
+\begin{itemize}
+\item[(a)] Prove that the set $B=\{e_{ij} : 1\leq i,j\leq n \}$ is a basis of $V$.
+\item[(b)] Let $U$ be the set of upper-triangular matrices in $V$, that is,
+$U$ consists of all matrices whose $(i,j)$-entry is equal to $0$ for all $i>j$.
+Prove that $U$ is a subspace and find a basis of $U$ and $\dim(U)$.
+{\bf Hint:} $U$ has a basis which is a subset of $B$.
+\item[(c)] Now find a basis for $W=\mathfrak{sl}_n(F)$, the set of all matrices in $V$ with zero trace
+(recall that $W$ was shown to be a subspace in HW\#1.2). {\bf Hint:} $W$ does not have a basis
+which is a subset of $V$, but you may want to look for a basis consisting of matrices with as few nonzero entries as possible.
+\end{itemize}
+\skv
+ \bf{Problem 7: }\rm This a continuation of Problem~1 from HW\#1. This time we are looking at $\dbQ$-subspaces of $\dbC$.
+A complex number $\alpha\in\dbC$ is called {\it algebraic} if $\alpha$ is a root of a nonzero polynomial with rational coefficients,
+that is, if there exist rational numbers  $q_0,\ldots, q_n$, not all $0$, such that $\sum\limits_{i=0}^n q_i \alpha^i=0$. 
+A complex number is called {\it transcendental} if it is not algebraic (for example, one can show that $e$ and $\pi$ are transcendental).
+
+Suppose you are given a specific transcendental number $\alpha\in\dbC$. Use it to construct, for every $n\in\dbN$, an explicit
+$\dbQ$-subspace of $\dbC$ of dimension exactly $n$.
+\newpage
+{\bf Hint for 3:} Start with a concrete example,
+say, $F=\dbR$, $n=2$, and $S$ consisting of $3$ polynomials of degrees $0,1$ and $2$, respectively, and look for a simple reason
+why $S$ is linearly independent. Then try to generalize that argument to an arbitrary $S$ satisfying the given conditions.
+
+\newpage
+{\bf Hint for 4(c):} How many choices are there to choose the first element of an ordered basis. Once the first element has been chosen,
+how may choices are there choices are there for the second element?
+
+\end{document}
