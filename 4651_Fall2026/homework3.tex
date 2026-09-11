@@ -1,0 +1,163 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .08cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+
+
+
+\bf\centerline{Homework \#3. Due on Thursday, Sep 17th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 1.6 and 2.1.
+
+\bf{Plan for next week (Sep 14,16): }\rm  continuue with 2.1 (kernels and images of linear maps, rank-mullity theorem), 2.2 (matrix of a linear transformation), 2.3 (composition of linear maps and matrix multiplication) and start 2.4 (invertibility and isomorphisms).
+\skv
+
+\bf\centerline{Problems: }\rm
+\skv
+
+\bf{Problem 1: }\rm Let $V$ be a vector space over $\dbC$ with $\dim(V)=n$. As discussed in HW\#1,
+we can also consider $V$ as a vector space over $\dbR$ (by restricting the scalars
+from $\dbC$ to $\dbR$). Prove that as an $\dbR$-vector space $V$ has dimension $2n$.
+{\bf Hint:} If $\{v_1,\ldots, v_n\}$ is a basis of $V$ as a vector space over $\dbC$,
+how to get a basis of $V$ as a vector space over $\dbR$? Use the basic example
+$V=\dbC$ to make a guess.
+\skv
+
+The next several problems in this homework deal with the notion of an internal direct sum of subspaces and the notion of a (vector space) complement. Let $V$ be a vector space
+and $U,W$ subspaces of $V$. We say that $V$ is an (internal) direct sum of $U$ and $W$ if 
+\begin{itemize}
+\item[(1)] $V=U+W$ (that is, every element of $V$
+can be written as $u+w$ for some $u\in U$ and $w\in W$) and 
+\item[(2)] $U\cap W=\{0\}$. 
+\end{itemize}
+If $V$ is a direct sum of $U$ and $W$, we write
+$V=U\oplus W$. 
+
+Given a subspace $U$ of $V$, a \emph{(vector space) complement} of $U$ in $V$ is any subspace $W$ of $V$ such that $V=U\oplus W$
+(unlike the set-theoretic complement, such $W$ is almost never unqiue).
+\skv
+
+{\bf Problem 2: } Let $V$ be a vector space, $U$ and $W$ subspaces of $V$, $\beta_U$ a basis for $U$ and $\beta_W$ a basis for $W$.
+\begin{itemize}
+\item[(a)] Prove that $V=U+W$ $\iff$ $\beta_U\cup\beta_W$ spans $V$;
+\item[(b)] Prove that $U\cap W=\{0\}$ if and only if $\beta_U\cap \beta_W=\emptyset$ and $\beta_U\cup \beta_W$ is linearly independent.
+\end{itemize}
+Thus, $V=U\oplus W$ if and only if $\beta_U\cap \beta_W=\emptyset$ and $\beta_U\cup \beta_W$ is a basis of $V$.
+
+\skv
+{\bf Problem 3: } Let $V$ be a finite-dimensional vector space and $U$ a subspace of $V$. Use Problem~2 and a suitable theorem from class
+to prove that
+\begin{itemize}
+\item[(i)] $U$ has a complement;
+\item[(ii)] for any complement $W$ of $U$ we have $\dim(U)+\dim(W)=\dim(V)$. 
+\end{itemize}
+\skv
+\skv
+\bf{Problem 4: }\rm Let $V$ be a finite-dimensional vector space and $U$ and $W$ subspaces of $V$.
+\begin{itemize}
+\item[(a)] Prove that $\dim(U+W)=\dim(U)+\dim(W)-\dim(U\cap W)$. See Problem~29(a) in \S~1.6 for
+a hint (this is a major generalization of 3(ii)).
+\item[(b)] Prove that $V=U\oplus W$ if and only if $V=U+W$ and $\dim(U)+\dim(W)=\dim(V)$.
+\item[(c)] Prove that $V=U\oplus W$ if and only if $U\cap W=\{0\}$ and $\dim(U)+\dim(W)=\dim(V)$.
+\end{itemize}
+\skv
+\bf{Problem 5: }\rm Let $V=\dbR^2$.
+\begin{itemize}
+\item[(a)] Let $u=(1,2)$ and $U=\Span(w)$. Find infinitely many different complements for $W$.
+\item[(b)] Let $U$ and $W$ be subspaces of $V$ with $\dim(U)=\dim(W)=1$. Prove that $W$ is a complement
+of $U$ $\iff$ $W\neq U$.
+\end{itemize}
+\skv
+{\bf Problem 6: } Let $F$ be a field, $V=F^n$ and $W=\{(x_1,\ldots, x_n)\in V: \sum\limits_{i=1}^n x_i=0\}$. Let $\{e_1,\ldots, e_n\}$
+be the standard basis of $V$ (that is, $e_i$ is the vector whose $i^{\rm th}$ coordinate is $1$ and all other coordinates are $0$).
+\begin{itemize}
+\item[(1)] Let $U=\Span(e_1)$. Prove (directly from definition) that $U$ is a complement of $W$
+\item[(2)] Let $S=\{e_i-e_1: 2\leq i\leq n\}$. Prove directly from definition that $S$ is both linearly independent and spanning for $W$
+(and hence a basis for $V$). 
+\item[(3)] Now use (1), an earlier problem in this HW and a theorem from class to explain why to show that $S$ from (b) is a basis
+for $W$, it suffices to check that it is either linearly independent or spanning for $W$ (and there is no need to check both).
+\end{itemize}
+\skv
+\bf{Problem 7: }\rm For each of the following maps $T$ do the following:
+Prove that $T$ is linear,  find a basis for $\Ker(T)$ and $\Im(T)$ and then verify the assertion of the rank-nullity theorem. As usual, $\mathcal P_n(F)$ denotes the space of polynomials of degree $\leq n$ over 
+a field $F$.
+\begin{itemize}
+\item[(a)] $T: \mathcal  P_6(\dbR)\to \mathcal  P_6(\dbR)$ given by $T(f(x))=f'(x)$
+\item[(b)] $T: \mathcal  P_6(\dbZ_3)\to \mathcal  P_6(\dbZ_3)$ given by $T(f(x))=f'(x)$
+(where as before $\dbZ_3$ is the field of congruence classes mod $3$).
+{\bf WARNING:} The answer in (b) is different from the answer in (a).
+\item[(c)] $T: \mathcal  P_3(\dbR)\to \dbR$ given by $T(f(x))=f(2)$, that is,
+$T$ is the evaluation map at $x=2$.
+\item[(d) ] $T: \mathcal  P_3(\dbR)\to \mathcal  P_4(\dbR)$ given by $T(f(x))=(x+1)p(x)$,
+that is, $T$ is the multiplication by $x+1$.
+\end{itemize}
+\skv
+\bf{Problem 8: }\rm Let $f:V\to W$ be a linear map, let $S=\{s_1,\ldots, s_n\}$ a finite subset of $V$ and $f(S)=\{f(s_1),\ldots, f(s_n)\}$.
+Determine if the following 
+statements are true (always) or false (in at least one case). If the statement is true, prove it; if false, give a specific counterexample.
+\begin{itemize}
+\item[(a)] If $S$ spans $W$, then $f(S)$ spans $\Im(f)$.
+\item[(b)] If $S$ is linearly independent and the vectors $f(s_1),\ldots, f(s_n)$ are distinct, then $f(S)$ is linearly independent.
+\item[(c)] If $f(S)$ spans $\Im(f)$, then $S$ spans $V$.
+\item[(d)] If  the vectors $f(s_1),\ldots, f(s_n)$ are distinct and $f(S)$ is linearly independent, then $S$ is linearly independent.
+\end{itemize}
+\end{document}
