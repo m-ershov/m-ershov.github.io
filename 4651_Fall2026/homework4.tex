@@ -1,0 +1,168 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+
+
+
+\bf\centerline{Homework \#4. Due on Thursday, Sep 24th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 2.1, 2.2 and parts of 2.4.
+
+\bf{Plan for next week (Sep 21,23): }\rm  2.3 (composition of linear maps and matrix multiplication), 2.5 (the change of coordinate matrix),
+parts of 2.4 (invertibility and isomorphisms). Note that we have already proved some results from 2.4 in Lecture~7 (Sep 16).
+\skv
+
+\bf\centerline{Problems: }\rm
+\skv
+\bf{Problem 1: }\rm This problem illustrates a relation between the internal
+and external direct sums (see also Problem~3 below). Let $U$ and $W$ be vector spaces over the same field and let $V=U\oplus W$ be their external direct sum, that is, $V$ is the set
+of ordered pairs $\{(u,w): u\in U, w\in W\}$ with componentwise addition and
+scalar multiplication: $(u_1,w_1)+(u_2,w_2)=(u_1+u_2,w_1+w_2)$ for all $u_1,u_2\in U$ and $w_1,w_2\in W$
+and $\lam (u,w)=(\lam u,\lam w)$ for all $\lam\in F$, $u\in U$ and 
+$w\in W$.
+ Define the subsets $\widetilde U$ and $\widetilde W$ of $V$
+by $\widetilde U=\{(u,0) : u\in U\}$ and $\widetilde W=\{(0,w) : u\in U\}$.
+Prove that
+\begin{itemize}
+\item[(i)] $\widetilde U$ and $\widetilde W$ are subspaces of $V$
+isomorphic to $U$ and $W$, respectively;
+\item[(ii)] $V=\widetilde U\oplus \widetilde W$, where now we talk
+about the internal direct sum.
+\end{itemize}
+Conclude that the external direct sum of two spaces $U$ and $W$ is equal to
+the internal direct sum of isomorphic copies of $U$ and $W$.
+\skv
+
+\noindent
+\bf{Problem 2: }\rm Let $V$ be a vector space over $F$,
+and let $V^2=V\oplus V$ be the external direct sum of two copies of $V$.
+Fix $\lam\in F$ and put $W=\{(v,\lam v) : v\in V\}$. Prove that 
+$W$ is a subspace of $V^2$ which is isomorphic to $V$. 
+
+\skv
+\bf{Problem 3: }\rm Let $U$ and $W$ be subspaces of a finite-dimensional 
+vector space $V$.
+Consider the external direct sum $U\oplus W=\{(u,w) : u\in U, w\in W\}$
+and the map $T:U\oplus W\to V$ given by $T((u,w))=u+w$. 
+\begin{itemize}
+\item[(a)] Prove that $T$ is linear and use the rank-nullity theorem to prove that $$\dim(U+W)=\dim(U)+\dim(W)-\dim(U\cap W)$$ 
+(recall that this was proved by a much longer argument in HW\#3.4).
+\item[(b)] Show that if the internal sum $U+W$ is direct, then
+$T$ is an isomorphism between the external and internal
+direct sums of $U$ and $W$.
+\end{itemize}
+\skv
+\bf{Problem 4: }\rm Recall that $\mathfrak{sl}_n(F)$ denotes
+the space of all $n\times n$ matrices over $F$ with trace $0$.
+In Problem~6 of HW\#2 it was proved that $\dim(\mathfrak{sl}_n(F))=n^2-1$
+after a considerable amount of work. Now give a short proof of this
+fact by applying the rank-nullity theorem to a suitable linear map.
+\skv
+\skv
+{\bf Problem 5: }Let $V$ be a finite-dimensional vector space over a field $F$.
+\begin{itemize}
+\item[(a)] Let $T:V\to V$ be a linear map. Prove that $T$ is an injective $\iff$ $T$ is surjective.
+\item[(b)] Now suppose that $c_0,\ldots, c_n$ are distinct elements of $F$ and consider the map
+$T:\mathcal P_n(F)\to F^{n+1}$ (where as before $\mathcal P_n(F)$ is polynomials of degree $\leq n$)
+given by $T(p(x))=(p(c_0),p(c_1),\ldots, p(c_n))$. Use (a) to prove that $T$ is an isomorphism.
+You may use without proof that for a nonzero polynomial of degree $n$ cannot have more than $n$ roots.
+\item[(c)] Give examples showing that both implications in (a) become false if we do not assume that $V$ is finite-dimensional.
+\end{itemize}
+\skv
+
+\noindent
+\bf{Problem 6: }\rm Let $V$ be a vector space and $T:V\to V$ a linear map.
+A subspace $W$ of $V$ is called {\it $T$-invariant} if $T(W)\subseteq W$
+where $T(W)=\{T(w): w\in W\}$.
+\begin{itemize}
+\item[(a)] Prove that $\Ker(T)$ and $\Im(T)$ are $T$-invariant subspaces.
+\item[(b)] Assume that $\dim(V)<\infty$ and $W$ is a $T$-invariant subspace
+of $V$ s.t. $V=W\oplus \Ker(T)$. Prove that $W=\Im(T)$. {\bf Hint:}
+First show that $\Im(T)\subseteq W$.
+\item[(c)] Give an example with $\dim(V)<\infty$ where the sum
+$\Im(T)+\Ker(T)$ is NOT direct. 
+\item[(d)] Use (b) and (c) to conclude that a $T$-invariant subspace
+may NOT have a $T$-invariant complement.
+\end{itemize}
+
+\skv
+
+
+\noindent
+{\bf Problem 7: } Let $V=\mathcal P_2(\dbR)$, $\beta=\{1,x,x^2\}$ and $\gamma=\{1,x^2-x+1, x^2+x+1\}$.
+\begin{itemize}
+\item[(a)] Prove that $\gamma$ is a basis for $V$
+\item[(b)] Now consider the linear map $T:V\to V$ given by $$T(p(x))=p(x)-p'(x).$$ Compute the matrices
+$[T]_{\beta}^{\gamma}$ and $[T]_{\gamma}^{\beta}$ directly from definition. Include all the details.
+\end{itemize}
+\skv
+{\bf Problem 8: } Let $V$ be a finite-dimensional vector space, $W$ a subspace of $V$,
+$n=\dim(V)$ and $k=\dim(W)$. Choose a basis $\beta_W=\{w_1,\ldots, w_k\}$ of $W$
+and extend it to a basis $\beta=\{w_1\ldots, w_k, u_1,\ldots, u_{n-k}\}$ of $V$.
+
+Find (with proof) a simple condition (***) on the entries of an $n\times n$ matrix $A$
+over $F$ such that the following statement holds:
+
+$W$ is $T$-invariant (as defined in Problem~6) $\iff$ the matrix $[T]_{\beta}=[T]_{\beta}^{\beta}$
+satisfies (***).
+\end{document}
