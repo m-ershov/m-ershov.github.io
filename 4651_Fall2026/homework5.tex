@@ -1,0 +1,192 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\phi{{\varphi}}
+
+
+\bf\centerline{Homework \#5. Due on Thursday, Oct 8th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 2.5 and 2.6.
+
+\bf{Plan for next week (Oct 5): }\rm  3.1 (elementary matrix operations and elementary matrices), 3.2 (the rank of a matrix) 
+and (if time allows) parts of 3.4 (reduced row echelon form).
+
+\skv
+\bf\centerline{Problems: }\rm
+\skv
+
+
+\skv
+{\bf Problem 1:} Let $V=P_2(\dbR)$ and define the linear map 
+$T:V\to V$ by $T(f(x))=(x+1)f'(x)$. 
+\begin{itemize}
+\item[(a)] Compute
+$[T]_{\mathcal \beta}$ for the ordered basis $\beta=\{1,x,x^2\}$.
+\item[(b)] Let $\beta'=\{1, (x+1), (x+1)^2\}$. Compute
+the matrix $Q=[id_V]_{\beta'}^{\beta}$ which changes $\beta'$-coordinates into
+$\beta$-coordinates and then use the change of basis formula
+to compute $[T]_{\beta'}$.
+\item[(c)] Now compute $[T]_{\beta'}$ directly from the definition
+of $T$. {\bf Hint:} If an element $f\in P_2(\dbR)$ is given in the standard form ($f=ax^2+bx+c$), to compute its $\beta'$-coordinates,
+let $y=x+1$ (so that $x=y-1$) and then expand $f$ as a polynomial in $y$. 
+\end{itemize}
+
+\skv
+{\bf Problem 2: }  Recall the definition of a projection map introduced in Problem~5 on the first midterm.
+Let $V$ be a vector space, and suppose $V=U\oplus W$
+for some subspaces $U$ and $W$. By Problem~1 on the practice midterm, every $v\in V$ can be uniquely written as $v=u+w$
+with $u\in U$ and $w\in W$. Thus, we can define a map $P_{U,W}: V\to V$ by 
+$$P_{U,W}(u+w)=u \mbox{ for all }u\in U \mbox{ and }w\in W.$$
+The map $T$ (which is linear by Midterm~1.5(a)) is called the {\bf projection onto $U$ along $W$} and
+will be denoted by $p_{U,W}$. By a {\bf projection} we will mean
+a map $p_{U,W}$ for some $U$ and $W$ as above.
+\skv
+ {\bf Remark:} $P_{U,W}$ is actually the unique linear map $T:V\to V$ such that $T(u)=u$ for all $u\in U$
+ and $T(w)=0$ for all $w\in W$ (such $T$ is unique since $V$ is spanned by $U\cup W$).
+\skv
+
+Now assume that $V$ is a finite-dimensional vector space and 
+$T:V\to V$ a linear map. Prove that the following
+are equivalent:
+\begin{itemize}
+\item[(i)] $T$ is a projection, that is, $T=P_{U,W}$ for some
+$U$ and $W$ with $U\oplus W=V$.
+\item[(ii)] $T^2=T$ (where $T^2=T\cdot T$ is the composition of $T$ with itself)
+\item[(iii)] There is an ordered basis $\beta$ of $V$ s.t.
+$[T]_{\beta}=e_{11}+\ldots+e_{kk}$ for some $0\leq k\leq \dim V$,
+that is, $[T]_{\beta}$ is the diagonal matrix whose first $k$ diagonal
+entries are equal to $1$ and the remaining diagonal entries are equal to $0$.
+\end{itemize}
+The equivalence of (i) and (iii) is Problem~5(b) on the first midterm. If you solved this problem correctly,
+you do not have to redo this part.
+
+{\bf Hint:} Perhaps the shortest way to solve Problem~2 is via the cycle
+``(i)$\Rightarrow$ (iii)$\Rightarrow$ (ii)$\Rightarrow$ (i)''.
+The first two implications are relatively easy. To prove ``(ii)$\Rightarrow$ (i)''
+first show that if $T^2=T$, then $V=\Im(T)\oplus\Ker(T)$. 
+\skv
+\bf{Problem 3: }\rm Let $V$ be a finite-dimensional vector space over a field $F$ and $W$ a proper subspace of $V$.
+\begin{itemize}
+\item[(a)] Suppose we are given a linear map $g:W\to U$ for some vector space $U$ over $F$ and vectors $v\in V\setminus W$ and $u\in U$.
+Prove that there exists a linear map $f:W\to U$ such that $f=g$ on $W$ (that is, $f(w)=g(w)$ for all $w\in W$) and $f(v)=u$.
+{\bf Hint:} Apply Lemma~5.1 from class to a suitable basis of $V$.
+\item[(b)] Use (a) to show that there exists a nonzero linear map $f:V\to F$ (that is, $f\in V^{*}$) such that $f_{|W}=0$
+(where as before $f_{|W}$ is the restriction of $f$ to $W$)
+\item[(c)] If $f\in V^{*}$, the map $f_{|W}:W\to F$ is also linear (so lies in $W^{*}$). Thus, we have a natural
+map $\phi:V^{*}\to W^{*}$ given by $\phi(f)=f_{|W}$. Prove that $\phi$ is linear, and then deduce from (a) and (b)
+that $\phi$ is surjective and not injective.
+\end{itemize}
+
+\skv
+\bf{Problem 4: }\rm This problem defines the notion of a direct sum
+of more than two spaces. As with the case of 2 subspaces, we will define both external and internal direct sums, but this
+time we start with the definition of the external sum, which is a straightforward generalization of the case of 2 spaces.
+
+Let $V_1,\ldots, V_n$ be vector spaces over the same field $F$.
+The external direct sum $\oplus_{i=1}^n V_i$ is defined as the set of all $n$-tuples
+$\{(v_1,\ldots, v_n): v_i\in V_i\mbox{ for }1\leq i\leq n\}$ with componentwise
+addition and scalar multiplication.
+
+Now assume that $V_1,\ldots, V_n$ are subspaces of the same space $V$. Their
+internal sum  $\sum_{i=1}^n V_i$ (not necessarily direct) is defined as 
+$$\sum_{i=1}^n V_i=\{v\in V: v=\sum_{i=1}^n v_i \mbox{ for some }v_i\in V_i\}.$$
+As in HW~\#4.1, there is a natural linear map $T:\oplus_{i=1}^n V_i\to \sum_{i=1}^n V_i$
+(where the sum on the left is the external direct sum) given by
+$$T((v_1,\ldots, v_n))=\sum_{i=1}^n v_i.$$
+Prove that the following are equivalent:
+\begin{itemize}
+\item[(a)] $T$ is an isomorphism
+\item[(b)] $\Ker(T)=\{0\}$
+\item[(c)] For all $v\in \sum_{i=1}^n V_i$ there exist UNIQUE vectors
+$v_1\in V_1,\ldots, v_n\in V_n$ s.t. $v=\sum_{i=1}^n v_i$
+\item[(d)] $V_i\cap (\sum_{j\neq i}V_j)=0$ for all $1\leq i\leq n$ 
+\item[(e)] $V_i\cap (\sum_{j=1}^{i-1} V_j)=0$ for all $2\leq i\leq n$ 
+\end{itemize}
+We say that the sum $\sum_{i=1}^n V_i$ is direct and write $\oplus_{i=1}^n V_i$
+if one (hence also all others) of the above five conditions hold.
+\skv
+
+{\bf Problem 5:} Give an example of a vector space $V$ and three subspaces $W_1,W_2,W_3$ of $V$ such that $W_i\cap W_j=\{0\}$
+for all $i\neq j$, but the sum $W_1+W_2+W_3$ is not direct.
+\skv
+
+
+{\bf Problem 6:} In each of the following examples you are given a finite-dimensional vector space
+$V$ and a basis $\beta=\{v_1,\ldots,v_n\}$ of $V$. Find the dual basis $\beta^*=\{v_1^*,\ldots,v_n^*\}$
+and give an explicit formula for each element of $\beta^*$. For instance,
+in part (a) the answer should be given in the form $v_1^* ((a,b)) = \mbox{ some 
+explicit function of }a,b$ and similarly for $v_2^*$.
+ \begin{itemize}
+\item[(a)] $V=\dbR^2$, $\beta=\{(3,4), (7,8)\}$ 
+\item[(b)] $V=P_1(\dbR)$, $\beta=\{x+1, x+2\}$.
+\end{itemize}
+
+
+\skv
+{\bf Problem 7:} Let $V=P_2(\dbR)$ and consider the elements $f_1, f_2, f_3$ of $V^*$
+given by $f_1(a+bx+cx^2)=a+b$, $f_2(a+bx+cx^2)=b+c$ and $f_3(a+bx+cx^2)=a+c$. Prove that
+$\{f_1, f_2, f_3\}$ is a basis of $V^*$ and find a basis $\beta$ of $V$ for which
+$\{f_1, f_2, f_3\}$ is the dual basis.
+
+
+\end{document}
