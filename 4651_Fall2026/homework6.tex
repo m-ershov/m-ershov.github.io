@@ -1,0 +1,198 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#6. Due on Thursday, Oct 15th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 3.1 and parts of 3.4.
+
+\bf{Plan for next week (Oct 12, 14): }\rm  3.2 (the rank of a matrix), 4.2 (determinants of order $n$), possibly start 4.3 (properties
+of determinants). Note: my plan is to define the determinants by the Leibniz formula
+\skv
+\centerline{\url{https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants}}
+\skv
+\noindent 
+instead of the cofactor expansion used in the book.
+
+\bf\centerline{Problems: }\rm
+\skv
+For the first 2 problems do not assume anything about the rank except the following definitions:
+
+\begin{itemize}
+\item[(1)] Let $T:V\to W$ be a linear map where $V$ and $W$ are both finite-dimensional. The rank of $T$, denoted by $\rk(T)$, is defined
+by $$\rk(T)=\dim(\Im(T))=\dim(T(V)).$$
+\item[(2)] If $F$ is a field and $A\in \Mat_{m\times n}(F)$, we define its rank $\rk(A)$ by $\rk(A)=\rk(L_A)$ where
+$L_A:F^n\to F^m$ is the map of left multiplication by $A$, that is, $L_A(v)=Av$ for all $v\in F^n$.
+\end{itemize}
+
+\skv
+{\bf Problem 1: } Let $T:V\to W$ and $S:V\to W$ be linear maps.
+\begin{itemize}
+\item[(a)] Prove that $\Im(T+S)\subseteq \Im(T)+\Im(S)$ and give an example showing that the equality may not hold.
+\item[(b)] Now assume that $V$ and $W$
+are finite-dimensional. Prove that $$\rk(T+S)\leq \rk(T)+\rk(S).$$
+\end{itemize}
+\skv
+{\bf Problem 2: } Let $T:V\to W$ be a linear map and $Z$ be a subspace of $W$.
+\begin{itemize}
+\item[(a)] Prove that $T^{-1}(Z)$ is a subspace of $V$. Here $T^{-1}(Z)$ is the preimage of $Z$,
+that is, $T^{-1}(Z)=\{v\in V: T(v)\in Z\}$.
+\item[(b)] Assume that $V$ and $W$ are finite-dimensional. Prove that $$\dim(T^{-1}(Z))\leq \dim (Z)+\dim(\Ker(T))$$
+%and give an example where $T$ is surjective but the above inequality is strict (that is, not an equality).
+{\bf Hint:} Apply the rank-nullity theorem to a suitable map obtained from $T$ by changing the domain.
+\end{itemize}
+\skv
+{\bf Problem 3: } In parts (a) and (b) let $U,V,W$ be finite-dimensional vector spaces
+and $T:U\to V$ and $S:V\to W$ linear maps. 
+\begin{itemize}
+\item[(a)] Prove that $$\null(ST)\leq \null(S)+\null(T)$$
+where by definition $\null(R)=\dim(\Ker(R))$ for a linear map $R$. {\bf Hint:} You can express $\Ker(ST)$
+in a suitable way using preimages, so that the result would follows immediately from Problem 2.
+\item[(b)] Prove that $\rk(ST)\geq \rk(S)+\rk(T)-\dim(V)$.
+\item[(c)] State and prove the analogue of (b) dealing with ranks of matrices.
+\end{itemize}
+\skv
+{\bf Problem 4:} Let $F$ be a field and $m,n\in\dbN$. Recall from class that 
+\begin{itemize}
+\item[(i)] $\mathcal E_{i,j}(\lam)$
+is the elementary row operation on the set $\Mat_{m\times n}(F)$ which
+adds the $j^{\rm th}$ row multiplied by $\lam$ to the $i^{\rm th}$ row and does not change any other row
+(symbolically $\row_i\mapsto \row_i+\lam\, \row_j$).
+\item[(ii)] $\mathcal E'_{i,j}(\lam)$ is the elementary column operation which  adds the $i^{\rm th}$ column multiplied by 
+$\lam$ to the $j^{\rm th}$ column and does not change any other column
+($\col_j\mapsto \col_j+\lam\, \col_i$).
+\item[(iii)] $E_{ij}(\lam)$ is the elementary (square) matrix (of suitable size) which has $1$'s on the diagonal,
+$\lam$ in the $(i,j)$-position and $0$ everywhere else. Thus, $E_{ij}(\lam)=I_k+\lam e_{i,j}$ where $k$ is the size of 
+the matrix and $I_k$ is the identity $k\times k$ matrix.
+\end{itemize}
+Prove (part of) Lemma~11.3 from class: for any $A\in \Mat_{m\times n}(F)$ we have
+\begin{itemize}
+\item[(a)] $(\mathcal E_{i,j}(\lam))(A)=E_{i,j}(\lam)A$ and
+\item[(b)] $(\mathcal E'_{i,j}(\lam))(A)=A E_{i,j}(\lam)$,
+\end{itemize}
+that is, applying $E_{i,j}(\lam)$ (resp. $\mathcal E'_{i,j}(\lam)$) is the same as multiplying by
+$E_{i,j}(\lam)$ on the left (resp. on the right).
+\skv
+{\bf Note:} The notation $E_{i,j}(\lam)$ is slightly ambiguous as it does not specify the size of the matrix. In particular,
+if $m\neq n$, then $E_{i,j}(\lam)$ denotes matrices of different sizes in (a) and (b) above.
+\skv
+{\bf Problem 5:} Recall two other types of elementary transformations introduced in class: $\mathcal F_{i,j}$ (swappting the
+$i^{\rm th}$ and $j^{\rm th}$ rows) and $\mathcal D_i(\lam)$ (multiplying the $i^{\rm th}$ row by some nonzero $\lam \in F$).
+Prove that $\mathcal F_{i,j}$ can expressed as a composition of 3 operations of the form $\mathcal E_{k,l} (\lam)$
+and 1 operation of the form $\mathcal D_k(\lam)$ (in a suitable order and for suitable $k,l$ and $\lam$).
+\skv
+{\bf Problem 6:} In Lecture~11 we explained why every matrix $A$ can be reduced to a matrix $R$ in RREF (reduced row echelon form)
+using elementary row operations. The ultimate goal of this problem is to prove that such a matrix $R$ is unique. 
+Given $A\in \Mat_{m\times n}(F)$, we define its rowspace $\Rowspace(A)$ to be the subspace of $F^n$ spanned by the rows of $A$.
+\begin{itemize}
+\item[(1)] Suppose that $A,B\in \Mat_{m\times n}(F)$ are row equivalent (that is, can be obtained from each other by a sequence
+of elementary row operations). Prove that $\Rowspace(A)=\Rowspace(B)$. {\bf Note:} The converse of (1) is also true, but 
+requires more work to prove.
+\end{itemize}
+Now let $R\in\Mat_{m\times n}(F)$ be a matrix in RREF. Our goal is to show that $R$ can be recovered from its rowspace $\Rowspace(R)$. 
+Together with (1) this implies that any $A$ is row equivalent to a UNIQUE matrix in RREF.
+\begin{itemize}
+\item[(2)] Let $e_1,\ldots e_n$ be the standard basis of $F^n$ (which is viewed here as the space which naturally contains $\Rowspace(R)$).
+For each $0\leq k\leq n$ let $V_k=\Span(e_1,\ldots, e_k)$ be the span of the first $k$ elements of the standard basis (in particular, $V_0=\{0\}$ and $V_m=F^m$). 
+
+Now take $1\leq k\leq n$.
+Prove that $V_k\neq V_{k-1}$ $\iff$ $R$ has a pivot in the $k^{\rm th}$ column. Thus, the set of columns of $R$
+which contain pivots is determined by $\Rowspace(R)$. 
+\item[(3)] Let $i_1<i_2<\ldots<i_p$ be the indices of columns of $R$ which contain pivots. Note that since $R$ is in RREF, this means
+that the first $p$ rows of $R$ are nonzero, and the remaining rows are zero.
+
+Let $T_0: F^n\to F^p$ be the map
+which simply removes the $j^{\rm th}$ component for each $j\not\in\{i_1,\ldots, i_p\}$ (and preserves the order of the remaining components).
+For example, if $n=5$, $p=2$, $i_1=2$ and $i_2=4$, we have $T_0((a_1,a_2,a_3,a_4,a_5))=(a_2,a_4)$. 
+
+Let $T:\Rowspace(A)\to F^p$ be the restriction of $T_0$ to $\Rowspace(R)$. Prove that $T$ is an isomorphism and
+for all $1\leq i\leq p$ we have $T(\row_i(R))=\eps_i$, where $\{\eps_1,\ldots, \eps_p\}$ is the standard basis of $F^p$. Thus,
+$\row_i(R)$ is the unique element of $\Rowspace(R)$ which is mapped to $\eps_i$ under $T$. Since the indices $i_1,\ldots, i_p$ (and hence
+also the number $p$) are determined by $\Rowspace(R)$ by (2) and all rows of $R$ below the $p^{\rm th}$ row are zero, it follows that each row of $R$ can be recovered from $\Rowspace(R)$, as desired.
+\end{itemize}
+
+\skv
+{\bf Problem 7:} Let $A=\begin{pmatrix} 3 & -2 \\ 2 & -1\end{pmatrix}$. Reduce $A$ to the identity matrix only using operations of the form
+$\mathcal E_{12}(\lam)$ and $\mathcal E_{21}(\lam)$ for some integer $\lam$. Then use Problem~4 to explicitly write $A$ as a product of matrices of the form $E_{12}(\lam)$ and $E_{21}(\lam)$.
+\skv
+
+{\bf Problem 8:} Let $n\in\dbN$ and $F$ a field.
+\begin{itemize}
+\item[(a)] Let $A\in \Mat_n(F)$ be an invertible matrix. Prove that the transposed matrix $A^t$ is also invertible and 
+$(A^t)^{-1}=(A^{-1})^t$.
+\item[(b)] Let $A\in \Mat_n(F)$ be such that $A^k=0$ for some $k\in\dbN$ (such matrices are called \emph{nilpotent}). Prove that
+the matrix $B=I_n+A$ is invertible (as before, $I_n$ is the identity matrix) and find an explicit formula for the inverse of $A$.
+\end{itemize}
+Do not use any facts about inverses except the definition. In (b) you may want to start with $k=2$ (possibly followed by $k=3$) before
+figuring out the general formula.
+\end{document}
+
