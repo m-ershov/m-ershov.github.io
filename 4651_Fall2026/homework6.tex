@@ -161,13 +161,11 @@ requires more work to prove.
 Now let $R\in\Mat_{m\times n}(F)$ be a matrix in RREF. Our goal is to show that $R$ can be recovered from its rowspace $\Rowspace(R)$. 
 Together with (1) this implies that any $A$ is row equivalent to a UNIQUE matrix in RREF.
 \begin{itemize}
-\item[(2)] Let $e_1,\ldots e_n$ be the standard basis of $F^n$ (which is viewed here as the space which naturally contains $\Rowspace(R)$).
-For each $1\leq k\leq n$ let $V_k=\Span(e_k,\ldots, e_n)$ be the span of all elements of the standard basis starting with $e_k$.
-Also set $V_{n+1}=\{0\}$. Thus $V=V_1\supset V_2\supset\cdots \supset V_n\supset V_{n+1}=\{0\}$. Let $W_k=V_k\cap \Rowspace(R)$
-for $1\leq k\leq n+1$.  
+\item[(2)] Given a nonzero vector $v=(x_1,\ldots, x_n)\in F^n$, let $p(v)$ denote the smallest $k$ such that $x_k\neq 0$.
+Thus, $p(v)=k$ $\iff$ $v$ has a pivot in the $k^{\rm th}$ column if we view $v$ as an $1\times n$-matrix.
 
 Now take $1\leq k\leq n$.
-Prove that $W_k\neq W_{k+1}$ $\iff$ $R$ has a pivot in the $k^{\rm th}$ column. Thus, the set of columns of $R$
+Prove that $R$ has a pivot in the $k^{\rm th}$ column $\iff$ there exists $v\in \Rowspace(R)$ with $p(v)=k$. Thus, the set of columns of $R$
 which contain pivots is determined by $\Rowspace(R)$. 
 \item[(3)] Let $i_1<i_2<\ldots<i_p$ be the indices of columns of $R$ which contain pivots. Note that since $R$ is in RREF, this means
 that the first $p$ rows of $R$ are nonzero, and the remaining rows are zero.
@@ -192,7 +190,7 @@ $\mathcal E_{12}(\lam)$ and $\mathcal E_{21}(\lam)$ for some integer $\lam$. The
 \item[(a)] Let $A\in \Mat_n(F)$ be an invertible matrix. Prove that the transposed matrix $A^t$ is also invertible and 
 $(A^t)^{-1}=(A^{-1})^t$.
 \item[(b)] Let $A\in \Mat_n(F)$ be such that $A^k=0$ for some $k\in\dbN$ (such matrices are called \emph{nilpotent}). Prove that
-the matrix $B=I_n+A$ is invertible (as before, $I_n$ is the identity matrix) and find an explicit formula for the inverse of $A$.
+the matrix $B=I_n+A$ is invertible (as before, $I_n$ is the identity matrix) and find an explicit formula for the inverse of $B$.
 \end{itemize}
 Do not use any facts about inverses except the definition. In (b) you may want to start with $k=2$ (possibly followed by $k=3$) before
 figuring out the general formula.
