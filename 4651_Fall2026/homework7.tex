@@ -1,0 +1,184 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Inv{{\rm Inv}}
+\def\inv{{\rm inv}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#7. Due on Thursday, Oct 22nd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 3.2 and 4.2.
+
+\bf{Plan for next week (Oct 19, 21): }\rm  Determinants (continued), 4.3-4.5. 
+
+\skv
+\noindent 
+
+\bf\centerline{Problems: }\rm
+\skv
+
+
+{\bf Problem 1: } Let $n\in\dbN$ and $A,B\in\Mat_n(F)$.
+\begin{itemize}
+\item[(a)] Use what we proved about rank (but not determinants!) to show that if $AB$ is invertible, then
+$A$ and $B$ are both invertible (as discussed in class, the converse is also true).
+\item[(b)] Deduce from (a) that if $AB=I_n$, then $A$ and $B$ are invertible, $B=A^{-1}$ and $A=B^{-1}$.
+Thus, when we are proving that a matrix $Y$ is the inverse of a matrix $X$ using the definition of inverse, it suffices
+to check that either $XY=I_n$ or $YX=I_n$ (no need to check both).
+\end{itemize}
+\skv
+{\bf Problem 2: } Let $V$ and $W$ be finite-dimensional vector spaces over the same field $F$, let $n=\dim(V)$, $m=\dim(W)$,
+and choose ordered bases $\beta$ of $V$ and $\gamma$ of $W$. Let $T:V\to W$ be a linear map. Prove that
+$\rk([T[_{\beta}^{\gamma})=\rk(T)$. See a hint at the end of the assignment.
+\skv
+{\bf Problem 3: } Read (and understand) Corollary~3 on page 158 which asserts that every invertible matrix can be written as a 
+product of elementary matrices.
+\skv
+In Problems 4-6 you are asked to prove certain facts about determinants. In all these problems do not use any facts about determinants except
+the definition from class (the Leibniz formula).
+\skv
+{\bf Problem 4: } Let $A=(a_{ij})\in \Mat_{n}(F)$.
+\begin{itemize}
+\item[(a)] Suppose that $A$ is diagonal, that is, $a_{ij}=0$ for all $i\neq j$. Prove that
+$\det(A)=a_{11}a_{22}\ldots a_{nn}$.
+\item[(b)] Now suppose that $A$ is upper-triangular, that is, $a_{ij}=0$ for all $i>j$. Again prove that
+$\det(A)=a_{11}a_{22}\ldots a_{nn}$.
+\item[(c)] Let $A$ be upper-triangular, and suppose that $a_{kk}=0$ for some $k$. Prove without using
+determinants that $\rk(A)<n$. {\bf Hint:} Consider the first $k$ columns of $A$.
+\end{itemize}
+\skv
+
+Now recall some notations from Lecture~13. Given $n\in\dbN$, let $[n]=\{1,\ldots, n\}$ and $S_n$
+ the set of all permutations of $[n]$. Given $\sigma\in S_n$, let $\Inv(\sigma)$ be the set of inversions
+ of $\sigma$ and $\inv(\sigma)=|\Inv(\sigma)|$, the number of inversions. Recall that according to the definition
+ from class, an inversion of $\sigma$ is an unordered pair $\{i,j\}$ with $i,j\in [n]$ such that
+ $i<j$ and $\sigma(i)>\sigma(j)$ or $i>j$ and $\sigma(i)<\sigma(j)$ (there are different conventions regarding
+the precise definition of inversion, but they do not affect the number of inversions).
+\skv
+ {\bf Problem 5: } Let $n\in\dbN$.
+ \begin{itemize}
+ \item[(a)] Prove that for any $\sigma\in S_n$ we have $\inv(\sigma^{-1})=\inv(\sigma)$, that is,
+ $\sigma$ and $\sigma^{-1}$ have the same number of inversions. Here $\sigma^{-1}$ is the inverse permutation,
+that is, the inverse function of $\sigma$. {\bf Hint:} Construct an explicit bijection between $\Inv(\sigma)$ 
+and $\Inv(\sigma^{-1})$.
+\item[(b)] Use (a) and the Leibniz formula to prove that $\det(A^t)=\det(A)$ for all $A\in \Mat_n(F)$. We will
+give a very different proof of this fact in class.
+\end{itemize}
+\skv
+\skv
+{\bf Problem 6:} Suppose that $M=(m_{ij})\in \Mat_{n}(F)$ has block-diagonal form:
+$$M=\begin{pmatrix} A_{k\times k} &B_{k\times (n-k)} \\ 0_{(n-k)\times k} & 
+C_{(n-k)\times (n-k)}.
+\end{pmatrix}$$
+for some $1\leq k\leq n-1$. (Equivalently, suppose that $m_{ij}=0$ whenever $i>k$ and $j\leq k$).
+Prove that $$\det(M)=\det(A)\det(C).$$ See a hint at the end of the assignment.
+\skv
+{\bf Problem 7:} Let $F$ be a field, $n\in\dbN$ and $A=(a_{ij})\in \Mat_{n}(F)$.
+\begin{itemize}
+\item[(a)] Prove that $A$ is invertible
+if and only if its columns are linearly independent.
+\item[(b)] Let $V$ be a vector space over $F$ with $\dim\, V=n<\infty$,
+and let $\beta=\{v_1,\ldots, v_n\}$ be a basis of $V$. Define the vectors $v_1',\ldots, v_n'\in V$
+by $v_j'=\sum_{i=1}^n a_{ij}v_i$. Prove that $\{v_1',\ldots, v_n'\}$ are linearly dependent if
+and only if the columns of $A$ are linearly dependent (this can be done by a direct calculation).
+Deduce from (a) that $\{v_1',\ldots, v_n'\}$ is a basis if and only if
+$A$ is invertible. 
+\item[(c)] Deduce from (b) that for any invertible matrix $A\in \Mat_{n}(F)$
+and any basis $\beta$ of $V$
+there is an ordered basis $\beta'$ of $V$ such that $A=[I]_{\beta'}^{\beta}$
+(where $I:V\to V$ is the  identity map).
+\end{itemize}
+\newpage
+{\bf Hint for 2:} Consider the linear maps $\Phi:V\to F^n$ and $\Psi: W\to F^m$ given by $\Phi(v)=[v]_{\beta}$
+and $\Psi(w)=[w]_{\gamma}$. Let $A=[T]_{\beta}^{\gamma}$. Prove that $L_A\Phi=\Psi T$ as maps from $V$ to $F^m$
+(where as usual $L_A$ is the left multiplication by $A$) -- this is actually a theorem from class, just stated using very different notations.
+Deduce that $\rk(L_A)=\rk(T)$ using what you know about $\Phi,\Psi$ and the general properties of rank.
+
+\newpage
+{\bf Hint for 6:} Let $S_{n,k}$ be the set of all $\sigma\in S_n$ such that $\sigma([k])=[k]$ (this is equivalent
+to saying that the first $k$ entries in the one line notation for $\sigma$ are integers from $1$ to $k$, in some order).
+First prove that if $\sigma\in S_n\setminus S_{n,k}$, then the product in the Leibniz formula for $\det(M)$
+corresponding to $\sigma$ is equal to $0$. 
+
+Next given $\sigma\in S_{n,k}$, define $\sigma_1\in S_k$ and $\sigma_2\in S_{n-k}$ as follows: $\sigma_1$
+is simply the restriction of $\sigma$ to $[k]$, and $\sigma_2$ is defined by $\sigma_2(i)=\sigma(i+k)-k$ for all $i\in [n-k]$.
+The description in terms of the one line notation is even simpler -- the one line notation for $\sigma_1$ is simply
+the first $k$ entries in the one line notation for $\sigma$; the one line notation for $\sigma_2$ is
+obtained from the one line notation for $\sigma$ by deleting the first $k$ entries and subtracting $k$ from the last
+$n-k$ entries.
+
+Prove that the map $f: S_{n,k}\to S_k\times S_{n-k}$ given by $f(\sigma)=(\sigma_1,\sigma_2)$ is a bijection and
+$\inv(\sigma_1)+\inv(\sigma_2)=\inv(\sigma)$ (and hence $(-1)^{\sigma}=(-1)^{\sigma_1}\cdot (-1)^{\sigma_2}$).
+
+Now combine all these facts to represent $\det(M)$ as a product of two factors and show that the factors are equal
+to $\det(B)$ and $\det(C)$, respectively.
+\end{document}
+
