@@ -1,0 +1,179 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Inv{{\rm Inv}}
+\def\inv{{\rm inv}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#8. Due on Thursday, Oct 29th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm Sections 4.2-4.4.
+
+\bf{Plan for next week (Oct 26, 28): }\rm  5.1 (Eigenvalues and Eigenvectors), 5.2 (Diagonalizability);
+possibly start 7.3 (Minimal Polynomials) or 5.4 (Invariant subspaces and the Cayley-Hamilton Theorem) 
+
+\skv
+\noindent 
+
+\bf\centerline{Problems: }\rm
+\skv
+
+
+{\bf Problem 1: } Let $V$ be the vector space of all functions $f:\dbR\to\dbR$ (considered as a vector space over $\dbR$).
+Let $c_1,\ldots,c_n$ be distinct real numbers, and for each $1\leq i\leq n$ define $f_i\in V$ by $f_i(x)=e^{cx}$. 
+Use the Vandermonde determinant to prove that the functions $f_1,\ldots, f_n$ are linearly independent. {\bf Hint:}
+Assume that $f_1,\ldots, f_n$ are linearly dependent and deduce that there is a Vandermonde matrix $M$ with distinct parameters $\alpha_1,\ldots,\alpha_n$ such that the equation $Mv=0$ has a non-zero solution $v\in F^n$, contradicting the main theorem about the Vandermonde determinant.
+
+\skv
+
+{\bf Problem 2: } The goal of this problem is to solve Problem~6 from HW\#7 (restated below) using elementary row operations rather than the definition of determinants. 
+
+Suppose that $M=(m_{ij})\in \Mat_{n}(F)$ has block-diagonal form:
+$$M=\begin{pmatrix} A_{k\times k} &B_{k\times (n-k)} \\ 0_{(n-k)\times k} & 
+C_{(n-k)\times (n-k)}.
+\end{pmatrix}$$
+for some $1\leq k\leq n-1$. (Equivalently, suppose that $m_{ij}=0$ whenever $i>k$ and $j\leq k$).
+Prove (by completing both (a) and (b) below) that $$\det(M)=\det(A)\det(C).$$
+
+\begin{itemize}
+\item[(a)] Suppose first that $A$ or $C$ is non-invertible. Use ranks to deduce that $M$ is non-invertible and deduce that
+$\det(M)=\det(A)\det(C)=0$ in this case.
+\item[(b)] Now suppose that $A$ and $C$ are both invertible. As discussed in Lecture~14, this means that each of them can be reduced to the identity matrix (of the same size) using a sequence of elementary row operations. Show that if we apply the corresponding sequences to the entire $M$
+(in either order, say, first the sequence used for $A$ and then the sequence used for $C$), then $M$ will be reduced to an {\bf upper-unitriangular}
+matrix (an upper-triangular matrix with $1$'s on the diagonal). Now use HW\#7.4 and what we proved about the behavior of determinants
+under elementary operations to prove that $\det(M)=\det(A)\det(C)$.
+\end{itemize}
+
+{\bf Problem 3: } Let $F$ be a field and $A\in \Mat_{m\times n}(F)$.
+\begin{itemize}
+\item[(i)] Given $k\leq \min\{m,n\}$, a \emph{$k\times k$ submatrix of $A$} is a matrix ``at the intersection'' of some set of $k$ rows of $A$
+and some set of $k$ columns of $A$ (more formally, it is a matrix obtained by first removing $m-k$ rows of $A$ and then $n-k$ columns of the resulting matrix).
+\item[(ii)] A $k\times k$ minor of $A$ is the determinant of a $k\times k$-submatrix of $A$.
+\end{itemize} 
+Prove that $\rk(A)$ is the largest $k$ for which $A$ has a nonzero $k\times k$ minor. 
+
+{\bf Hint:} It is more convenient to prove the statement
+in the following form: for each $k\in \dbZ_{\geq 0}$ we have $\rk(A)\geq k$ $\iff$ $A$ has a nonzero $k\times k$ minor. Reformulate the latter
+statement entirely in terms of ranks and then prove this reformulation using equivalent definitions of rank. 
+
+\skv
+{\bf Problem 4: } The goal of this problem is to prove that the definition of the determinant given in class (using the Leibniz formula) and the definition in terms of cofactors coincide. For the latter, we will use the expansion with respect to the first column, but with little additional work, one can show that the definition does not change if we replace the first column by any row or any column (see items (4) and (5) below)
+
+So let $F$ be a field, $n\in\dbN$ and $A\in \Mat_n(F)$. Given $1\leq i,j\leq n$, denote by $A(i,j)$ the $(n-1)\times (n-1)$-matrix obtained from
+$A$ by removing the $i^{\rm th}$ row and $j^{\rm th}$ column. Define $\det_{CF}A $ (the determinant of $A$ using cofactors) as follows:
+If $n=1$, we set $\det_{CF}(A)=A$, and if $n>1$, we set
+$$\det\textstyle_{CF}A =\sum\limits_{i=1}^n (-1)^{i+1}a_{i1}\det\textstyle_{CF}A(i,1).$$
+
+Our goal is to show that $\det(A)$ (defined by the Leibniz formula) is equal to $\det_{CF}(A)$ for all $A$. The proof is by induction on $n$,
+with the base case $n=1$ being true by definition. Now fix $n>1$, and suppose that $\det B =\det_{CF} B$ for each $(n-1)\times (n-1)$-matrix $B$.
+
+\begin{itemize}
+\item[(1)] Fix $v_2,\ldots, v_n\in F^n$ viewed as column vectors. Given $x\in F^n$ (also viewed as a column vector), let $M(x)\in\Mat_n(F)$
+be the matrix whose first column is $x$ and whose $j^{\rm th}$ column is $v_j$ for $2\leq j\leq n$. We know that $\det M(x)$ is a linear function
+of $x$ (by Lemma~13.2 from class and the fact that $\det$ is invariant under transposition). Prove that $\det_{CF} M(x)$ is a linear function of 
+$x$ as well (you will need to use the induction hypothesis for this).
+\item[(2)] Now prove that $\det M(e_i) =\det_{CF} M(e_i)$ for each $1\leq i\leq n$. {\bf Hint:} In the case $i=1$ this follows directly from
+Problem~2. The case of arbitrary $i$ can be reduced to the case $i=1$ using the fact that $\det$ changes sign under row flips (again you will need the induction hypothesis).
+\item[(3)] Deduce from (1) and (2) that $\det M(x) =\det_{CF} M(x)$ for all $x\in F^n$.
+\end{itemize}
+
+Assertions (4) and (5) can be deduced from (3) and the results proved in class, without induction.
+\begin{itemize}
+\item[(4)] Now prove that $\det A=\sum\limits_{i=1}^n (-1)^{i+1}a_{1i}\det A(1,i)$ for all $A\in\Mat_n(F)$, that is, one can compute the determinant expanding along
+the first row instead of the first column.
+\item[(5)] (optional, no need to turn in) Now generalize the argument in (2)-(4) to prove that for every $1\leq j\leq n$ we have
+$$\det A = \sum\limits_{i=1}^n (-1)^{i+j}a_{ij}\det A(i,j)=\sum\limits_{i=1}^n (-1)^{i+j}a_{ji}\det A(j,i)$$.
+\end{itemize}
+\skv 
+{\bf Problem 5: } Given a matrix $A=(a_{ij})\in \Mat_{n}(F)$, its \emph{characteristic polynomial}
+$\chi_A(t)$ is defined by $\chi_A(t)=\det(tI_n-A)$ (note that in the book the characteristic polynomial 
+is defined as $\det(A-tI_n)$ which is the same thing up to the factor of $(-1)^n$).
+\begin{itemize}
+\item[(a)] Prove that $\chi_A(t)$ is a monic polynomial of degree $n$ in $t$ (`monic' means that
+the leading coefficient is equal to $1$), so that $\chi_A(t)=t^n+a_{n-1}t^{n-1}+\ldots+a_0$ for some
+$a_0,\ldots, a_{n-1}\in F$. Moreover, show that $\chi_A(t)=(t-a_{11})\ldots (t-a_{nn})+p(t)$
+where $\deg (p(t))\leq n-2$.
+\item[(b)] Prove that in the notations of part (a), $a_{n-1}=-\tr(A)$ and $a_0=(-1)^n \det(A)$. 
+\end{itemize}
+\skv
+
+{\bf Problem 6:} Let $V$ be a finite-dimensional 
+vector space and $W_1,W_2,\ldots, W_k$ subspaces of $V$. Recall that the notion of internal direct sum of 
+more then 2 subspaces was defined in HW\#5.4. 
+\begin{itemize}
+\item[(a)] Suppose that $V=W_1+\ldots+W_k$. Prove that 
+$\sum_{i=1}^k \dim W_i\geq \dim V$ and equality holds
+$\iff$ the sum $W_1+\ldots+W_k$ is direct.
+\item[(b)] Now suppose that the sum $W_1+\ldots+W_k$ is direct.
+Prove that $\sum_{i=1}^k \dim W_i\leq \dim V$ and equality holds
+$\iff$ $V=W_1+\ldots+W_k$.
+\end{itemize}
+\end{document}
