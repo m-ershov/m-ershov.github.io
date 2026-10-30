@@ -1,0 +1,179 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Inv{{\rm Inv}}
+\def\inv{{\rm inv}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#9. Due on Thursday, Nov 4th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm 5.1 and parts of 5.2
+
+\bf{Plan for next week (Nov 2,4): }\rm  5.2 (Diagonalizability) continued,
+7.3 (Minimal Polynomials) and 5.4 (Invariant subspaces and the Cayley-Hamilton Theorem) 
+
+\skv
+\noindent 
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Problem 1:} Let $F$ be a field.
+Recall that the trace of a square matrix over $F$ denoted by $\tr$ is the sum of its diagonal entries.
+Also recall from HW\#1.2 that $\tr(AB)=\tr(BA)$ for any $A,B\in \Mat_{n}(F)$. 
+\begin{itemize}
+\item[(a)] Prove that if $A,C\in \Mat_{n}(F)$ are similar (that is, $C=Q^{-1}AQ$ for some
+invertible $Q\in \Mat_{n}(F)$), then $\tr(A)=\tr(C)$.
+\item[(b)] Use (a) to define $\tr(T)$ for a linear transformation $T:V\to V$ where $\dim(V)<\infty$
+(similarly to how we defined $\det(T)$ in Lecture~17). Your definition should not depend on the choice of a basis of $V$.
+\end{itemize}
+\skv
+{\bf Problem 2:} Let $V$ be a vector space over a field $F$ and $T:V\to V$ a linear map. Given a polynomial $p(x)\in\mathcal{P}(F)$,
+we can define $p(T)$ (the value of $p$ at $T$) in a natural way: if $p(x)=\sum\limits_{k=0}^n a_k x^k$ with $a_k\in F$,
+we set $p(T)=\sum\limits_{k=0}^n a_k T^k$ (where $T^0=I$, the identity map). 
+\begin{itemize}
+\item[(a)] Prove that $p(T)$ is a linear map and $\Ker\, p(T)$ and $\Im\, p(T)$ are both $T$-invariant subspaces of $V$.
+\item[(b)] Let $v\in V$ be an eigenvector for $T$ with eigenvalue $\lam$. Prove that $v$ is also an eigenvector for $p(T)$
+with eigenvalue $p(\lam)$.
+\end{itemize}
+\skv
+The results of Problems 3 and 4 below will be essential for the proof of the existence of the Jordan Canonical Forms of matrices
+(tentatively scheduled for the Nov 9 week). 
+
+\skv
+{\bf Problem 3:} Let $V$ be a finite-dimensional vector space over a field $F$, $n=\dim(V)$ and $T:V\to V$ a linear map.
+If $W$ is a $T$-invariant subspace of $V$, denote by $T_W: W\to W$ the map obtained from $T$ by restricting both the domain
+and codomain to $W$ (we can restrict the codomain as well precisely because $W$ is $T$-invariant). 
+
+Suppose now that $V=\bigoplus\limits_{i=1}^k W_i$ where each $V_i$ is $T$-invariant, and choose an ordered basis $\beta_i$ for each $V_i$.
+Prove that 
+\begin{itemize}
+\item[(i)] $\beta=\beta_1\cup\ldots\cup\beta_k$ is a basis of $V$. In (ii) below we view $\beta$ as an ordered basis where elements of 
+$\beta_1$ come first, followed by elements of $\beta_2$ etc.
+\item[(ii)] The matrix $[T]_{\beta}$ is $k\times k$ block-diagonal, with $i^{\rm th}$ diagonal block equal to $[T_{W_i}]_{\beta_i}$,
+that is,
+$$[T]_{\beta}=\begin{pmatrix}
+{[T_{W_1}]}_{\beta_1} & \ldots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \ldots & {[T_{W_k}]}_{\beta_k}\\
+\end{pmatrix}$$
+\end{itemize}
+{\bf Note:} Part (i) has nothing to do with $T$. Also (i) holds without the assumption $\dim(V)<\infty$, but in the finite-dimensional
+case you can give a shorter proof using HW\#8.6.
+\skv
+
+\skv
+{\bf Problem 4:} Let $V$ be a vector space and $T:V\to V$ a linear map. In parts (b)--(e) assume that $\dim\, V<\infty$.
+\begin{itemize}
+\item[(a)] Prove that $\Ker(T^n)\subseteq \Ker(T^{n+1})$ for each $n\geq 1$.
+\item[(b)] By (a) we get an ascending chain of subspaces of $V$: $$\Ker(T)\subseteq \Ker(T^2)\subseteq \ldots .$$
+Prove that this chain stabilizes after finitely many steps, that is, there is $N\in\dbN$ s.t. $\Ker(T^n)= \Ker(T^{N})$
+for all $n\geq N$.
+\item[(c)] Assume that $\Ker(T)\cap \Im(T)\neq \{0\}$. Prove that $\Ker(T^2)\neq \Ker(T)$.
+\item[(d)] Use (b) and (c) (applied to a suitable power of $T$) to show that there exists $n\in\dbN$ s.t. $\Ker(T^n)\cap \Im(T^n)=\{0\}$. Deduce that $V=\Ker(T^n)\oplus \Im(T^n)$. 
+\item[(e)] Use (d) to show that if $T$ is non-invertible and non-nilpotent, then $V$ can be written as a direct sum of 2 nonzero
+$T$-invariant subspaces.
+\end{itemize}
+\skv
+{\bf Problem 5:} Let $F$ be a field and $n\in\dbN$. Given an ordered basis $\beta$ of $F^n$, let $Q(\beta)$ be the matrix whose columns are the elements of $\beta$ (in the given order). Given $\lam_1,\ldots,\lam_n\in F$, let $D(\lam_1,\ldots,\lam_n)$ be the diagonal matrix with the diagonal entries $\lam_1,\ldots,\lam_n$ (in this order).
+
+Prove that for a given $A\in \Mat_n(F)$, an ordered basis $\beta=\{v_1,\ldots, v_n\}$ of $F^n$ and scalars $\lam_1,\ldots,\lam_n\in F$,
+the following are equivalent:
+\begin{itemize}
+\item[(i)] $v_i$ is an eigenvector of $A$ with eigenvalue $\lam_i$ for each $1\leq i\leq n$;
+\item[(ii)] $QD=AQ$ (or, equivalently, $Q^{-1}AQ=D$) where $Q=Q(\beta)$ and $D=D(\lam_1,\ldots,\lam_n)$.
+\end{itemize}
+Deduce from this that $A$ is diagonalizable if and only if $A$ is similar to a diagonal matrix.
+\skv
+{\bf Hint:} Show that whenever the product of two matrices $XY$ is defined, the $j^{\rm th}$ column of $XY$ is equal to $X\col_j(Y)$ for all $j$.
+Note that the result of Problem~5 is stated in the book as Corollary after Theorem~5.1 on page 247, but as far as I can tell, the proof is not clearly presented. 
+\skv
+{\bf Problem 6:} In each of the following examples the field is $\dbR$ (real numbers).
+Find all eigenvalues and eigenvectors of the given $A\in \Mat_3(\dbR)$ and determine
+whether the matrix $A$ is diagonalizable.
+If $A$ is diagonalizable, find an invertible matrix $Q$
+and a diagonal matrix $D$ s.t. $Q^{-1}AQ=D$.
+\begin{align*}
+&\mbox{(a)}\quad A=\begin{pmatrix} 1& 1& 0\\ 0& 1 &2 \\ 0& 0& 3\end{pmatrix}&
+&\mbox{(b)}\quad A=\begin{pmatrix} 7& -4& 0\\8 &-5 &0\\ 6& -6& 3\end{pmatrix}&
+\end{align*}
+\skv
+{\bf Problem 7:} Let $A=\Mat_n(F)$, and suppose that $\chi_T(x)$ splits completely over $F$,
+that is, $\chi_T(x)=\prod\limits_{i=1}^n (x-\lam_i)$ for some $\lam_1,\ldots, \lam_n\in F$.
+(Thus, $\lam_1,\ldots, \lam_n$ are precisely the eigenvalues of $T$ listed with their algebraic multiplicities).
+Prove that $$\sum_{i=1}^n \lam_i=\tr(A)\quad\mbox{ and }\quad\prod_{i=1}^n \lam_i=\det(A).\eqno (***)$$
+Then explain why the analogous results holds if $A$ is a replaced by a linear map $T:V\to V$ where
+$V$ is a finite-dimensional vector space.
+{\bf Hint:} Use HW\#8.5.
+\skv
+{\bf Problem 8:} Let $V$ be a vector space, and let $T:V\to V$ and $S:V\to V$ be linear maps which commute ($TS=ST$).
+Let $\lam$ be an eigenvalue of $T$. Prove that the eigenspace $E_{\lam}(T)$ is $S$-invariant.
+\end{document}
+
