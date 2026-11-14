@@ -1,0 +1,206 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+%Calligraphic roman letters
+\def\calA{{\mathcal A}}
+\def\calB{{\mathcal B}}
+\def\calC{{\mathcal C}}
+\def\calD{{\mathcal D}}
+\def\calE{{\mathcal E}}
+\def\calF{{\mathcal F}}
+\def\calG{{\mathcal G}}
+\def\calH{{\mathcal H}}
+\def\calI{{\mathcal I}}
+\def\calJ{{\mathcal J}}
+\def\calK{{\mathcal K}}
+\def\calL{{\mathcal L}}
+\def\calM{{\mathcal M}}
+\def\calN{{\mathcal N}}
+\def\calO{{\mathcal O}}
+\def\calP{{\mathcal P}}
+\def\calQ{{\mathcal Q}}
+\def\calR{{\mathcal R}}
+\def\calS{{\mathcal S}}
+\def\calT{{\mathcal T}}
+\def\calU{{\mathcal U}}
+\def\calV{{\mathcal V}}
+\def\calW{{\mathcal W}}
+\def\calX{{\mathcal X}}
+\def\calY{{\mathcal Y}}
+\def\calZ{{\mathcal Z}}
+
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Spec{{\rm Spec}}
+\def\supp{{\rm supp}}
+\def\Inv{{\rm Inv}}
+\def\inv{{\rm inv}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#10. Due on Friday, Nov 20th, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm parts of 5.4, 7.1 and 7.3
+
+\bf{Plan for next week (Nov 16,18): }\rm  Jordan Canonical Form (continue 7.1 and 7.2)). 
+
+\skv
+\noindent 
+
+\bf\centerline{Problems: }\rm
+\skv
+{\bf Problem 1:} Let $F$ be a field and $A_1,\ldots, A_k$ square
+matrices over $F$ (possibly of different sizes). Suppose that  $A_i\in \Mat_{n_i}(F)$, and
+let $n=\sum\limits_{i=1}^k n_i$. Denote by $A_1\oplus\ldots\oplus A_k$ the 
+block-diagonal matrix whose diagonal blocks are $A_1,\ldots, A_k$, in this order (thus $A_1\oplus\ldots\oplus A_k\in \Mat_n(F)$).
+Prove that if $A=A_1\oplus\ldots\oplus A_k$, then 
+\begin{itemize}
+\item[(a)] $\rk(A)=\sum\limits_{i=1}^k \rk(A_i)$;
+\item[(b)] for any polynomial
+$p(x)\in\mathcal P(F)$ we have $p(A)=p(A_1)\oplus\ldots\oplus p(A_k)$.
+\end{itemize}
+See a hint for (b) at the end of the homework.
+\skv
+
+{\bf Problem 2:} Let $V$ be a finite-dimensional vector space, $T\in\calL(V)$ and $W$ a $T$-invariant subspace of $V$.
+Let $T_W\in \calL(W)$ be the restriction of $T$ to $W$.
+\begin{itemize}
+\item[(a)] Prove that $\chi_{T_W}(x)\mid \chi_{T}(x)$ and $\mu_{T_W}(x)\mid \mu_T(x)$ (Recall that $\mu_S(x)$ is the minimal polynomial
+of a linear map $S$).
+\item[(b)] Use (a) (and something we proved in class) to show that if $T$ is diagonalizable, then $T_{W}$ is also diagonalizable.
+\end{itemize}
+\skv
+{\bf Problem 3:} Let $V$ be a finite-dimensional vector space over a field $F$ and $T\in\calL(V)$. Recall that for each $\lam\in \Spec(T)$,
+the generalized $\lam$-eigenspace is $K_{\lam}(T)=\bigcup_{k=0}^{\infty}\Ker((T-\lam I)^k)$. In class we proved that
+\begin{itemize}
+\item[(i)] the sum $\sum\limits_{\lam\in\Spec(T)}K_{\lam}(T)$ is always direct (Theorem 21.1);
+\item[(ii)] if $\chi_T(x)$ splits over $F$, then $\sum\limits_{\lam\in\Spec(T)}K_{\lam}(T)=V$ (Theorem 21.3; proof will be completed in
+Lecture~22).
+\end{itemize}
+The goal of this problem is to provide an alternative proof of (i) assuming (ii). This proof only works under the assumption that 
+$\chi_T(x)$ splits, but once (i) is proved under that assumption, it is not hard to deduce (i) in general using the argument we used
+in the proof of the Cayley-Hamilton Theorem in Lecture~20.
+\skv
+So assume that $\chi_T(x)$ splits over $F$.
+\begin{itemize}
+\item[(a)] Given $\lam\in \Spec(T)$, let $T_{\lam}\in \calL(K_{\lam})$ be the restriction of $T$ to $K_{\lam}$. Prove that
+$\chi_{T_{\lam}}(x)=(x-\lam)^{\dim(K_{\lam})}$ (this can be done in several different ways).
+\item[(b)] Use (a) and Problem~2 to prove that for each $\lam\in\Spec(T)$ we have $\dim K_{\lam}(T)\leq m_{\lam}(T)$
+where $m_{\lam}(T)$ is the algebraic multiplicity of $\lam$.
+\item[(c)] Now use (b), (ii) above and HW\#8.6 to prove that $\dim K_{\lam}(T) = m_{\lam}(T)$ for each $\lam$ and the sum $\sum\limits_{\lam\in\Spec(T)}K_{\lam}(T)$ is direct.
+ \end{itemize}
+\skv
+{\bf Problem 4:} This problem strengthens the statement of 
+Problem~4(b) in HW\#9. Let $V$ be a vector space and
+$T\in \mathcal L (V)$.
+\begin{itemize}
+\item[(a)] Suppose that there exists $i\in\dbN$ be such that $\Ker(T^{i+1})=\Ker(T^{i})$. Prove that
+$\Ker(T^{m})=\Ker(T^{i})$ for all $m>i$.  Note that we are not assuming that $V$ is finite-dimensional.
+{\bf Hint:} It is enough to show
+that $\Ker(T^{i+2})=\Ker(T^{i+1})$.
+\end{itemize}
+In parts (b) and (c)  assume that $V$ is finite-dimensional, and let $n=\dim V$.
+
+\begin{itemize}
+\item[(b)] Prove that $\cup_{i=0}^{\infty}\Ker(T^{i})=\Ker(T^n)$.
+\item[(c)] Deduce from (b) that $K_{\lam}(T)=\Ker((T-\lam I)^n)$ for any $\lam\in \Spec(T)$.
+\end{itemize}
+\skv
+{\bf Problem 5:} Let $V$ be a vector space over a field $F$ and $T\in\calL(V)$.
+\begin{itemize}
+\item[(a)] Prove that if $W_1,\ldots, W_k$ are $T$-invariant subspaces of $V$, then $\sum_{i=1}^k W_k$ is also $T$-invariant.
+\item[(b)] Assume that $\Spec(T)$ is finite (of course, this is automatic if $V$ is finite-dimensional), and let $m=|\Spec(T)|$.
+Use (a) to prove that $V$ has at least $2^m$ distinct $T$-invariant subspaces.
+\item[(c)] Now assume that $n=\dim(V)$ is finite and that $T$ has $n$ distinct eigenvalues $\lam_1,\ldots, \lam_n$.
+This means that $T$ is diagonalizable and each eigenspace $E_{\lam_i}(T)$ is $1$-dimensional. Choose a nonzero $w_i\in E_{\lam_i}(T)$,
+for each $i$, and let $\beta=\{w_1,\ldots,w_n\}$ (thus, $\beta$ is a basis consisting of eigenvectors for $T$).
+
+Given $v\in V$, write $v=\sum_{i=1}^n \lam_i w_i$, and define $$\supp(v)=\{1\leq i\leq n: \lam_i\neq 0\}.$$ In other words,
+$\supp(v)$ is the set of all $i$ such that the $i^{\rm th}$ coordinate of $[w]_{\beta}$ is nonzero.
+Prove that the smallest $T$-invariant subspace containing $v$ is equal
+to $\sum_{\lam\in \supp(v)}E_{\lam}(T)$. {\bf Hint:} one way to prove this is using a Vandermonde-type argument similar
+to the second proof of the theorem that the sum of eigenspaces is direct (Lecture~18).
+\item[(d)] Let $T$ be as in (c). Use (c) and your solution to (b) to prove that $T$ has precisely $2^n$ $T$-invariant subspaces.
+\end{itemize}
+\skv
+{\bf Problem 6:} Let $V$ be a vector space and $T\in\calL(V)$. A sequence of vectors $v_1,\ldots, v_k\in V$
+is called a \emph{nilpotent $T$-cycle} if each $v_i$ is nonzero, $T(v_1)=0$ and $T(v_i)=v_{i-1}$ for $2\leq i\leq k$.
+\begin{itemize}
+\item[(a)] Prove that the vectors which from a nilpotent $T$-cycle must be linearly independent.
+\item[(b)] Let $v_1,\ldots, v_k$ be a nilpotent $T$-cycle, $\beta=\{v_1,\ldots, v_k\}$ and $W=\Span(\beta)$ (so that
+$\beta$ is a basis of $W$ by (a)). For each $1\leq i\leq k$ let $W_i=\Span(v_1,\ldots, v_i)$; also set $W_0=0$.
+Prove that each $W_i$ is $T$-invariant and each $T$-invariant subspace of $W$ is equal to $W_i$ for some $i$.  
+\end{itemize}
+
+\newpage 
+{\bf Hint for 1(b):} Let $v\in F^n$ and write $v=\sum_{i=1}^k v_i$ where $v_i$ agrees with $v$ in the coordinates corresponding to the
+$i^{\rm th}$ blocks and all other coordinates of $v_i$ are equal to $0$. Start by expressing $Av$ in terms of $A_i$ and $v_i$.
+
+\end{document}
