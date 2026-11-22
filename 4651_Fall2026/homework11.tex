@@ -1,0 +1,261 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{psfig}
+
+\begin{document}
+\baselineskip=16pt
+\textheight=8.5in
+%\parindent=0pt 
+\def\sk {\hskip .5cm}
+\def\skv {\vskip .05cm}
+\def\cos {\mbox{cos}}
+\def\sin {\mbox{sin}}
+\def\tan {\mbox{tan}}
+\def\intl{\int\limits}
+\def\lm{\lim\limits}
+\newcommand{\frc}{\displaystyle\frac}
+\def\xbf{{\mathbf x}}
+\def\fbf{{\mathbf f}}
+\def\gbf{{\mathbf g}}
+
+\def\dbA{{\mathbb A}}
+\def\dbB{{\mathbb B}}
+\def\dbC{{\mathbb C}}
+\def\dbD{{\mathbb D}}
+\def\dbE{{\mathbb E}}
+\def\dbF{{\mathbb F}}
+\def\dbG{{\mathbb G}}
+\def\dbH{{\mathbb H}}
+\def\dbI{{\mathbb I}}
+\def\dbJ{{\mathbb J}}
+\def\dbK{{\mathbb K}}
+\def\dbL{{\mathbb L}}
+\def\dbM{{\mathbb M}}
+\def\dbN{{\mathbb N}}
+\def\dbO{{\mathbb O}}
+\def\dbP{{\mathbb P}}
+\def\dbQ{{\mathbb Q}}
+\def\dbR{{\mathbb R}}
+\def\dbS{{\mathbb S}}
+\def\dbT{{\mathbb T}}
+\def\dbU{{\mathbb U}}
+\def\dbV{{\mathbb V}}
+\def\dbW{{\mathbb W}}
+\def\dbX{{\mathbb X}}
+\def\dbY{{\mathbb Y}}
+\def\dbZ{{\mathbb Z}}
+
+
+%Calligraphic roman letters
+\def\calA{{\mathcal A}}
+\def\calB{{\mathcal B}}
+\def\calC{{\mathcal C}}
+\def\calD{{\mathcal D}}
+\def\calE{{\mathcal E}}
+\def\calF{{\mathcal F}}
+\def\calG{{\mathcal G}}
+\def\calH{{\mathcal H}}
+\def\calI{{\mathcal I}}
+\def\calJ{{\mathcal J}}
+\def\calK{{\mathcal K}}
+\def\calL{{\mathcal L}}
+\def\calM{{\mathcal M}}
+\def\calN{{\mathcal N}}
+\def\calO{{\mathcal O}}
+\def\calP{{\mathcal P}}
+\def\calQ{{\mathcal Q}}
+\def\calR{{\mathcal R}}
+\def\calS{{\mathcal S}}
+\def\calT{{\mathcal T}}
+\def\calU{{\mathcal U}}
+\def\calV{{\mathcal V}}
+\def\calW{{\mathcal W}}
+\def\calX{{\mathcal X}}
+\def\calY{{\mathcal Y}}
+\def\calZ{{\mathcal Z}}
+
+
+\def\la{{\langle}}
+\def\ra{{\rangle}}
+\def\summ{{\sum\limits}}
+\def\eps{{\varepsilon}}
+\def\lam{{\lambda}}
+\def\tr{{\rm tr}}
+\def\char{{\rm char}}
+\def\Mat{{\rm Mat}}
+\def\Func{{\rm Func}}
+\def\Span{{\rm Span}}
+\def\Spec{{\rm Spec}}
+\def\supp{{\rm supp}}
+\def\Inv{{\rm Inv}}
+\def\inv{{\rm inv}}
+\def\Ker{{\rm Ker}}
+\def\Im{{\rm Im}}
+\def\rk{{\rm rk}}
+\def\phi{{\varphi}}
+\def\row{{\rm row}}
+\def\col{{\rm col}}
+\def\Rowspace{{\rm Rowspace}}
+\def\null{{\rm null}}
+
+
+\bf\centerline{Homework \#11. Due on Thursday, Dec 3rd, 11:59pm on Canvas}\rm
+\vskip .1cm
+
+\bf{Reading for this homework: }\rm 7.1 and 7.2.
+
+\bf{Plan for next 3 classes (Nov 23, Nov 30 and Dec 2): }\rm  Continue with the Jordan Canonical Form (7.2); more on Minimal
+Polynomials (7.3); possibly start Rational Canonical Form (7.4).
+
+\noindent 
+\skv
+{\bf Problem 1:} Let $A\in \Mat_{n}(F)$.
+\begin{itemize}
+\item[(a)] Suppose that $A$ is in JCF. As usual, for each $\lam\in \Spec(A)$, denote by $m_{\lam}(A)$ its algebraic multiplicity.
+Prove that $m_{\lam}(A)$ is equal to the sum of sizes of all Jordan blocks
+of $A$ with eigenvalue $\lam$. {\bf Note:} This result follows from
+the proof of existence of JCF, but it can be easily obtained by direct
+computation.
+\item[(b)] Suppose that $F=\dbR$ and $\chi_A(x)=(x-4)(x-5)^2(x-6)^3$.
+Write down all possible Jordan canonical forms of $A$, up to equivalence
+(two Jordan canonical forms are called equivalent if they can be obtained
+from each other by permutation of blocks).
+\end{itemize}
+\skv
+
+{\bf Definition:}  Let $V$ be a finite-dimensional vector space and
+$T\in\mathcal L(V)$. A basis $\beta$ of $V$ is called a \emph{Jordan basis} for $T$ if $[T]_{\beta}$ is in JCF. 
+\skv
+{\bf Problem 2:} Let $V$ be a finite-dimensional vector space and
+$T\in\mathcal L(V)$ a {\bf nilpotent} linear map. 
+In Lecture~22 we proved that $F^n$ has a basis $\beta$ which is a disjoint union of nilpotent $T$-cycles,
+and hence, as noted in Lecture~23, $[T]_{\beta}$ is in JCF where all blocks have eigenvalue $0$ (so
+$\beta$ is a Jordan basis). The proof of Theorem~22.1 can be viewed as an algorithm for computing this $\beta$;
+however, this algorithm usually requires more work than needed.  
+The goal of this problem is to justify a simpler algorithm for constructing a Jordan basis $\beta$ in the case $\dim(V)=3$
+(there is an analogous, even simpler, algorithm when $\dim(V)=2$).
+\skv
+So, below we assume that $\dim(V)=3$, $T\in\mathcal L(V)$ is nilpotent
+and $\beta$ is a Jordan basis for $T$. 
+%For brevity, by a cycle we mean a nilpotent $T$-cycle. 
+%Note that there are $3$ options for $JCF(T)$ (up to equivalence):
+\begin{itemize}
+\item[(a)] Prove that $\rk(T)<3$, and in each of the remaining cases ($\rk(T)=0,1,2$), $JCF(T)$ is uniquely determined by the rank as follows: 
+\begin{itemize}
+\item[(i)] If $\rk(T)=0$, then $JCF(T)=J_1(0)\oplus J_1(0)\oplus J_1(0)$, that is, $JCF(T)$ is the zero matrix.
+\item[(ii)] If $\rk(T)=1$, then $JCF(T)=J_2(0)\oplus J_1(0)$, that is, $$JCF(T)=\begin{pmatrix} 0 &1&0\\ 0 &0&0\\ 0 &0&0
+\end{pmatrix}.$$
+\item[(iii)] If $\rk(T)=2$, $JCF(T)=J_3(0)=\begin{pmatrix} 0 &1&0\\ 0 &0&1\\ 0 &0&0\end{pmatrix}
+$
+\end{itemize}
+In case (i) there is nothing to do as any basis is a Jordan basis. In parts (b) and (c)
+yuu are asked to justify the given algorithms in cases (ii) and (iii).
+
+\item[(b)] Suppose that $\rk(T)=1$. Prove that $T^2=0$. Now take any $v\not\in\Ker(T)$. Prove that $\{v,T(v)\}$ is linearly independent
+and $\Ker(T)\not\subseteq \Span(v,T(v))$, so that there exists $w\in \Ker(T)\setminus \Span(v,T(v))$. Deduce that
+$\beta=\{T(v),v,w\}$ is a Jordan basis for $T$.
+\item[(c)] Now suppose that $\rk(T)=2$. Prove that $T^2\neq 0$ but $T^3=0$, and if we take any $v\not\in\Ker(T^2)$, then $\{T^2(v),T(v),v\}$ is a Jordan basis for $T$.
+\end{itemize}
+\skv
+{\bf Problem 3:} Find the Jordan canonical form and a Jordan basis
+for the matrix $$A=\begin{pmatrix}2& 1& 0& 0\\     
+0& 2& 1& 0\\
+0& 0& 3& 0\\
+0& 1& 0& 3
+\end{pmatrix}.$$
+(This is the same as finding JCF and Jordan basis for $T=L_A$).
+The general algorithm for computing JCF is discussed at the end of the homework.
+
+\skv
+{\bf Problem 4:} Let $F$ be a field, $n\in\dbN$, and let $A\in\Mat_n(F)$ be a nilpotent matrix.
+\begin{itemize}
+\item[(a)] Prove $\mu_A(x)=x^m$ for some $m$ (recall that $\mu_A$ denotes the minimal polynomial). {\bf Hint:}
+This can be done without any computations if you use the right theorem.
+\item[(b)] Prove that $\chi_A(x)=x^n$ without using JCF. {\bf Hint:} First consider the case where
+$F$ is algebraically closed; then extend to arbitrary fields using the fact that any field is a subfield of an
+algebraically closed field. 
+
+{\bf Note:} The linear map $T=L_A$ is nilpotent since $A$ is nilpotent. Hence, as explained at the beginning of Problem~2,
+there exists a basis $\beta$ such that $[T]_{\beta}$ is in JCF where all blocks have eigenvalue $0$. This immediately
+implies that $\chi_A(x)=\chi_T(x)=x^n$; however, this argument requires much more work. 
+\item[(c)] Suppose in addition that $\rk(A)=n-1$. Use dot diagrams to prove
+that $JCF (A) = J_n(0)$ -- a single Jordan block of size $n$ with eigenvalue $0$. {\bf Note:} The use of dot diagrams 
+is by no means necessary, but they provide a particularly elegant argument. 
+\item[(d)] Now assume that $\rk(A)=n-2$. Recall that $\mu_A(x)=x^m$ for some $m\in\dbN$. Prove that
+$JCF(A)$ is uniquely determined by $m$ and describe it explicitly (as a function of $m$). Also determine all possible
+values of $m$. {\bf Note:} This can also be solved using dot diagrams, but you are not required to use them for this part. 
+\end{itemize}
+
+\skv
+{\bf Problem 5:} Let $F$ be a field with $\char(F)\neq 2$, $\lam\in F$, $n\in \dbN$ and $A =J_{n}(\lam$).
+Use the result of Problem~4 to determine $JCF(A^2)$. {\bf Note:} The answer will depend on
+whether $\lam\neq 0$ or not. Explain clearly where you use the assumption $\char(F)\neq 2$.
+To compute $J_{n}(\lam)^k$ for $k\geq 2$ it may be convenient to write $J_{n}(\lam)=J_n(0)+\lam I_n$ and use the binomial formula.
+
+\skv
+{\bf Problem 6:} Let $A\in \Mat_{n}(F)$ and assume that
+$\chi_A(x)$ splits. Prove that $A$ is similar to its transpose $A^t$.
+{\bf Hint:} Use ranks to prove that $A$ and $A^t$ have the same JCF. 
+\skv
+{\bf Note:} The assumption that $\chi_A(x)$ splits is not necessary,
+but one needs a different technique to remove it (one way to do
+it is using the notion of rational canonical form discussed in \S~7.4).
+\skv
+
+
+\newpage
+\centerline{\bf An algorithm for computing JCF
+}
+\skv
+The algorithm below follows the proof of the existence part of Theorem~23.2.
+Let $V$ be a finite-dimensional vector space over a field $F$
+and let $T\in\mathcal L(V)$. We assume that $\chi_T(x)$ splits over $F$.
+\skv
+{\it Step 1:} Compute the eigenvalues of $T$, call them $\lam_1,\ldots,\lam_s$.
+\skv
+
+{\it Step 2:} For each $\lam\in \Spec(T)$ compute the generalized
+eigenspace $K_{\lam}$. This can be done by consecutively
+computing $\Ker(T-\lam I)$, $\Ker(T-\lam I)^2$ etc. and stopping
+at the first $i$ s.t. $\dim \Ker(T-\lam I)^i=m_{\lam}(T)$.
+\skv
+
+{\it Step 3:} For each $\lam\in \Spec(T)$ denote by $T_{\lam}$
+the restriction of $T$ to $K_{\lam}=K_{\lam}(T)$. Find a Jordan basis
+for each $T_{\lam}$, that is, find a basis $\beta_{\lam}$
+for $K_{\lam}$ s.t. $[T_{\lam}]_{\beta_{\lam}}$ is in JCF.
+This can be done by the algorithm from the proof
+of Theorem~22.2 or (in the case $m_{\lam}\leq 3$) using the simpler algorithm described in Problem~2. Indeed, by definition
+of $K_{\lam}$, the map $T_{\lam}-\lam I\in \mathcal L(K_{\lam})$
+is nilpotent, so Theorem~22.2 (or Problem~2 if $m_{\lam}\leq 3$) provides an algorithm for finding
+a basis $\beta_{\lam}$ of $K_{\lam}$ s.t. 
+$[T_{\lam}-\lam I]_{\beta_{\lam}}$ is in JCF with all Jordan blocks
+having $0$'s on the diagonal. But $[T_{\lam}-\lam I]_{\beta_{\lam}}=
+[T_{\lam}]_{\beta_{\lam}}+\lam [I]_{\beta_{\lam}}=
+[T_{\lam}]_{\beta_{\lam}}+\lam I_{m_{\lam}}$, and by adding
+the scalar matrix $\lam I_{m_{\lam}}$ to a matrix in JCF with
+$0$'s on the diagonal, we clearly get a matrix in JCF with $\lam$'s
+on the diagonal. Thus, $\beta_{\lam}$ is a Jordan basis for $T_{\lam}$.
+
+\hskip .4cm
+Note that to implement the simpler algorithm from Problem~2, one needs to
+compute $\rk((T_{\lam}-\lam I))$ and $\Ker((T_{\lam}-\lam I)^i)$ for $i=1$ or $2$.
+All of this can be done without computing
+the restriction map $T_{\lam}$ explicitly. Indeed, one can show
+(check these !!!) that $\Ker((T_{\lam}-\lam I)^i)=\Ker((T-\lam I)^i)$ for each $i$
+and thus $\rk((T_{\lam}-\lam I)^i)=\rk((T-\lam I)^i)-\dim V+m_{\lam}$
+by rank-nullity.
+\skv
+
+
+{\it Step 4:} Now take the ordered union $\beta_{\lam_1}\cup\ldots\cup\beta_{\lam_s}$
+of the bases found in Step~3 for each $\lam_i\in Spec(T)$. As shown in Lecture~23, this union
+is a Jordan basis for $T$. To determine $JCF(T)$, we go back to Step 3. By construction, each $\beta_{\lam}$ is a union of nilpotent $(T-\lam I)$-cycles. Each nilpotent $(T-\lam I)$-cycle will yield a Jordan block corresponding
+to $\lam$ in $JCF(T)$ with the size of the block equal to the length
+of the cycle.
+\end{document}
